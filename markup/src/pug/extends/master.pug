@@ -1,0 +1,19 @@
+block config
+	include ../includes/variables
+
+doctype html
+
+html(lang="en")
+	head
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(charset='utf-8')
+		script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', defer)
+		script(type='text/javascript').
+			window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js"><\/script>')
+		script(src='js/jquery.main.js', defer)
+		script(src='js/custom.js', defer)
+		include ../includes/styles
+		title #{siteTitle}
+	body
+		#wrapper
+			block content
