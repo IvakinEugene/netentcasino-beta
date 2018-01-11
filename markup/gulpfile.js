@@ -6,12 +6,14 @@ var gulp 		= require('gulp'),
 	imagemin 	= require('gulp-imagemin'),
 	run 		= require('run-sequence'),
 	watch 		= require('gulp-watch'),
-	clean 		= require('gulp-contrib-clean');
+	clean 		= require('gulp-contrib-clean'),
+	plumber 	= require('gulp-plumber'),
 	src 		= './src',
 	dist 		= './dist';
 
 gulp.task('sass', function(){
 	gulp.src(src + '/scss/**/*.scss')
+		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(sourcemaps.write())
@@ -31,6 +33,7 @@ gulp.task('browser-sync', function(){
 
 gulp.task('pug', function(){
 	gulp.src(src + '/*.pug')
+		.pipe(plumber())
 		.pipe(pug({
 			pretty: true
 		}))
