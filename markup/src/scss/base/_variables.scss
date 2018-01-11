@@ -5,6 +5,7 @@
 $black:				#000;
 $shadow:			rgba(#3a3a3a,0.25);
 $theme-color-base:	#6daf0e;
+$base-gray:			#8c8e96;
 $theme-color-add:	#fed958;
 $border-color-base:	#cbd6d2;
 $white:				#fff;
@@ -18,7 +19,7 @@ $base-font-serif:		'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Body
 $base-text-color:		#515151;
-$base-background-color: rgba(203,214,210,0.2);
+$base-background-color: #f7f9f9;
 $font-size-base:		14px;
 $line-height-base:		1.5;
 $base-font-family:		$base-font-sans-serif !default;
@@ -52,15 +53,14 @@ $btn-link-color:				$base-text-color;
 $btn-dark-background:			$base-text-color;
 $btn-dark-border:				$base-text-color;
 $btn-dark-color:				$white;
-$btn-font-size:					14px;
-$btn-padding:					10px 11px 11px;
+$btn-font-size:					16px;
+$btn-padding:					6px 13px 7px;
 
 // Forms
-$form-element-padding: 9px 10px !default;
-$form-element-background: $white !default;
-$form-element-border-color: $gray !default;
-$form-element-focus-border-color: $black !default;
-$placeholder-color: $gray !default;
+$form-element-padding:			5px 6px 6px;
+$form-element-background:		$white;
+$form-element-border-color:		$border-color-base;
+$placeholder-color:				$gray !default;
 
 // Headers
 $h1-font-size: 24px;

@@ -4,143 +4,219 @@ block content
 	include pug/includes/header
 
 	#main
-		hr
-		hr
 		//- 
-			.casino-box
-				.heading
-					.image
-						a(href="#")
-							img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-					.description
-						h3
-							a(href="#") SlotsMillion
-						p stars
-						a(href="#").btn.btn-default casino review
-				.cell.total
-					.sticker
-						span.icon icon &gt;
-						|  Recommended by Casino Experts
+			section.section-intro
+				.holder.text-center
+					img(src="images/logo-finn.png", alt="Image description", width="124", height="84")
+				.search-box
 					div
-						strong.title £150 + 50 Free Spins
-						em.note 50% up to £100 + 50 Free Spins
-				.content
-					.cell.deposit
-						p
-							strong £10
-							|  Min. Deposit
-					.cell.time
-						p
-							strong 30 mins - 4 hours (avg)
-							|  Withdrawal Time
-				.fullwidth
-					a(href="#").btn.btn-primary go to casino
-			.casino-box.small
-				.heading
+						form(action="#")
+							.form-content
+								input(type="text", placeholder="Search 200+ Casinos & Games")
+								span.icon-search s
 					div
+						- var count = "329"
+						- var title = "Casino Reviews"
+						- var content = "For Your Convenience"
+						include pug/extends/read-more-button
+					div
+						- var count = "204"
+						- var title = "Games"
+						- var content = "To Play for Free"
+						include pug/extends/read-more-button
+					div
+						- var count = "3049"
+						- var title = "News Articles"
+						- var content = "Ready to be Read"
+						include pug/extends/read-more-button
+				- var image = "img01"
+				include pug/extends/retina-images
+			section.section-casinos-list
+				.holder
+					h1 New Casinos
+					strong.subtitle Discover November’s latest Casinos
+					.content.hidden-sm
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sed, possimus voluptatibus animi! Possimus sed in, eos qui odio, necessitatibus!
+					- var h2 = "LadyLucks"
+					- var duration = "2 days"
+					- var h3 = "£150 + 50 Free Spins"
+					- var content = "50% up to £100 + 50 Free Spins"
+					include pug/extends/new-casino-box
+					- var h2 = "WildSlots"
+					- var duration = "17 days"
+					- var h3 = "£1000 + 20 Free Spins"
+					- var content = "100% up to £500 + 20 Free Spins"
+					include pug/extends/new-casino-box
+					- var h2 = "HighRoller"
+					- var duration = "1 month"
+					- var h3 = "£1500 + 50 Free Spins"
+					- var content = "200% up to £500 + 50 Free Spins"
+					include pug/extends/new-casino-box
+					.text-center
+						a(href="#").btn.btn-secondary View More New Casinos
+			section.section-top-offer
+				.holder
+					.frame
+						.location
+							span.icon-map i
+							| London, United Kingdom
+							a(href="#").hidden-sm
+								strong - Change Location
+						h1 Novembers’ Top Casino Offers
+						.offer-casino-box
+							.heading
+								div
+									.logo-holder
+										a(href="#")
+											img(src="http://via.placeholder.com/50x50")
+									.txt
+										h2
+											a(href="#") Betsson
+										em.time Launched 2 days ago!
+								div
+									span.rate
+										strong 5
+										span /5
+									box-shadow: 0 0 3px 0 rgba(56,58,58,0.25);.stars
+							.content
+								h3 £150 + 50 Free Spins
+								p 50% up to £100 + 50 Free Spins
+								a(href="#").btn.btn-primary Go to Betsson
+							.bottom.text-center
+								div
+									span.icon- i
+									p
+										| Expires in - 
+										strong 18 Days  21 Hours 18 Minutes
+								div.hidden-sm
+									a(href="#").btn.btn-link View all top casino offers
+						.text-center
+							a(href="#").btn.btn-secondary View all top casino offers
+		section.section-games
+			.holder
+				h1 NetEnt Games &amp; Jackpots
+				strong.subtitle Most played Games &amp; Jackpots right now!
+				.games-slider
+					div
+						.game-box
+							.media-holder
+								img(src="http://via.placeholder.com/293x149")
+					div
+					div
+			//- 
+				.casino-box2.small
+					.heading
+						div
+							.image
+								a(href="#")
+									img(src="http://via.placeholder.com/50x50")
+							div
+								h3
+									a(href="#") Etoro
+						div
+							span.rate
+								strong 4
+								span /5
+							p stars
+					.cell.total
+						div
+							strong.title Earn 2% Management Fee
+							em.note Become a Popular Invester
+					.content
+						.cell.deposit
+							p
+								strong £50
+								|  Min. Deposit
+					.fullwidth
+						a(href="#").btn.btn-primary visit etoro
+				.casino-box2
+					.heading
 						.image
 							a(href="#")
 								img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-						div
+						.description
 							h3
-								a(href="#") Etoro
-					div
-						span.rate
-							strong 4
-							span /5
-						p stars
-				.cell.total
-					div
-						strong.title Earn 2% Management Fee
-						em.note Become a Popular Invester
-				.content
-					.cell.deposit
-						p
-							strong £50
-							|  Min. Deposit
-				.fullwidth
-					a(href="#").btn.btn-primary visit etoro
-			.casino-box.large
-				.heading
-					div
-						.image
-							a(href="#")
-								img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+								a(href="#") SlotsMillion
+							p stars
+							a(href="#").btn.btn-default casino review
+					.cell.total
+						.sticker
+							span.icon icon &gt;
+							|  Recommended by Casino Experts
 						div
-							h3
-								a(href="#") Betsson
-							p Founded 2001
-					div
-						span.rate
-							strong 5
-							span /5
-						p stars
-				.content
-					div
-						h4 Did You Know?
-						blockquote
-							p “Betsson is one of the largest online Gaming companies owning several Netent Casinos.”
-					div
-						ul.description-list
-							li
-								h4 No. of Games
-								p 400+ Games
-							li
-								h4 Min. Deposit
-								p £10
-							li
-								h4 Support Options
-								ul.icons-list
-									li
-										a(href="#").icon-mail
-									li
-										a(href="#").icon-chat-bubbles
-									li
-										a(href="#").icon-phone
-							li.fullwidth
-								h4 Payment Methods
-								p 17 depositing options
-								ul.payments-list
-									li
-										a(href="#")
-											img(src="images/logo-visa.png", alt="Image description", width="37", height="12")
-									li
-										a(href="#")
-											img(src="images/logo-paypal.png", alt="Image description", width="28", height="28")
-									li
-										a(href="#")
-											img(src="images/logo-bitcoin.png", alt="Image description", width="47", height="11")
-									li
-										a(href="#")
-											img(src="images/logo-skrill.png", alt="Image description", width="46", height="16")
-									li
-										a(href="#")
-											span +12
-				.cell.total
-					div
-						strong.title £150 + 50 Free Spins
-						em.note 50% up to £100 + 50 Free Spins
-					div
-						a(href="#").btn.btn-primary Go to Betsson
-		hr
-		hr
-		section.section-intro
-			.holder.text-center
-				img(src="images/logo-finn.png", alt="Image description", width="124", height="84")
-			.search-box
-				div
-					form(action="#")
+							strong.title £150 + 50 Free Spins
+							em.note 50% up to £100 + 50 Free Spins
+					.content
+						.cell.deposit
+							p
+								strong £10
+								|  Min. Deposit
+						.cell.time
+							p
+								strong 30 mins - 4 hours (avg)
+								|  Withdrawal Time
+					.fullwidth
+						a(href="#").btn.btn-primary go to casino
+				.casino-box2.large
+					.heading
 						div
-							input(type="text", placeholder="Search 200+ Casinos & Games")
-							span.icon-search search
-				div
-					- var count = "329"
-					- var title = "Casino Reviews"
-					- var content = "For Your Convenience"
-					include pug/extends/read-more-button
-				div
-				div
-			- var image = "img01"
-			include pug/extends/retina-images
-
+							.image
+								a(href="#")
+									img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+							div
+								h3
+									a(href="#") Betsson
+								p Founded 2001
+						div
+							span.rate
+								strong 5
+								span /5
+							p stars
+					.content
+						div
+							h4 Did You Know?
+							blockquote
+								p “Betsson is one of the largest online Gaming companies owning several Netent Casinos.”
+						div
+							ul.description-list
+								li
+									h4 No. of Games
+									p 400+ Games
+								li
+									h4 Min. Deposit
+									p £10
+								li
+									h4 Support Options
+									ul.icons-list
+										li
+											a(href="#").icon-mail
+										li
+											a(href="#").icon-chat-bubbles
+										li
+											a(href="#").icon-phone
+								li.fullwidth
+									h4 Payment Methods
+									p 17 depositing options
+									ul.payments-list
+										li
+											a(href="#")
+												img(src="images/logo-visa.png", alt="Image description", width="37", height="12")
+										li
+											a(href="#")
+												img(src="images/logo-paypal.png", alt="Image description", width="28", height="28")
+										li
+											a(href="#")
+												img(src="images/logo-bitcoin.png", alt="Image description", width="47", height="11")
+										li
+											a(href="#")
+												img(src="images/logo-skrill.png", alt="Image description", width="46", height="16")
+										li
+											a(href="#")
+												span +12
+					.cell.total
+						div
+							strong.title £150 + 50 Free Spins
+							em.note 50% up to £100 + 50 Free Spins
+						div
+							a(href="#").btn.btn-primary Go to Betsson
 	include pug/includes/footer
