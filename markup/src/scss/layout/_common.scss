@@ -1,5 +1,8 @@
-body{
-	max-width: 375px;
+#wrapper{
+	width: 375px;
+	@include media(">=tablet") {
+		width:1200;
+	}
 }
 
 
@@ -97,6 +100,35 @@ body{
 	}
 }
 
+.slick-dots{
+	font-size:0;
+	line-height:0;
+	padding:15px 0;
+	text-align:center;
+	@extend %listreset;
+	li{
+		display:inline-block;
+		vertical-align:top;
+		margin:0 5px;
+		&.slick-active,
+		&:hover {
+			button{
+				background:$theme-color-base;
+			}
+		}
+	}
+	button{
+		background:$border-color-base;
+		border-radius: 100%;
+		border: 0;
+		display:block;
+		height:11px;
+		margin:0;
+		padding:0;
+		width:11px;
+	}
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -174,7 +206,9 @@ body{
 }
 
 .section-casinos-list{
-	padding:50px 23px 20px;
+	.holder{
+		padding:50px 23px 20px;
+	}
 }
 
 .section-top-offer{
@@ -188,5 +222,102 @@ body{
 	.btn-secondary{
 		border-color: $white;
 		color:$white;
+	}
+}
+
+.section-games{
+	background:$white;
+	.holder{
+		padding:50px 22px 20px;
+	}
+	.games-slider{
+		margin:50px 0 0 -8px;
+		overflow:hidden;
+		padding:0 30px 0 0;
+	}
+	.slick-list{
+		overflow:visible;
+	}
+	.slick-slide{
+		padding:5px 8px;
+		ul{
+			@extend %listreset;
+			> li{
+				display: flex;
+			    flex-direction: row;
+			    flex-wrap: nowrap;
+			    justify-content: space-between;
+			    align-content: center;
+			    align-items: center;
+			    padding:16px 16px 17px 21px;
+			    + li{
+			    	border-top: 1px solid $border-color-base;
+			    }
+			    > div{
+			    	&:first-child {
+			    		display: flex;
+					    flex-direction: row;
+					    flex-wrap: nowrap;
+					    justify-content: flex-start;
+					    align-content: center;
+					    align-items: center;
+			    	}
+			    }
+			}
+		}
+		.logo-holder{
+			width:35px;
+		}
+		.txt{
+			padding:0 0 4px 18px;
+		}
+		h2{
+			color:#4a4a4a;
+			font-size: 15px;
+			font-weight:500;
+			margin:0 0 5px;
+		}
+		.btn{
+			font-size: 14px;
+			padding:5px 11px;
+		}
+	}
+}
+
+.section-bonuses{
+	.holder{
+		padding:10px 23px 20px;
+	}
+	.boxes-holder{
+		> div{
+			padding:0 0 10px;
+		}
+	}
+}
+
+.section-bonus-calc{
+	background:#e5eae8;
+	position:relative;
+	.holder{
+		padding:10px 15px 20px;
+	}
+	h1{
+		margin:0 0 10px;
+	}
+	p{
+		margin:0 0 10px;
+	}
+	form{}
+	.sticker{
+		background:$theme-color-add;
+		box-shadow: 0 0 1px $shadow;
+		color:#383a3a;
+		font-size: 12px;
+		font-weight:bold;
+		left:0;
+		padding:0 11px 0 19px;
+		position:absolute;
+		text-transform:uppercase;
+		top:10px;
 	}
 }

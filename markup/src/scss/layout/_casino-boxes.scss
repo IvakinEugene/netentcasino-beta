@@ -1,520 +1,630 @@
 .logo-holder{
-	border: 1px solid $border-color-base;
-	border-radius: 100%;
-	margin:0 auto;
-	overflow:hidden;
-	width:50px;
+    border: 1px solid $border-color-base;
+    border-radius: 100%;
+    margin:0 auto;
+    overflow:hidden;
+    width:50px;
 }
 
 .rate{
-	display:block;
-	font-size: 20px;
-	margin:0 0 10px;
-	text-align:center;
-	> *{
-		display:inline-block;
-		vertical-align:baseline;
-	}
-	strong{
-		color:$theme-color-base;
-		font-size: 26px;
-		font-weight:500;
-	}
+    display:block;
+    font-size: 20px;
+    margin:0 0 10px;
+    text-align:center;
+    > *{
+        display:inline-block;
+        vertical-align:baseline;
+    }
+    strong{
+        color:$theme-color-base;
+        font-size: 26px;
+        font-weight:500;
+    }
 }
 
 .new-casino-box{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-content: stretch;
-	align-items: stretch;
-	background:$white;
-	box-shadow: 0 0 3px 0 $shadow;
-	color:$base-gray;
-	font-size: 12px;
-	margin:0 0 20px;
-	text-align:center;
-	.heading{
-		border: 0 solid $border-color-base;
-		border-width: 0 1px 0 0;
-		min-width: 91px;
-		padding:8px 15px;
-	}
-	.logo-holder{
-		margin-bottom: 4px;
-	}
-	h2{
-		font-size: 12px;
-		font-weight:500;
-		margin:0 0 4px;
-		a{
-			text-decoration:underline;
-		}
-	}
-	.stars{
-		display:block;
-		margin:0 auto 9px;
-	}
-	.time{
-		color:$base-gray;
-		display:block;
-		font-size: 10px;
-		font-style:normal;
-		font-weight:300;
-		line-height:11px;
-	}
-	.content-holder{
-		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: center;
-		align-content: stretch;
-		align-items: stretch;
-		flex:1 1 auto;
-		padding:15px;
-	}
-	h3{
-		font-size: 18px;
-		font-weight:500;
-		margin:0 0 -2px;
-		text-transform:uppercase;
-	}
-	p{
-		margin:0 0 13px;
-	}
-	.btn{
-		font-size: 13px;
-		line-height:1.1538;
-		min-width: 189px;
-		padding:6px 5px 5px;
-	}
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    background:$white;
+    box-shadow: 0 0 3px 0 $shadow;
+    color:$base-gray;
+    font-size: 12px;
+    margin:0 0 20px;
+    text-align:center;
+    .heading{
+        border: 0 solid $border-color-base;
+        border-width: 0 1px 0 0;
+        min-width: 91px;
+        padding:8px 15px;
+    }
+    .logo-holder{
+        margin-bottom: 4px;
+    }
+    h2{
+        font-size: 12px;
+        font-weight:500;
+        margin:0 0 4px;
+        a{
+            text-decoration:underline;
+        }
+    }
+    .stars{
+        display:block;
+        margin:0 auto 9px;
+    }
+    .time{
+        color:$base-gray;
+        display:block;
+        font-size: 10px;
+        font-style:normal;
+        font-weight:300;
+        line-height:11px;
+    }
+    .content-holder{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: stretch;
+        flex:1 1 auto;
+        padding:15px;
+    }
+    h3{
+        font-size: 18px;
+        font-weight:500;
+        margin:0 0 -2px;
+        text-transform:uppercase;
+    }
+    p{
+        margin:0 0 13px;
+    }
+    .btn{
+        font-size: 13px;
+        line-height:1.1538;
+        min-width: 189px;
+        padding:6px 5px 5px;
+    }
 }
 
 .offer-casino-box{
-	background:$white;
-	box-shadow:0 1px 2px rgba($black, 0.22);
-	color:$base-gray;
-	font-size:16px;
-	@include media(">=tablet") {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		align-content: stretch;
-		align-items: stretch;
-	}
-	.heading{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-content: flex-start;
-		align-items: flex-start;
-		padding:10px 15px 20px;
-		> div{
-			&:first-child {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				justify-content: flex-start;
-				align-content: center;
-				align-items: center;
-			}
-		}
-	}
-	.logo-holder{
-		margin:0 10px 0 0;
-	}
-	h2{
-		font-size: 18px;
-		font-weight:500;
-		margin:0 0 10px;
-	}
-	.time{
-		// color:$base-gray;
-		display:block;
-		font-size: 12px;
-		font-style:normal;
-	}
-	.content{
-		border:0 solid $border-color-base;
-		border-width: 1px 0 0;
-		padding:10px 15px 20px;
-		text-align:center;
-	}
-	h3{
-		font-weight:500;
-		margin:0 0 10px;
-	}
-	p{
-		margin:0 0 10px;
-	}
-	.btn-primary{
-		font-size: 18px;
-		min-width: 300px;
-		padding-top: 10px;
-		padding-bottom: 11px;
-	}
-	.bottom{
-		background:$theme-color-add;
-		color:#383a3a;
-		font-size: 14px;
-		padding:10px 15px 20px;
-		> *{
-			display:inline;
-		}
-		p{
-			margin:0;
-		}
-		strong{
-			font-weight:normal;
-		}
-		.btn-link{
-			@include media(">=tablet") {
-				text-decoration:underline;
-			}
-		}
-	}
+    background:$white;
+    box-shadow:0 1px 2px rgba($black, 0.22);
+    color:$base-gray;
+    font-size:16px;
+    @include media(">=tablet") {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: stretch;
+    }
+    .heading{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        align-items: flex-start;
+        padding:10px 15px 20px;
+        > div{
+            &:first-child {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-content: center;
+                align-items: center;
+            }
+        }
+    }
+    .logo-holder{
+        margin:0 10px 0 0;
+    }
+    h2{
+        font-size: 18px;
+        font-weight:500;
+        margin:0 0 10px;
+    }
+    .time{
+        // color:$base-gray;
+        display:block;
+        font-size: 12px;
+        font-style:normal;
+    }
+    .content{
+        border:0 solid $border-color-base;
+        border-width: 1px 0 0;
+        padding:10px 15px 20px;
+        text-align:center;
+    }
+    h3{
+        font-weight:500;
+        margin:0 0 10px;
+    }
+    p{
+        margin:0 0 10px;
+    }
+    .btn-primary{
+        font-size: 18px;
+        min-width: 300px;
+        padding-top: 10px;
+        padding-bottom: 11px;
+    }
+    .bottom{
+        background:$theme-color-add;
+        color:#383a3a;
+        font-size: 14px;
+        padding:10px 15px 20px;
+        > *{
+            display:inline;
+        }
+        p{
+            margin:0;
+        }
+        strong{
+            font-weight:normal;
+        }
+        .btn-link{
+            @include media(">=tablet") {
+                text-decoration:underline;
+            }
+        }
+    }
 }
 
 .game-box{
-	background:$white;
-	box-shadow:0 0 3px$shadow;
+    background:$white;
+    box-shadow:0 0 3px$shadow;
+    border-radius: 4px 4px 0 0;
+    overflow:hidden;
+    .media-holder{
+        position:relative;
+        iframe,
+        img{
+            position:relative;
+            z-index:1;
+        }
+        img{
+            max-width: none;
+            width:100%;
+        }
+        .sticker{
+            background:$theme-color-add;
+            box-shadow: 0 1px 2px $shadow;
+            color:$headings-color;
+            font-size: 18px;
+            left:0;
+            font-weight:500;
+            max-width: 100%;
+            padding:0 19px 3px;
+            position:absolute;
+            text-transform:uppercase;
+            top:10px;
+            z-index:5;
+        }
+    }
+}
+
+.bonus-box{
+    background:$white;
+    box-shadow:0 0 3px $shadow;
+    color:#8c8e96;
+    font-size:12px;
+    line-height:1.3333;
+    padding:22px 22px 0;
+    h2{
+        font-size: 18px;
+        font-weight:500;
+        margin:0 0 2px;
+    }
+    p{
+        margin:0 0 24px;
+    }
+    ul{
+        border-top: 1px solid $border-color-base;
+        margin:0 -22px;
+        text-align:center;
+        @extend %listreset;
+        + .btn{
+            display:block;
+            margin:0 -22px;
+            padding:20px 15px 21px;
+            &:hover {
+                background:$btn-dark-background;
+                color:$btn-dark-color;
+            }
+        }
+        li{
+            overflow:hidden;
+            vertical-align:top;
+        }
+    }
+    .casino{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: stretch;
+        border-bottom: 1px solid $border-color-base;
+        .heading{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            border-right: 1px solid $border-color-base;
+            min-width:92px;
+            padding:5px;
+        }
+        .logo-holder{
+            margin-bottom: 7px;
+        }
+        h3{
+            color:#4a4a4a;
+            font-size: 12px;
+            font-weight:500;
+            margin:0 0 2px;
+        }
+        .content{
+            flex:1 1 auto;
+            padding:10px 15px 13px;
+        }
+        h4{
+            font-size: 18px;
+            font-weight:normal;
+            margin:0 0 1px;
+        }
+        p{
+            margin:0 0 13px;
+        }
+        .btn{
+            font-size: 13px;
+            min-width: 189px;
+            padding:6px 15px;
+        }
+    }
 }
 
 .casino-box2{
-	background:$white;
-	box-shadow:0 0 2px 0 $shadow;
-	font-size: $font-size-base;
-	font-weight:normal;
-	line-height:1.2857;
-	margin:0 0 20px;
-	overflow:hidden;
-	text-align:center;
-	@include media(">=tablet") {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-		align-content: stretch;
-		align-items: stretch;
-		max-width:1252px;
-		text-align:left;
-	}
-	> div{
-		&:not([class*="content"]){
-			overflow:hidden;
-		}
-		&:last-child {
-			@include media(">=tablet") {
-				display:none;
-			}
-		}
-	}
-	.heading{
-		border:0 solid $border-color-base;
-		border-width: 0 1px 1px 0;
-		float:left;
-		padding:10px;
-		width:120px;
-		@include media(">=tablet") {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: center;
-			align-content: center;
-			align-items: center;
-			border-width: 0 1px 0 0;
-			// min-width:458px;
-			min-width:36.5815%;
-		}
-	}
-	.total{
-		@include media(">=tablet") {
-			border-width: 0;
-			display: flex;
-			flex-direction: column;
-			flex-wrap: wrap;
-			justify-content: flex-start;
-			align-content: stretch;
-			align-items: stretch;
-			flex: 1 1 auto;
-			order:1;
-			text-align:center;
-		}
-		> div{
-			&:nth-child(2) {
-				@include media(">=tablet") {
-					display: flex;
-					flex-direction: column;
-					flex-wrap: wrap;
-					justify-content: center;
-					align-content: stretch;
-					align-items: stretch;
-					flex: 1 1 auto;
-				}
-			}
-		}
-	}
-	.content{
-		@include media(">=tablet") {
-			min-width: 33.0671%;
-		}
-	}
-	.deposit,
-	.time{
-		overflow:hidden;
-		@include media(">=tablet") {
-			display: flex;
-			flex-direction: column;
-			flex-wrap: wrap;
-			justify-content: center;
-			align-content: stretch;
-			align-items: stretch;
-			min-height: 103px;
-			// min-width: 414px;
-		}
-	}
-	.time{
-		width:100%;
-	}
-	.cell{
-		border:0 solid $border-color-base;
-		border-width: 0 0 1px;
-		padding:10px 15px;
-		@include media(">=tablet") {
-			border-width: 0 1px 1px 0;
-		}
-	}
-	.fullwidth{
-		width:100% !important;
-	}
-	.image{
-		border: 1px solid $border-color-base;
-		border-radius: 100%;
-		margin:0 auto 10px;
-		overflow:hidden;
-		@include media(">=tablet") {
-			margin:0 10px 0 0;
-			min-width:140px;/// flexbox fixes
-			// width:100px;
-		}
-	}
-	h3{
-		font-size: inherit;
-		margin:0 0 10px;
-	}
-	.rate{
-		display:none;
-		@include media(">=tablet") {
-			display:block;
-		}
-	}
-	.title{
-		display:block;
-		font-size: 18px;
-		margin:0 0 10px;
-	}
-	.note{
-		font-size: 12px;
-		font-style:normal;
-	}
-	p{
-		margin:0;
-	}
-	strong{
-		font-weight:500;
-	}
-	.sticker{
-		background:$theme-color-add;
-		display:none;
-		text-align:center;
-		padding:10px 15px 20px;
-		@include media(">=tablet") {
-			display:block;
-		}
-	}
+    background:$white;
+    box-shadow:0 0 2px 0 $shadow;
+    font-size: $font-size-base;
+    font-weight:normal;
+    line-height:1.2857;
+    margin:0 0 20px;
+    overflow:hidden;
+    text-align:center;
+    @include media(">=tablet") {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: stretch;
+        max-width:1252px;
+        text-align:left;
+    }
+    > div{
+        &:not([class*="content"]){
+            overflow:hidden;
+        }
+        &:last-child {
+            @include media(">=tablet") {
+                display:none;
+            }
+        }
+    }
+    .heading{
+        border:0 solid $border-color-base;
+        border-width: 0 1px 1px 0;
+        float:left;
+        padding:10px;
+        width:120px;
+        @include media(">=tablet") {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            border-width: 0 1px 0 0;
+            // min-width:458px;
+            min-width:36.5815%;
+        }
+    }
+    .total{
+        @include media(">=tablet") {
+            border-width: 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: stretch;
+            align-items: stretch;
+            flex: 1 1 auto;
+            order:1;
+            text-align:center;
+        }
+        > div{
+            &:nth-child(2) {
+                @include media(">=tablet") {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-content: stretch;
+                    align-items: stretch;
+                    flex: 1 1 auto;
+                }
+            }
+        }
+    }
+    .content{
+        @include media(">=tablet") {
+            min-width: 33.0671%;
+        }
+    }
+    .deposit,
+    .time{
+        overflow:hidden;
+        @include media(">=tablet") {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: stretch;
+            align-items: stretch;
+            min-height: 103px;
+            // min-width: 414px;
+        }
+    }
+    .time{
+        width:100%;
+    }
+    .cell{
+        border:0 solid $border-color-base;
+        border-width: 0 0 1px;
+        padding:10px 15px;
+        @include media(">=tablet") {
+            border-width: 0 1px 1px 0;
+        }
+    }
+    .fullwidth{
+        width:100% !important;
+    }
+    .image{
+        border: 1px solid $border-color-base;
+        border-radius: 100%;
+        margin:0 auto 10px;
+        overflow:hidden;
+        @include media(">=tablet") {
+            margin:0 10px 0 0;
+            min-width:140px;/// flexbox fixes
+            // width:100px;
+        }
+    }
+    h3{
+        font-size: inherit;
+        margin:0 0 10px;
+    }
+    .rate{
+        display:none;
+        @include media(">=tablet") {
+            display:block;
+        }
+    }
+    .title{
+        display:block;
+        font-size: 18px;
+        margin:0 0 10px;
+    }
+    .note{
+        font-size: 12px;
+        font-style:normal;
+    }
+    p{
+        margin:0;
+    }
+    strong{
+        font-weight:500;
+    }
+    .sticker{
+        background:$theme-color-add;
+        display:none;
+        text-align:center;
+        padding:10px 15px 20px;
+        @include media(">=tablet") {
+            display:block;
+        }
+    }
 }
 
 .casino-box2.small{
-	@include media(">=tablet") {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		align-content: stretch;
-		align-items: stretch;
-		max-width: none;
-		text-align:center;
-		width:330px;
-	}
-	.heading{
-		@include media(">=tablet") {
-			border-width: 0 0 1px;
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: space-between;
-			align-content: center;
-			align-items: center;
-			width:auto;
-		}
-		div{
-			&:first-child {
-				@include media(">=tablet") {
-					display: flex;
-					flex-direction: row;
-					flex-wrap: nowrap;
-					justify-content: flex-start;
-					align-content: center;
-					align-items: center;
-				}
-			}
-		}
-	}
-	> div{
-		&:last-child {
-			@include media(">=tablet") {
-				display:block;
-			}
-		}
-	}
-	.total{
-		@include media(">=tablet") {
-			border-width: 0 0 1px;
-			order:0;
-		}
-	}
-	.deposit{
-		@include media(">=tablet") {
-			border-width: 0 0 1px;
-			min-height: 0;
-		}
-	}
-	.image{
-		float:left;
-	}
+    @include media(">=tablet") {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: stretch;
+        max-width: none;
+        text-align:center;
+        width:330px;
+    }
+    .heading{
+        @include media(">=tablet") {
+            border-width: 0 0 1px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+            width:auto;
+        }
+        div{
+            &:first-child {
+                @include media(">=tablet") {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: flex-start;
+                    align-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    > div{
+        &:last-child {
+            @include media(">=tablet") {
+                display:block;
+            }
+        }
+    }
+    .total{
+        @include media(">=tablet") {
+            border-width: 0 0 1px;
+            order:0;
+        }
+    }
+    .deposit{
+        @include media(">=tablet") {
+            border-width: 0 0 1px;
+            min-height: 0;
+        }
+    }
+    .image{
+        float:left;
+    }
 }
 
 .casino-box2.large{
-	@include media(">=tablet") {
-		display:block;
-	}
-	// layout
-	.heading{
-		border-width: 0 0 1px;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-		align-content: center;
-		align-items: center;
-		float:none;
-		width:auto;
-		@include media(">=tablet") {
-			border-width: 0 1px 0 0;
-			display:block;
-			float:left;
-			text-align:center;
-			width:200px;
-		}
-		> div{
-			&:first-child {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: nowrap;
-				justify-content: flex-start;
-				align-content: center;
-				align-items: center;
-				text-align:left;
-				@include media(">=tablet") {
-					display:block;
-					text-align:inherit;
-				}
-			}
-		}
-	}
-	.content{
-		display:none;
-		@include media(">=tablet") {
-			display:block;
-			overflow:hidden;
-		}
-		> div{
-			@include media(">=tablet") {
-				padding:10px 15px 20px;
-			}
-			+ div{
-				@include media(">=tablet") {
-					border-top: 1px solid $border-color-base;
-				}
-			}
-		}
-	}
-	.total{
-		@include media(">=tablet") {
-			background:rgba(203, 214, 210, 0.25);
-			border-width: 1px 0 0;
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: space-between;
-			align-content: center;
-			align-items: center;
-			order:0;
-			overflow:hidden;
-			width:100%;
-		}
-		div{
-			&:nth-child(2) {
-				@include media(">=tablet") {
-					display:block;
-					flex:0 1 auto;
-				}
-			}
-		}
-	}
-	//elements
-	.image{
-		margin:0 10px 0 0;
-		@include media(">=tablet") {
-			margin:0 auto 15px;
-			width:140px;
-		}
-	}
-	.rate{
-		display:block;
-	}
-	h4{
-		font-size: 20px;
-		font-weight:normal;
-		margin:0 0 10px;
-	}
-	dl{
-		margin:0;
-	}
-	.description-list{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		align-content: flex-start;
-		align-items: flex-start;
-		@extend %listreset;
-		> li{
-			padding:0 50px 20px 0;
-			width:33.3333%;
-		}
-	}
-	.icons-list{
-		@extend %listreset;
-		li{
-			display:inline-block;
-			vertical-align:middle;
-		}
-		a{
-			color:$theme-color-base;
-		}
-	}
+    @include media(">=tablet") {
+        display:block;
+    }
+    // layout
+    .heading{
+        border-width: 0 0 1px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        float:none;
+        width:auto;
+        @include media(">=tablet") {
+            border-width: 0 1px 0 0;
+            display:block;
+            float:left;
+            text-align:center;
+            width:200px;
+        }
+        > div{
+            &:first-child {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-content: center;
+                align-items: center;
+                text-align:left;
+                @include media(">=tablet") {
+                    display:block;
+                    text-align:inherit;
+                }
+            }
+        }
+    }
+    .content{
+        display:none;
+        @include media(">=tablet") {
+            display:block;
+            overflow:hidden;
+        }
+        > div{
+            @include media(">=tablet") {
+                padding:10px 15px 20px;
+            }
+            + div{
+                @include media(">=tablet") {
+                    border-top: 1px solid $border-color-base;
+                }
+            }
+        }
+    }
+    .total{
+        @include media(">=tablet") {
+            background:rgba(203, 214, 210, 0.25);
+            border-width: 1px 0 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+            order:0;
+            overflow:hidden;
+            width:100%;
+        }
+        div{
+            &:nth-child(2) {
+                @include media(">=tablet") {
+                    display:block;
+                    flex:0 1 auto;
+                }
+            }
+        }
+    }
+    //elements
+    .image{
+        margin:0 10px 0 0;
+        @include media(">=tablet") {
+            margin:0 auto 15px;
+            width:140px;
+        }
+    }
+    .rate{
+        display:block;
+    }
+    h4{
+        font-size: 20px;
+        font-weight:normal;
+        margin:0 0 10px;
+    }
+    dl{
+        margin:0;
+    }
+    .description-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+        @extend %listreset;
+        > li{
+            padding:0 50px 20px 0;
+            width:33.3333%;
+        }
+    }
+    .icons-list{
+        @extend %listreset;
+        li{
+            display:inline-block;
+            vertical-align:middle;
+        }
+        a{
+            color:$theme-color-base;
+        }
+    }
 }
