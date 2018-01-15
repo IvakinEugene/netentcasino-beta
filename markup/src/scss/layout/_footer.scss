@@ -6,9 +6,11 @@
 		color: #ffffff;
 		font-size: 12px;
 		padding: 26px 0;
-		// display:flex;
-		// justify-content:space-between;
 		border-bottom: 1px solid #9B9B9B;
+		@include media(">=tablet") {
+			display:flex;
+			justify-content:space-between;
+		}
 		.title{
 			font-size: 14px;
 			display:block;
@@ -17,24 +19,38 @@
 		p{
 			margin: 0 0 25px;
 		}
+		.box-left{
+			max-width: 355px;
+			margin: 0 auto;
+			@include media(">=tablet") {
+				text-align:left;
+				margin: 0;
+			}
+		}
 		.list-item{
 			list-style:none;
 			padding:0;
 			margin:0 0 22px;
 			display:flex;
 			justify-content:center;
+			@include media(">=tablet") {
+				justify-content: flex-start;
+			}
 			li{
 				position: relative;
-				padding:0 8px;
+				padding:0 10px;
 				&:not(:first-child) {
 					&:after {
-						position:absolute;
-						top:50%;
-						left:-2px;
+						width: 2px;
+						height: 12px;
+						position: absolute;
+						top: 50%;
+						left: -1px;
+						-ms-transform: translate(0, -50%);
 						transform: translate(0, -50%);
-						content: '|';
-						color: #ffffff;
-						margin: -2px 0 0 0;
+						background: #ffffff;
+						content: '';
+						margin:-1px 0 0 0;
 					}
 				}
 				a{
@@ -55,10 +71,12 @@
 		}
 	}
 	.footer-bottom{
-		// display:flex;
-		// justify-content:space-between;
-		// align-items:center;
 		padding:25px 0;
+		@include media(">=tablet") {
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+		}
 		.item-widget{
 			list-style:none;
 			margin:0 0 20px;
@@ -66,6 +84,9 @@
 			display:flex;
 			justify-content:center;
 			align-items: center;
+			@include media(">=tablet") {
+				justify-content:center;
+			}
 			li{
 				padding:0 5px;
 			}
@@ -75,3 +96,5 @@
 		}
 	}
 }
+
+
