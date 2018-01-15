@@ -1,7 +1,7 @@
 #wrapper{
 	width: 375px;
 	@include media(">=tablet") {
-		width:1200;
+		width:1440px;
 	}
 }
 
@@ -154,8 +154,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .section-intro{
-	// height:200px;
-	padding:0 21px;
 	position:relative;
 	.holder,
 	.search-box{
@@ -163,7 +161,7 @@
 		z-index:5;
 	}
 	.holder{
-		padding:29px 0 14px;
+		padding:128px 21px 15px;
 	}
 	.search-box{
 		background:$white;
@@ -207,21 +205,54 @@
 
 .section-casinos-list{
 	.holder{
-		padding:50px 23px 20px;
+		padding:16px 23px 20px;
+	}
+	h1{
+		margin:0 0 1px;
+	}
+	.subtitle{
+		margin:0 0 14px;
+	}
+	.boxes-holder{
+		margin:-5px -5px 0;
+		padding:0 0 15px;
+		> div{
+			padding:5px;
+		}
+	}
+	.load-more{
+		padding-right: 13px;
+		padding-left: 13px;
 	}
 }
 
 .section-top-offer{
 	background: linear-gradient(180deg, rgba(255,102,0,0.6) 0%, #FF6600 100%);
 	.holder{
-		padding:10px 23px 20px;
+		padding:27px 23px 34px;
+	}
+	.location{
+		padding:0 0 0 20px;
+		position:relative;
+		[class*="icon-"] {
+			left:10px;
+			position:absolute;
+			top:50%;
+			transform:translateY(-50%);
+		}
+	}
+	h1{
+		margin:0 0 21px;
+		text-transform:none;
 	}
 	.offer-casino-box{
 		margin:0 0 20px;
 	}
-	.btn-secondary{
+	.load-more{
 		border-color: $white;
 		color:$white;
+		font-size: 14px;
+		padding:8px 13px 6px;
 	}
 }
 
@@ -297,17 +328,31 @@
 
 .section-bonus-calc{
 	background:#e5eae8;
+	color:$base-gray;
+	font-size:14px;
+	line-height:1.2143;
 	position:relative;
 	.holder{
-		padding:10px 15px 20px;
+		padding:32px 42px 12px;
 	}
 	h1{
-		margin:0 0 10px;
+		font-size:20px;
+		margin:0 0 3px;
 	}
 	p{
 		margin:0 0 10px;
 	}
-	form{}
+	form{
+		input[type=text]{
+			padding-right: 9px;
+			padding-left: 9px;
+		}
+		.btn{
+			font-size:14px;
+			font-weight:500;
+			width:100%;
+		}
+	}
 	.sticker{
 		background:$theme-color-add;
 		box-shadow: 0 0 1px $shadow;
@@ -319,5 +364,106 @@
 		position:absolute;
 		text-transform:uppercase;
 		top:10px;
+	}
+}
+
+.section-payments{
+	background:$white;
+	.holder{
+		padding:30px 15px 20px;
+	}
+	.payments-holder{
+		> div{
+			padding:0 0 15px;
+		}
+	}
+}
+
+.section-recent-news{
+	.holder{
+		padding:40px 22px 20px;
+	}
+	h1{
+		margin:0 0 10px;
+	}
+	.boxes-holder{
+		> div{
+			padding:0 0 10px;
+		}
+	}
+}
+
+.section-promo{
+	background:$white;
+	.holder{
+		padding:50px 15px 20px;
+	}
+	[class*="icon-"]{
+		color:$theme-color-base;
+		font-size: 50px;
+		margin:0 0 10px;
+	}
+	h1{
+		margin:0 0 10px;
+	}
+	p{
+		margin:0 0 10px;
+	}
+	form{
+		.btn{
+			width:100%;
+		}
+	}
+}
+
+.section-refer{
+	color:#9b9b9b;
+	font-size:12px;
+	line-height:1.3333;
+	padding:50px 23px 30px;
+	.holder{
+		background:$white;
+		border-radius: 2px;
+		box-shadow: 0 1px 2px $shadow;
+		padding:17px 15px 20px;
+	}
+	.left{
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    justify-content: flex-start;
+	    align-content: stretch;
+	    align-items: stretch;
+	}
+	.icon-holder{
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    justify-content: center;
+	    align-content: center;
+	    align-items: center;
+	}
+	.icon-gift{
+		background:$base-gray;
+		display:block;
+		height:65px;
+		width:68px;
+	}
+	.content{
+		flex:1 1 auto;
+		padding:0 0 0 30px;
+	}
+	h1{
+		color:#4a4a4a;
+		font-size: 15px;
+		margin:0 0 3px;
+		text-transform:none;
+	}
+	p{
+		margin:0 0 14px;
+	}
+	.btn{
+		font-size: 14px;
+		padding:4px 42px 6px;
 	}
 }

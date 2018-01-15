@@ -5,9 +5,8 @@ block content
 
 	#main
 		//- 
-			section.section-intro
-				.holder.text-center
-					img(src="images/logo-finn.png", alt="Image description", width="124", height="84")
+		section.section-intro
+			.holder
 				.search-box
 					div
 						form(action="#")
@@ -29,338 +28,342 @@ block content
 						- var title = "News Articles"
 						- var content = "Ready to be Read"
 						include pug/extends/read-more-button
-				- var image = "img01"
-				include pug/extends/retina-images
-			section.section-casinos-list
-				.holder
-					h1 New Casinos
-					strong.subtitle Discover November’s latest Casinos
-					.content.hidden-sm
-						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sed, possimus voluptatibus animi! Possimus sed in, eos qui odio, necessitatibus!
-					- var h2 = "LadyLucks"
-					- var duration = "2 days"
-					- var h3 = "£150 + 50 Free Spins"
-					- var content = "50% up to £100 + 50 Free Spins"
-					include pug/extends/new-casino-box
-					- var h2 = "WildSlots"
-					- var duration = "17 days"
-					- var h3 = "£1000 + 20 Free Spins"
-					- var content = "100% up to £500 + 20 Free Spins"
-					include pug/extends/new-casino-box
-					- var h2 = "HighRoller"
-					- var duration = "1 month"
-					- var h3 = "£1500 + 50 Free Spins"
-					- var content = "200% up to £500 + 50 Free Spins"
-					include pug/extends/new-casino-box
-					.text-center
-						a(href="#").btn.btn-secondary View More New Casinos
-			section.section-top-offer
-				.holder
-					.frame
-						.location
-							span.icon-map i
-							| London, United Kingdom
-							a(href="#").hidden-sm
-								strong - Change Location
-						h1 Novembers’ Top Casino Offers
-						.offer-casino-box
-							.heading
-								div
-									.logo-holder
-										a(href="#")
-											img(src="http://via.placeholder.com/50x50")
-									.txt
-										h2
-											a(href="#") Betsson
-										em.time Launched 2 days ago!
-								div
-									span.rate
-										strong 5
-										span /5
-									img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+			- var image = "banner-concept-1"
+			include pug/extends/retina-images
+		section.section-casinos-list
+			.holder
+				h1 New Casinos
+				strong.subtitle Discover November’s latest Casinos
+				.content.hidden-sm
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sed, possimus voluptatibus animi! Possimus sed in, eos qui odio, necessitatibus!
+				.boxes-holder
+					div
+						- var h2 = "LadyLucks"
+						- var duration = "2 days"
+						- var h3 = "£150 + 50 Free Spins"
+						- var content = "50% up to £100 + 50 Free Spins"
+						include pug/extends/new-casino-box
+					div
+						- var h2 = "WildSlots"
+						- var duration = "17 days"
+						- var h3 = "£1000 + 20 Free Spins"
+						- var content = "100% up to £500 + 20 Free Spins"
+						include pug/extends/new-casino-box
+					div
+						- var h2 = "HighRoller"
+						- var duration = "1 month"
+						- var h3 = "£1500 + 50 Free Spins"
+						- var content = "200% up to £500 + 50 Free Spins"
+						include pug/extends/new-casino-box
+				.text-center
+					a(href="#").btn.btn-secondary.load-more View More New Casinos
+		section.section-top-offer
+			.holder
+				.frame
+					.location
+						span.icon-map i
+						| London, United Kingdom
+						a(href="#").hidden-sm
+							strong - Change Location
+					h1 Novembers’ Top Casino Offers
+					.offer-casino-box
+						.heading
+							div
+								.logo-holder
+									a(href="#")
+										img(src="http://via.placeholder.com/50x50/ff6600/ffffff")
+								.txt
+									h2
+										a(href="#") Betsson
+									em.time Launched 2 days ago!
+							div
+								span.rate
+									strong 5
+									span /5
+								img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+						.content
+							h3 £150 + 50 Free Spins
+							p 50% up to £100 + 50 Free Spins
+							a(href="#").btn.btn-primary Go to Betsson
+						.bottom.text-center
 							.content
-								h3 £150 + 50 Free Spins
-								p 50% up to £100 + 50 Free Spins
-								a(href="#").btn.btn-primary Go to Betsson
-							.bottom.text-center
-								div
-									span.icon- i
-									p
-										| Expires in - 
-										strong 18 Days  21 Hours 18 Minutes
-								div.hidden-sm
-									a(href="#").btn.btn-link View all top casino offers
-						.text-center
-							a(href="#").btn.btn-secondary View all top casino offers
-			section.section-games
-				.holder
-					h1 NetEnt Games &amp; Jackpots
-					strong.subtitle Most played Games &amp; Jackpots right now!
-					.games-slider
-						div
-							.game-box
-								.media-holder
-									img(src="http://via.placeholder.com/293x149?text=Slide+1")
-									.sticker £8,000,00
-								ul
-									li
-										div
-											.logo-holder
-												a(href="#")
-													img(src="http://via.placeholder.com/50")
-											.txt
-												h2
-													a(href="#") Betsson
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										div
-											a(href="#").btn.btn-primary Play Game
-									li
-										div
-											.logo-holder
-												a(href="#")
-													img(src="http://via.placeholder.com/50")
-											.txt
-												h2
-													a(href="#") Unibet
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										div
-											a(href="#").btn.btn-primary Play Game
-									li
-										div
-											.logo-holder
-												a(href="#")
-													img(src="http://via.placeholder.com/50")
-											.txt
-												h2
-													a(href="#") LeoVegas
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										div
-											a(href="#").btn.btn-primary Play Game
-						div
-							.game-box
-								.media-holder
-									img(src="http://via.placeholder.com/293x149?text=Slide+2")
-									.sticker new
-								ul
-									li
-										div
-											.logo-holder
-												a(href="#")
-													img(src="http://via.placeholder.com/50")
-											.txt
-												h2
-													a(href="#") Casumo
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										div
-											a(href="#").btn.btn-primary Play Game
-									li
-										div
-											.logo-holder
-												a(href="#")
-													img(src="http://via.placeholder.com/50")
-											.txt
-												h2
-													a(href="#") Dunder
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										div
-											a(href="#").btn.btn-primary Play Game
-									li
-										div
-											.logo-holder
-												a(href="#")
-													img(src="http://via.placeholder.com/50")
-											.txt
-												h2
-													a(href="#") LokiCasino
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										div
-											a(href="#").btn.btn-primary Play Game
-						div
-							.game-box
-								.media-holder
-									img(src="http://via.placeholder.com/293x149?text=Slide+3")
-									.sticker NEW
-								ul
-									li
-										div
-											.logo-holder
-												a(href="#")
-													img(src="http://via.placeholder.com/50")
-											.txt
-												h2
-													a(href="#") VideoSlots
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										div
-											a(href="#").btn.btn-primary Play Game
-									li
-										div
-											.logo-holder
-												a(href="#")
-													img(src="http://via.placeholder.com/50")
-											.txt
-												h2
-													a(href="#") LVbet
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										div
-											a(href="#").btn.btn-primary Play Game
-									li
-										div
-											.logo-holder
-												a(href="#")
-													img(src="http://via.placeholder.com/50")
-											.txt
-												h2
-													a(href="#") WildSlots
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										div
-											a(href="#").btn.btn-primary Play Game
+								span.icon- i
+								p
+									| Expires in - 
+									strong 18 Days  21 Hours 18 Minutes
+							.btn-holder.hidden-sm
+								a(href="#").btn.btn-link View all top casino offers
 					.text-center
-						a(href="#").btn.btn-secondary View More Jackpots
-			section.section-bonuses
-				.holder
-					h1 NetEnt Bonuses
-					p Start playing with more today!
-					.boxes-holder
-						div
-							.bonus-box
-								h2 Welcome Bonus
-								p Virtually all Netent Casinos offer new players an attractive welcome bonus.
-								ul
-									li
-										.casino
-											.heading
-												.logo-holder
-													a(href="#")
-														img(src="http://via.placeholder.com/50")
-												h3
-													a(href="#") Betsson
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-											.content
-												h4 £150 + 50 Free Spins
-												p 50% up to £100 + 50 Free Spins
-												a(href="#").btn.btn-primary Go to Casino
-												a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
-									li
-										.casino
-											.heading
-												.logo-holder
-													a(href="#")
-														img(src="http://via.placeholder.com/50")
-												h3
-													a(href="#") Unibet
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-											.content
-												h4 £1500 + 50 Free Spins
-												p 200% up to £500 + 50 Free Spins
-												a(href="#").btn.btn-primary Go to Casino
-												a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
-									li
-										.casino
-											.heading
-												.logo-holder
-													a(href="#")
-														img(src="http://via.placeholder.com/50")
-												h3
-													a(href="#") LeoVegas
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-											.content
-												h4 £1000 + 20 Free Spins
-												p 100% up to £500 + 20 Free Spins
-												a(href="#").btn.btn-primary Go to Casino
-												a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
-								a(href="#").btn.btn-link View all 314 Casinos
-						div
-							.bonus-box
-								h2 Free Spins Bonus
-								p Free Spins are popular casino bonuses and many Netent Casinos treat their players.
-								ul
-									li
-										.casino
-											.heading
-												.logo-holder
-													a(href="#")
-														img(src="http://via.placeholder.com/50")
-												h3
-													a(href="#") Casumo
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-											.content
-												h4 150 Free Spins
-												a(href="#").btn.btn-primary Go to Casino
-												a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
-									li
-										.casino
-											.heading
-												.logo-holder
-													a(href="#")
-														img(src="http://via.placeholder.com/50")
-												h3
-													a(href="#") LokiCasino
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-											.content
-												h4 50 Free Spins
-												a(href="#").btn.btn-primary Go to Casino
-												a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
-									li
-										.casino
-											.heading
-												.logo-holder
-													a(href="#")
-														img(src="http://via.placeholder.com/50")
-												h3
-													a(href="#") Dunder
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-											.content
-												h4 20 Free Spins
-												a(href="#").btn.btn-primary Go to Casino
-												a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
-								a(href="#").btn.btn-link View all 79 Casinos
-						div
-							.bonus-box
-								h2 No Deposit Bonus
-								p Check out all Netent Casinos that grant their players a bonus or Free Spins without a deposit.
-								ul
-									li
-										.casino
-											.heading
-												.logo-holder
-													a(href="#")
-														img(src="http://via.placeholder.com/50")
-												h3
-													a(href="#") VideoSlots
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-											.content
-												h4 £10 Free Bonus
-												a(href="#").btn.btn-primary Go to Casino
-												a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
-									li
-										.casino
-											.heading
-												.logo-holder
-													a(href="#")
-														img(src="http://via.placeholder.com/50")
-												h3
-													a(href="#") LVbet
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-											.content
-												h4 £50 Free Bonus
-												a(href="#").btn.btn-primary Go to Casino
-												a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
-									li
-										.casino
-											.heading
-												.logo-holder
-													a(href="#")
-														img(src="http://via.placeholder.com/50")
-												h3
-													a(href="#") WildSlots
-												img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-											.content
-												h4 £20 Free Bonus
-												a(href="#").btn.btn-primary Go to Casino
-												a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
-								a(href="#").btn.btn-link View all 10 Casinos
-					.text-center
-						a(href="#").btn.btn-secondary View All Bonuses
+						a(href="#").btn.btn-secondary.load-more View all top casino offers
+		section.section-games
+			.holder
+				h1 NetEnt Games &amp; Jackpots
+				strong.subtitle Most played Games &amp; Jackpots right now!
+				.games-slider
+					div
+						.game-box
+							.media-holder
+								img(src="http://via.placeholder.com/293x149?text=Slide+1")
+								.sticker £8,000,00
+							ul
+								li
+									div
+										.logo-holder
+											a(href="#")
+												img(src="http://via.placeholder.com/50")
+										.txt
+											h2
+												a(href="#") Betsson
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+									div
+										a(href="#").btn.btn-primary Play Game
+								li
+									div
+										.logo-holder
+											a(href="#")
+												img(src="http://via.placeholder.com/50")
+										.txt
+											h2
+												a(href="#") Unibet
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+									div
+										a(href="#").btn.btn-primary Play Game
+								li
+									div
+										.logo-holder
+											a(href="#")
+												img(src="http://via.placeholder.com/50")
+										.txt
+											h2
+												a(href="#") LeoVegas
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+									div
+										a(href="#").btn.btn-primary Play Game
+					div
+						.game-box
+							.media-holder
+								img(src="http://via.placeholder.com/293x149?text=Slide+2")
+								.sticker new
+							ul
+								li
+									div
+										.logo-holder
+											a(href="#")
+												img(src="http://via.placeholder.com/50")
+										.txt
+											h2
+												a(href="#") Casumo
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+									div
+										a(href="#").btn.btn-primary Play Game
+								li
+									div
+										.logo-holder
+											a(href="#")
+												img(src="http://via.placeholder.com/50")
+										.txt
+											h2
+												a(href="#") Dunder
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+									div
+										a(href="#").btn.btn-primary Play Game
+								li
+									div
+										.logo-holder
+											a(href="#")
+												img(src="http://via.placeholder.com/50")
+										.txt
+											h2
+												a(href="#") LokiCasino
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+									div
+										a(href="#").btn.btn-primary Play Game
+					div
+						.game-box
+							.media-holder
+								img(src="http://via.placeholder.com/293x149?text=Slide+3")
+								.sticker NEW
+							ul
+								li
+									div
+										.logo-holder
+											a(href="#")
+												img(src="http://via.placeholder.com/50")
+										.txt
+											h2
+												a(href="#") VideoSlots
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+									div
+										a(href="#").btn.btn-primary Play Game
+								li
+									div
+										.logo-holder
+											a(href="#")
+												img(src="http://via.placeholder.com/50")
+										.txt
+											h2
+												a(href="#") LVbet
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+									div
+										a(href="#").btn.btn-primary Play Game
+								li
+									div
+										.logo-holder
+											a(href="#")
+												img(src="http://via.placeholder.com/50")
+										.txt
+											h2
+												a(href="#") WildSlots
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+									div
+										a(href="#").btn.btn-primary Play Game
+				.text-center
+					a(href="#").btn.btn-secondary View More Jackpots
+		section.section-bonuses
+			.holder
+				h1 NetEnt Bonuses
+				p Start playing with more today!
+				.boxes-holder
+					div
+						.bonus-box
+							h2 Welcome Bonus
+							p Virtually all Netent Casinos offer new players an attractive welcome bonus.
+							ul
+								li
+									.casino
+										.heading
+											.logo-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/50")
+											h3
+												a(href="#") Betsson
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										.content
+											h4 £150 + 50 Free Spins
+											p 50% up to £100 + 50 Free Spins
+											a(href="#").btn.btn-primary Go to Casino
+											a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
+								li
+									.casino
+										.heading
+											.logo-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/50")
+											h3
+												a(href="#") Unibet
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										.content
+											h4 £1500 + 50 Free Spins
+											p 200% up to £500 + 50 Free Spins
+											a(href="#").btn.btn-primary Go to Casino
+											a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
+								li
+									.casino
+										.heading
+											.logo-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/50")
+											h3
+												a(href="#") LeoVegas
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										.content
+											h4 £1000 + 20 Free Spins
+											p 100% up to £500 + 20 Free Spins
+											a(href="#").btn.btn-primary Go to Casino
+											a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
+							a(href="#").btn.btn-link View all 314 Casinos
+					div
+						.bonus-box
+							h2 Free Spins Bonus
+							p Free Spins are popular casino bonuses and many Netent Casinos treat their players.
+							ul
+								li
+									.casino
+										.heading
+											.logo-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/50")
+											h3
+												a(href="#") Casumo
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										.content
+											h4 150 Free Spins
+											a(href="#").btn.btn-primary Go to Casino
+											a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
+								li
+									.casino
+										.heading
+											.logo-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/50")
+											h3
+												a(href="#") LokiCasino
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										.content
+											h4 50 Free Spins
+											a(href="#").btn.btn-primary Go to Casino
+											a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
+								li
+									.casino
+										.heading
+											.logo-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/50")
+											h3
+												a(href="#") Dunder
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										.content
+											h4 20 Free Spins
+											a(href="#").btn.btn-primary Go to Casino
+											a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
+							a(href="#").btn.btn-link View all 79 Casinos
+					div
+						.bonus-box
+							h2 No Deposit Bonus
+							p Check out all Netent Casinos that grant their players a bonus or Free Spins without a deposit.
+							ul
+								li
+									.casino
+										.heading
+											.logo-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/50")
+											h3
+												a(href="#") VideoSlots
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										.content
+											h4 £10 Free Bonus
+											a(href="#").btn.btn-primary Go to Casino
+											a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
+								li
+									.casino
+										.heading
+											.logo-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/50")
+											h3
+												a(href="#") LVbet
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										.content
+											h4 £50 Free Bonus
+											a(href="#").btn.btn-primary Go to Casino
+											a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
+								li
+									.casino
+										.heading
+											.logo-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/50")
+											h3
+												a(href="#") WildSlots
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										.content
+											h4 £20 Free Bonus
+											a(href="#").btn.btn-primary Go to Casino
+											a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
+							a(href="#").btn.btn-link View all 10 Casinos
+				.text-center
+					a(href="#").btn.btn-secondary View All Bonuses
 		section.section-bonus-calc
 			.holder
 				h1 Bonus Calculator
@@ -371,6 +374,118 @@ block content
 					.form-group
 						input(type="submit", value="View Bonus Overview").btn.btn-primary 
 			.sticker NEW
+		section.section-payments
+			.holder
+				h1 Payments
+				p Payment methods available on Casinos!
+				.payments-holder
+					div
+						.payment-box
+							div
+								.logo-holder
+									a(href="#")
+										img(src="images/logo-paypal-large.png", alt="Image description", width="45", height="38")
+							.content
+								h2 PayPal
+								p 35 Casinos Offering PayPal.
+								a(href="#").btn.btn-primary View all Casinos
+					div
+						.payment-box
+							div
+								.logo-holder
+									a(href="#")
+										img(src="images/logo-bitcoin-large.png", alt="Image description", width="53", height="13")
+							.content
+								h2 Bitcoin
+								p 12 Casinos Offering bitcoin.
+								a(href="#").btn.btn-primary View all Casinos
+					div
+						.payment-box
+							div
+								.logo-holder
+									a(href="#")
+										img(src="images/logo-visa-large.png", alt="Image description", width="50", height="16")
+							.content
+								h2 Visa
+								p 310 Casinos Offering Visa.
+								a(href="#").btn.btn-primary View all Casinos
+				.text-center
+					a(href="#").btn.btn-secondary View More Payments
+		section.section-recent-news
+			.holder
+				h1 Latest Casino News &amp; Promotions
+				.boxes-holder
+					div
+						.post-preview
+							.media-holder
+								img(src="http://via.placeholder.com/330x150")
+							.body
+								h2 Finn and the Swirly Spin arrives at all online Casinos in 2 weeks!
+								p.by
+									| Published on 
+									a(href="#")
+										time(datetime="2017-11-06") 6th November 2017
+									|  by 
+									a(href="#") Adam
+								p LeoVegas have exclusively acquired NetEnt’s Finn and the Swirly Spin, but we thought it was still important to note that the general release is just 2 weeks away. You may be thinking: why’s that interesting if I can already play it? Well, while it’s awesome that LeoVegas have early access, there’ll be more Finn and the Swirly Spin free spins and casino bonuses available on 23rd November!
+								.text-center
+									a(href="#").btn.btn-secondary Continue Reading
+					div
+						.post-preview
+							.media-holder
+								img(src="http://via.placeholder.com/330x150")
+							.body
+								h2 Exclusive 150% Welcome Bonus from New Casino WildSlots!
+								p.by
+									| Published on 
+									a(href="#")
+										time(datetime="2017-11-09") 9 November 2017
+									|  by 
+									a(href="#") Adam
+								p
+									| Listen up, readers! We’ve got one of the last few 
+									a(href="#") new 2017 casinos
+									|  for you to consider – WildSlots – and better yet there’s an exclusive welcome bonus on the table. It’s extremely satisfying to be able to offer you a better deal, and just wait until you get a look at WildSlots’ VIP casino program!
+								.text-center
+									a(href="#").btn.btn-secondary Continue Reading
+					div
+						.post-preview
+							.media-holder
+								img(src="http://via.placeholder.com/330x150")
+							.body
+								h2 Best Casino Bonuses November 2017 Week 1 (Updated!)
+								p.by
+									| Published on 
+									a(href="#")
+										time(datetime="2017-11-08") 8 November 2017
+									|  by 
+									a(href="#") Adam
+								p Now that Halloween is out of sight, attention has turned to Christmas! It’s probably slightly premature to be looking forward to the 25th December, but online casinos have already started distributing their presents early to you gamers. Expect plenty more to arrive as Santa’s visit gets closer, but here are November 2017’s first week best casino bonuses and free spins to enjoy!
+								.text-center
+									a(href="#").btn.btn-secondary Continue Reading
+				.text-center
+					a(href="#").btn.btn-secondary View more Articles
+		section.section-promo
+			.holder
+				.icon-email.text-center
+				h1 Don’t miss out on 600 Secret No Deposit Spins
+				p Subscribe to our newsletter to unlock 600 secret No Deposit Spins.
+				form(action="#")
+					.form-group
+						input(type="text", placeholder="Enter your email address")
+					.form-group
+						input(type="submit", value="Unlock Spins Now").btn.btn-primary
+		section.section-refer
+			.holder
+				.left
+					.icon-holder
+						.icon-gift
+					.content
+						h1 Refer a Friend
+						p Refer a friend to NetEnt Casinos and you both get rewarded.
+						a(href="#").btn.btn-secondary Make Money
+				.right.hidden-sm
+					a(href="#").btn.btn-secondary Make Money
 			//- 
 				.casino-box2.small
 					.heading

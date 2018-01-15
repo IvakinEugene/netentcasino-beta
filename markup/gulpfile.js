@@ -42,8 +42,8 @@ gulp.task('pug', function(){
 });
 
 gulp.task('images', function() {
-	gulp.src([src + '/images/*'])
-		.pipe(watch(src + '/images/*'))
+	gulp.src([src + '/images/**/*.*'])
+		.pipe(watch(src + '/images/**/*.*'))
 		.pipe(gulp.dest(dist + '/images'))
 		.pipe(browserSync.reload({
 			stream: true
