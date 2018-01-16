@@ -2,6 +2,12 @@
 	background: #383A3A;
 	text-align:center;
 	color: #ffffff;
+	.holder{
+		padding: 0 10px;
+		@include media(">=tablet") {
+			padding:0 25px;
+		}
+	}
 	.footer-top{
 		color: #ffffff;
 		font-size: 12px;
@@ -30,7 +36,7 @@
 		.list-item{
 			list-style:none;
 			padding:0;
-			margin:0 0 22px;
+			margin:0 -10px 22px;
 			display:flex;
 			justify-content:center;
 			@include media(">=tablet") {
@@ -56,6 +62,7 @@
 				a{
 					color: #ffffff;
 					font-size: 14px;
+					line-height:16px;
 				}
 			}
 		}
