@@ -99,7 +99,8 @@
 		font-size: 13px;
 		line-height:1.1538;
 		min-width: 189px;
-		padding:6px 5px 5px;
+		padding-top: 6px;
+		padding-bottom: 5px;
 	}
 }
 
@@ -294,6 +295,18 @@
 			flex:1 1 auto;
 			padding:10px 15px 13px;
 		}
+		.txt{
+			display: flex;
+		    flex-direction: column;
+		    flex-wrap: nowrap;
+		    justify-content: center;
+		    align-content: stretch;
+		    align-items: stretch;
+			min-height: 54px;
+			> *{
+				width:100%;
+			}
+		}
 		h4{
 			font-size: 18px;
 			font-weight:normal;
@@ -305,7 +318,8 @@
 		.btn{
 			font-size: 13px;
 			min-width: 189px;
-			padding:6px 15px;
+			padding-top: 6px;
+			padding-bottom: 6px;
 		}
 	}
 }
@@ -320,13 +334,30 @@
 	background:$white;
 	border: 1px solid $border-color-base;
 	box-shadow: 0 0 4px $shadow;
-	padding:10px 15px 20px;
+	color:$base-gray;
+	padding:14px 20px 13px;
 	.content{
 		flex:1 1 auto;
 	}
 	.logo-holder{
 		height:70px;
+		margin-top: 4px;
 		width:70px;
+	}
+	.content{
+		padding:0 0 0 19px;
+	}
+	h2{
+		font-size: 16px;
+		font-weight:500;
+		margin:0 0 -1px;
+	}
+	p{
+		margin:0 0 6px;
+	}
+	.btn{
+		font-size: 14px;
+		min-width: 189px;
 	}
 }
 
@@ -345,13 +376,13 @@
 		font-size:16px;
 		font-weight:500;
 		line-height:1.125;
-		margin:0 0 5px;
+		margin:0 0 4px;
 		text-transform:uppercase;
 	}
 	.by{
 		color:$theme-color-base;
 		font-size: 12px;
-		margin:0 0 6px;
+		margin:0 0 7px;
 	}
 	p{
 		margin:0 0 12px;

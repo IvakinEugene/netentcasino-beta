@@ -1,12 +1,20 @@
-header#header
-	.offer-header
-		div
+header#header.popup-holder
+	.offer-popup.popup
+		.content.text-center
+			div
+				include promo-content
+		.footer
+			include section-refer
+		a(href="#").icon-close.close
+	.offer-box
+		.left
 			a.icon-close(href="#")
 			a.icon-email(href="#")
-		div.content
-			p Unlock 600 secret No Deposit Spins by subscribing to our newsletter.
+			.content
+				h2.hidden-sm Don’t miss out on 600 Secret No Deposit Spins
+				p Unlock 600 secret No Deposit Spins by subscribing to our newsletter.
 		div
-			a(href="#").btn.btn-dark Get Free Spins
+			a(href="#").btn.btn-dark.opener Get Free Spins
 	.header-holder
 		div
 			strong.logo
@@ -14,17 +22,3 @@ header#header
 					img(src="images/logo.png", alt="NetEntCasino", width="944", height="156")
 		div
 			a(href="#").nav-opener.icon-menu-and-search
-	//- 
-		hr
-		hr
-		hr
-		a(href="#").btn.btn-primary primary
-		br
-		br
-		a(href="#").btn.btn-secondary secondary
-		br
-		br
-		a(href="#").btn.btn-link link
-		br
-		br
-		a(href="#").btn.btn-dark Dark

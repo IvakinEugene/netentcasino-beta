@@ -3,7 +3,7 @@
 	z-index:5;
 }
 
-.offer-header{
+.offer-box{
 	background:$theme-color-add;
 	display: flex;
     flex-direction: row;
@@ -14,30 +14,33 @@
 	font-size:12px;
 	line-height:1.25;//15
 	padding:9px 8px 10px;
-	> div{
+	&.closed{
+		display:none;
+	}
+	.left{
 		// padding:0 3px;
-		&:first-child {
+		// > div{
 			display: flex;
 		    flex-direction: row;
 		    flex-wrap: nowrap;
-		    justify-content: space-between;
+		    justify-content: flex-start;
 		    align-content: center;
 		    align-items: center;
-			// font-size: 0;
-			// line-height:1;
 			min-width: 38px;
-		}
+		// }
 	}
 	.icon-close{
 		background:$black;
 		display:inline-block;
 		vertical-align:top;
 		height:6px;
+		margin:0 10px 0 0;
 		width:6px;
 	}
 	.icon-email{
 		color:$base-text-color;
 		font-size:14px;
+		margin:0 1px 0 0;
 	}
 	.content{
 		letter-spacing: -0.3px;
@@ -49,6 +52,7 @@
 	.btn{
 		box-shadow: 0 2px 4px $shadow;
 		font-size: 13px;
+		min-width: 0;
 		padding:7px 6px 9px;
 		text-transform:capitalize;
 		white-space: nowrap;
