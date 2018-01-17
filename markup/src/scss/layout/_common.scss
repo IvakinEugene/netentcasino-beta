@@ -1,5 +1,5 @@
 #wrapper{
-	max-width: 767px;
+	max-width: 375px;
 	@include media(">=tablet") {
 		width:1440px;
 		// margin: 0 auto;
