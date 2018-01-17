@@ -1,24 +1,63 @@
 header#header.popup-holder
-	.offer-popup.popup
-		.content.text-center
+	//- | header-content
+	//- 
+	.offer-box.popup
+		.holder
+			.left
+				a.icon-close(href="#")
+				a.icon-email(href="#")
+				.content
+					h2.hidden-sm Don’t miss out on 600 Secret No Deposit Spins
+					p Unlock 600 secret No Deposit Spins by subscribing to our newsletter.
 			div
-				include promo-content
-		.footer
-			include section-refer
-		a(href="#").icon-close.close
-	.offer-box
-		.left
-			a.icon-close(href="#")
-			a.icon-email(href="#")
-			.content
-				h2.hidden-sm Don’t miss out on 600 Secret No Deposit Spins
-				p Unlock 600 secret No Deposit Spins by subscribing to our newsletter.
-		div
-			a(href="#").btn.btn-dark.opener Get Free Spins
+				a(href="#offer-popup").btn.btn-dark.lightbox-opener Get Free Spins
 	.header-holder
 		div
 			strong.logo
 				a(href="#")
 					img(src="images/logo.png", alt="NetEntCasino", width="944", height="156")
 		div
-			a(href="#").nav-opener.icon-menu-and-search
+			//- 
+				.mobile-nav-holder
+					.mobile-nav-frame
+						.search-bar
+							form(action="#")
+								span.icon-search i
+								input(type="text", placeholder="Search NetentCasinos")
+								span.icon-close-o x
+						ul.nav
+							li
+								a(href="#")
+									span.icon-new-casinos
+									| New Casinos
+							li
+								a(href="#")
+									span.icon-top-monthly-offers
+									| Top Monthly Offers
+							li.divider
+							li
+								a(href="#")
+									span.icon-casinos
+									| NetEnt Casinos
+							li
+								a(href="#")
+									span.icon-icon i
+									| NetEnt Bonuses
+							li
+								a(href="#")
+									span.icon-games-and-jackpots
+									| NetEnt Games &amp; Jackpots
+							li
+								a(href="#")
+									span.icon-news
+									| NetEnt News
+							li.divider
+							li
+								a(href="#")
+									span.icon-payments
+									| Payments
+							li
+								a(href="#")
+									span.icon-guides
+									| Guides
+			a(href="#").nav-opener.icon-menu-and-search.hidden-md

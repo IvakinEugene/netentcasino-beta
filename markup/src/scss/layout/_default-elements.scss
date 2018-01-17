@@ -92,6 +92,12 @@
 	}
 }
 
+.hidden-md{
+	@include media(">=tablet") {
+		display:none !important;
+	}
+}
+
 .slick-dots{
 	font-size:0;
 	line-height:0;

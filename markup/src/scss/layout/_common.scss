@@ -1,14 +1,26 @@
 #wrapper{
-	max-width: 375px;
+	max-width: 767px;
 	@include media(">=tablet") {
-		max-width:1355px;
-		margin: 0 auto;
+		width:1440px;
+		// margin: 0 auto;
+	}
+}
+
+#main{
+	position:relative;
+	z-index:1;
+}
+
+section{
+	> .holder{
+		margin:0 auto;
+		padding-right: 23px;
+		padding-left: 23px;
 	}
 }
 
 .section-intro{
 	// height:200px;
-	padding:0 21px;
 	position:relative;
 	.holder,
 	.search-box{
@@ -16,7 +28,17 @@
 		z-index:5;
 	}
 	.holder{
-		padding:29px 0 14px;
+		padding-top: 14px;
+		padding-bottom: 14px;
+	}
+	.casino-logo{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		height:84px;
 	}
 	.search-box{
 		background:$white;
@@ -61,7 +83,8 @@
 
 .section-casinos-list{
 	.holder{
-		padding:16px 23px 20px;
+		padding-top: 16px;
+		padding-bottom: 20px;
 	}
 	.boxes-holder{
 		margin:-5px -5px 0;
@@ -79,14 +102,25 @@
 .section-top-offer{
 	background: linear-gradient(180deg, rgba(255,102,0,0.6) 0%, #FF6600 100%);
 	.holder{
-		padding:10px 23px 20px;
+		padding-top: 27px;
+		padding-bottom: 33px;
+	}
+	h1{
+		margin:0 0 22px;
+		text-transform:none;
 	}
 	.offer-casino-box{
 		margin:0 0 20px;
 	}
-	.btn-secondary{
+	.load-more{
 		border-color: $white;
 		color:$white;
+		font-size: 14px;
+		padding-top: 8px;
+		&:hover {
+			background:$white;
+			color:#f60;
+		}
 	}
 }
 
@@ -94,7 +128,8 @@
 	background:$white;
 	overflow:hidden;
 	.holder{
-		padding:27px 22px 30px;
+		padding-top: 27px;
+		padding-bottom: 30px;
 	}
 	.games-slider{
 		// margin:0 -22px 0 -8px;
@@ -112,25 +147,25 @@
 			@extend %listreset;
 			> li{
 				display: flex;
-			    flex-direction: row;
-			    flex-wrap: nowrap;
-			    justify-content: space-between;
-			    align-content: center;
-			    align-items: center;
-			    padding:20px 16px 15px 21px;
-			    + li{
-			    	border-top: 1px solid $border-color-base;
-			    }
-			    > div{
-			    	&:first-child {
-			    		display: flex;
-					    flex-direction: row;
-					    flex-wrap: nowrap;
-					    justify-content: flex-start;
-					    align-content: center;
-					    align-items: center;
-			    	}
-			    }
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: space-between;
+				align-content: center;
+				align-items: center;
+				padding:20px 16px 15px 21px;
+				+ li{
+					border-top: 1px solid $border-color-base;
+				}
+				> div{
+					&:first-child {
+						display: flex;
+						flex-direction: row;
+						flex-wrap: nowrap;
+						justify-content: flex-start;
+						align-content: center;
+						align-items: center;
+					}
+				}
 			}
 		}
 		.logo-holder{
@@ -158,10 +193,11 @@
 
 .section-bonuses{
 	.holder{
-		padding:25px 23px 29px;
+		padding-top: 25px;
+		padding-bottom: 29px;
 	}
 	.boxes-holder{
-		padding:0 0 10px;
+		padding:5px 0 10px;
 		> div{
 			padding:0 0 10px;
 		}
@@ -170,6 +206,7 @@
 
 .section-bonus-calc{
 	background:#e5eae8;
+	line-height:1.2143;
 	position:relative;
 	.holder{
 		padding:34px 42px 12px;
@@ -191,6 +228,7 @@
 		.btn{
 			font-size:14px;
 			font-weight:500;
+			padding-top: 8px;
 			width:100%;
 		}
 	}
@@ -212,7 +250,8 @@
 .section-payments{
 	background:$white;
 	.holder{
-		padding:23px 21px 21px;
+		padding-top: 23px;
+		padding-bottom: 21px;
 	}
 	.payments-holder{
 		padding:0 0 12px;
@@ -224,7 +263,8 @@
 
 .section-recent-news{
 	.holder{
-		padding:34px 22px 21px;
+		padding-top: 34px;
+		padding-bottom: 21px;
 	}
 	.boxes-holder{
 		padding:13px 0 10px;
@@ -274,19 +314,19 @@
 	}
 	.left{
 		display: flex;
-	    flex-direction: row;
-	    flex-wrap: nowrap;
-	    justify-content: flex-start;
-	    align-content: stretch;
-	    align-items: stretch;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: stretch;
 	}
 	.icon-holder{
 		display: flex;
-	    flex-direction: row;
-	    flex-wrap: nowrap;
-	    justify-content: center;
-	    align-content: center;
-	    align-items: center;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
 	}
 	.icon-gift{
 		background:$base-gray;

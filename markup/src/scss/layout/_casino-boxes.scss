@@ -392,7 +392,7 @@
 	// }
 }
 
-.casino-box2{
+.casino-box{
 	background:$white;
 	box-shadow:0 0 2px 0 $shadow;
 	font-size: $font-size-base;
@@ -606,7 +606,7 @@
 	}
 }
 
-.casino-box2.large{
+.casino-box.large{
 	@include media(">=tablet") {
 		display:block;
 	}
@@ -685,15 +685,13 @@
 		}
 	}
 	//elements
+	.logo-holder,
 	.image{
 		margin:0 10px 0 0;
 		@include media(">=tablet") {
 			margin:0 auto 15px;
 			width:140px;
 		}
-	}
-	.rate{
-		display:block;
 	}
 	h4{
 		font-size: 20px;

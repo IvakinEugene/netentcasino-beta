@@ -22,6 +22,7 @@ $media-expressions: (
 @import 'vendors/include-media';
 @import 'vendors/normalize';
 @import 'vendors/_slick.scss';
+@import 'vendors/magnific-popup/_main.scss';
 
 @import 'base/variables';
 @import 'base/mixins';
@@ -36,6 +37,11 @@ $media-expressions: (
 @import 'layout/_default-elements.scss';
 @import 'layout/_casino-boxes.scss';
 @import 'layout/header';
-@import 'layout/footer';
 @import 'layout/common';
 @import 'layout/post';
+@import 'layout/footer';
+
+
+
+
+@import 'pages/_casino-review.scss';

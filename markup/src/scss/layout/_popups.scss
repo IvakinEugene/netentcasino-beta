@@ -1,3 +1,18 @@
+// customize Magnific Popup
+.mfp-container{
+	padding-right: 0;
+	padding-left: 0;
+}
+.mfp-close{
+	opacity:1;
+}
+// end of customize Magnific Popup
+
+.popups-holder{
+	height:0;
+	overflow:hidden;
+}
+
 .offer-popup{
 	background:$theme-color-add;
 	display: flex !important;
@@ -10,7 +25,8 @@
     font-size:16px;
     line-height:1.25;
 	height:100vh;
-	height:658px;
+	// height:658px;
+	position:relative;
 	> .content{
 		display: flex;
 	    flex-direction: column;

@@ -7,29 +7,71 @@ block content
 		//- 
 		section.section-intro
 			.holder
-				.search-box
-					div
-						form(action="#")
-							.form-content
-								input(type="text", placeholder="Search 200+ Casinos & Games")
-								span.icon-search s
-					div
-						- var count = "329"
-						- var title = "Casino Reviews"
-						- var content = "For Your Convenience"
-						include pug/extends/read-more-button
-					div
-						- var count = "204"
-						- var title = "Games"
-						- var content = "To Play for Free"
-						include pug/extends/read-more-button
-					div
-						- var count = "3049"
-					
-						- var title = "News Articles"
-						- var content = "Ready to be Read"
-						include pug/extends/read-more-button
-			- var image = "banner-concept-1"
+				.casino-logo
+					img(src="http://via.placeholder.com/102x34")
+				.casino-box.large
+					.heading
+						div
+							.logo-holder
+								a(href="#")
+									img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+							div
+								h3
+									a(href="#") Betsson
+								p Founded 2001
+						div
+							span.rate
+								strong 5
+								span /5
+							img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+					.content
+						div
+							h4 Did You Know?
+							blockquote
+								p “Betsson is one of the largest online Gaming companies owning several Netent Casinos.”
+						div
+							ul.description-list
+								li
+									h4 No. of Games
+									p 400+ Games
+								li
+									h4 Min. Deposit
+									p £10
+								li
+									h4 Support Options
+									ul.icons-list
+										li
+											a(href="#").icon-mail
+										li
+											a(href="#").icon-chat-bubbles
+										li
+											a(href="#").icon-phone
+								li.fullwidth
+									h4 Payment Methods
+									p 17 depositing options
+									ul.payments-list
+										li
+											a(href="#")
+												img(src="images/logo-visa.png", alt="Image description", width="37", height="12")
+										li
+											a(href="#")
+												img(src="images/logo-paypal.png", alt="Image description", width="28", height="28")
+										li
+											a(href="#")
+												img(src="images/logo-bitcoin.png", alt="Image description", width="47", height="11")
+										li
+											a(href="#")
+												img(src="images/logo-skrill.png", alt="Image description", width="46", height="16")
+										li
+											a(href="#")
+												span +12
+					.cell.total
+						div
+							strong.title £150 + 50 Free Spins
+							em.note 50% up to £100 + 50 Free Spins
+						div
+							a(href="#").btn.btn-primary Go to Betsson
+			- var image = "banner-concept-4"
 			include pug/extends/retina-images
 		section.section-casinos-list
 			.holder
@@ -539,68 +581,7 @@ block content
 								|  Withdrawal Time
 					.fullwidth
 						a(href="#").btn.btn-primary go to casino
-				.casino-box2.large
-					.heading
-						div
-							.image
-								a(href="#")
-									img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-							div
-								h3
-									a(href="#") Betsson
-								p Founded 2001
-						div
-							span.rate
-								strong 5
-								span /5
-							p stars
-					.content
-						div
-							h4 Did You Know?
-							blockquote
-								p “Betsson is one of the largest online Gaming companies owning several Netent Casinos.”
-						div
-							ul.description-list
-								li
-									h4 No. of Games
-									p 400+ Games
-								li
-									h4 Min. Deposit
-									p £10
-								li
-									h4 Support Options
-									ul.icons-list
-										li
-											a(href="#").icon-mail
-										li
-											a(href="#").icon-chat-bubbles
-										li
-											a(href="#").icon-phone
-								li.fullwidth
-									h4 Payment Methods
-									p 17 depositing options
-									ul.payments-list
-										li
-											a(href="#")
-												img(src="images/logo-visa.png", alt="Image description", width="37", height="12")
-										li
-											a(href="#")
-												img(src="images/logo-paypal.png", alt="Image description", width="28", height="28")
-										li
-											a(href="#")
-												img(src="images/logo-bitcoin.png", alt="Image description", width="47", height="11")
-										li
-											a(href="#")
-												img(src="images/logo-skrill.png", alt="Image description", width="46", height="16")
-										li
-											a(href="#")
-												span +12
-					.cell.total
-						div
-							strong.title £150 + 50 Free Spins
-							em.note 50% up to £100 + 50 Free Spins
-						div
-							a(href="#").btn.btn-primary Go to Betsson
+				
 	
 	include pug/includes/footer
 	
