@@ -198,9 +198,12 @@
 
 .game-box{
 	background:$white;
-	box-shadow:0 0 3px$shadow;
+	box-shadow:0 0 3px $shadow;
 	border-radius: 4px 4px 0 0;
 	overflow:hidden;
+	&.no-content {
+		border-radius: 4px;
+	}
 	.media-holder{
 		position:relative;
 		iframe,
@@ -224,7 +227,38 @@
 			position:absolute;
 			text-transform:uppercase;
 			top:10px;
-			z-index:5;
+			z-index:15;
+		}
+		.hover-box{
+			display:none !important;
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: center;
+		    align-content: center;
+		    align-items: center;
+		    background:rgba($black, 0.8);
+		    color:$white;
+		    font-size:18px;
+		    font-weight:500;
+		    line-height:1;
+			height:100%;
+			position:absolute;
+			text-align:center;
+			text-transform:uppercase;
+			top:0;
+			width:100%;
+			z-index:10;
+			> span{
+				width:100%;
+			}
+			.icon-play{
+				background:$white;
+				display:block;
+				height:43px;
+				margin:0 auto 15px;
+				width:43px;
+			}
 		}
 	}
 }
@@ -398,7 +432,7 @@
 	font-size: $font-size-base;
 	font-weight:normal;
 	line-height:1.2857;
-	margin:0 0 20px;
+	// margin:0 0 20px;
 	overflow:hidden;
 	text-align:center;
 	@include media(">=tablet") {
@@ -606,7 +640,9 @@
 	}
 }
 
-.casino-box.large{
+.casino-box.heading{
+	color:$base-gray;
+	font-size:14px;
 	@include media(">=tablet") {
 		display:block;
 	}
@@ -620,6 +656,8 @@
 		align-content: center;
 		align-items: center;
 		float:none;
+		font-size: 12px;
+		padding:10px 21px;
 		width:auto;
 		@include media(">=tablet") {
 			border-width: 0 1px 0 0;
@@ -643,6 +681,9 @@
 				}
 			}
 		}
+		p{
+			margin:0;
+		}
 	}
 	.content{
 		display:none;
@@ -661,68 +702,96 @@
 			}
 		}
 	}
-	.total{
-		@include media(">=tablet") {
-			background:rgba(203, 214, 210, 0.25);
-			border-width: 1px 0 0;
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: space-between;
-			align-content: center;
-			align-items: center;
-			order:0;
-			overflow:hidden;
-			width:100%;
-		}
-		div{
-			&:nth-child(2) {
-				@include media(">=tablet") {
-					display:block;
-					flex:0 1 auto;
-				}
-			}
-		}
-	}
 	//elements
-	.logo-holder,
-	.image{
-		margin:0 10px 0 0;
+	.logo-holder{
+		margin:0 19px 0 0;
 		@include media(">=tablet") {
 			margin:0 auto 15px;
 			width:140px;
 		}
 	}
-	h3{}
-	h4{
-		font-size: 20px;
-		font-weight:normal;
-		margin:0 0 10px;
-	}
-	dl{
-		margin:0;
-	}
-	.description-list{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		align-content: flex-start;
-		align-items: flex-start;
-		@extend %listreset;
-		> li{
-			padding:0 50px 20px 0;
-			width:33.3333%;
-		}
-	}
-	.icons-list{
-		@extend %listreset;
-		li{
-			display:inline-block;
-			vertical-align:middle;
-		}
+	h3{
+		font-size: 18px;
+		margin:0 0 -2px;
 		a{
-			color:$theme-color-base;
+			text-decoration:none;
 		}
 	}
+	.rate{
+		display:block;
+		margin:0 0 -4px;
+		strong{
+			color:inherit;
+		}
+	}
+	// h4{
+	// 	font-size: 20px;
+	// 	font-weight:normal;
+	// 	margin:0 0 10px;
+	// }
+	// dl{
+	// 	margin:0;
+	// }
+	.total{
+		padding:9px 15px 20px;
+		// @include media(">=tablet") {
+		// 	background:rgba(203, 214, 210, 0.25);
+		// 	border-width: 1px 0 0;
+		// 	display: flex;
+		// 	flex-direction: row;
+		// 	flex-wrap: nowrap;
+		// 	justify-content: space-between;
+		// 	align-content: center;
+		// 	align-items: center;
+		// 	order:0;
+		// 	overflow:hidden;
+		// 	width:100%;
+		// }
+		// div{
+		// 	&:nth-child(2) {
+		// 		@include media(">=tablet") {
+		// 			display:block;
+		// 			flex:0 1 auto;
+		// 		}
+		// 	}
+		// }
+		.title{
+			color:#383a3a;
+			font-size: 22px;
+			margin:0 0 1px;
+			text-transform:uppercase;
+		}
+		p{
+			margin:0 0 16px;
+		}
+		.btn{
+			font-size: 18px;
+			min-width: 265px;
+			padding-top: 4px;
+			padding-bottom: 6px;
+		}
+	}
+	// .description-list{
+	// 	display: flex;
+	// 	flex-direction: row;
+	// 	flex-wrap: wrap;
+	// 	justify-content: flex-start;
+	// 	align-content: flex-start;
+	// 	align-items: flex-start;
+	// 	@extend %listreset;
+	// 	> li{
+	// 		padding:0 50px 20px 0;
+	// 		width:33.3333%;
+	// 	}
+	// }
+	// .icons-list{
+	// 	@extend %listreset;
+	// 	li{
+	// 		display:inline-block;
+	// 		vertical-align:middle;
+	// 	}
+	// 	a{
+	// 		color:$theme-color-base;
+	// 	}
+	// }
 }

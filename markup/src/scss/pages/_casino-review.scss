@@ -1,0 +1,67 @@
+.section-casino{
+	padding:12px 0 60px;
+	.anchors-link{
+		margin:0 0 50px;
+	}
+	.subsection{
+		border-bottom: 1px solid $border-color-base;
+		padding:0 0 10px;
+	}
+	h1{
+		font-weight:normal;
+		margin:0 0 10px;
+		text-transform:none;
+	}
+	p{
+		margin:0 0 10px;
+	}
+	.link-more{
+		color:inherit;
+		text-decoration:underline;
+		&:hover {
+			text-decoration:none;
+		}
+	}
+}
+
+.payment-overview-box{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+	background:$white;
+	box-shadow: 0 1px 2px rgba(74,74,74,0.22);
+	padding:10px 15px 20px;
+	.icon-holder{
+		min-width: 70px;
+	}
+	.icon-pig{
+		background:#ccc;
+		border-radius: 100%;
+		display:block;
+		height:74px;
+		width:74px;
+	}
+	.content{
+		flex:1 1 auto;
+		padding:0 0 0 20px;
+	}
+}
+
+dl{
+	color:$base-gray;
+	font-size:14px;
+	line-height:1.7857;
+	margin:0;
+	dt{
+		color:$headings-color;
+		display:block;
+		font-weight:500;
+		margin:0 0 1px;
+	}
+	dd{
+		margin:0 0 10px;
+	}
+}

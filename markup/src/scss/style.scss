@@ -34,14 +34,12 @@ $media-expressions: (
 
 @import 'base/_fonts.scss';
 @import 'layout/_popups.scss';
+@import 'vendors/_slick-custom.scss';
 @import 'layout/_default-elements.scss';
 @import 'layout/_casino-boxes.scss';
 @import 'layout/header';
 @import 'layout/common';
 @import 'layout/post';
 @import 'layout/footer';
-
-
-
 
 @import 'pages/_casino-review.scss';

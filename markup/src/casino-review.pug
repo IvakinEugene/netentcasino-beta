@@ -9,7 +9,7 @@ block content
 			.holder
 				.casino-logo
 					img(src="http://via.placeholder.com/102x34")
-				.casino-box.large
+				.casino-box.heading
 					.heading
 						div
 							.logo-holder
@@ -68,39 +68,189 @@ block content
 					.cell.total
 						div
 							strong.title £150 + 50 Free Spins
-							em.note 50% up to £100 + 50 Free Spins
+							p 50% up to £100 + 50 Free Spins
 						div
 							a(href="#").btn.btn-primary Go to Betsson
-				.casino-box
-					.heading
-						.image
-							a(href="#")
-								img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-						.description
-							h3
-								a(href="#") SlotsMillion
-							p stars
-							a(href="#").btn.btn-default casino review
-					.cell.total
-						.sticker
-							span.icon icon &gt;
-							|  Recommended by Casino Experts
-						div
-							strong.title £150 + 50 Free Spins
-							em.note 50% up to £100 + 50 Free Spins
-					.content
-						.cell.deposit
-							p
-								strong £10
-								|  Min. Deposit
-						.cell.time
-							p
-								strong 30 mins - 4 hours (avg)
-								|  Withdrawal Time
-					.fullwidth
-						a(href="#").btn.btn-primary go to casino
+				//- 
+					.casino-box
+						.heading
+							.image
+								a(href="#")
+									img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+							.description
+								h3
+									a(href="#") SlotsMillion
+								p stars
+								a(href="#").btn.btn-default casino review
+						.cell.total
+							.sticker
+								span.icon icon &gt;
+								|  Recommended by Casino Experts
+							div
+								strong.title £150 + 50 Free Spins
+								em.note 50% up to £100 + 50 Free Spins
+						.content
+							.cell.deposit
+								p
+									strong £10
+									|  Min. Deposit
+							.cell.time
+								p
+									strong 30 mins - 4 hours (avg)
+									|  Withdrawal Time
+						.fullwidth
+							a(href="#").btn.btn-primary go to casino
 			- var image = "banner-concept-4"
 			include pug/extends/retina-images
+		section.section-casino
+			.anchors-link
+				.holder
+					ul
+						li.active
+							a(href="#section1") Casino Info
+						li
+							a(href="#section2") Bonuses
+			.subsection#section1
+				.holder
+					h1 About Betsson
+					p Just like online Netent Casino Euro, Betsson was previously owned by Net Entertainment, Betsson was created by Net Entertainment in 2001 however, just like Euro Casino this online casino is no longer part of the Netent iGaming software company.
+					a(href="#").link-more Read More
+					h2 Did You Know?
+					p “Betsson is one of the largest online Gaming companies owning several Netent Casinos.”
+					.option-columns
+						div
+							h2 Pros
+							ul
+								li Mega Fortune Dreams, Hall of Gods and Arabian Nights Pooled Jackpots.
+								li Almost all Netent Games.
+								li Mobile Casino featuring Netent Touch.
+						div
+							h2 Cons
+							ul
+								li No Netent Live Casino.
+								li Welcome Bonus only valid for certain countries.
+			.subsection#section2
+				.holder
+					.twocolumns
+						div
+							.section-heading
+								h1 400+ NetEnt Games
+								strong.subtitle Newest games available right now on Betsson!
+								.games-slider(data-slick='{"dots": true, "slidesToShow": 1, "slidesToScroll": 1, "arrows": false, "infinite": false}')
+									div
+										.game-box.no-content
+											.media-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/293x149/ff0000/ffffff")
+												span.sticker £8,000,00
+												a(href="#").hover-box
+													span
+														span.icon-play
+														| Play at Betsson
+											strong.media-title 123
+									div
+										.game-box.no-content
+											.media-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/293x149/ff0000/ffffff")
+												span.sticker £1,348,00
+												a(href="#").hover-box
+													span
+														span.icon-play
+														| Play at Betsson
+											strong.media-title 123
+						div
+							.section-heading
+								h1 57 Progressive Jackpots
+								strong.subtitle Highest progressive jackpots available right now on Betsson!
+								.games-slider(data-slick='{"dots": true, "slidesToShow": 1, "slidesToScroll": 1, "arrows": false, "infinite": false}')
+									div
+										.game-box.no-content
+											.media-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/293x149/ff0000/ffffff")
+												span.sticker new
+												a(href="#").hover-box
+													span
+														span.icon-play
+														| Play at Betsson
+											strong.media-title 123
+									div
+										.game-box.no-content
+											.media-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/293x149/ff0000/ffffff")
+												span.sticker new
+												a(href="#").hover-box
+													span
+														span.icon-play
+														| Play at Betsson
+											strong.media-title 123
+					P +200 Games from other providers
+					ul.games-list
+						li
+							a(href="#")
+								img(src="http://via.placeholder.com/73x21")
+						li
+							a(href="#")
+								img(src="http://via.placeholder.com/75x19")
+						li
+							a(href="#")
+								img(src="http://via.placeholder.com/82x30")
+						li
+							a(href="#")
+								| +12
+			.subsection#section3
+				.holder
+					.twocolumns
+						div
+							h1 Payment Methods
+							p 17 deposit options
+							ul.payments-list
+								li
+									a(href="#")
+										span.logo-holder
+											img(src="http://via.placeholder.com/37x21")
+										span Visa
+								li
+									a(href="#")
+										span.logo-holder
+											img(src="http://via.placeholder.com/34x34")
+										span PayPal
+								li
+									a(href="#")
+										span.logo-holder
+											img(src="http://via.placeholder.com/33x17")
+										span Bitcoin
+								li
+									a(href="#")
+										span.logo-holder
+											img(src="http://via.placeholder.com/30x30")
+										span Trustly
+								li
+									a(href="#")
+										span.logo-holder
+											img(src="http://via.placeholder.com/34x12")
+										span Skrill
+								li
+									a(href="#")
+										span.logo-holder
+											img(src="http://via.placeholder.com/37x6")
+										span Neteller
+						div
+							h1 Payments Overview
+							p &nbsp;
+							.payment-overview-box
+								.icon-holder
+									span.icon-pig
+								.content
+									dl
+										dt Minumum Deposit
+										dd €10
+										dt Withdrawal Time
+										dd 30 mins - 4 hours (avg)
+										dt Currencies
+										dd EUR, USD, GBP, NOK, SEK, BRL, CZK, PLN
 		//- 
 			section.section-casinos-list
 				.holder

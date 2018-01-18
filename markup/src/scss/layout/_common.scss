@@ -1,5 +1,6 @@
 #wrapper{
 	max-width: 375px;
+	overflow:hidden;
 	@include media(">=tablet") {
 		width:1440px;
 		// margin: 0 auto;
@@ -126,7 +127,6 @@ section{
 
 .section-games{
 	background:$white;
-	overflow:hidden;
 	.holder{
 		padding-top: 27px;
 		padding-bottom: 30px;
@@ -136,13 +136,8 @@ section{
 		// overflow:hidden;
 		// padding:0 30px 0 0;
 	}
-	.slick-list{
-		margin:0 -22px 0 -8px;
-		overflow:visible;
-		padding:0 52px 0 0;
-	}
+	
 	.slick-slide{
-		padding:5px 8px;
 		ul{
 			@extend %listreset;
 			> li{

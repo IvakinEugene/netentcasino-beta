@@ -133,3 +133,44 @@
 		margin:0 0 1px;
 	}
 }
+
+.anchors-link{
+	border-bottom: 1px solid $border-color-base;
+	color:$base-gray;
+	font-size:18px;
+	// font-weight:bold;
+	line-height:1.1111;
+	text-transform:uppercase;
+	.holder{
+		padding:0 35px;
+	}
+	ul{
+		margin:0 0 -1px;
+		@extend %listreset;
+		li{
+			display:inline-block;
+			vertical-align:top;
+			&.active {
+				a{
+					border-bottom-color: $theme-color-base;
+					color:$base-link-color;
+				}
+			}
+			&:hover {
+				a{
+					color:$base-link-color;
+				}
+			}
+			+ li{
+				margin:0 0 0 81px;
+			}
+		}
+		a{
+			border-bottom: 1px solid transparent;
+			color:inherit;
+			display:inline-block;
+			vertical-align:top;
+			padding:0 0 7px;
+		}
+	}
+}
