@@ -1,11 +1,14 @@
 .section-casino{
 	padding:12px 0 60px;
-	.anchors-link{
-		margin:0 0 50px;
-	}
+	// .anchors-link{
+	// 	margin:0 0 50px;
+	// }
 	.subsection{
-		border-bottom: 1px solid $border-color-base;
+		border-top: 1px solid $border-color-base;
 		padding:0 0 10px;
+		> .holder{
+			padding:32px 23px 20px;
+		}
 	}
 	h1{
 		font-weight:normal;
@@ -64,4 +67,8 @@ dl{
 	dd{
 		margin:0 0 10px;
 	}
+}
+
+.casino-description{
+	.row{}
 }

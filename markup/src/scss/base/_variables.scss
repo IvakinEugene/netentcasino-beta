@@ -2,13 +2,14 @@
 // Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
 // Color names - http://name-of-color.com/
 
-$black:				#000;
-$shadow:			rgba(#3a3a3a,0.25);
-$theme-color-base:	#6daf0e;
-$base-gray:			#8c8e96;
-$theme-color-add:	#fed958;
-$border-color-base:	#cbd6d2;
-$white:				#fff;
+$black:						#000;
+$shadow:					rgba(#3a3a3a,0.25);
+$theme-color-base:			#6daf0e;
+$theme-color-base-lighten:	lighten($theme-color-base, 10%);
+$base-gray:					#8c8e96;
+$theme-color-add:			#fed958;
+$border-color-base:			#cbd6d2;
+$white:						#fff;
 
 
 $light-blue:		#39f;
@@ -37,8 +38,8 @@ $max-content-width: 1140px;
 $max-container-width: $trim + $max-content-width + $trim;
 
 // Links
-$base-link-color:		$theme-color-base;
-$base-link-hover-color: lighten($base-link-color, 10%);
+$base-link-color:		$base-text-color;
+// $base-link-hover-color: lighten($base-link-color, 10%);
 
 // Buttons 
 $btn-primary-background:		$theme-color-base;

@@ -56,9 +56,9 @@ p {
 
 a {
 	color: $base-link-color;
-	text-decoration:none;
+	text-decoration:underline;
 	&:hover {
-		color: $base-link-hover-color;
+		text-decoration:none;
 	}
 }
 
@@ -67,4 +67,41 @@ a {
 	display:block;
 	font-size: 16px;
 	font-weight:normal;
+	line-height:1.25;
+}
+
+hr{
+	border:0 solid $border-color-base;
+	border-width: 1px 0 0;
+	margin:37px 0 24px;
+}
+
+.list-advantages,
+.list-disadvantages{
+	line-height:1.3571;
+	@extend %listreset;
+	li{
+		overflow:hidden;
+		padding:0 0 10px 30px;
+		position:relative;
+		vertical-align:top;
+		&:before {
+			background:$theme-color-base;
+			border-radius: 100%;
+			content: '';
+			height:15px;
+			left:0;
+			position:absolute;
+			top:4px;
+			width:15px;
+		}
+	}
+}
+
+.list-disadvantages{
+	li{
+		&:before {
+			background:$theme-color-add;
+		}
+	}
 }

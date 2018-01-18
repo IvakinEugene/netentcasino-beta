@@ -51,7 +51,7 @@
 	&:hover {
 		color:$base-link-color;
 		[class*="icon-"]{
-			color:$base-link-hover-color;
+			color:$theme-color-base-lighten;
 		}
 	}
 	> span{
@@ -135,34 +135,34 @@
 }
 
 .anchors-link{
-	border-bottom: 1px solid $border-color-base;
+	// border-bottom: 1px solid $border-color-base;
 	color:$base-gray;
 	font-size:18px;
 	// font-weight:bold;
 	line-height:1.1111;
-	text-transform:uppercase;
+	// text-transform:uppercase;
 	.holder{
-		padding:0 35px;
+		// overflow:auto;
+		padding:0 23px;
 	}
 	ul{
 		margin:0 0 -1px;
+		white-space: nowrap;
 		@extend %listreset;
 		li{
 			display:inline-block;
 			vertical-align:top;
+			margin:0 15px 0 0;
 			&.active {
 				a{
 					border-bottom-color: $theme-color-base;
-					color:$base-link-color;
+					color:$theme-color-base;
 				}
 			}
 			&:hover {
 				a{
-					color:$base-link-color;
+					color:$theme-color-base;
 				}
-			}
-			+ li{
-				margin:0 0 0 81px;
 			}
 		}
 		a{
@@ -171,6 +171,21 @@
 			display:inline-block;
 			vertical-align:top;
 			padding:0 0 7px;
+			text-decoration:none;
 		}
+	}
+}
+
+.languages-list{
+	font-size:0;
+	line-height:1;
+	@extend %listreset;
+	li{
+		display:inline-block;
+		vertical-align:top;
+		margin:0 10px 10px 0;
+	}
+	img{
+		max-width: none;
 	}
 }
