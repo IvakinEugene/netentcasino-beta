@@ -1,270 +1,270 @@
-body{
-	margin: 0 auto;
-}
-// #wrapper{
-// 	width: none !important;
-// 	@include media(">=tablet") {
-// 		width: none !important;
-// 	}
+// body{
+// 	margin: 0 auto;
 // }
+// // #wrapper{
+// // 	width: none !important;
+// // 	@include media(">=tablet") {
+// // 		width: none !important;
+// // 	}
+// // }
 
-.twocolumns{
-	margin:0 auto;
-	overflow:hidden;
-	.holder{
-		max-width: 1440px;
-		margin: 0 auto;
-		padding:0 20px;
-		overflow:hidden;
-	}
-	.content{
-		float:left;
-		width:100%;
-		padding:0 0 3px;
-		.content-holder{
-			margin:0 388px 0 0;
-			background: #ffffff;
-			padding:0 22px 40px;
-			box-shadow: 0px 1px 2px 0px rgba(227, 229, 228, 0.8);
-			+.content-holder{
-				margin-top:20px;
-			}
-			h2{
-				text-transform:uppercase;
-				font-size: 16px;
-			}
-			.by-txt{
-				color: #6DAF0E;
-				margin: 0 0 8px;
-			}
-			ul{
-				list-style: none;
-				margin:0;
-				padding:0;
-				li{
-					margin:0 0 10px;
-				}
-			}
-		}
-	}
-}
-
-.aside{
-	float:right;
-	margin:0  0 0 -100%;
-	width:380px;
-}
-
-.post-image{
-	margin:0 -22px 34px;
-	&.fullwidth{
-		img{
-			width: 100%;
-		}
-	}
-}
-.widget{
-	ul{
-		list-style:none;
-		margin:0;
-		padding:0;
-		border: 2px solid #e8e7e8;
-		li{
-			background: #ffffff;
-			border-bottom: 1px solid #e8e7e8;
-			&:last-child{
-				border-bottom: none;
-			}
-		}
-		a{
-			color: #515151;
-			display:block;
-			padding:13px 21px;
-		}
-	}
-}
-// .post-content{
-// 	background: #f5f7f6;
-// 	padding:0 9px;
+// .twocolumns{
+// 	margin:0 auto;
 // 	overflow:hidden;
-// 	.post{
-// 		border: 1px solid #e3e5e4;
-// 		border-radius: 3px;
-// 		background: #fff;
-// 		padding: 0 10px 20px;
-// 		margin:0 0 20px;
-// 		box-shadow: 0px 1px 2px 0px rgba(227,229,228,0.8);
-// 		&:first-child{
-// 			margin:0 -25px 18px;
-// 			padding:0 37px 20px;
-// 			border: none;
-// 			h1{
-// 				font-size: 24px;
-// 				line-height: 24px;
-// 				margin:0 0 15px;
+// 	.holder{
+// 		max-width: 1440px;
+// 		margin: 0 auto;
+// 		padding:0 20px;
+// 		overflow:hidden;
+// 	}
+// 	.content{
+// 		float:left;
+// 		width:100%;
+// 		padding:0 0 3px;
+// 		.content-holder{
+// 			margin:0 388px 0 0;
+// 			background: #ffffff;
+// 			padding:0 22px 40px;
+// 			box-shadow: 0px 1px 2px 0px rgba(227, 229, 228, 0.8);
+// 			+.content-holder{
+// 				margin-top:20px;
 // 			}
-// 			.text{
-// 				font-size:16px;
-// 				line-height:17px;
+// 			h2{
+// 				text-transform:uppercase;
+// 				font-size: 16px;
 // 			}
-// 			.post-img{
-// 				margin: 0 -25px 23px;
-// 					img{
-// 					height: 174px;
-// 					width:100%;
+// 			.by-txt{
+// 				color: #6DAF0E;
+// 				margin: 0 0 8px;
+// 			}
+// 			ul{
+// 				list-style: none;
+// 				margin:0;
+// 				padding:0;
+// 				li{
+// 					margin:0 0 10px;
 // 				}
 // 			}
 // 		}
-// 		.txt{
-// 			text-align:center;
-// 			@include media(">=tablet") {
-// 				text-align:left;
-// 			}
-// 		}
-// 		p{
-// 			margin:0 0 10px;
-// 		}
-// 		ul{
-// 			list-style: none;
-// 			margin:0;
-// 			padding:0;
-// 			li{
-// 				margin:0 0 10px;
-// 			}
-// 		}
-// 		.post-img{
-// 			margin: 0 -10px 15px;
-// 			img{
-// 				height: 149px;
-// 				width:100%;
-// 			}
-// 		}
-// 		h1{
-// 			font-size: 16px;
-// 			line-height: 21px;
-// 			margin:0 0 2px;
-// 			color: #383A3A;
-// 		}
-// 		.text{
-// 			display:block;
-// 			font-size:12px;
-// 			line-height:15px;
-// 			color: #6DAF0E;
-// 			margin:0 0 8px;
-// 		}
 // 	}
 // }
 
-.share-block{
-	.holder{
-		padding:0 40px;
-	}
-	.head-title{
-		font-size: 16px;
-		color: #383A3A;
-		display:block;
-		text-transform:uppercase;
-		font-weight: 500;
-		margin:0 0 20px;
-	}
-	
-	a{
-		font-size: 16px;
-		margin:0 10px 0 0;
-		padding:0 5px;
-	}
-}
+// .aside{
+// 	float:right;
+// 	margin:0  0 0 -100%;
+// 	width:380px;
+// }
 
-.post-articles{
-	padding:37px 43px 35px;
-	text-align:center;
-	background: #ffffff;
-	// max-width: 1355px;
-	// margin: 0 auto;
-	border-top: 1px solid #EAE9EA;;
-	border-bottom: 1px solid #EAE9EA;
-	overflow:hidden;
-	.heading-title{
-		text-align: left;
-		.title{
-			display:block;
-			font-size: 16px;
-			color: #8C8E96;
-			margin:0 0 18px;
-		}
-		h1{
-			margin:0;
-		}
-	}
-	.post-block{
-		display:flex;
-		flex-wrap: wrap;
-		margin:0 -8px 21px;
-		.post-holder{
-			padding:0 8px 10px;
-			display:flex;
-			@include media(">=tablet") {
-				max-width: 33.33%;
-			}
-			.post-box{
-				border: 1px solid #e7e6e7;
-				box-shadow: 0px 1px 2px 0px rgba(227, 229, 228, 0.8);
-				padding:0 20px 19px;
-				text-align:center;
-				position:relative;
-				background: #ffffff;
-				@include media(">=tablet") {
-					padding:0 20px 70px;
-				}
-				.btn{
-					@include media(">=tablet") {
-						position:absolute;
-						bottom: 20px;
-						left: 70px;
-						right:70px;
-					}
-				}
-				.post-img{
-					margin:0 -20px 15px;
-					@include media(">=tablet") {
-						margin:0 -20px 22px;
-					}
-					img{
-						height: 149px;
-						width:100%;
-						@include media(">=tablet") {
-							height:201px;
-						}
-					}
-					a{
-						display:block;
-					}
-				}
-				.post-text{
-					text-align:left;
-					margin:0 0 29px;
-					@include media(">=tablet") {
-						margin:0;
-					}
-					p{
-						line-height: 21px;
-					}
-				}
-				h2{
-					font-size: 16px;
-					text-transform:uppercase;
-					margin:0 0 1px;
-				}
-				.title{
-					font-size: 12px;
-					color: #6DAF0E;
-					display:block;
-					margin:0 0 6px;
-					@include media(">=tablet") {
-						margin:0 0 9px;
-					}
-				}
-			}
-		}
-	}
-}
+// .post-image{
+// 	margin:0 -22px 34px;
+// 	&.fullwidth{
+// 		img{
+// 			width: 100%;
+// 		}
+// 	}
+// }
+// .widget{
+// 	ul{
+// 		list-style:none;
+// 		margin:0;
+// 		padding:0;
+// 		border: 2px solid #e8e7e8;
+// 		li{
+// 			background: #ffffff;
+// 			border-bottom: 1px solid #e8e7e8;
+// 			&:last-child{
+// 				border-bottom: none;
+// 			}
+// 		}
+// 		a{
+// 			color: #515151;
+// 			display:block;
+// 			padding:13px 21px;
+// 		}
+// 	}
+// }
+// // .post-content{
+// // 	background: #f5f7f6;
+// // 	padding:0 9px;
+// // 	overflow:hidden;
+// // 	.post{
+// // 		border: 1px solid #e3e5e4;
+// // 		border-radius: 3px;
+// // 		background: #fff;
+// // 		padding: 0 10px 20px;
+// // 		margin:0 0 20px;
+// // 		box-shadow: 0px 1px 2px 0px rgba(227,229,228,0.8);
+// // 		&:first-child{
+// // 			margin:0 -25px 18px;
+// // 			padding:0 37px 20px;
+// // 			border: none;
+// // 			h1{
+// // 				font-size: 24px;
+// // 				line-height: 24px;
+// // 				margin:0 0 15px;
+// // 			}
+// // 			.text{
+// // 				font-size:16px;
+// // 				line-height:17px;
+// // 			}
+// // 			.post-img{
+// // 				margin: 0 -25px 23px;
+// // 					img{
+// // 					height: 174px;
+// // 					width:100%;
+// // 				}
+// // 			}
+// // 		}
+// // 		.txt{
+// // 			text-align:center;
+// // 			@include media(">=tablet") {
+// // 				text-align:left;
+// // 			}
+// // 		}
+// // 		p{
+// // 			margin:0 0 10px;
+// // 		}
+// // 		ul{
+// // 			list-style: none;
+// // 			margin:0;
+// // 			padding:0;
+// // 			li{
+// // 				margin:0 0 10px;
+// // 			}
+// // 		}
+// // 		.post-img{
+// // 			margin: 0 -10px 15px;
+// // 			img{
+// // 				height: 149px;
+// // 				width:100%;
+// // 			}
+// // 		}
+// // 		h1{
+// // 			font-size: 16px;
+// // 			line-height: 21px;
+// // 			margin:0 0 2px;
+// // 			color: #383A3A;
+// // 		}
+// // 		.text{
+// // 			display:block;
+// // 			font-size:12px;
+// // 			line-height:15px;
+// // 			color: #6DAF0E;
+// // 			margin:0 0 8px;
+// // 		}
+// // 	}
+// // }
+
+// .share-block{
+// 	.holder{
+// 		padding:0 40px;
+// 	}
+// 	.head-title{
+// 		font-size: 16px;
+// 		color: #383A3A;
+// 		display:block;
+// 		text-transform:uppercase;
+// 		font-weight: 500;
+// 		margin:0 0 20px;
+// 	}
+	
+// 	a{
+// 		font-size: 16px;
+// 		margin:0 10px 0 0;
+// 		padding:0 5px;
+// 	}
+// }
+
+// .post-articles{
+// 	padding:37px 43px 35px;
+// 	text-align:center;
+// 	background: #ffffff;
+// 	// max-width: 1355px;
+// 	// margin: 0 auto;
+// 	border-top: 1px solid #EAE9EA;;
+// 	border-bottom: 1px solid #EAE9EA;
+// 	overflow:hidden;
+// 	.heading-title{
+// 		text-align: left;
+// 		.title{
+// 			display:block;
+// 			font-size: 16px;
+// 			color: #8C8E96;
+// 			margin:0 0 18px;
+// 		}
+// 		h1{
+// 			margin:0;
+// 		}
+// 	}
+// 	.post-block{
+// 		display:flex;
+// 		flex-wrap: wrap;
+// 		margin:0 -8px 21px;
+// 		.post-holder{
+// 			padding:0 8px 10px;
+// 			display:flex;
+// 			@include media(">=tablet") {
+// 				max-width: 33.33%;
+// 			}
+// 			.post-box{
+// 				border: 1px solid #e7e6e7;
+// 				box-shadow: 0px 1px 2px 0px rgba(227, 229, 228, 0.8);
+// 				padding:0 20px 19px;
+// 				text-align:center;
+// 				position:relative;
+// 				background: #ffffff;
+// 				@include media(">=tablet") {
+// 					padding:0 20px 70px;
+// 				}
+// 				.btn{
+// 					@include media(">=tablet") {
+// 						position:absolute;
+// 						bottom: 20px;
+// 						left: 70px;
+// 						right:70px;
+// 					}
+// 				}
+// 				.post-img{
+// 					margin:0 -20px 15px;
+// 					@include media(">=tablet") {
+// 						margin:0 -20px 22px;
+// 					}
+// 					img{
+// 						height: 149px;
+// 						width:100%;
+// 						@include media(">=tablet") {
+// 							height:201px;
+// 						}
+// 					}
+// 					a{
+// 						display:block;
+// 					}
+// 				}
+// 				.post-text{
+// 					text-align:left;
+// 					margin:0 0 29px;
+// 					@include media(">=tablet") {
+// 						margin:0;
+// 					}
+// 					p{
+// 						line-height: 21px;
+// 					}
+// 				}
+// 				h2{
+// 					font-size: 16px;
+// 					text-transform:uppercase;
+// 					margin:0 0 1px;
+// 				}
+// 				.title{
+// 					font-size: 12px;
+// 					color: #6DAF0E;
+// 					display:block;
+// 					margin:0 0 6px;
+// 					@include media(">=tablet") {
+// 						margin:0 0 9px;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }

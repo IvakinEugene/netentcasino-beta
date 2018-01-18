@@ -1,0 +1,135 @@
+
+.section-content{
+	background:$white;
+	@include media(">=tablet") {
+		background:none;
+	}
+	&.posts-list {
+		background:none;
+		> .holder{
+			padding-right: 13px;
+			padding-left: 13px;
+		}
+		.content-holder{
+			background:$white;
+			box-shadow: 0 2px 4px $shadow;
+			margin:20px 0;
+			padding:0 15px 20px;
+		}
+	}
+	> .holder{
+		@include media(">=tablet") {
+			padding-top: 10px;
+			overflow:hidden;
+		}
+	}
+	.content{
+		@include media(">=tablet") {
+			float:left;
+			width:100%;
+			&:only-child {
+				float:none;
+				width:auto;
+			}
+		}
+	}
+	.content-holder{
+		&:first-child:not(:only-child) {
+			background:$white;
+			margin:0;
+		}
+		@include media(">=tablet") {
+			box-shadow: 0 0 4px $shadow;
+			border-radius:3px 3px 0 0;
+			margin:0 384px 0 0;
+			// overflow:hidden;
+			padding:0 $gutter-width 20px;
+			.content:only-child + & {
+				margin:0;
+			}
+		}
+		+ .content-holder{
+			@include media(">=tablet") {
+				margin-top:20px;
+			}
+		}
+	}
+	.aside{
+		@include media(">=tablet") {
+			float:right;
+			margin:0 0 0 -100%;
+			width:375px;
+		}
+	}
+}
+
+.post-image{
+	border-radius: 3px;
+	margin:0 0 25px;
+	overflow:hidden;
+	@include media(">=tablet") {
+		margin:17px 0 14px;
+	}
+	&.fullwidth{
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+		margin:0 -#{$gutter-width} 23px;
+		@include media(">=tablet") {
+			margin-bottom: 33px;
+		}
+	}
+	img{
+		width: 100%;
+	}
+}
+
+.by{
+	color:$theme-color-base;
+	font-size: 16px;
+	margin:3px 0 8px;
+	@include media(">=tablet") {
+		font-size: 20px;
+		margin-bottom: 13px;
+	}
+	a{
+		color:inherit;
+		text-decoration:none;
+		&:hover {
+			color:$theme-color-base-lighten;
+		}
+	}
+}
+
+.widget{
+	ul{
+		border: 1px solid #cbd6d2;
+		box-shadow: 0 0 2px $shadow;
+		font-size:14px;
+		line-height:1.2857;
+		@extend %listreset;
+		li{
+			+ li{
+				border-top: 1px solid #cbd6d2;
+			}
+		}
+		a{
+			background:$white;
+			display:block;
+			padding:15px 20px;
+			text-decoration:none;
+			&:hover {
+				background:#edf0ee;
+			}
+		}
+		ul{
+			border-width:1px 0 0;
+			box-shadow: none;
+			li{
+				border: 0;
+			}
+			a{
+				background:#edf0ee;
+			}
+		}
+	}
+}

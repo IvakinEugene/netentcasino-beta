@@ -54,35 +54,6 @@ body{
 	margin:0  0 0 -100%;
 	width:380px;
 }
-
-.post-image{
-	margin:0 -22px 34px;
-	&.fullwidth{
-		img{
-			width: 100%;
-		}
-	}
-}
-.widget{
-	ul{
-		list-style:none;
-		margin:0;
-		padding:0;
-		border: 2px solid #e8e7e8;
-		li{
-			background: #ffffff;
-			border-bottom: 1px solid #e8e7e8;
-			&:last-child{
-				border-bottom: none;
-			}
-		}
-		a{
-			color: #515151;
-			display:block;
-			padding:13px 21px;
-		}
-	}
-}
 // .post-content{
 // 	background: #f5f7f6;
 // 	padding:0 9px;

@@ -20,7 +20,7 @@ $base-font-serif:		'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Body
 $base-text-color:		#515151;
-$base-background-color: #f7f9f9;
+$base-background-color: #383a3a;
 $font-size-base:		14px;
 $line-height-base:		1.5;
 $base-font-family:		$base-font-sans-serif !default;
@@ -65,7 +65,7 @@ $placeholder-color:				$gray !default;
 
 // Headers
 $h1-font-size: 24px;
-$h2-font-size: 16px;
+$h2-font-size: 22px;
 $h3-font-size: 18px;
 $h4-font-size: 21px !default;
 $h5-font-size: 17px !default;
@@ -76,3 +76,5 @@ $headings-color:		#383a3a;
 
 
 $animation-speed: 0.3s;
+
+$gutter-width:					23px;
