@@ -7,14 +7,29 @@
 	&.posts-list {
 		background:none;
 		> .holder{
-			padding-right: 13px;
-			padding-left: 13px;
+			padding-right: 10px;
+			padding-left: 10px;
 		}
 		.content-holder{
 			background:$white;
 			box-shadow: 0 2px 4px $shadow;
-			margin:20px 0;
-			padding:0 15px 20px;
+			// margin:20px 0;
+			padding:0 10px 20px;
+		}
+		.post-image{
+			&.fullwidth {
+				margin:0 -10px 14px;
+			}
+		}
+		h2,
+		.h2{
+			font-size: 16px;
+			margin:0 0 2px;
+			text-transform:uppercase;
+		}
+		.by{
+			font-size: 12px;
+			margin:0 0 5px;
 		}
 	}
 	> .holder{
@@ -34,28 +49,40 @@
 		}
 	}
 	.content-holder{
-		&:first-child:not(:only-child) {
-			background:$white;
-			margin:0;
-		}
+		// &:first-child:not(:only-child) {
+		// 	background:$white;
+		// 	margin:0;
+		// }
 		@include media(">=tablet") {
 			box-shadow: 0 0 4px $shadow;
 			border-radius:3px 3px 0 0;
 			margin:0 384px 0 0;
 			// overflow:hidden;
 			padding:0 $gutter-width 20px;
-			.content:only-child + & {
-				margin:0;
-			}
+			// .content:only-child + & {
+			// 	margin:0;
+			// }
 		}
 		+ .content-holder{
-			@include media(">=tablet") {
-				margin-top:20px;
+			margin-top:20px;
+			// @include media(">=tablet") {
+			// }
+		}
+		.button-holder{
+			padding:5px 0 0;
+			.btn{
+				font-size: 14px;
+				letter-spacing:0.03em;
+				min-width: 290px;
+				padding-top: 8px;
+				padding-bottom: 7px;
 			}
 		}
 	}
 	.aside{
+		display:none;
 		@include media(">=tablet") {
+			display:block;
 			float:right;
 			margin:0 0 0 -100%;
 			width:375px;
@@ -106,8 +133,34 @@
 		box-shadow: 0 0 2px $shadow;
 		font-size:14px;
 		line-height:1.2857;
-		@extend %listreset;
+		// @extend %listreset;
+		&.accordeon {
+			.active {
+				.opener{
+					&:before {
+						transform:translateY(-50%) rotate(180deg);
+					}
+				}
+			}
+			.opener{
+				position:relative;
+				&:before {
+					content: "UP";
+					font-size:16px;
+					line-height:1;
+					position:absolute;
+					right:20px;
+					top:50%;
+					transform:translateY(-50%);
+					transition:transform $animation-speed;
+				}
+			}
+		}
 		li{
+			padding:0;
+			&:before {
+				display:none;
+			}
 			+ li{
 				border-top: 1px solid #cbd6d2;
 			}
@@ -131,5 +184,21 @@
 				background:#edf0ee;
 			}
 		}
+	}
+}
+
+.section-related-posts{
+	background:$white;
+	.holder{
+		padding-top: 20px;
+		padding-bottom: 30px;
+	}
+	.boxes-holder{
+		> div{
+			padding:0 0 10px;
+		}
+	}
+	.view-more-button{
+		padding:10px 0 0;
 	}
 }

@@ -49,11 +49,11 @@ body{
 	}
 }
 
-.aside{
-	float:right;
-	margin:0  0 0 -100%;
-	width:380px;
-}
+// .aside{
+// 	float:right;
+// 	margin:0  0 0 -100%;
+// 	width:380px;
+// }
 // .post-content{
 // 	background: #f5f7f6;
 // 	padding:0 9px;
@@ -128,7 +128,7 @@ body{
 
 .share-block{
 	.holder{
-		padding:0 40px;
+		padding:25px 10px 20px;
 	}
 	.head-title{
 		font-size: 16px;
@@ -136,13 +136,17 @@ body{
 		display:block;
 		text-transform:uppercase;
 		font-weight: 500;
-		margin:0 0 20px;
+		margin:0 0 14px;
 	}
-	
-	a{
-		font-size: 16px;
-		margin:0 10px 0 0;
-		padding:0 5px;
+	ul{
+		li{
+			display:inline-block;
+			vertical-align:top;
+			padding:0 7px 10px 0;
+			&:before {
+				display:none;
+			}
+		}
 	}
 }
 

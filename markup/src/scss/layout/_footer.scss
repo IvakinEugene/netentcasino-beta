@@ -1,123 +1,123 @@
 #footer {
-	background: #383A3A;
+	background:$base-background-color;
+	color:$white;
+	font-size: 12px;
+	line-height:1.4167;
 	text-align:center;
-	color: #ffffff;
 	.holder{
-		padding: 0 10px;
-		@include media(">=tablet") {
-			padding:0 25px;
-		}
+		padding: 0 $gutter-width;
+		// @include media(">=tablet") {
+		// 	padding:0 25px;
+		// }
 	}
-	.footer-top{
-		color: #ffffff;
-		font-size: 12px;
-		padding: 26px 0;
-		border-bottom: 1px solid #9B9B9B;
-		@include media(">=tablet") {
-			display:flex;
-			justify-content:space-between;
-		}
-		.title{
-			font-size: 14px;
-			display:block;
-			margin: 0 0 10px;
-		}
-		p{
-			margin: 0 0 25px;
-		}
-		.box-left{
-			max-width: 355px;
-			margin: 0 auto;
-			@include media(">=tablet") {
-				text-align:left;
-				margin: 0;
-			}
-		}
-		.list-item{
-			list-style:none;
-			padding:0;
-			margin:0 0 22px;
-			display:flex;
-			justify-content:center;
-			@include media(">=tablet") {
-				justify-content: flex-start;
-				margin: 0 -10px 22px;
-			}
-			li{
-				position: relative;
-				padding:0 10px;
-				&:not(:first-child) {
-					&:after {
-						width: 2px;
-						height: 12px;
-						position: absolute;
-						top: 50%;
-						left: -1px;
-						-ms-transform: translate(0, -50%);
-						transform: translate(0, -50%);
-						background: #ffffff;
-						content: '';
-						margin:-1px 0 0 0;
-					}
-				}
-				a{
-					color: #ffffff;
-					font-size: 14px;
-					line-height:16px;
-				}
-			}
-		}
-		.social-networks{
-			font-size:18px;
-			line-height:1;
-			@extend %listreset;
-			li{
-				display:inline-block;
-				vertical-align:top;
-				padding:0 2px;
-			}
-			a{
-				border: 2px solid $white;
-				border-radius: 100%;
-				color:$white;
-				display:block;
-				height:38px;
-				position:relative;
-				width:38px;
-				&:before {
-					left:50%;
-					position:absolute;
-					top:50%;
-					transform:translate(-50%, -50%);
-				}
-			}
-		}
-	}
-	.footer-bottom{
-		padding:25px 0;
-		@include media(">=tablet") {
-			display:flex;
-			justify-content:space-between;
-			align-items:center;
-		}
-		.item-widget{
-			list-style:none;
-			margin:0 0 20px;
-			padding:0;
-			display:flex;
-			justify-content:center;
-			align-items: center;
-			@include media(">=tablet") {
-				justify-content:center;
-			}
-			li{
-				padding:0 5px;
-			}
-		}
-		.copyright{
-			font-size: 13px;
+	a{
+		color:inherit;
+		text-decoration:none;
+		&:hover {
+			text-decoration:underline;
 		}
 	}
 }
 
+.footer-top{
+	border-bottom:1px solid #9B9B9B;
+	// color: $white;
+	padding:28px 0 50px;
+	// @include media(">=tablet") {
+	// 	display:flex;
+	// 	justify-content:space-between;
+	// }
+	// .title{
+	// 	display:block;
+	// 	font-size: 14px;
+	// 	margin: 0 0 10px;
+	// }
+	// p{
+	// 	margin: 0 0 25px;
+	// }
+	// .box-left{
+	// 	max-width: 355px;
+	// 	margin: 0 auto;
+	// 	@include media(">=tablet") {
+	// 		text-align:left;
+	// 		margin: 0;
+	// 	}
+	// }
+	.footer-nav{
+		font-size: 14px;
+		line-height:1.2143;
+		margin:0 -50px 22px;
+		text-align:center;
+		// @include media(">=tablet") {
+		// 	justify-content: flex-start;
+		// 	margin: 0 -10px 22px;
+		// }
+		li{
+			display:inline-block;
+			vertical-align:top;
+			position: relative;
+			padding:0 10px 0 10px;
+			&:before {
+				background;
+
+			}
+			// a{
+			// 	color: #ffffff;
+			// 	font-size: 14px;
+			// 	line-height:16px;
+			// }
+		}
+	}
+	.social-networks{
+		font-size:18px;
+		line-height:1;
+		@extend %listreset;
+		li{
+			display:inline-block;
+			vertical-align:top;
+			padding:0 2px;
+		}
+		a{
+			border: 2px solid $white;
+			border-radius: 100%;
+			color:$white;
+			display:block;
+			height:38px;
+			position:relative;
+			width:38px;
+			&:before {
+				left:50%;
+				position:absolute;
+				top:50%;
+				transform:translate(-50%, -50%);
+			}
+		}
+	}
+}
+
+.footer-bottom{
+	padding:25px 0;
+	@include media(">=tablet") {
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+	}
+	.item-widget{
+		list-style:none;
+		margin:0 0 20px;
+		padding:0;
+		display:flex;
+		justify-content:center;
+		align-items: center;
+		@include media(">=tablet") {
+			justify-content:center;
+		}
+		li{
+			padding:0 5px;
+		}
+	}
+	.copyright{
+		font-size: 13px;
+	}
+}
 

@@ -412,11 +412,10 @@
 	box-shadow: 0 0 4px $shadow;
 	font-size:14px;
 	line-height:1.3571;
-	.media-holder{
-		position:relative;
-	}
-	.body{
-		padding:14px 19px 22px;
+	padding:0 19px 71px;
+	position:relative;
+	.post-image.fullwidth{
+		margin:0 -19px 15px;
 	}
 	h2{
 		font-size:16px;
@@ -426,12 +425,18 @@
 		text-transform:uppercase;
 	}
 	.by{
-		color:$theme-color-base;
+		// color:$theme-color-base;
 		font-size: 12px;
 		margin:0 0 7px;
 	}
 	p{
 		margin:0 0 12px;
+	}
+	.button-holder{
+		bottom:19px;
+		left:$gutter-width;
+		position:absolute;
+		right:$gutter-width;
 	}
 	// .btn{
 	//     min-width: 250px;

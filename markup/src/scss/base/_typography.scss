@@ -91,6 +91,23 @@ hr{
 	margin:37px 0 24px;
 }
 
+ul{
+	@extend %listreset;
+	li{
+		overflow:hidden;
+		padding:0 0 10px;
+		// position:relative;
+		vertical-align:top;
+		&:before {
+			content: '-';
+			margin:0 7px 0 0;
+			// left:0;
+			// position:absolute;
+			// top:0;
+		}
+	}
+}
+
 .list-advantages,
 .list-disadvantages{
 	line-height:1.3571;
