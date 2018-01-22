@@ -22,7 +22,7 @@
 .footer-top{
 	border-bottom:1px solid #9B9B9B;
 	// color: $white;
-	padding:28px 0 50px;
+	padding:28px 0 32px;
 	// @include media(">=tablet") {
 	// 	display:flex;
 	// 	justify-content:space-between;
@@ -46,8 +46,9 @@
 	.footer-nav{
 		font-size: 14px;
 		line-height:1.2143;
-		margin:0 -50px 22px;
+		margin:0 -#{$gutter-width} 25px;
 		text-align:center;
+		@extend %listreset;
 		// @include media(">=tablet") {
 		// 	justify-content: flex-start;
 		// 	margin: 0 -10px 22px;
@@ -56,10 +57,22 @@
 			display:inline-block;
 			vertical-align:top;
 			position: relative;
-			padding:0 10px 0 10px;
+			padding:0 6px 0 10px;
+			&:first-child {
+				&:before {
+					display:none;
+				}
+			}
 			&:before {
-				background;
-
+				background:$white;
+				content: '';
+				height:12px;
+				left:0;
+				margin:0;
+				position:absolute;
+				top:50%;
+				transform:translateY(-50%);
+				width:2px;
 			}
 			// a{
 			// 	color: #ffffff;
@@ -68,10 +81,19 @@
 			// }
 		}
 	}
+	p{
+		margin:0 0 27px;
+	}
+	.title{
+		display:block;
+		font-size: 14px;
+		font-weight:normal;
+		margin:0 0 17px;
+	}
 	.social-networks{
 		font-size:18px;
 		line-height:1;
-		@extend %listreset;
+		// @extend %listreset;
 		li{
 			display:inline-block;
 			vertical-align:top;
@@ -85,6 +107,12 @@
 			height:38px;
 			position:relative;
 			width:38px;
+			&:hover {
+				background:$white;
+				&:before {
+					color:$base-background-color;
+				}
+			}
 			&:before {
 				left:50%;
 				position:absolute;
@@ -96,28 +124,43 @@
 }
 
 .footer-bottom{
-	padding:25px 0;
-	@include media(">=tablet") {
-		display:flex;
-		justify-content:space-between;
-		align-items:center;
-	}
-	.item-widget{
-		list-style:none;
-		margin:0 0 20px;
-		padding:0;
-		display:flex;
-		justify-content:center;
-		align-items: center;
-		@include media(">=tablet") {
-			justify-content:center;
-		}
+	padding:29px 0;
+	// @include media(">=tablet") {
+	// 	display:flex;
+	// 	justify-content:space-between;
+	// 	align-items:center;
+	// }
+	// .item-widget{
+	// 	list-style:none;
+	// 	margin:0 0 20px;
+	// 	padding:0;
+	// 	display:flex;
+	// 	justify-content:center;
+	// 	align-items: center;
+	// 	@include media(">=tablet") {
+	// 		justify-content:center;
+	// 	}
+	// 	li{
+	// 		padding:0 5px;
+	// 	}
+	// }
+	.logos-list{
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    align-content: center;
+	    align-items: center;
+	    margin:0 -10px 26px;
+		// @extend %listreset;
 		li{
-			padding:0 5px;
+			// display:inline-block;
+			// vertical-align:top;
+			margin:0 8px;
 		}
 	}
 	.copyright{
 		font-size: 13px;
+		font-weight:300;
 	}
 }
-

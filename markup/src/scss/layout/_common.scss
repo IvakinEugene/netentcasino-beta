@@ -3,7 +3,8 @@
 	max-width: 375px;
 	overflow:hidden;
 	@include media(">=tablet") {
-		max-width:1440px;
+		max-width: none;
+		width:1440px;
 		// margin: 0 auto;
 	}
 }

@@ -93,17 +93,19 @@ hr{
 
 ul{
 	@extend %listreset;
-	li{
-		overflow:hidden;
-		padding:0 0 10px;
-		// position:relative;
-		vertical-align:top;
-		&:before {
-			content: '-';
-			margin:0 7px 0 0;
-			// left:0;
-			// position:absolute;
-			// top:0;
+	&:not([class]) {
+		li{
+			overflow:hidden;
+			padding:0 0 10px;
+			// position:relative;
+			vertical-align:top;
+			&:before {
+				content: '-';
+				margin:0 7px 0 0;
+				// left:0;
+				// position:absolute;
+				// top:0;
+			}
 		}
 	}
 }

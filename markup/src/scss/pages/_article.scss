@@ -7,29 +7,82 @@
 	&.posts-list {
 		background:none;
 		> .holder{
-			padding-right: 10px;
-			padding-left: 10px;
+			@include media("<tablet") {
+				padding-right: 10px;
+				padding-left: 10px;
+			}
 		}
 		.content-holder{
-			background:$white;
-			box-shadow: 0 2px 4px $shadow;
-			// margin:20px 0;
-			padding:0 10px 20px;
+			@include media("<tablet") {
+				background:$white;
+				box-shadow: 0 2px 4px $shadow;
+				padding:0 10px 20px;
+				// margin:0 384px 0 0;
+			}
+			&:first-child {
+				@include media("<tablet") {
+					margin-right: -10px;
+					margin-left: -10px;
+					padding-right: $gutter-width;
+					padding-left: $gutter-width;
+					// margin:0 384px 0 0;
+				}
+				.post-image{
+					&.fullwidth {
+						margin:0 -#{$gutter-width} 24px;
+						@include media(">=tablet") {
+							margin-bottom: 34px;
+						}
+					}
+				}
+				h1,
+				.h1{
+					font-size: $h1-font-size;
+					line-height:1;
+					margin:0 0 9px;
+					@include media(">=tablet") {
+						font-size: 24px;
+						font-weight:500;
+						margin:0 0 2px;
+						text-transform:uppercase;
+					}
+				}
+				.by{
+					font-size: 16px;
+					margin:0 0 9px;
+					@include media(">=tablet") {
+						font-size: 20px;
+						margin:0 0 16px;
+					}
+				}
+			}
 		}
 		.post-image{
 			&.fullwidth {
 				margin:0 -10px 14px;
+				@include media(">=tablet") {
+					margin:0 -#{$gutter-width} 25px;
+				}
 			}
 		}
-		h2,
-		.h2{
+		h1,
+		.h1{
 			font-size: 16px;
+			line-height:1.2727;
 			margin:0 0 2px;
 			text-transform:uppercase;
+			@include media(">=tablet") {
+				font-size: 22px;
+				font-weight:normal;
+				margin:0 0 10px;
+				text-transform:none;
+			}
 		}
 		.by{
-			font-size: 12px;
-			margin:0 0 5px;
+			@include media("<tablet") {
+				font-size: 12px;
+				margin:0 0 5px;
+			}
 		}
 	}
 	> .holder{
@@ -54,11 +107,12 @@
 		// 	margin:0;
 		// }
 		@include media(">=tablet") {
+			background:$white;
 			box-shadow: 0 0 4px $shadow;
 			border-radius:3px 3px 0 0;
 			margin:0 384px 0 0;
 			// overflow:hidden;
-			padding:0 $gutter-width 20px;
+			padding:0 $gutter-width 25px;
 			// .content:only-child + & {
 			// 	margin:0;
 			// }
@@ -70,12 +124,21 @@
 		}
 		.button-holder{
 			padding:5px 0 0;
+			@include media(">=tablet") {
+				padding:18px 0 9px;
+				text-align:left;
+			}
 			.btn{
 				font-size: 14px;
 				letter-spacing:0.03em;
 				min-width: 290px;
 				padding-top: 8px;
 				padding-bottom: 7px;
+				@include media(">=tablet") {
+					font-size: 16px;
+					min-width: 400px;
+					padding-bottom: 10px;
+				}
 			}
 		}
 	}
@@ -143,6 +206,7 @@
 				}
 			}
 			.opener{
+				padding-right: 50px;
 				position:relative;
 				&:before {
 					content: "UP";
