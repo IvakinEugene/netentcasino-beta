@@ -1,12 +1,50 @@
 .payments-list{
 	overflow:hidden;
 	@extend %listreset;
+	&.large {
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    justify-content: flex-start;
+	    align-content: flex-start;
+	    align-items: flex-start;
+	    font-size: 12px;
+	    margin:0 0 21px;
+	    li{
+	    	margin:0;
+	    	padding:4px;
+	    	width:33.3333%;
+	    }
+		a{
+		    flex-direction: column;
+		    flex-wrap: wrap;
+		    // justify-content: flex-start;
+			background:$white;
+			border: 0;
+			box-shadow: 0 0 3px $shadow;
+			height:111px;
+			width:102px;
+			&:hover {
+				box-shadow: 0 0 10px $shadow;
+			}
+		}
+		.logo-holder{
+			display: flex;
+		    flex-direction: column;
+		    flex-wrap: wrap;
+		    justify-content: center;
+		    align-content: center;
+		    align-items: center;
+			height:50px;
+			margin-bottom:5px;
+		}
+	}
 	li{
 		float:left;
 		margin:0 10px 10px 0;
 	}
 	a{
-		border: 1px solid $theme-color-base;
+		border: 1px solid $border-color-base;
 		color:#4a4a4a;
 		display: flex;
 		flex-direction: row;
@@ -15,6 +53,7 @@
 		align-content: center;
 		align-items: center;
 		height:32px;
+		text-decoration:none;
 		width:71px;
 	}
 }
@@ -130,14 +169,16 @@
 .section-heading{
 	padding:0 0 14px;
 	h1{
-		margin:0 0 1px;
+		margin:0 0 1px !important;
 	}
 }
 
-.anchors-link{
+.anchor-links{
+	background:$white;
 	// border-bottom: 1px solid $border-color-base;
 	color:$base-gray;
 	font-size:18px;
+	letter-spacing: -0.025em;
 	// font-weight:bold;
 	line-height:1.1111;
 	// text-transform:uppercase;
@@ -148,11 +189,15 @@
 	ul{
 		margin:0 0 -1px;
 		white-space: nowrap;
-		@extend %listreset;
+		// @extend %listreset;
 		li{
 			display:inline-block;
 			vertical-align:top;
 			margin:0 15px 0 0;
+			padding:0;
+			@include media(">=tablet") {
+				margin:0 43px 0 0;
+			}
 			&.active {
 				a{
 					border-bottom-color: $theme-color-base;
@@ -164,6 +209,9 @@
 					color:$theme-color-base;
 				}
 			}
+			&:before {
+				display:none;
+			}
 		}
 		a{
 			border-bottom: 1px solid transparent;
@@ -172,6 +220,9 @@
 			vertical-align:top;
 			padding:0 0 7px;
 			text-decoration:none;
+			@include media(">=tablet") {
+				padding:18px 0;
+			}
 		}
 	}
 }
@@ -187,5 +238,116 @@
 	}
 	img{
 		max-width: none;
+	}
+}
+
+.casino-description{
+	.row{
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    justify-content: flex-start;
+	    align-content: stretch;
+	    align-items: stretch;
+		+ .row{
+			padding-top: 9px;
+		}
+	}
+	.heading{
+		background:#f2f5f4;
+		min-width: 144px;
+		padding:13px;
+		strong{
+			font-weight:normal;
+		}
+	}
+	.content{
+		border: 1px solid $border-color-base;
+		flex:1 1 auto;
+		padding:13px 15px 5px;
+	}
+	p{
+		margin:0;
+	}
+}
+
+.games-list{
+	font-size: 16px;
+	line-height:1;
+	li{
+		display:inline-block;
+		vertical-align:top;
+		margin:0 6px 10px 0;
+	}
+	a{
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    justify-content: center;
+	    align-content: center;
+	    align-items: center;
+		border: 1px solid $border-color-base;
+		height:32px;
+		width:71px;
+		text-decoration:none;
+		&:hover {
+			background:$border-color-base;
+			color:$white;
+		}
+	}
+}
+
+.devices-list{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-end;
+    align-items: flex-end;
+    li{
+    	margin:0 21px 21px 0;
+    }
+}
+
+.mobile-stores-list{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    li{
+    	margin:0 9px 0 0;
+    }
+    a{
+    	display:block;
+    	width:118px;
+    }
+}
+
+.support-list{
+	font-size:16px;
+	line-height:1.125;
+	padding:5px 0 9px;
+	li{
+		padding:0 0 9px;
+	}
+	a{
+		box-shadow: 0 1px 2px $shadow;
+		display:block;
+		padding:18px 15px 16px 71px;
+		position:relative;
+		text-decoration:none;
+	}
+	.icon-icon{
+		left:11px;
+		position:absolute;
+		text-align:center;
+		top:50%;
+		transform:translateY(-50%);
+		width:50px;
+		&:before {
+			content: 'icon';
+		}
 	}
 }

@@ -5,7 +5,6 @@
 	@include media(">=tablet") {
 		max-width: none;
 		width:1440px;
-		// margin: 0 auto;
 	}
 }
 
@@ -14,6 +13,7 @@
 	z-index:1;
 }
 
+.subsection,
 section{
 	> .holder{
 		padding-right: $gutter-width;
@@ -26,6 +26,7 @@ section{
 }
 
 .section-intro{
+	background:$white;
 	// height:200px;
 	position:relative;
 	.holder,
@@ -36,6 +37,16 @@ section{
 	.holder{
 		padding-top: 14px;
 		padding-bottom: 14px;
+		@include media(">=tablet") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: wrap;
+		    justify-content: space-between;
+		    align-content: flex-start;
+		    align-items: flex-start;
+		    padding-top: 43px;
+		    padding-bottom: 19px;
+		}
 	}
 	.casino-logo{
 		display: flex;
@@ -45,6 +56,17 @@ section{
 		align-content: center;
 		align-items: center;
 		height:84px;
+		@include media(">=tablet") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: wrap;
+		    justify-content: center;
+		    align-content: center;
+		    align-items: center;
+			flex:1 1 auto;
+			order: 1;
+			min-height: 258px;
+		}
 	}
 	.search-box{
 		background:$white;

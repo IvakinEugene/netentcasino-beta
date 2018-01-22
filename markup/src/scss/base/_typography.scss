@@ -89,6 +89,9 @@ hr{
 	border:0 solid $border-color-base;
 	border-width: 1px 0 0;
 	margin:37px 0 24px;
+	@include media(">=tablet") {
+		margin-top: 23px;
+	}
 }
 
 ul{
@@ -116,9 +119,18 @@ ul{
 	@extend %listreset;
 	li{
 		overflow:hidden;
-		padding:0 0 10px 30px;
+		padding:0 0 0 30px;
 		position:relative;
 		vertical-align:top;
+		@include media(">=tablet") {
+			padding:0 0 0 34px;
+		}
+		+ li{
+			margin-top: 10px;
+			@include media(">=tablet") {
+				margin-top: 12px;
+			}
+		}
 		&:before {
 			background:$theme-color-base;
 			border-radius: 100%;

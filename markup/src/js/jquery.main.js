@@ -30,7 +30,7 @@ function initMobileNav() {
 // initialize smooth anchor links
 function initAnchors() {
 	new SmoothScroll({
-		anchorLinks: 'a[href*="popup"]:not([href="#"])',
+		anchorLinks: '.anchor-links a[href^="#"]:not([href="#"])',
 		extraOffset: 0,
 		activeClasses: 'parent',
 		anchorActiveClass: 'active',
