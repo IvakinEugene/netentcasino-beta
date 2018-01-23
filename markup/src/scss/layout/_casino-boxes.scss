@@ -202,6 +202,13 @@
 	box-shadow:0 0 3px $shadow;
 	border-radius: 4px 4px 0 0;
 	overflow:hidden;
+	&:hover {
+		.media-holder{
+			.hover-box{
+				display: flex;
+			}
+		}
+	}
 	&.no-content {
 		border-radius: 4px;
 		position:relative;
@@ -216,10 +223,22 @@
 			right:0;
 			text-transform:uppercase;
 			z-index:10;
+			@include media(">=tablet") {
+				color:$headings-color;
+				display:block;
+				font-size: 14px;
+				font-weight:normal;
+				padding:6px 9px 7px;
+				position:relative;
+				text-transform:none;
+			}
 		}
 	}
 	.media-holder{
 		position:relative;
+		a{
+			text-decoration:none;
+		}
 		iframe,
 		img{
 			position:relative;
@@ -242,10 +261,14 @@
 			text-transform:uppercase;
 			top:10px;
 			z-index:15;
+			@include media(">=tablet") {
+				font-size: 16px;
+				padding:2px 13px 4px;
+			}
 		}
 		.hover-box{
-			display:none !important;
-			display: flex;
+			// display:none !important;
+			display:none;
 		    flex-direction: row;
 		    flex-wrap: nowrap;
 		    justify-content: center;
@@ -319,70 +342,7 @@
 // 	}
 // }
 
-.bonus-box{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-content: stretch;
-	align-items: stretch;
-	background:$white;
-	box-shadow: 0 0 3px $shadow;
-	color:$base-gray;
-	font-size:12px;
-	line-height:1.25;
-	.heading{
-		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: center;
-		align-content: center;
-		align-items: center;
-		border-right: 1px solid $border-color-base;
-		min-width:91px;
-		padding:5px;
-	}
-	.logo-holder{
-		margin-bottom: 7px;
-	}
-	h3{
-		color:#4a4a4a;
-		font-size: 12px;
-		font-weight:500;
-		margin:0 0 2px;
-	}
-	.content{
-		flex:1 1 auto;
-		padding:25px 20px 18px;
-	}
-	.txt{
-		display: flex;
-	    flex-direction: column;
-	    flex-wrap: nowrap;
-	    justify-content: center;
-	    align-content: stretch;
-	    align-items: stretch;
-		min-height: 54px;
-		> *{
-			width:100%;
-		}
-	}
-	h4{
-		font-size: 18px;
-		font-weight:normal;
-		line-height:1.0556;
-		margin:0 0 5px;
-	}
-	p{
-		margin:0 0 11px !important;
-	}
-	.btn{
-		font-size: 16px;
-		min-width: 189px;
-		padding-top: 6px;
-		padding-bottom: 6px;
-	}
-}
+
 
 // .payment-box{
 // 	display: flex;

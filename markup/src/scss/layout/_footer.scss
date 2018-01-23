@@ -4,11 +4,18 @@
 	font-size: 12px;
 	line-height:1.4167;
 	text-align:center;
+	@include media(">=tablet") {
+		font-size:14px;
+		line-height:1.2143;
+		padding:36px 0;
+		text-align:left;
+	}
 	.holder{
 		padding: 0 $gutter-width;
-		// @include media(">=tablet") {
-		// 	padding:0 25px;
-		// }
+		@include media(">=tablet") {
+			margin:0 auto;
+			max-width: 1392px;
+		}
 	}
 	a{
 		color:inherit;
@@ -23,42 +30,49 @@
 	border-bottom:1px solid #9B9B9B;
 	// color: $white;
 	padding:28px 0 32px;
-	// @include media(">=tablet") {
-	// 	display:flex;
-	// 	justify-content:space-between;
-	// }
-	// .title{
-	// 	display:block;
-	// 	font-size: 14px;
-	// 	margin: 0 0 10px;
-	// }
-	// p{
-	// 	margin: 0 0 25px;
-	// }
-	// .box-left{
-	// 	max-width: 355px;
-	// 	margin: 0 auto;
-	// 	@include media(">=tablet") {
-	// 		text-align:left;
-	// 		margin: 0;
-	// 	}
-	// }
+	@include media(">=tablet") {
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    justify-content: space-between;
+	    align-content: flex-start;
+	    align-items: flex-start;
+	    padding:0 18px 31px;
+	}
+	> div{
+		@include media(">=tablet") {
+			width:50%;
+		}
+		&:first-child {
+			@include media(">=tablet") {
+				max-width: 450px;
+			}
+		}
+		&:last-child {
+			@include media(">=tablet") {
+				max-width: 294px;
+				text-align:center;
+			}
+		}
+	}
 	.footer-nav{
 		font-size: 14px;
 		line-height:1.2143;
 		margin:0 -#{$gutter-width} 25px;
-		text-align:center;
 		@extend %listreset;
-		// @include media(">=tablet") {
-		// 	justify-content: flex-start;
-		// 	margin: 0 -10px 22px;
-		// }
+		@include media(">=tablet") {
+			margin:0 0 13px;
+			text-align:left;
+		}
 		li{
 			display:inline-block;
 			vertical-align:top;
 			position: relative;
 			padding:0 6px 0 10px;
 			&:first-child {
+				@include media(">=tablet") {
+					padding-left: 0;
+				}
 				&:before {
 					display:none;
 				}
@@ -83,12 +97,19 @@
 	}
 	p{
 		margin:0 0 27px;
+		@include media(">=tablet") {
+			margin:0;
+		}
 	}
 	.title{
 		display:block;
 		font-size: 14px;
 		font-weight:normal;
 		margin:0 0 17px;
+		@include media(">=tablet") {
+			font-size: 16px;
+			margin:0 0 19px;
+		}
 	}
 	.social-networks{
 		font-size:18px;
@@ -98,6 +119,9 @@
 			display:inline-block;
 			vertical-align:top;
 			padding:0 2px;
+			@include media(">=tablet") {
+				padding:0 3px;
+			}
 		}
 		a{
 			border: 2px solid $white;
@@ -125,25 +149,15 @@
 
 .footer-bottom{
 	padding:29px 0;
-	// @include media(">=tablet") {
-	// 	display:flex;
-	// 	justify-content:space-between;
-	// 	align-items:center;
-	// }
-	// .item-widget{
-	// 	list-style:none;
-	// 	margin:0 0 20px;
-	// 	padding:0;
-	// 	display:flex;
-	// 	justify-content:center;
-	// 	align-items: center;
-	// 	@include media(">=tablet") {
-	// 		justify-content:center;
-	// 	}
-	// 	li{
-	// 		padding:0 5px;
-	// 	}
-	// }
+	@include media(">=tablet") {
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    justify-content: space-between;
+	    align-content: center;
+	    align-items: center;
+		padding:17px 9px 0;
+	}
 	.logos-list{
 		display: flex;
 	    flex-direction: row;
@@ -152,7 +166,9 @@
 	    align-content: center;
 	    align-items: center;
 	    margin:0 -10px 26px;
-		// @extend %listreset;
+		@include media(">=tablet") {
+			margin:0;
+		}
 		li{
 			// display:inline-block;
 			// vertical-align:top;
@@ -162,5 +178,6 @@
 	.copyright{
 		font-size: 13px;
 		font-weight:300;
+		margin:0;
 	}
 }

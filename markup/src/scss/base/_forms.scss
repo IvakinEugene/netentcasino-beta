@@ -31,6 +31,12 @@ textarea {
 	outline: none;
 	padding: $form-element-padding;
 	width: 100%;
+	@include media(">=tablet") {
+		font-size: 18px;
+		height:auto;
+		line-height:normal;
+		padding:7px 12px 8px;
+	}
 	@include placeholder {
 		color: $placeholder-color;
 	}

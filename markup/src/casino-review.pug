@@ -106,10 +106,11 @@ block content
 			- var image = "banner-concept-4"
 			include pug/extends/retina-images
 		section.section-casino
+			//- 
 			.anchor-links
 				.holder
 					ul
-						li.active
+						li
 							a(href="#section1") General Information
 						li
 							a(href="#section2") Games
@@ -145,42 +146,44 @@ block content
 								li Welcome Bonus only valid for certain countries.
 					hr
 					.casino-description
-						.row
-							.heading
-								strong Welcome Bonus
-							.content
-								p
-									a(href="#") 50% up to £100 + 50 Free Spins
-						.row
-							.heading
-								strong Founded
-							.content
-								p 2001
-						.row
-							.heading
-								strong License(s)
-							.content
-								p Malta (MGA/CL3/183/2004)
-						.row
-							.heading
-								strong Products
-							.content
-								p Casino, Live Casino, Sportsbook &amp; Bingo
-						.row
-							.heading
-								strong Languages
-							.content
-								ul.languages-list
-									li
-										img(src="images/flag-uk.png", alt="Image description", width="35", height="18")
-									li
-										img(src="images/flag-german.png", alt="Image description", width="38", height="18")
-									li
-										img(src="images/flag-sweden.png", alt="Image description", width="35", height="18")
-									li
-										img(src="images/flag-spain.png", alt="Image description", width="35", height="18")
-									li
-										img(src="images/flag-italy.png", alt="Image description", width="35", height="18")
+						div
+							.row
+								.heading
+									strong Welcome Bonus
+								.content
+									p
+										a(href="#") 50% up to £100 + 50 Free Spins
+							.row
+								.heading
+									strong Founded
+								.content
+									p 2001
+							.row
+								.heading
+									strong License(s)
+								.content
+									p Malta (MGA/CL3/183/2004)
+						div
+							.row
+								.heading
+									strong Products
+								.content
+									p Casino, Live Casino, Sportsbook &amp; Bingo
+							.row
+								.heading
+									strong Languages
+								.content
+									ul.languages-list
+										li
+											img(src="images/flag-uk.png", alt="Image description", width="35", height="18")
+										li
+											img(src="images/flag-german.png", alt="Image description", width="38", height="18")
+										li
+											img(src="images/flag-sweden.png", alt="Image description", width="35", height="18")
+										li
+											img(src="images/flag-spain.png", alt="Image description", width="35", height="18")
+										li
+											img(src="images/flag-italy.png", alt="Image description", width="35", height="18")
 			.subsection#section2
 				.holder
 					.twocolumns
@@ -188,7 +191,7 @@ block content
 							.section-heading
 								h1 400+ NetEnt Games
 								strong.subtitle Newest games available right now on Betsson!
-							.games-slider.slick-slider(data-slick='{"dots": true, "slidesToShow": 1, "slidesToScroll": 1, "arrows": false, "infinite": false}')
+							.games-slider
 								div
 									.game-box.no-content
 										.media-holder
@@ -199,7 +202,7 @@ block content
 												span
 													span.icon-play
 													| Play at Betsson
-										strong.media-title Planet of the apes 2
+										strong.media-title Planet of the Apes 2
 								div
 									.game-box.no-content
 										.media-holder
@@ -229,18 +232,18 @@ block content
 							.section-heading
 								h1 57 Progressive Jackpots
 								strong.subtitle Highest progressive jackpots available right now on Betsson!
-							.games-slider.slick-slider(data-slick='{"dots": true, "slidesToShow": 1, "slidesToScroll": 1, "arrows": false, "infinite": false}')
+							.games-slider
 								div
 									.game-box.no-content
 										.media-holder
 											a(href="#")
 												img(src="http://via.placeholder.com/293x149/ff0000/ffffff")
+												span.hover-box
+													span
+														span.icon-play
+														| Play at Betsson
 											span.sticker new
-											a(href="#").hover-box
-												span
-													span.icon-play
-													| Play at Betsson
-										strong.media-title Blood Suckers 2
+										strong.media-title Mega Fortune Dreams
 									.description
 										p The Mega Fortune Jackpot is a network jackpot.
 										p
@@ -316,26 +319,39 @@ block content
 										dd EUR, USD, GBP, NOK, SEK, BRL, CZK, PLN
 			.subsection#section4
 				.holder
-					.section-heading
-						h1 Devices
-						strong.subtitle Available on desktop, tablet &amp; mobile
-					ul.devices-list
-						li
-							span
-								img(src="http://via.placeholder.com/51x35")
-						li
-							span
-								img(src="http://via.placeholder.com/27x31")
-						li
-							span
-								img(src="http://via.placeholder.com/17x32")
-					ul.mobile-stores-list
-						li
-							a(href="#")
-								img(src="images/appstore-badge.svg", alt="Image description", width="138", height="35")
-						li
-							a(href="#")
-								img(src="images/google-play-badge.png", alt="Image description", width="646", height="250")
+					.twocolumns
+						div
+							.section-heading
+								h1 Devices
+								strong.subtitle Available on desktop, tablet &amp; mobile
+							ul.devices-list
+								li
+									span
+										img(src="http://via.placeholder.com/51x35")
+										span.txt Desktop
+								li
+									span
+										img(src="http://via.placeholder.com/27x31")
+										span.txt Tablet
+								li
+									span
+										img(src="http://via.placeholder.com/17x32")
+										span.txt Mobile
+							ul.mobile-stores-list
+								li
+									a(href="#")
+										img(src="images/appstore-badge.svg", alt="Image description", width="138", height="35")
+								li
+									a(href="#")
+										img(src="images/google-play-badge.png", alt="Image description", width="646", height="250")
+						.hidden-sm
+							.images-slider
+								div
+									img(src="http://via.placeholder.com/396x423/00ff00/ffffff")
+								div
+									img(src="http://via.placeholder.com/396x123/0000ff/ffffff")
+								div
+									img(src="http://via.placeholder.com/396x523/ff0000/ffffff")
 			.subsection#section5
 				.holder
 					.section-heading
@@ -344,7 +360,7 @@ block content
 					ul.support-list
 						li
 							a(href="mailto:support@betsson.com")
-								span.icon-icon
+								span.icon-email
 								span.content support @betsson.com
 						li
 							a(href="#")
@@ -378,11 +394,11 @@ block content
 										a(href="#") Betsson
 									img(src="images/stars.png", alt="Image description", width="55", height="10").stars
 								.content
-									.txt
-										h4 20 Free Spins
-										p No Deposit Free Spins are for Starburst, Gonzo’s Quest and Mega Fortune Dreams.
-									a(href="#").btn.btn-primary Get Bonus
-									a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
+									h4 20 Free Spins
+									p No Deposit Free Spins are for Starburst, Gonzo’s Quest and Mega Fortune Dreams.
+									.button-holder
+										a(href="#").btn.btn-primary Get Bonus
+						//- 
 						li
 							.bonus-box
 								.heading
@@ -393,11 +409,10 @@ block content
 										a(href="#") Betsson
 									img(src="images/stars.png", alt="Image description", width="55", height="10").stars
 								.content
-									.txt
-										h4 €200 Welcome Bonus + Free Spins
-										p 200% up to 200 + 25 Free Spins on first deposit.
-									a(href="#").btn.btn-primary Get Bonus
-									a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
+									h4 €200 Welcome Bonus + Free Spins
+									p 200% up to 200 + 25 Free Spins on first deposit.
+									.button-holder
+										a(href="#").btn.btn-primary Get Bonus
 						li
 							.bonus-box
 								.heading
@@ -408,17 +423,16 @@ block content
 										a(href="#") Betsson
 									img(src="images/stars.png", alt="Image description", width="55", height="10").stars
 								.content
-									.txt
-										h4 €1600 Reload Bonus
-										p 200% up to €200 on first deposit, 50% up to €500 on the following 3 deposits including 25 free spins on each.
-									a(href="#").btn.btn-primary Get Bonus
-									a(href="#").btn.btn-link.hidden-sm T&amp;C’s Apply
+									h4 €1600 Reload Bonus
+									p 200% up to €200 on first deposit, 50% up to €500 on the following 3 deposits including 25 free spins on each.
+									.button-holder
+										a(href="#").btn.btn-primary Get Bonus
 			.subsection
 				.holder
 					.section-heading
 						h1 Similar Casinos
 						strong.subtitle Users who viewed this casino also liked
-					.casinos-tiles-slider.slick-slider(data-slick='{"dots": true, "slidesToShow": 3, "slidesToScroll": 3, "arrows": false, "infinite": false}')
+					.casinos-tiles-slider
 						div
 							.casino-tile
 								div
@@ -455,5 +469,4 @@ block content
 									h2
 										a(href="#") Casumo
 									img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-	
 	include pug/includes/footer
