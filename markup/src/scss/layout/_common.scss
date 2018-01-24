@@ -4,6 +4,7 @@
 	overflow:hidden;
 	@include media(">=tablet") {
 		max-width: 992px;
+		max-width: none;
 	}
 	@include media(">=1200px") {
 		max-width: none;

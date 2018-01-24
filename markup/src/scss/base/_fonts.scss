@@ -37,6 +37,13 @@
 	}
 }
 
+a{
+	&[class^="icon-"],
+	&[class*=" icon-"]{
+		text-decoration:none;
+	}
+}
+
 .icon-google-plus:before {
   content: "\ea8b";
 }

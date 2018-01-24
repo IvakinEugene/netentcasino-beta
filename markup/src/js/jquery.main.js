@@ -5,8 +5,16 @@ jQuery(function() {
 	initRetinaCover();
 	initAddClasses();
 	initFitVids();
+	initFocusClass();
 });
 
+// add class when element is in focus
+function initFocusClass() {
+	jQuery('.mobile-nav-holder').addFocusClass({
+		focusClass: 'search-bar-active',
+		element: 'input[id="autocomplete"]'
+	});
+}
 
 // accordion menu init
 function initAccordion() {
@@ -797,6 +805,63 @@ jQuery.fn.clickClass = function(opt) {
 		});
 	});
 };
+
+/*
+ * Add Class on focus
+ */
+;(function($) {
+	function AddFocusClass(options) {
+		this.options = $.extend({
+			container: null,
+			element: ':input',
+			focusClass: 'focus',
+			stayFocusOnFilled: false
+		}, options);
+		this.initStructure();
+		this.attachEvents();
+	}
+	AddFocusClass.prototype = {
+		initStructure: function() {
+			this.container = $(this.options.container);
+			this.element = this.container.find(this.options.element);
+		},
+		attachEvents: function() {
+			var self = this;
+			this.focusHandler = function() {
+				self.container.addClass(self.options.focusClass);
+			};
+			this.blurHandler = function() {
+				if (self.options.stayFocusOnFilled) {
+					self.container.toggleClass(self.options.focusClass, !!self.element.val().trim().length);
+				} else {
+					self.container.removeClass(self.options.focusClass);
+				}
+			};
+			this.blurHandler();
+			this.element.on({
+				focus: this.focusHandler,
+				blur: this.blurHandler
+			});
+		},
+		destroy: function() {
+			this.container.removeClass(this.options.focusClass);
+			this.element.off({
+				focus: this.focusHandler,
+				blur: this.blurHandler
+			});
+		}
+	};
+
+	$.fn.addFocusClass = function(options) {
+		return this.each(function() {
+			var params = $.extend({}, options, {
+					container: this
+				}),
+				instance = new AddFocusClass(params);
+			$.data(this, 'AddFocusClass', instance);
+		});
+	};
+}(jQuery));
 
 /*!
 * FitVids 1.0.3
