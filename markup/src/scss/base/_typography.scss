@@ -67,6 +67,9 @@ h6, .h6 {
 
 p {
 	margin: 0 0 10px;
+	strong{
+		font-weight:500;
+	}
 }
 
 a {
@@ -84,7 +87,7 @@ a {
 	font-weight:normal;
 	line-height:1.25;
 	@include media(">=tablet") {
-		font-size: 18px;
+		font-size: 14px;
 	}
 }
 
@@ -141,7 +144,7 @@ ul{
 			height:15px;
 			left:0;
 			position:absolute;
-			top:4px;
+			top:3px;
 			width:15px;
 		}
 	}

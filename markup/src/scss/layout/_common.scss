@@ -1,15 +1,15 @@
 #wrapper{
 	background:#f5f7f6;
-	max-width: 375px;
+	// max-width: 375px;
 	overflow:hidden;
-	@include media(">=tablet") {
-		max-width: 992px;
-		max-width: none;
-	}
-	@include media(">=1200px") {
-		max-width: none;
-		width:1440px;
-	}
+	// @include media(">=tablet") {
+	// 	max-width: 992px;
+	// 	max-width: none;
+	// }
+	// @include media(">=1200px") {
+	// 	max-width: none;
+	// 	width:1440px;
+	// }
 }
 
 #main{
@@ -42,10 +42,10 @@ section{
 	.holder{
 		padding-top: 14px;
 		padding-bottom: 14px;
-		@include media(">=tablet") {
+		@include media(">=desktop") {
 			display: flex;
 		    flex-direction: row;
-		    flex-wrap: wrap;
+		    flex-wrap: nowrap;
 		    justify-content: space-between;
 		    align-content: flex-start;
 		    align-items: flex-start;
@@ -61,16 +61,22 @@ section{
 		align-content: center;
 		align-items: center;
 		height:84px;
-		@include media(">=tablet") {
-			display: flex;
-		    flex-direction: row;
-		    flex-wrap: wrap;
-		    justify-content: center;
-		    align-content: center;
-		    align-items: center;
+		@include media(">=desktop") {
+			// display: flex;
+		    // flex-direction: row;
+		    // flex-wrap: nowrap;
+		    // justify-content: center;
+		    // align-content: center;
+		    // align-items: center;
 			flex:1 1 auto;
 			order: 1;
 			min-height: 258px;
+			padding:0 $gutter-width;
+		}
+	}
+	.casino-review-box{
+		@include media(">=desktop") {
+			width:890px;
 		}
 	}
 	.search-box{
@@ -111,6 +117,9 @@ section{
 	.bg-stretch{
 		// background-position:50% 0;
 		height:247px;
+		@include media(">=tablet") {
+			height:346px;
+		}
 	}
 }
 
@@ -376,10 +385,11 @@ section{
 		    justify-content: space-between;
 		    align-content: center;
 		    align-items: center;
-			max-width: 1356px;
+			// max-width: 1356px;
+			max-width: 1392px;
 			background:none;
 			box-shadow: none;
-			padding:28px $gutter-width 13px;
+			padding:28px 41px 13px;
 		}
 	}
 	.left{
@@ -421,6 +431,11 @@ section{
 		@include media(">=tablet") {
 			padding:0 0 0 21px;
 		}
+		.btn{
+			@include media(">=tablet") {
+				display:none;
+			}
+		}
 	}
 	h1{
 		color:#4a4a4a;
@@ -446,6 +461,86 @@ section{
 			min-width: 291px;
 			padding-top: 8px;
 			padding-bottom: 8px;
+		}
+	}
+	.right{
+		display:none;
+		@include media(">=tablet") {
+			display:block;
+		}
+	}
+}
+
+.section-breadcrumbs{
+	display:none;
+	@include media(">=desktop") {
+		box-shadow: 0 1px 2px rgba($black,0.22);
+		color:$base-gray;
+		display:block;
+		font-size:16px;
+		line-height:1.125;
+		position:relative;
+		z-index:10;
+	}
+	> .holder{
+		@include media(">=desktop") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: space-between;
+		    align-content: flex-start;
+		    align-items: flex-start;
+		    padding-top: 14px;
+		    padding-bottom: 17px;
+		}
+	}
+	.breadcrumbs{
+		li{
+			@include media(">=desktop") {
+				display:inline-block;
+				vertical-align:top;
+				padding:0 4px 0 18px;
+				position:relative;
+			}
+			&:first-child {
+				@include media(">=desktop") {
+					padding-left: 0;
+					&:before {
+						display:none;
+					}
+				}
+			}
+			&:before {
+				@include media(">=desktop") {
+					color:$theme-color-base;
+					content: '>';
+					left:0;
+					position:absolute;
+					top:0;
+				}
+			}
+		}
+		a{
+			@include media(">=desktop") {
+				color:$base-text-color;
+				font-weight:500;
+				text-decoration:none;
+			}
+			&:hover {
+				@include media(">=desktop") {
+					color:$theme-color-base;
+				}
+			}
+		}
+	}
+	p{
+		@include media(">=desktop") {
+			margin:0;
+		}
+		strong{
+			@include media(">=desktop") {
+				color:$base-text-color;
+			}
 		}
 	}
 }

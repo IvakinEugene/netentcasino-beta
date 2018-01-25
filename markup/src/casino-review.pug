@@ -1,9 +1,22 @@
 extends pug/extends/master
 
 block content
+	- var page_class = "hide-nav hide-offer"
 	include pug/includes/header
-
 	#main
+		section.section-breadcrumbs
+			.holder
+				div
+					ul.breadcrumbs
+						li
+							a(href="#") Home
+						li
+							a(href="#") Casinos
+						li
+							| Betsson
+				div
+					p Last updated - 
+						strong 2 days ago!
 		//- 
 		section.section-intro
 			.holder
@@ -107,7 +120,7 @@ block content
 			include pug/extends/retina-images
 		section.section-casino
 			//- 
-			.anchor-links
+			.anchor-links.to-fixed-with-offset
 				.holder
 					ul
 						li
@@ -193,27 +206,30 @@ block content
 								strong.subtitle Newest games available right now on Betsson!
 							.games-slider
 								div
-									.game-box.no-content
+									.game-box
 										.media-holder
-											a(href="#")
-												img(src="http://via.placeholder.com/293x149/ff0000/ffffff")
-											span.sticker £8,000,00
-											a(href="#").hover-box
-												span
-													span.icon-play
-													| Play at Betsson
-										strong.media-title Planet of the Apes 2
+											a(href="#").bg-stretch
+												- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+												include pug/extends/retina-single
+												span.hover-box
+													span
+														span.icon-play
+														| Play at Betsson
+												span.sticker £8,000,00
+											strong.media-title Planet of the Apes 2
 								div
-									.game-box.no-content
+									.game-box
 										.media-holder
-											a(href="#")
-												img(src="http://via.placeholder.com/293x149/ff0000/ffffff")
+											a(href="#").bg-stretch
+												- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+												include pug/extends/retina-single
+												//- img(src="")
+												span.hover-box
+													span
+														span.icon-play
+														| Play at Betsson
+												strong.media-title Blood Suckers 2
 											span.sticker £1,348,00
-											a(href="#").hover-box
-												span
-													span.icon-play
-													| Play at Betsson
-										strong.media-title Blood Suckers 2
 							strong.title +200 Games from other providers
 							ul.games-list
 								li
@@ -234,31 +250,33 @@ block content
 								strong.subtitle Highest progressive jackpots available right now on Betsson!
 							.games-slider
 								div
-									.game-box.no-content
+									.game-box
 										.media-holder
-											a(href="#")
-												img(src="http://via.placeholder.com/293x149/ff0000/ffffff")
+											a(href="#").bg-stretch
+												- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+												include pug/extends/retina-single
 												span.hover-box
 													span
 														span.icon-play
 														| Play at Betsson
+												strong.media-title Mega Fortune Dreams
 											span.sticker new
-										strong.media-title Mega Fortune Dreams
 									.description
 										p The Mega Fortune Jackpot is a network jackpot.
 										p
 											strong Min Bet  £0.20 per spin
 								div
-									.game-box.no-content
+									.game-box
 										.media-holder
-											a(href="#")
-												img(src="http://via.placeholder.com/293x149/ff0000/ffffff")
+											a(href="#").bg-stretch
+												- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+												include pug/extends/retina-single
+												span.hover-box
+													span
+														span.icon-play
+														| Play at Betsson
+												strong.media-title Cosmic Fortune
 											span.sticker new
-											a(href="#").hover-box
-												span
-													span.icon-play
-													| Play at Betsson
-										strong.media-title Cosmic Fortune
 									.description
 										p The Arabian Nights Jackpot is a local jackpot or a network jackpot.
 										p
@@ -344,7 +362,7 @@ block content
 								li
 									a(href="#")
 										img(src="images/google-play-badge.png", alt="Image description", width="646", height="250")
-						.hidden-sm
+						div
 							.images-slider
 								div
 									img(src="http://via.placeholder.com/396x423/00ff00/ffffff")
@@ -398,7 +416,6 @@ block content
 									p No Deposit Free Spins are for Starburst, Gonzo’s Quest and Mega Fortune Dreams.
 									.button-holder
 										a(href="#").btn.btn-primary Get Bonus
-						//- 
 						li
 							.bonus-box
 								.heading

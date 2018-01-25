@@ -1,7 +1,169 @@
 #header{
+	border-bottom: 1px solid $border-color-base;
 	// height:60px;// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	position:relative;
 	z-index:5;
+	&.casino-review {
+		.offer-box {
+			display:none;
+		}
+	}
+	.popup{
+		&.closed {
+			display:none;
+		}
+		.icon-close{
+			background:$black;
+			display:inline-block;
+			vertical-align:top;
+			height:6px;
+			margin:0 10px 0 0;
+			width:6px;
+			@include media(">=tablet") {
+				height:17px;
+				margin-right: 45px;
+				width:17px;
+			}
+		}
+		// bonus
+		.btn{
+			font-size: 14px;
+			min-width: 0;
+			padding-top: 8px;
+			padding-bottom: 7px;
+			@include media(">=tablet") {
+				font-size: 18px;
+				min-width: 206px;
+			}
+		}
+		// offer
+		// .btn{
+		// 	box-shadow: 0 2px 4px $shadow;
+		// 	font-size: 13px;
+		// 	min-width: 0;
+		// 	padding:8px 6px;
+		// 	text-transform:capitalize;
+		// 	white-space: nowrap;
+		// 	@include media(">=tablet") {
+		// 		font-size: 18px;
+		// 		font-weight:bold;
+		// 		padding:8px 31px 7px;
+		// 		text-transform:uppercase;
+		// 	}
+		// }
+	}
+}
+
+.header-bonus-box{
+	background:$white;
+	box-shadow: 0 1px 2px $shadow;
+	color:$base-gray;
+	font-size:12px;
+	line-height:1.25;
+	position:relative;
+	z-index:5;
+	.hide-bonus & {
+		display:none;
+	}
+	@include media(">=tablet") {
+		font-size: 18px;
+	}
+	> .holder{
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    justify-content: flex-start;
+	    align-content: center;
+	    // align-content: start;
+	    align-items: center;
+	    // align-items: start;
+	    padding:8px 8px 11px;
+	    @include media(">=tablet") {
+	    	justify-content: space-between;
+	    	margin:0 auto;
+	    	max-width: 1396px;
+	    	padding: 10px $gutter-width;
+	    }
+	}
+	.left{
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    justify-content: flex-start;
+	    align-content: center;
+	    align-items: center;
+	}
+	.title-holder{
+		line-height:1;
+		@include media(">=tablet") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: flex-start;
+		    align-content: center;
+		    align-items: center;
+		}
+	}
+	.logo-holder{
+		width:33px;
+		@include media(">=tablet") {
+			margin:0 19px 0 0;
+			width:40px;
+		}
+	}
+	h2{
+		display:none;
+		@include media(">=tablet") {
+			display:block;
+			font-size: 16px;
+			margin:0 0 -1px;
+		}
+	}
+	.stars{
+		display:block;
+		@include media(">=tablet") {
+			margin:0 0 5px;
+			width:50px;
+		}
+	}
+	.content{
+		padding:0 0 0 10px;
+		@include media(">=tablet") {
+			padding:0 $gutter-width;
+			text-align:center;
+		}
+	}
+	.title{
+		color:$headings-color;
+		display:block;
+		font-size: 16px;
+		font-weight:500;
+		margin:0 0 2px;
+		@include media(">=tablet") {
+			display:inline;
+			font-size: inherit;
+			margin:0 5px 0 0;
+			text-transform:uppercase;
+		}
+	}
+	p{
+		margin:0;
+		@include media(">=tablet") {
+			display:inline;
+			&:before {
+				content: "-";
+				margin:0 4px 0 0;
+			}
+		}
+	}
+	.button-holder{
+		flex: 1 1 auto;
+		text-align:right;
+		@include media(">=tablet") {
+			flex: 0 1 auto;
+		}
+	}
+	.btn{}
 }
 
 .offer-box{
@@ -9,7 +171,7 @@
 	font-size:12px;
 	letter-spacing: -0.025em;
 	line-height:1.25;//15
-	&.closed{
+	.hide-offer & {
 		display:none;
 	}
 	.holder{
@@ -19,12 +181,14 @@
 		justify-content: space-between;
 		align-content: center;
 		align-items: center;
-		margin:0 auto;
-		max-width: 1364px;
 		padding:9px 8px 10px;
-		// @include media(">=tablet") {
-		// 	padding-top: 11px;
-		// }
+		@include media(">=tablet") {
+			margin:0 auto;
+			max-width: 1396px;
+			padding-right: $gutter-width;
+			padding-left: $gutter-width;
+			// padding-top: 11px;
+		}
 	}
 	.left{
 		// padding:0 3px;
@@ -37,19 +201,6 @@
 			align-items: center;
 			min-width: 38px;
 		// }
-	}
-	.icon-close{
-		background:$black;
-		display:inline-block;
-		vertical-align:top;
-		height:6px;
-		margin:0 10px 0 0;
-		width:6px;
-		@include media(">=tablet") {
-			height:17px;
-			margin-right: 45px;
-			width:17px;
-		}
 	}
 	.icon-email{
 		color:$base-text-color;
@@ -68,7 +219,9 @@
 		}
 	}
 	h2{
+		display:none;
 		@include media(">=tablet") {
+			display:block;
 			font-size: 16px;
 			font-weight:500;
 			letter-spacing: 0;
@@ -79,52 +232,110 @@
 	p{
 		margin:0;
 	}
-	.btn{
-		box-shadow: 0 2px 4px $shadow;
-		font-size: 13px;
-		min-width: 0;
-		padding:8px 6px;
-		text-transform:capitalize;
-		white-space: nowrap;
-		@include media(">=tablet") {
-			font-size: 18px;
-			font-weight:bold;
-			padding:8px 31px 7px;
-			text-transform:uppercase;
-		}
+}
+
+.go-back{
+	background:$white;
+	display:none;
+	height:100%;
+	left:0;
+	padding:22px 50px 15px;
+	position:absolute;
+	text-align:center;
+	top:0;
+	width:100%;
+	@include media(">=nav") {
+		display:none !important;
+	}
+	.hide-nav & {
+		display:block;
+	}
+	.btn-back{
+		background:$theme-color-base;
+		height:24px;
+		left:22px;
+		position:absolute;
+		top:50%;
+		transform:translateY(-50%);
+		width:32px;
+	}
+	.title{
+		color:$headings-color;
+		font-size:18px;
+		font-weight:500;
+		line-height:1.1111;
+		text-transform:uppercase;
 	}
 }
 
-.header-holder{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-content: center;
-	align-items: center;
-	margin:0 auto;
-	max-width: 1390px;
-	padding:12px 21px;
-	div{
-		&:last-child {
-			@include media(">=tablet") {
-				display: flex;
-			    flex-direction: row;
-			    flex-wrap: nowrap;
-			    justify-content: flex-start;
-			    align-content: center;
-			    align-items: center;
-			}
-			> div{
-				@include media(">=tablet") {
-					padding:0 0 0 30px;
-				}
-			}
+.header-content{
+	background:$white;
+	position:relative;
+	z-index:1;
+	.nav-active & {
+		z-index:10;
+	}
+	.holder{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+		margin:0 auto;
+		padding:12px 21px;
+		@include media(">=tablet") {
+			max-width: 1390px;
 		}
 	}
+	// .hide-nav & {
+	// 	display:none;
+	// 	@include media(">=tablet") {
+	// 		display:flex;
+	// 	}
+	// }
+	// div{
+	// 	&:last-child {
+	// 		@include media(">=tablet") {
+	// 			display: flex;
+	// 		    flex-direction: row;
+	// 		    flex-wrap: nowrap;
+	// 		    justify-content: flex-start;
+	// 		    align-content: center;
+	// 		    align-items: center;
+	// 		}
+	// 		> div{
+	// 			@include media(">=tablet") {
+	// 				padding:0 0 0 30px;
+	// 			}
+	// 		}
+	// 	}
+	// }
 	.logo{
 		display:block;
 		width:162px;
+	}
+	.desktop-nav{
+		display:none;
+		@include media(">=nav") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: flex-start;
+		    align-content: center;
+		    align-items: center;
+		}
+		> div{
+			@include media(">=tablet") {
+				padding:0 0 0 30px;
+			}
+		}
+
+	}
+	.mobile-nav{
+		@include media(">=nav") {
+			display:none;
+		}
 	}
 	.btn-search{
 		@include media(">=tablet") {
@@ -148,6 +359,9 @@
 			}
 		}
 	}
+	.flag{
+		max-width: none;
+	}
 }
 
 .nav-opener{
@@ -167,12 +381,8 @@
 	right:0;
 	top:0;
 	transform:translateX(100%);
-	transition:transform $animation-speed;
 	width:82.6667%;
 	z-index:15;
-	@include media(">=tablet") {
-		display:none;
-	}
 	&.ui-drop-active {
 		.hideme{
 			display:none;
@@ -185,6 +395,8 @@
 	// }
 	.nav-active & {
 		transform:translateX(0);
+		transition:transform $animation-speed;
+		// transition:none;
 	}
 	&:before {
 		background-color:rgba(56,58,58,0.8);
@@ -195,11 +407,12 @@
 		position:absolute;
 		right:100%;
 		top:0;
-		transition:opacity $animation-speed;
 		width:200%;
 		.nav-active & {
 			opacity:1;
 			pointer-events:auto;
+			transition:opacity $animation-speed;
+			// transition:none;
 		}
 	}
 	.mobile-nav-frame{
@@ -384,11 +597,12 @@
 }
 
 #nav{
+	text-align:right;
 	li{
 		@include media(">=tablet") {
 			display:inline-block;
 			vertical-align:top;
-			padding:0 0 0 23px;
+			padding:5px 0 5px 23px;
 			&:hover,
 			&.active {
 				> a{
