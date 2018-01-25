@@ -1,15 +1,13 @@
 #wrapper{
 	background:#f5f7f6;
-	// max-width: 375px;
+	max-width: 375px;
 	overflow:hidden;
-	// @include media(">=tablet") {
-	// 	max-width: 992px;
-	// 	max-width: none;
-	// }
-	// @include media(">=1200px") {
-	// 	max-width: none;
-	// 	width:1440px;
-	// }
+	@include media(">=tablet") {
+		max-width: 992px;
+	}
+	@include media(">=widescreen") {
+		max-width:1440px;
+	}
 }
 
 #main{

@@ -1,8 +1,12 @@
-
 .section-content{
 	background:$white;
 	@include media(">=tablet") {
 		background:none;
+	}
+	&.fixed-position{
+		.aside{
+			margin:0;
+		}
 	}
 	&.posts-list {
 		background:none;
@@ -102,25 +106,18 @@
 		}
 	}
 	.content-holder{
-		// &:first-child:not(:only-child) {
-		// 	background:$white;
-		// 	margin:0;
-		// }
 		@include media(">=tablet") {
 			background:$white;
 			box-shadow: 0 0 4px $shadow;
 			border-radius:3px 3px 0 0;
-			margin:0 384px 0 0;
-			// overflow:hidden;
+			margin:0 229px 0 0;
 			padding:0 $gutter-width 25px;
-			// .content:only-child + & {
-			// 	margin:0;
-			// }
+		}
+		@include media(">=desktop") {
+			margin-right: 384px;
 		}
 		+ .content-holder{
 			margin-top:20px;
-			// @include media(">=tablet") {
-			// }
 		}
 		.button-holder{
 			padding:5px 0 0;
@@ -148,8 +145,17 @@
 			display:block;
 			float:right;
 			margin:0 0 0 -100%;
+			padding:0 0 30px;
+			width:220px;
+		}
+		@include media(">=desktop") {
 			width:375px;
 		}
+		// .aside{
+		// 	@include media(">=tablet") {
+		// 		padding:0 0 30px;
+		// 	}
+		// }
 	}
 }
 
@@ -253,16 +259,90 @@
 
 .section-related-posts{
 	background:$white;
+	border-top: 1px solid $border-color-base;
 	.holder{
 		padding-top: 20px;
 		padding-bottom: 30px;
 	}
 	.boxes-holder{
+		padding:6px 0 0;
+		@include media(">=tablet") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: wrap;
+		    justify-content: flex-start;
+		    align-content: stretch;
+		    align-items: stretch;
+		    margin:-4px -8px 0;
+		    padding:0;
+		}
 		> div{
 			padding:0 0 10px;
+			@include media(">=tablet") {
+				display: flex;
+			    flex-direction: row;
+			    flex-wrap: nowrap;
+			    justify-content: flex-start;
+			    align-content: stretch;
+			    align-items: stretch;
+				max-width: 33.3333%;
+				padding:8px;
+				width:100%;
+			}
+		}
+	}
+	.post-preview{
+		border: 1px solid $border-color-base;
+		box-shadow: 0 2px 4px $shadow;
+		line-height:1.3571;
+		padding:0 18px 20px;
+		@include media(">=tablet") {
+			line-height:$line-height-base;
+			padding:0 21px 74px;
+			position:relative;
+			width:100%;
+		}
+		.post-image{
+			border-radius: 0;
+			margin:0 -19px 15px;
+			@include media(">=tablet") {
+				margin:0 -22px 21px;
+			}
+		}
+		h2,
+		h3{
+			font-size:16px;
+			line-height:1.125;
+			margin:0 0 4px;
+			text-transform:uppercase;
+			@include media(">=tablet") {
+				margin:0 0 12px;
+			}
+		}
+		.by{
+			font-size: 12px;
+			margin:0 0 7px;
+		}
+		.button-holder{
+			padding:19px 0 0;
+			@include media(">=tablet") {
+				bottom:20px;
+				left:21px;
+				position:absolute;
+				right:21px;
+			}
+		}
+		.btn{
+			@include media(">=tablet") {
+				max-width: 300px;
+				width:100%;
+			}
 		}
 	}
 	.view-more-button{
 		padding:10px 0 0;
+		@include media(">=tablet") {
+			padding:21px 0 0;
+		}
 	}
 }

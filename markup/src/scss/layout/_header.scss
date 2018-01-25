@@ -1,5 +1,4 @@
 #header{
-	border-bottom: 1px solid $border-color-base;
 	// height:60px;// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	position:relative;
 	z-index:5;
@@ -270,6 +269,7 @@
 
 .header-content{
 	background:$white;
+	border-bottom: 1px solid $border-color-base;
 	position:relative;
 	z-index:1;
 	.nav-active & {
@@ -607,6 +607,11 @@
 			&.active {
 				> a{
 					color:$theme-color-base;
+				}
+			}
+			&.active {
+				> a{
+					font-weight:500;
 				}
 			}
 		}

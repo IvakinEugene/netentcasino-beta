@@ -33,21 +33,22 @@ $media-expressions: (
 @import 'base/forms';
 @import 'base/buttons';
 
-@import 'base/_fonts.scss';
-@import 'layout/_popups.scss';
+@import 'base/_icons.scss';
 @import 'vendors/_slick-custom.scss';
 @import 'layout/_default-elements.scss';
-@import 'layout/_casino-boxes.scss';
+
 @import 'layout/header';
 @import 'layout/common';
-
-@import 'pages/_article.scss';
-
-
-
-
-@import 'layout/post';
-@import 'layout/news';
 @import 'layout/footer';
 
+
+
+
+@import 'pages/_article.scss';
 @import 'pages/_casino-review.scss';
+@import 'pages/news';
+
+
+@import 'layout/_popups.scss';
+@import 'layout/_casino-boxes.scss';
+@import 'layout/post';

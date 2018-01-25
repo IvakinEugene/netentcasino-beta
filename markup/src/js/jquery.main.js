@@ -11,6 +11,19 @@ jQuery(function() {
 
 // initialize fixed blocks on scroll
 function initStickyScrollBlock() {
+	jQuery('.fixed-aside').stickyScrollBlock({
+		setBoxHeight: false,
+		activeClass: 'fixed-position',
+		container: '.section-content',
+		positionType: 'fixed',
+		extraTop: function() {
+			var totalHeight = 0;
+			jQuery('.header-content').each(function() {
+				totalHeight += jQuery(this).outerHeight();
+			});
+			return totalHeight;
+		}
+	});
 	jQuery('.to-fixed').stickyScrollBlock({
 		setBoxHeight: true,
 		activeClass: 'fixed-position',
@@ -56,10 +69,25 @@ function initMobileNav() {
 function initAnchors() {
 	new SmoothScroll({
 		anchorLinks: '.anchor-links a[href^="#"]:not([href="#"])',
-		extraOffset: 0,
 		activeClasses: 'parent',
 		anchorActiveClass: 'active',
-		wheelBehavior: 'none'
+		wheelBehavior: 'none',
+		extraOffset: function() {
+			var totalHeight = 0;
+			jQuery('#header').each(function() {
+				var $box = jQuery(this);
+				var stickyInstance = $box.data('StickyScrollBlock');
+				if (stickyInstance) {
+					stickyInstance.stickyFlag = false;
+					stickyInstance.stickyOn();
+					totalHeight += $box.outerHeight();
+					stickyInstance.onResize();
+				} else {
+					totalHeight += $box.outerHeight();
+				}
+			});
+			return totalHeight;
+		}
 	});
 }
 
@@ -1102,9 +1130,11 @@ jQuery.fn.clickClass = function(opt) {
 						position: this.options.positionType
 					});
 					if (this.isWrap) {
-						this.$stickyBoxWrap.css({
-							height: this.data.boxFullHeight
-						});
+						if (jQuery(this.$stickyBox).css('display') != 'none'){
+							this.$stickyBoxWrap.css({
+								height: this.data.boxFullHeight
+							});
+						}
 					}
 					this.makeCallback('fixedOn');
 				}

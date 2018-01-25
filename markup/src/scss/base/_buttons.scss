@@ -10,6 +10,16 @@
 	text-align:center;
 	text-decoration:none;
 	text-transform:uppercase;
+	&:hover {
+		> *{
+			color:inherit;
+		}
+	}
+	.number{
+		color:$base-gray;
+		font-size: 16px;
+		margin:0 0 0 4px;
+	}
 }
 
 .btn-primary{
@@ -50,5 +60,24 @@
 	&:hover {
 		background:transparent;
 		color:$btn-dark-background;
+	}
+}
+
+.fake-select{
+	font-size: 18px;
+	font-weight:500;
+	min-width: 0;
+	padding:11px 45px 10px 19px;
+	position:relative;
+	text-align:left;
+	&:before {
+		background:$base-gray;
+		content: '';
+		height:11px;
+		position:absolute;
+		right:18px;
+		top:50%;
+		transform:translateY(-50%);
+		width:20px;
 	}
 }
