@@ -1,6 +1,6 @@
 jQuery(function() {
 	initMobileNav();
-	// initAnchors();
+	initAnchors();
 	initRetinaCover();
 	initAddClasses();
 	initFitVids();
