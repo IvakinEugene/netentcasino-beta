@@ -11,8 +11,8 @@
 	text-decoration:none;
 	text-transform:uppercase;
 	&:hover {
-		> *{
-			color:inherit;
+		*{
+			color:inherit !important;
 		}
 	}
 	.number{
@@ -70,6 +70,11 @@
 	padding:11px 45px 10px 19px;
 	position:relative;
 	text-align:left;
+	&:hover {
+		&:before {
+			background:$white;
+		}
+	}
 	&:before {
 		background:$base-gray;
 		content: '';

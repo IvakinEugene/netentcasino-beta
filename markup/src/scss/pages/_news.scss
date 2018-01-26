@@ -1,25 +1,84 @@
 .section-posts-collection{
 	.anchor-links{
 		display:none;
+		@include media(">=desktop") {
+			display:block;
+		}
 	}
 	.main-heading{
 		background:$white;
-		border-bottom: 1px solid $border-color-base;
 		line-height:1.4286;
+		@include media(">=desktop") {
+			border-bottom: 1px solid $border-color-base;
+		}
 		> .holder{
 			padding-top: 22px;
-			padding-bottom: 20px;
+			padding-bottom: 30px;
+			@include media(">=desktop") {
+				padding-top: 31px;
+				padding-bottom: 18px;
+			}
+		}
+		h1{
+			@include media(">=desktop") {
+				margin:0 0 5px;
+			}
 		}
 		.subtitle{
 			color:$theme-color-base;
 			margin:0 0 13px;
+			@include media(">=tablet") {
+				font-size: 20px;
+				margin:0 0 16px;
+			}
 		}
 		p{
 			margin:0 0 23px;
 		}
-		.btn{
+		.fake-select{
 			display:block;
+			@include media(">=desktop") {
+				display:none;
+			}
 		}
+	}
+	.section-related-posts{
+		background:none;
+		border-width: 0;
+		@include media(">=desktop") {
+			&:nth-child(2n) {
+				background:$white;
+			}
+		}
+		.holder{
+			@include media(">=desktop") {
+				padding-top: 30px;
+				// padding-bottom: 20px;
+			}
+		}
+		.section-heading{
+			display:none;
+			@include media(">=desktop") {
+				display:block;
+				padding:0 0 11px;
+			}
+			h2{
+				@include media(">=desktop") {
+					font-size: 26px;
+					letter-spacing: 0;
+					margin:0;
+					text-transform:uppercase;
+				}
+			}
+			p{
+				@include media(">=desktop") {
+					margin:4px 0 0;
+				}
+			}
+		}
+		// .boxes-holder{
+		// 	padding-top:0;
+		// }
 	}
 }
 

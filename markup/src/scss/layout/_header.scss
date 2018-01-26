@@ -597,12 +597,13 @@
 }
 
 #nav{
+	margin:-10px 0;
 	text-align:right;
 	li{
 		@include media(">=tablet") {
 			display:inline-block;
 			vertical-align:top;
-			padding:5px 0 5px 23px;
+			padding:3px 0 3px 23px;
 			&:hover,
 			&.active {
 				> a{

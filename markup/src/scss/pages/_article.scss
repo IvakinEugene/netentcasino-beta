@@ -266,7 +266,14 @@
 	}
 	.boxes-holder{
 		padding:6px 0 0;
-		@include media(">=tablet") {
+		&.twocolumns {
+			> div{
+				@include media(">=desktop") {
+					max-width: 50%;
+				}
+			}
+		}
+		@include media(">=desktop") {
 			display: flex;
 		    flex-direction: row;
 		    flex-wrap: wrap;
@@ -278,7 +285,7 @@
 		}
 		> div{
 			padding:0 0 10px;
-			@include media(">=tablet") {
+			@include media(">=desktop") {
 				display: flex;
 			    flex-direction: row;
 			    flex-wrap: nowrap;
@@ -292,6 +299,7 @@
 		}
 	}
 	.post-preview{
+		background:$white;
 		border: 1px solid $border-color-base;
 		box-shadow: 0 2px 4px $shadow;
 		line-height:1.3571;
@@ -301,6 +309,37 @@
 			padding:0 21px 74px;
 			position:relative;
 			width:100%;
+		}
+		&.no-image {
+			padding-top: 20px;
+			@include media(">=tablet") {
+				font-size:16px;
+				line-height:1.5625;
+				padding:25px 29px 79px;
+			}
+			h2,
+			h3{
+				@include media(">=tablet") {
+					font-size: 26px;
+					margin:0 0 2px;
+				}
+			}
+			.button-holder{
+				@include media(">=tablet") {
+					bottom:31px;
+					left:30px;
+					padding:0;
+					right:30px;
+				}
+				.btn{
+					@include media(">=tablet") {
+						max-width: none;
+						min-width: 0;
+						padding:9px 26px 9px;
+						width:auto;
+					}
+				}
+			}
 		}
 		.post-image{
 			border-radius: 0;
@@ -343,6 +382,12 @@
 		padding:10px 0 0;
 		@include media(">=tablet") {
 			padding:21px 0 0;
+		}
+		+ .boxes-holder{
+			padding-top: 20px;
+			@include media(">=tablet") {
+				padding-top: 26px;
+			}
 		}
 	}
 }

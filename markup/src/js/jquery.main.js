@@ -1,12 +1,12 @@
 jQuery(function() {
 	initAccordion();
 	initMobileNav();
-	initAnchors();
 	initRetinaCover();
 	initAddClasses();
 	initFitVids();
 	initFocusClass();
 	initStickyScrollBlock();
+	initAnchors();
 });
 
 // initialize fixed blocks on scroll
@@ -31,6 +31,18 @@ function initStickyScrollBlock() {
 		extraTop: function() {
 			var totalHeight = 0;
 			jQuery('0').each(function() {
+				totalHeight += jQuery(this).outerHeight();
+			});
+			return totalHeight;
+		}
+	});
+	jQuery('.anchor-links').stickyScrollBlock({
+		setBoxHeight: true,
+		activeClass: 'fixed-position',
+		positionType: 'fixed',
+		extraTop: function() {
+			var totalHeight = 0;
+			jQuery('.header-content').each(function() {
 				totalHeight += jQuery(this).outerHeight();
 			});
 			return totalHeight;
@@ -68,23 +80,16 @@ function initMobileNav() {
 // initialize smooth anchor links
 function initAnchors() {
 	new SmoothScroll({
-		anchorLinks: '.anchor-links a[href^="#"]:not([href="#"])',
+		anchorLinks: '.anchor-links a[href^="#"]:not([href="#"]), .back-to-top',
 		activeClasses: 'parent',
 		anchorActiveClass: 'active',
 		wheelBehavior: 'none',
 		extraOffset: function() {
 			var totalHeight = 0;
-			jQuery('#header').each(function() {
+			jQuery('#header .header-content, .anchor-links').each(function() {
 				var $box = jQuery(this);
-				var stickyInstance = $box.data('StickyScrollBlock');
-				if (stickyInstance) {
-					stickyInstance.stickyFlag = false;
-					stickyInstance.stickyOn();
-					totalHeight += $box.outerHeight();
-					stickyInstance.onResize();
-				} else {
-					totalHeight += $box.outerHeight();
-				}
+				totalHeight += $box.outerHeight();
+
 			});
 			return totalHeight;
 		}

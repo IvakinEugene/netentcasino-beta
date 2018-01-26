@@ -22,7 +22,6 @@
 		a{
 		    flex-direction: column;
 		    flex-wrap: wrap;
-		    // justify-content: flex-start;
 			background:$white;
 			border: 0;
 			box-shadow: 0 0 3px $shadow;
@@ -155,15 +154,12 @@
 	color:$base-gray;
 	font-size:18px;
 	letter-spacing: -0.025em;
-	// font-weight:bold;
 	line-height:1.1111;
-	margin:0 0 -1px;
+	// margin:0 0 -1px;
 	position:relative;
 	z-index:5;
-	// text-transform:uppercase;
 	.holder{
 		overflow:auto;
-		// overflow-x:visible;
 		padding:0 23px;
 		@include media(">=tablet") {
 			margin:0 auto;
@@ -175,18 +171,15 @@
 		}
 	}
 	ul{
-		// margin:0 0 -1px;
 		white-space: nowrap;
-		// @extend %listreset;
 		li{
 			display:inline-block;
-			// vertical-align:top;
 			margin:0 15px 0 0;
 			padding:0;
 			@include media(">=tablet") {
 				margin:0 20px 0 0;
 			}
-			@include media(">=desktop") {
+			@include media(">=widescreen") {
 				margin:0 43px 0 0;
 			}
 			&.active {
@@ -212,7 +205,7 @@
 			padding:0 0 7px;
 			text-decoration:none;
 			@include media(">=tablet") {
-				padding:18px 0;
+				padding:20px 0 17px;
 			}
 		}
 	}
@@ -488,4 +481,62 @@
 .stars{
 	display:block;
 	margin:0 auto;
+}
+
+.back-to-top{
+	background:$white;
+	border-radius: 100%;
+	bottom:10px;
+	height:50px;
+	position:fixed;
+	right:10px;
+	width:50px;
+	@include media(">=desktop") {
+		display:none;
+	}
+	span{
+		&,
+		&:before {
+			border: 0 solid $theme-color-base;
+			border-width: 1px 0 0 1px;
+			// bottom:10px;
+			display:block;
+			height:16px;
+			left:50%;
+			margin:-5px 0 0 -8px;
+			position:absolute;
+			top:50%;
+			transform:rotate(45deg);
+			width:16px;
+		}
+		&:before {
+			animation:2s arrow infinite;
+			border-width: 1px 0 0 1px;
+			content: '';
+			height:10px;
+			margin:-5px 0 0 -5px;
+			transform:none;
+			width:10px;
+		}
+	}
+}
+
+@keyframes arrow {
+	0% {
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		transform: translate(10px, 10px)
+	}
+}
+
+@-webkit-keyframes arrow {
+	0% {
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		transform: translate(10px, 10px)
+	}
 }

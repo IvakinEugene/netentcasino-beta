@@ -1,100 +1,129 @@
 .popups-holder
 	//- 
-		.subscribe-popup#subscribe-popup
-			.content.text-center
-				div
-					include promo-content
-			.footer
-				include section-refer
-		.refer-popup#refer-popup
-			.icon-gift
-			h2 Refer a Friend &amp; Get Rewarded
-			strong.title How it Works:
-			ol
-				li
-					| Subscribe to our newsletter to 
-					strong unlock 600 secret No Deposit Spins.
-				li
-					| Click “
-					strong Request Referral
-					| ” found at the bottom of the newsletter, then 
-					strong share the unique URL 
-					| with your friends.
-				li
-					| They use your link to signup for the newsletter, then you get an 
-					strong extra 200 Free Spins 
-					| and your friend gets a 100 Free Spins (
-					strong No Deposit required
-					| ).
+	.subscribe-popup#subscribe-popup
+		.content.text-center
+			div
+				include promo-content
+		.footer
+			include section-refer
+	.refer-popup#refer-popup
+		.icon-gift
+		h2 Refer a Friend &amp; Get Rewarded
+		strong.title How it Works:
+		ol
+			li
+				| Subscribe to our newsletter to 
+				strong unlock 600 secret No Deposit Spins.
+			li
+				| Click “
+				strong Request Referral
+				| ” found at the bottom of the newsletter, then 
+				strong share the unique URL 
+				| with your friends.
+			li
+				| They use your link to signup for the newsletter, then you get an 
+				strong extra 200 Free Spins 
+				| and your friend gets a 100 Free Spins (
+				strong No Deposit required
+				| ).
+		form(action="#")
+			.form-group
+				input(type="text", placeholder="Enter your email address")
+			.form-group
+				input(type="submit", value="Make Money").btn.btn-dark
+	.main-search-popup#search-popup
+		.main-search-bar
 			form(action="#")
-				.form-group
-					input(type="text", placeholder="Enter your email address")
-				.form-group
-					input(type="submit", value="Make Money").btn.btn-dark
-		.main-search-popup#search-popup
-			.main-search-bar
-				form(action="#")
-					span.icon-search i
-					input(type="text", placeholder="Search NetEnt Casinos", id="d-autocomplete")
-					span.icon-close-o x
-				.default-results
-					.top
-						div
-							.hideme
-								h2 Top Searches
-								ul.ui-autocomplete
-									li
-										a(href="#")
-											img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-											span.title
-												| Betsson 
-												span.category (Casino)
-									li
-										a(href="#")
-											img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-											span.title
-												| Free Spins 
-												span.category (Bonus)
-									li
-										a(href="#")
-											img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-											span.title
-												| Bitcoin 
-												span.category (Payment)
-									li
-										a(href="#")
-											img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-											span.title
-												| New Casinos 
-												span.category (Casinos)
-									li
-										a(href="#")
-											img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-											span.title
-												| Betsson 
-												span.category (Casino)
-									li
-										a(href="#")
-											img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-											span.title
-												| Free Spins 
-												span.category (Bonus)
-									li
-										a(href="#")
-											img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-											span.title
-												| Bitcoin 
-												span.category (Payment)
-									li
-										a(href="#")
-											img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-											span.title
-												| New Casinos 
-												span.category (Casinos)
-					.bottom
-						a(href="#").btn.btn-secondary
-							| View all 
-							span.count 50
-							|  Results
+				span.icon-search i
+				input(type="text", placeholder="Search NetEnt Casinos", id="d-autocomplete")
+				span.icon-close-o x
+			.default-results
+				.top
+					div
+						.hideme
+							h2 Top Searches
+							ul.ui-autocomplete
+								li
+									a(href="#")
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+										span.title
+											| Betsson 
+											span.category (Casino)
+								li
+									a(href="#")
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+										span.title
+											| Free Spins 
+											span.category (Bonus)
+								li
+									a(href="#")
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+										span.title
+											| Bitcoin 
+											span.category (Payment)
+								li
+									a(href="#")
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+										span.title
+											| New Casinos 
+											span.category (Casinos)
+								li
+									a(href="#")
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+										span.title
+											| Betsson 
+											span.category (Casino)
+								li
+									a(href="#")
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+										span.title
+											| Free Spins 
+											span.category (Bonus)
+								li
+									a(href="#")
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+										span.title
+											| Bitcoin 
+											span.category (Payment)
+								li
+									a(href="#")
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+										span.title
+											| New Casinos 
+											span.category (Casinos)
+				.bottom
+					a(href="#").btn.btn-secondary
+						| View all 
+						span.count 50
+						|  Results
 	.default-popup#articles-popup
-		| default
+		.popup-content
+			.popup-frame
+				h2 Terms and conditions - Casino Name
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		.popup-footer.text-center
+			a(href="#").btn.btn-secondary Close
+	.default-popup#fiter-posts-popup
+		.popup-content.filters-holder
+			.search-bar
+				form(action="#")
+					input(type="text", placeholder="Search NetentCasino")
+			ul.news-list
+				li
+					a(href="#", data-filter="#section1") NetEnt News
+				li
+					a(href="#", data-filter="#section2") Bonus News
+				li
+					a(href="#", data-filter="#section3") Exclusive Promotions
+				li
+					a(href="#", data-filter="#section4") New NetEnt Games
+				li
+					a(href="#", data-filter="#section5") Casino Reviews
+				li
+					a(href="#", data-filter="#section6") Live Casino
+		//- 
+			.popup-footer.text-center
+				a(href="#").btn.btn-secondary Close
