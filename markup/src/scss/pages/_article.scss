@@ -1,30 +1,33 @@
 .section-content{
 	background:$white;
-	@include media(">=tablet") {
+	@include media(">=desktop") {
 		background:none;
 	}
 	&.fixed-position{
 		.aside{
-			margin:0;
+			@include media(">=desktop") {
+				margin:0;
+			}
 		}
 	}
 	&.posts-list {
 		background:none;
 		> .holder{
-			@include media("<tablet") {
+			@include media("<desktop") {
+				padding-top: 0;
 				padding-right: 10px;
 				padding-left: 10px;
 			}
 		}
 		.content-holder{
-			@include media("<tablet") {
+			@include media("<desktop") {
 				background:$white;
 				box-shadow: 0 2px 4px $shadow;
 				padding:0 10px 20px;
 				// margin:0 384px 0 0;
 			}
 			&:first-child {
-				@include media("<tablet") {
+				@include media("<desktop") {
 					margin-right: -10px;
 					margin-left: -10px;
 					padding-right: $gutter-width;
@@ -34,7 +37,7 @@
 				.post-image{
 					&.fullwidth {
 						margin:0 -#{$gutter-width} 24px;
-						@include media(">=tablet") {
+						@include media(">=desktop") {
 							margin-bottom: 34px;
 						}
 					}
@@ -64,7 +67,7 @@
 		.post-image{
 			&.fullwidth {
 				margin:0 -10px 14px;
-				@include media(">=tablet") {
+				@include media(">=desktop") {
 					margin:0 -#{$gutter-width} 25px;
 				}
 			}
@@ -90,13 +93,14 @@
 		}
 	}
 	> .holder{
-		@include media(">=tablet") {
+		padding-top: 48px;
+		@include media(">=desktop") {
 			padding-top: 10px;
 			overflow:hidden;
 		}
 	}
 	.content{
-		@include media(">=tablet") {
+		@include media(">=desktop") {
 			float:left;
 			width:100%;
 			&:only-child {
@@ -106,14 +110,14 @@
 		}
 	}
 	.content-holder{
-		@include media(">=tablet") {
+		@include media(">=desktop") {
 			background:$white;
 			box-shadow: 0 0 4px $shadow;
 			border-radius:3px 3px 0 0;
-			margin:0 229px 0 0;
+			margin:0 279px 0 0;
 			padding:0 $gutter-width 25px;
 		}
-		@include media(">=desktop") {
+		@include media(">=widescreen") {
 			margin-right: 384px;
 		}
 		+ .content-holder{
@@ -131,31 +135,40 @@
 				min-width: 290px;
 				padding-top: 8px;
 				padding-bottom: 7px;
+				max-width: 290px;
+				min-width: 0;
+				width:100%;
 				@include media(">=tablet") {
 					font-size: 16px;
+					max-width: none;
 					min-width: 400px;
 					padding-bottom: 10px;
+					width:auto;
 				}
 			}
 		}
 	}
 	.aside{
-		display:none;
-		@include media(">=tablet") {
+		@include media("<desktop") {
+			left:0;
+			// margin:0 -#{$gutter-width};
+			position:fixed;
+			top:60px;
+			width:100% !important;
+			z-index:10;
+		}
+		@include media(">=desktop") {
 			display:block;
 			float:right;
 			margin:0 0 0 -100%;
 			padding:0 0 30px;
-			width:220px;
+			position:relative;
+			width:270px;
+			z-index:5;
 		}
-		@include media(">=desktop") {
+		@include media(">=widescreen") {
 			width:375px;
 		}
-		// .aside{
-		// 	@include media(">=tablet") {
-		// 		padding:0 0 30px;
-		// 	}
-		// }
 	}
 }
 
@@ -196,38 +209,122 @@
 	}
 }
 
-.widget{
+.share-block{
+	> .holder{
+		padding:26px 10px 18px;
+	}
+	h2{
+		font-size: 16px;
+		margin:0 0 16px;
+		text-transform:uppercase;
+	}
 	ul{
-		border: 1px solid #cbd6d2;
+		li{
+			display:inline-block;
+			vertical-align:top;
+			padding:0 6px 10px 0;
+			&:before {
+				display:none;
+			}
+			&:hover {
+				a{
+					opacity:0.7;
+				}
+			}
+		}
+	}
+}
+
+.widget{
+	display:none;
+	@include media(">=desktop") {
+		display:block;
+	}
+	&.open-close {
+		display:block;
+		position:relative;
+		&.active {
+			&:before {
+				display:block;
+			}
+		}
+		&:before {
+			background:rgba($black, 0.8);
+			content: '';
+			display:none;
+			height:100%;
+			left:0;
+			pointer-events:none;
+			position:fixed;
+			top:0;
+			width:100%;
+			z-index:5;
+		}
+		> .opener{
+			background:$white;
+			border-bottom: 1px solid $border-color-base;
+			display:block;
+			font-size:14px;
+			line-height:1.2857;
+			padding:15px 50px 15px 20px;
+			position:relative;
+			text-decoration:none;
+			z-index:10;
+			&:before {
+				content: 'UP';
+				position:absolute;
+				right:20px;
+				top:16px;
+				transition:transform $animation-speed;
+			}
+		}
+		> .slide{
+			left:0;
+			position:absolute;
+			top:0;
+			width:100%;
+		}
+	}
+	ul{
+		border:0 solid #cbd6d2;
+		border-width:0 0 1px;
 		box-shadow: 0 0 2px $shadow;
 		font-size:14px;
 		line-height:1.2857;
-		// @extend %listreset;
+		position:relative;
+		z-index:10;
+		@include media(">=desktop") {
+			border-width: 1px;
+		}
 		&.accordeon {
 			.active {
 				.opener{
-					&:before {
-						transform:translateY(-50%) rotate(180deg);
-					}
+					transform:rotate(180deg);
 				}
 			}
 			.opener{
-				padding-right: 50px;
-				position:relative;
+				background:none;
+				font-size:16px;
+				line-height:1;
+				padding:0;
+				position:absolute;
+				right:20px;
+				top:16px;
+				transition:transform $animation-speed;
 				&:before {
-					content: "UP";
-					font-size:16px;
-					line-height:1;
-					position:absolute;
-					right:20px;
-					top:50%;
-					transform:translateY(-50%);
-					transition:transform $animation-speed;
+					content: 'UP';
 				}
 			}
 		}
 		li{
 			padding:0;
+			position:relative;
+			&.anchor-active,
+			&.child-active {
+				> a{
+					color:$theme-color-base;
+				}
+			}
 			&:before {
 				display:none;
 			}
@@ -238,7 +335,8 @@
 		a{
 			background:$white;
 			display:block;
-			padding:15px 20px;
+			padding:15px 50px 15px 20px;
+			position:relative;
 			text-decoration:none;
 			&:hover {
 				background:#edf0ee;
@@ -388,6 +486,279 @@
 			@include media(">=tablet") {
 				padding-top: 26px;
 			}
+		}
+	}
+}
+
+.casino-boxes{
+	padding:16px 0 19px;
+	li{
+		+ li{
+			padding:9px 0 0;
+		}
+	}
+	.box{
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    justify-content: flex-start;
+	    align-content: stretch;
+	    align-items: stretch;
+		background:$white;
+		box-shadow: 0 0 3px $shadow;
+		color:$base-gray;
+		font-size:12px;
+		line-height:1.25;
+		text-align:center;
+		@include media(">=tablet") {
+			font-size: 20px;
+		}
+		.heading{
+			border-right: 1px solid $border-color-base;
+			min-width: 92px;
+			padding:10px;
+			@include media(">=tablet") {
+				display: flex;
+			    flex-direction: row;
+			    flex-wrap: nowrap;
+			    justify-content: flex-start;
+			    align-content: center;
+			    align-items: center;
+				// min-width: 457px;
+				max-width: 46.4589%;
+				min-width: 46.4589%;
+			}
+			@include media(">=widescreen") {
+				max-width: 49.4589%;
+				min-width: 49.4589%;
+			}
+			.btn{
+				display:none;
+				@include media(">=tablet") {
+					display:inline-block;
+					font-size: 14px;
+					min-width: 0;
+					padding:9px 13px 6px;
+				}
+			}
+		}
+		.logo-holder{
+			margin-bottom: 7px;
+			@include media(">=tablet") {
+				margin:0 auto;
+				width:120px;
+			}
+		}
+		.logo-description{
+			@include media(">=tablet") {
+				padding:0 0 8px 15px;
+				min-width: 194px;
+				text-align:left;
+			}
+			@include media(">=widescreen") {
+				min-width: 224px;
+			}
+		}
+		h2{
+			color:#4a4a4a;
+			font-size: 12px;
+			margin:0 0 3px;
+			@include media(">=tablet") {
+				font-size: 26px;
+				margin:0 0 -1px;
+			}
+			a{
+				@include media(">=tablet") {
+					text-decoration:none;
+				}
+			}
+		}
+		.stars{
+			@include media(">=tablet") {
+				margin:0 0 10px;
+				width:145px;
+			}
+		}
+		.content{
+			flex: 1 1 auto;
+			padding:16px 15px 11px;
+			@include media(">=tablet") {
+				padding:20px 15px 16px;
+			}
+		}
+		h3{
+			font-size: 16px;
+			margin:0;
+			text-transform:uppercase;
+			@include media(">=tablet") {
+				font-size: 30px;
+				margin:0 0 3px;
+			}
+		}
+		p{
+			margin:0 0 14px;
+		}
+		.btn{
+			font-size: 14px;
+			max-width: 189px;
+			min-width: 0;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			width:100%;
+			@include media(">=tablet") {
+				font-size: 16px;
+				max-width: none;
+				min-width: 280px;
+				padding-top: 9px;
+				padding-bottom: 9px;
+				width:auto;
+			}
+		}
+	}
+}
+
+.section-top-casinos{
+	@include media(">=tablet") {
+		border-top: 1px solid $border-color-base;
+	}
+	.holder{
+		padding-top: 20px;
+		padding-bottom: 25px;
+	}
+	.boxes-holder{
+		@include media(">=tablet") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: wrap;
+		    justify-content: flex-start;
+		    align-content: stretch;
+		    align-items: stretch;
+		}
+		> div{
+			padding:0 0 9px;
+			@include media(">=tablet") {
+				display: flex;
+			    flex-direction: row;
+			    flex-wrap: wrap;
+			    justify-content: flex-start;
+			    align-content: stretch;
+			    align-items: stretch;
+				padding:0 6px 6px;
+				width:33.3333%;
+			}
+		}
+		+ .button-holder{
+			padding:12px 0 0;
+			.btn{
+				font-size: 13px;
+				padding-top: 9px;
+				padding-bottom: 8px;
+			}
+		}
+	}
+	.casino-box{
+		background:$white;
+		box-shadow: 0 0 2px $shadow;
+		color:$base-gray;
+		font-size:12px;
+		line-height:1.25;
+		text-align:center;
+		@include media(">=tablet") {
+			display: flex;
+		    flex-direction: column;
+		    flex-wrap: nowrap;
+		    justify-content: space-between;
+		    align-content: flex-start;
+		    align-items: flex-start;
+		    width:100%;
+		}
+		> div{
+			@include media(">=tablet") {
+				width:100%;
+			}
+		}
+		.top{
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: flex-start;
+		    align-content: stretch;
+		    align-items: stretch;
+		    @include media(">=tablet") {
+		    	flex: 1 1 auto;
+		    }
+		}
+		.heading{
+			display: flex;
+		    flex-direction: column;
+		    flex-wrap: nowrap;
+		    justify-content: center;
+		    align-content: center;
+		    align-items: center;
+			border: 0 solid $border-color-base;
+			border-width: 0 1px 0 0;
+			min-width: 92px;
+			padding:10px;
+		}
+		.logo-holder{
+			margin-bottom: 8px;
+			width:40px;
+		}
+		.logo-description{}
+		h2{
+			font-size: 12px;
+			margin:0;
+		}
+		.stars{}
+		.content{
+			display: flex;
+		    flex-direction: column;
+		    flex-wrap: nowrap;
+		    justify-content: space-between;
+		    align-content: stretch;
+		    align-items: stretch;
+			flex:1 1 auto;
+			// padding:11px 0 20px;
+		}
+		.frame{
+			padding:11px 15px 15px;
+			@include media(">=tablet") {
+				display: flex;
+			    flex-direction: column;
+			    flex-wrap: nowrap;
+			    justify-content: center;
+			    align-content: stretch;
+			    align-items: stretch;
+				flex: 1 1 auto;
+			}
+		}
+		h3{
+			font-size: 18px;
+			margin:0;
+			text-transform:uppercase;
+		}
+		p{
+			margin:0;
+		}
+		.counter{
+			border: 0 solid $border-color-base;
+			border-width: 1px 0 0;
+			color:$headings-color;
+			font-size: 16px;
+			padding:6px;
+			strong{
+				font-weight:normal;
+			}
+		}
+		.button-holder{
+			border: 0 solid $border-color-base;
+			border-width: 1px 0 0;
+			padding:13px 12px 14px;
+		}
+		.btn{
+			font-size: 13px;
+			min-width: 200px;
+			padding-bottom: 5px;
 		}
 	}
 }

@@ -56,10 +56,13 @@
 		}
 	}
 	.footer-nav{
-		font-size: 14px;
+		font-size: 12px;
 		line-height:1.2143;
 		margin:0 -#{$gutter-width} 25px;
 		@extend %listreset;
+		@include media(">=375px") {
+			font-size: 14px;
+		}
 		@include media(">=tablet") {
 			margin:0 0 13px;
 			text-align:left;
@@ -165,14 +168,14 @@
 	    justify-content: center;
 	    align-content: center;
 	    align-items: center;
-	    margin:0 -10px 26px;
+	    margin:-8px -10px 18px;
 		@include media(">=tablet") {
 			margin:0;
 		}
 		li{
 			// display:inline-block;
 			// vertical-align:top;
-			margin:0 8px;
+			margin:8px;
 		}
 	}
 	.copyright{

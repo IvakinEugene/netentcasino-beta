@@ -1,3 +1,18 @@
+#navigation-links{
+	padding:15px 15px 0;
+	li{
+		display:inline-block;
+		vertical-align:top;
+		margin:0 10px 10px 0;
+		&:before {
+			display:none;
+		}
+	}
+	.btn{
+		min-width: 0;
+	}
+}
+
 .payments-list{
 	overflow:hidden;
 	@extend %listreset;
@@ -31,6 +46,7 @@
 				height:117px;
 			}
 			&:hover {
+				background:$white;
 				box-shadow: 0 0 10px $shadow;
 			}
 		}
@@ -61,6 +77,9 @@
 		height:32px;
 		text-decoration:none;
 		width:71px;
+		&:hover {
+			background:$base-gray;
+		}
 	}
 }
 
@@ -93,52 +112,6 @@
 
 .text-right{
 	text-align:right;
-}
-
-.read-more-button{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-content: center;
-	align-items: center;
-	font-size:12px;
-	padding:8px 15px 10px;
-	&:hover {
-		color:$base-link-color;
-		[class*="icon-"]{
-			color:$theme-color-base-lighten;
-		}
-	}
-	> span{
-		&:nth-child(2) {
-			flex: 1 1 auto;
-		}
-	}
-	.count{
-		font-size: 32px;
-		font-weight:500;
-		line-height:1;
-		min-width: 82px;
-		text-align:center;
-	}
-	.content{
-		color:$base-gray;
-		padding:0 0 0 15px;
-	}
-	.title{
-		color:$headings-color;
-		display:block;
-		font-size: 16px;
-		font-weight:500;
-		margin:0 0 -3px;
-		text-transform:uppercase;
-	}
-	[class*="icon-"]{
-		display:inline-block;
-		vertical-align:top;
-		font-size: 16px;
-	}
 }
 
 .section-heading{
@@ -182,7 +155,7 @@
 			@include media(">=widescreen") {
 				margin:0 43px 0 0;
 			}
-			&.active {
+			&[class*="active"] {
 				a{
 					border-bottom-color: $theme-color-base;
 					color:$theme-color-base;
@@ -486,11 +459,13 @@
 .back-to-top{
 	background:$white;
 	border-radius: 100%;
+	box-shadow: 0 0 5px $shadow;
 	bottom:10px;
 	height:50px;
 	position:fixed;
 	right:10px;
 	width:50px;
+	z-index:20;
 	@include media(">=desktop") {
 		display:none;
 	}

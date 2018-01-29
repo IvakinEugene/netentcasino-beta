@@ -289,10 +289,11 @@
     align-content: stretch;
     align-items: stretch;
 	height:100vh;
-	height:658px;
+	// height:658px;
 	margin:0 auto;
 	position:relative;
-	width:375px;
+	// max-width:375px;
+	// width:100%;
 	.popup-content{
 		background:$white;
 		overflow:auto;

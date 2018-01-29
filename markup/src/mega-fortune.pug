@@ -1,0 +1,42 @@
+extends pug/extends/master
+
+block content
+	- var page_class = "hide-nav hide-offer hide-bonus"
+	include pug/includes/header
+	#main
+		section.section-breadcrumbs
+			.holder
+				div
+					ul.breadcrumbs
+						li
+							a(href="#") Home
+						li
+							a(href="#") NetEnt Game &amp; Jackpots
+						li Mega Fortune Jackpot
+				div
+					p Last updated - 
+						strong 2 days ago!
+		//- 
+		section.section-intro
+			.holder
+				.casino-logo
+					img(src="http://via.placeholder.com/207x69")
+				.game-box
+					.media-holder
+						a(href="#").bg-stretch
+							- var image = "http://via.placeholder.com/562x280/ff0000/ffffff"
+							include pug/extends/retina-single
+							span.hover-box
+								span
+									span.icon-play
+									| Play at Betsson
+							span.sticker £2,061.762
+						strong.media-title Planet of the Apes 2
+			- var image = "banner-concept-4"
+			include pug/extends/retina-images
+		section.section-casino
+			//- 
+			.holder
+				h1 Mega Fortune Jackpot
+				p The name Mega Fortune is a good clue for what to expect from the style of this video slot. All symbols are synonymous with wealth and what you might expect a mega rich life to include. With a backdrop of a luxurious paradise, the roll symbols include bottles of champagne, diamond rings, designer watches and wads of cash. 
+	include pug/includes/footer
