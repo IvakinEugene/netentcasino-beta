@@ -1,0 +1,201 @@
+.section-casino-info{
+	> .holder{
+		background:$white;
+		padding-top: 20px;
+		padding-bottom: 40px;
+	}
+	.casinos-boxes{}
+	.boxes-holder{
+		padding:10px $gutter-width 20px;
+		> div{
+			padding:0 0 9px;
+		}
+	}
+	.casino-box{
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    justify-content: flex-start;
+	    align-content: stretch;
+	    align-items: stretch;
+		background:$white;
+		box-shadow: 0 0 2px $shadow;
+		color:$base-gray;
+		font-size:12px;
+		line-height:1.25;
+		text-align:center;
+		@include media(">=desktop") {
+			font-size: 20px;
+			max-width: 1252px; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		}
+		.heading{
+			display: flex;
+		    flex-direction: column;
+		    flex-wrap: nowrap;
+		    justify-content: center;
+		    align-content: stretch;
+		    align-items: stretch;
+			border-right: 1px solid $border-color-base;
+			min-width: 91px;
+			padding:23px 15px 20px;
+			padding:18px;
+			@include media(">=desktop") {
+				// display: flex;
+			    flex-direction: row;
+			    // flex-wrap: nowrap;
+			    // justify-content: center;
+			    align-content: center;
+			    align-items: center;
+				// min-width: 457px;
+				min-width: 36.5016%;
+			}
+			.btn{
+				display:none;
+				@include media(">=desktop") {
+					display:inline-block;
+					font-size: 14px;
+					min-width: 0;
+					padding:8px 13px 6px;
+				}
+			}
+		}
+		.logo-holder{
+			margin-bottom: 7px;
+			@include media(">=desktop") {
+				margin-bottom: 0;
+				width:120px;
+			}
+		}
+		.txt{
+			@include media(">=desktop") {
+				min-width: 225px;
+				padding:0 0 12px 15px;
+				text-align:left;
+			}
+		}
+		h2{
+			font-size: 12px;
+			margin:0 0 4px;
+			@include media(">=desktop") {
+				font-size: 26px;
+				margin:0;
+			}
+			a{
+				@include media(">=desktop") {
+					text-decoration:none;
+				}
+			}
+		}
+		.stars{
+			width:53px;
+			@include media(">=desktop") {
+				margin:0 0 10px;
+				width:145px;
+			}
+		}
+		.content{
+			flex: 1 1 auto;
+			padding:24px 15px 25px;
+			@include media(">=desktop") {
+				display: flex;
+			    flex-direction: row;
+			    flex-wrap: nowrap;
+			    justify-content: flex-start;
+			    align-content: stretch;
+			    align-items: stretch;
+				padding:0;
+			}
+		}
+		.frame{
+			@include media(">=desktop") {
+				display: flex;
+			    flex-direction: column;
+			    flex-wrap: nowrap;
+			    justify-content: center;
+			    align-content: stretch;
+			    align-items: stretch;
+			    padding:10px 15px 15px;
+				width:50%;
+			}
+		}
+		h3{
+			font-size: 18px;
+			margin:0;
+			text-transform:uppercase;
+			@include media(">=tablet") {
+				font-size: 30px;
+			}
+		}
+		p{
+			margin:0 0 14px;
+			@include media(">=desktop") {
+				margin:0;
+			}
+		}
+		.button-holder{
+			@include media(">=desktop") {
+				display: flex;
+			    flex-direction: column;
+			    flex-wrap: nowrap;
+			    justify-content: flex-start;
+			    align-content: stretch;
+			    align-items: stretch;
+				border: 0 solid $border-color-base;
+				border-width: 0 0 0 1px;
+				position:relative;
+				width:50%;
+			}
+		}
+		.button-frame{
+			@include media(">=desktop") {
+				display: flex;
+			    flex-direction: row;
+			    flex-wrap: nowrap;
+			    justify-content: center;
+			    align-content: center;
+			    align-items: center;
+				flex:1 1 auto;
+			}
+		}
+		.sticker{
+			display:none;
+			@include media(">=desktop") {
+				background:$theme-color-add;
+				color:$headings-color;
+				display:block;
+				font-size:14px;
+				line-height:1.1429;
+				// left:0;
+				padding:10px 15px 20px;
+				// position:absolute;
+				// top:0;
+				// width:100%;
+			}
+			> * {
+				@include media(">=desktop") {
+					display:inline;
+					margin:0 5px;
+				}
+			}
+			.icon{
+				@include media(">=desktop") {
+					background:$base-gray;
+					// width:20px;
+				}
+			}
+		}
+		.btn{
+			font-size: 14px;
+			max-width: 189px;
+			min-width: 0;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			width:100%;
+			@include media(">=desktop") {
+				font-size: 18px;
+				min-width: 280px;
+				width:auto;
+			}
+		}
+	}
+}

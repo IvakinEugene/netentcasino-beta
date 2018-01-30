@@ -1,15 +1,23 @@
 #navigation-links{
+	left:0;
 	padding:15px 15px 0;
+	position:fixed;
+	top:0;
+	z-index:50;
 	li{
 		display:inline-block;
 		vertical-align:top;
 		margin:0 10px 10px 0;
+		overflow:visible;
 		&:before {
 			display:none;
 		}
 	}
-	.btn{
-		min-width: 0;
+	a{
+		background:white;
+		box-shadow: 0 0 10px #000;
+		color:$theme-color-base;
+		text-decoration:none;
 	}
 }
 
@@ -213,6 +221,19 @@
 	}
 	@include media(">=desktop") {
 		font-size: 18px;
+	}
+	&.large {
+		> div {
+			@include media(">=tablet") {
+				padding:0;
+				width:100%;
+			}
+		}
+		.heading{
+			@include media(">=tablet") {
+				min-width: 348px;
+			}
+		}
 	}
 	> div{
 		@include media(">=tablet") {

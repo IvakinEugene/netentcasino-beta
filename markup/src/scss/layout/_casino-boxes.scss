@@ -133,18 +133,31 @@
 .game-box{
 	background:$white;
 	box-shadow:0 0 3px $shadow;
-	border-radius: 4px 4px;
+	border-radius: 4px;
 	overflow:hidden;
-	&:hover {
+	&.small {
+		border-radius: 2px 2px 0 0;
 		.media-holder{
-			.hover-box{
-				display: flex;
-			}
+			height:100px;
+		}
+		.media-title{
+			color:inherit;
+			display:block;
+			font-size: 12px;
+			font-weight:normal;
+			padding:5px 9px 6px;
+			position:relative;
+			text-transform:none;
 		}
 	}
 	.media-holder{
 		height:149px;
 		position:relative;
+		&:hover {
+			.hover-box{
+				display: flex;
+			}
+		}
 		a{
 			text-decoration:none;
 		}
@@ -213,15 +226,63 @@
 		right:0;
 		text-transform:uppercase;
 		z-index:5;
-		// @include media(">=tablet") {
-		// 	color:$headings-color;
-		// 	display:block;
-		// 	font-size: 14px;
-		// 	font-weight:normal;
-		// 	padding:6px 9px 7px;
-		// 	position:relative;
-		// 	text-transform:none;
-		// }
+	}
+	.games-list2{
+		li{
+			display: list-item;
+			+ li{
+				border-top: 1px solid $border-color-base;
+			}
+		}
+	}
+	.game{
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    justify-content: space-between;
+	    align-content: flex-start;
+	    align-items: flex-start;
+	    padding:20px 19px 16px;
+	    .heading{
+	    	display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: flex-start;
+		    align-content: flex-start;
+		    align-items: flex-start;
+	    }
+	    .logo-holder{
+	    	margin:0 19px 0 0;
+	    	width:35px;
+	    }
+	    .txt{}
+	    h2{
+	    	font-size: 15px;
+	    	margin:0 0 4px;
+	    }
+	    .stars{
+	    	margin:0;
+	    	width:53px;
+	    }
+	    .btn{
+	    	font-size: 14px;
+	    	min-width: 110px;
+	    	padding-top: 5px;
+	    	padding-bottom: 6px;
+	    }
+	}
+	.footer{
+		border-top: 1px solid $border-color-base;
+		.btn{
+			display:block;
+			min-width: 0;
+			padding-top: 14px;
+			padding-bottom: 16px;
+			&:hover {
+				background:$btn-secondary-border;
+				color:$white;
+			}
+		}
 	}
 }
 

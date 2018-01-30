@@ -4,6 +4,7 @@ block content
 	- var page_class = "hide-nav hide-offer hide-bonus"
 	include pug/includes/header
 	#main
+		//- 
 		section.section-breadcrumbs
 			.holder
 				div
@@ -16,11 +17,11 @@ block content
 				div
 					p Last updated - 
 						strong 2 days ago!
-		//- 
 		section.section-intro
 			.holder
-				.casino-logo
-					img(src="http://via.placeholder.com/207x69")
+				//- 
+					.casino-logo
+						img(src="http://via.placeholder.com/207x69")
 				.game-box
 					.media-holder
 						a(href="#").bg-stretch
@@ -34,9 +35,116 @@ block content
 						strong.media-title Planet of the Apes 2
 			- var image = "banner-concept-4"
 			include pug/extends/retina-images
-		section.section-casino
+		section.section-casino-info
 			//- 
 			.holder
 				h1 Mega Fortune Jackpot
-				p The name Mega Fortune is a good clue for what to expect from the style of this video slot. All symbols are synonymous with wealth and what you might expect a mega rich life to include. With a backdrop of a luxurious paradise, the roll symbols include bottles of champagne, diamond rings, designer watches and wads of cash. 
+				p Mega Fortune is an incredible triple jackpot casino slot game that is well known for its huge payouts and fantastic prize potential.
+			.casinos-boxes
+				.holder
+					.boxes-holder
+						div
+							.casino-box
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") Unibet
+										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										a(href="#").btn.btn-secondary casino review
+								.content
+									.frame
+										h3 £1000 + 20 Free Spins
+										p 100% up to £500 + 20 Free Spins
+									.button-holder
+										.sticker
+											span.icon icon
+											p Recommended by Casino Experts
+										.button-frame
+											a(href="#").btn.btn-primary Go to Unibet
+						//- 
+						div
+							.casino-box
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") LeoVegas
+										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										a(href="#").btn.btn-secondary casino review
+								.content
+									.frame
+										h3 £1500 + 50 Free Spins
+										p 200% up to £500 + 50 Free Spins
+									.button-holder
+										.button-frame
+											a(href="#").btn.btn-primary Go to LeoVegas
+						div
+							.casino-box
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") Thrills
+										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										a(href="#").btn.btn-secondary casino review
+								.content
+									.frame
+										h3 £150 + 50 Free Spins
+										p 50% up to £100 + 50 Free Spins
+									.button-holder
+										.sticker
+											span.icon icon
+											p Free Spins Before Depsoit
+										.button-frame
+											a(href="#").btn.btn-primary Go to Thrills
+						div
+							.casino-box
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") VideoSlots
+										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										a(href="#").btn.btn-secondary casino review
+								.content
+									.frame
+										h3 £1000 + 20 Free Spins
+										p 100% up to £500 + 20 Free Spins
+									.button-holder
+										.button-frame
+											a(href="#").btn.btn-primary Go to VideoSlots
+					.button-holder.text-center
+						a(href="#").btn.btn-secondary Load More Casinos
+			.holder
+				.casino-description.large
+					div
+						.row
+							.heading
+								strong Minimum Bet
+							.content
+								p £0.25 per spin
+						.row
+							.heading
+								strong Average Payout Percentage
+							.content
+								p 96.4%
+						.row
+							.heading
+								strong WInning Jackpot Combination
+							.content
+								p 3 or more symbols on a win line start the bonus game. In the bonus game you get the chance to win the jackpot.
+				hr
+				h1 Mega Fortune Progressive Jackpot
+				p As mentioned you are able to win 3 progressive jackpots while playing Mega Fortune. Mega Fortune Rapid, and Major are local progressive jackpots, meaning that the jackpot amount of these are determined by players at any one casino. For example, with every spin made at the NetEnt casino Mr Green, a percentage of the amount played will be added to the progressive jackpots, increasing with every player playing at Mr Green. These therefore can vary greatly, as it may have been only a few hours since the last win spin or it could have been a few weeks depending on the casino. It’s a good idea, therefore, to search around and find which casino currently offers the highest Mega Fortune Rapid and Major jackpots for maximum value.
+				p
+					a(href="#") Rear More
 	include pug/includes/footer
