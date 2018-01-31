@@ -7,7 +7,6 @@
 		.aside{
 			@include media(">=desktop") {
 				margin:0;
-				padding-top: 10px;
 			}
 		}
 	}
@@ -94,15 +93,16 @@
 		}
 	}
 	> .holder{
-		padding-top: 48px;
+		padding-top: 47px;
 		@include media(">=desktop") {
-			padding-top: 10px;
 			overflow:hidden;
+			padding-top: 0;
 		}
 	}
 	.content{
 		@include media(">=desktop") {
 			float:left;
+			padding-top: 10px;
 			width:100%;
 			&:only-child {
 				float:none;
@@ -162,7 +162,7 @@
 			display:block;
 			float:right;
 			margin:0 0 0 -100%;
-			padding:0 0 30px;
+			padding:10px 0 30px;
 			position:relative;
 			width:270px;
 			z-index:5;

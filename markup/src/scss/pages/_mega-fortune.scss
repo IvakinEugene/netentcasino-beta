@@ -2,35 +2,31 @@
 	.subsection{
 		&.content {
 			background:$white;
-			padding-top: 22px;
-			padding-bottom: 30px;
+			padding: 22px 0 30px;
+		}
+		&.boxes-holder {
+			padding:50px 0 60px;
 		}
 	}
 	h1{
 		margin:0 0 10px;
 	}
-}
-
-.section-casino-info{
-	> .holder{
-		background:$white;
-		padding-top: 20px;
-		padding-bottom: 40px;
-	}
-	.casinos-boxes{}
 	.boxes-holder{
-		padding:10px $gutter-width 20px;
-		> div{
-			padding:0 0 9px;
+		ul{
+			li{
+				&:before {
+					display:none;
+				}
+			}
 		}
 	}
 	.casino-box{
 		display: flex;
-	    flex-direction: row;
-	    flex-wrap: nowrap;
-	    justify-content: flex-start;
-	    align-content: stretch;
-	    align-items: stretch;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: stretch;
 		background:$white;
 		box-shadow: 0 0 2px $shadow;
 		color:$base-gray;
@@ -43,22 +39,22 @@
 		}
 		.heading{
 			display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: center;
-		    align-content: stretch;
-		    align-items: stretch;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: stretch;
+			align-items: stretch;
 			border-right: 1px solid $border-color-base;
 			min-width: 91px;
 			padding:23px 15px 20px;
 			padding:18px;
 			@include media(">=desktop") {
 				// display: flex;
-			    flex-direction: row;
-			    // flex-wrap: nowrap;
-			    // justify-content: center;
-			    align-content: center;
-			    align-items: center;
+				flex-direction: row;
+				// flex-wrap: nowrap;
+				// justify-content: center;
+				align-content: center;
+				align-items: center;
 				// min-width: 457px;
 				min-width: 36.5016%;
 			}
@@ -111,23 +107,23 @@
 			padding:24px 15px 25px;
 			@include media(">=desktop") {
 				display: flex;
-			    flex-direction: row;
-			    flex-wrap: nowrap;
-			    justify-content: flex-start;
-			    align-content: stretch;
-			    align-items: stretch;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: flex-start;
+				align-content: stretch;
+				align-items: stretch;
 				padding:0;
 			}
 		}
 		.frame{
 			@include media(">=desktop") {
 				display: flex;
-			    flex-direction: column;
-			    flex-wrap: nowrap;
-			    justify-content: center;
-			    align-content: stretch;
-			    align-items: stretch;
-			    padding:10px 15px 15px;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				justify-content: center;
+				align-content: stretch;
+				align-items: stretch;
+				padding:10px 15px 15px;
 				width:50%;
 			}
 		}
@@ -148,11 +144,11 @@
 		.button-holder{
 			@include media(">=desktop") {
 				display: flex;
-			    flex-direction: column;
-			    flex-wrap: nowrap;
-			    justify-content: flex-start;
-			    align-content: stretch;
-			    align-items: stretch;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				justify-content: flex-start;
+				align-content: stretch;
+				align-items: stretch;
 				border: 0 solid $border-color-base;
 				border-width: 0 0 0 1px;
 				position:relative;
@@ -162,11 +158,11 @@
 		.button-frame{
 			@include media(">=desktop") {
 				display: flex;
-			    flex-direction: row;
-			    flex-wrap: nowrap;
-			    justify-content: center;
-			    align-content: center;
-			    align-items: center;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: center;
+				align-content: center;
+				align-items: center;
 				flex:1 1 auto;
 			}
 		}
@@ -210,5 +206,22 @@
 				width:auto;
 			}
 		}
+	}
+}
+
+.section-casino-info{
+	> .holder{
+		background:$white;
+		padding-top: 20px;
+		padding-bottom: 40px;
+	}
+	.casinos-boxes{}
+	.boxes-holder{
+		padding:10px $gutter-width 20px;
+		> div{
+			padding:0 0 9px;
+		}
+	}
+	.casino-box{
 	}
 }
