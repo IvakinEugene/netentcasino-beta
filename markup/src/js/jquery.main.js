@@ -130,7 +130,8 @@ function initMobileNav() {
 // initialize smooth anchor links
 function initAnchors() {
 	new SmoothScroll({
-		anchorLinks: '.anchor-links a[href^="#"]:not([href="#"]), .back-to-top, .aside a[href^="#"]:not([href="#"])',
+		// anchorLinks: '.anchor-links a[href^="#"]:not([href="#"]), .back-to-top, .aside a[href^="#"]:not([href="#"])',
+		anchorLinks: 'a[href^="#"]:not([href="#"]):not([href*="popup"])',
 		activeClasses: 'parent',
 		anchorActiveClass: 'anchor-active',
 		wheelBehavior: 'none',
@@ -1185,7 +1186,7 @@ jQuery.fn.clickClass = function(opt) {
 						position: this.options.positionType
 					});
 					if (this.isWrap) {
-						if (jQuery(this.$stickyBox).css('display') != 'none'){
+						if ((jQuery(this.$stickyBox).css('display') != 'none') && (jQuery(this.$stickyBox).outerHeight() != 0) ){
 							this.$stickyBoxWrap.css({
 								height: this.data.boxFullHeight
 							});
@@ -1402,11 +1403,16 @@ jQuery.fn.clickClass = function(opt) {
 						self.hideSlide();
 					}
 				}
+				if (!jQuery(e.target).hasClass('opener')) {
+					self.hideSlide();
+				}
 			};
 
 			// set initial styles
 			if (this.holder.hasClass(this.options.activeClass)) {
-				$(document).on('click touchstart', self.outsideClickHandler);
+				$(document).on('click touchstart', function(){
+					self.outsideClickHandler;
+				});
 			} else {
 				this.slider.addClass(slideHiddenClass);
 			}

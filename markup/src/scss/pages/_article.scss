@@ -7,6 +7,7 @@
 		.aside{
 			@include media(">=desktop") {
 				margin:0;
+				padding-top: 10px;
 			}
 		}
 	}
@@ -270,6 +271,9 @@
 			position:relative;
 			text-decoration:none;
 			z-index:10;
+			@include media(">=desktop") {
+				display:none;
+			}
 			&:before {
 				content: 'UP';
 				position:absolute;
@@ -283,6 +287,9 @@
 			position:absolute;
 			top:0;
 			width:100%;
+			@include media(">=desktop") {
+				position:static;
+			}
 		}
 	}
 	ul{

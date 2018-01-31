@@ -41,6 +41,14 @@
 		background:$btn-secondary-border;
 		color:$white;
 	}
+	&.invert {
+		background:$btn-secondary-border;
+		color:$white;
+		&:hover {
+			background:$btn-secondary-background;
+			color:$btn-secondary-color;
+		}
+	}
 }
 
 .btn-link{

@@ -77,7 +77,7 @@
 	    // align-content: start;
 	    align-items: center;
 	    // align-items: start;
-	    padding:8px 8px 11px;
+	    padding:10px 8px 11px;
 	    @include media(">=tablet") {
 	    	justify-content: space-between;
 	    	margin:0 auto;
@@ -121,9 +121,10 @@
 	}
 	.stars{
 		display:block;
+		width:43px;
 		@include media(">=tablet") {
 			margin:0 0 5px;
-			width:50px;
+			width:49px;
 		}
 	}
 	.content{

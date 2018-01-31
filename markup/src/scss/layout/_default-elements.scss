@@ -54,8 +54,9 @@
 				height:117px;
 			}
 			&:hover {
-				background:$white;
-				box-shadow: 0 0 10px $shadow;
+				.logo-holder{
+					border-color: $theme-color-base
+				}
 			}
 		}
 		.logo-holder{
@@ -86,7 +87,8 @@
 		text-decoration:none;
 		width:71px;
 		&:hover {
-			background:$base-gray;
+			border-color: $theme-color-base;
+			color:$theme-color-base;
 		}
 	}
 }
@@ -207,6 +209,7 @@
 }
 
 .casino-description{
+	margin:0 0 -9px;
 	@include media(">=tablet") {
 		display: flex;
 	    flex-direction: row;
@@ -216,7 +219,7 @@
 	    align-items: stretch;
 		font-size:16px;
 		line-height:1.5556;
-		margin:0 -6px;
+		margin:0 -6px -11px;
 		padding:16px 0 0;
 	}
 	@include media(">=desktop") {
@@ -254,11 +257,11 @@
 	    justify-content: flex-start;
 	    align-content: stretch;
 	    align-items: stretch;
+	    padding:0 0 9px;
+	    @include media(">=tablet") {
+	    	padding:0 0 11px;
+	    }
 		+ .row{
-			padding-top: 9px;
-			@include media(">=tablet") {
-				padding-top: 11px;
-			}
 			&:last-child {
 				@include media(">=tablet") {
 					flex:1 1 auto;
@@ -486,7 +489,7 @@
 	position:fixed;
 	right:10px;
 	width:50px;
-	z-index:20;
+	z-index:1;
 	@include media(">=desktop") {
 		display:none;
 	}
