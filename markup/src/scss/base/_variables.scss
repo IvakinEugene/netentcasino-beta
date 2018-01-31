@@ -1,0 +1,72 @@
+// Colors
+// Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
+// Color names - http://name-of-color.com/
+
+$black:							#000;
+$shadow:						rgba(#3a3a3a,0.25);
+$theme-color-base:				#6daf0e;
+$theme-color-base-lighten:		lighten($theme-color-base, 10%);
+$base-gray:						#8c8e96;
+$theme-color-add:				#fed958;
+$border-color-base:				#cbd6d2;
+$bg-content:					#f5f7f6;
+$white:							#fff;
+
+
+
+$light-blue:					#39f;
+$gray:							#999;
+
+$base-font-sans-serif:			'brother-1816', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-serif:				'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+
+// Body
+$base-text-color:				#515151;
+$base-background-color:			#383a3a;
+$font-size-base:				14px;
+$line-height-base:				1.5;
+$base-font-family:				$base-font-sans-serif !default;
+
+$vertical-rhythm:				($line-height-base * 1em);
+
+$base-min-width:				320px;
+
+// Links
+$base-link-color:				$base-text-color;
+
+// Buttons 
+$btn-primary-background:		$theme-color-base;
+$btn-primary-border:			$theme-color-base;
+$btn-primary-color:				$white;
+$btn-secondary-background:		transparent;
+$btn-secondary-border:			$base-text-color;
+$btn-secondary-color:			$base-text-color;
+$btn-link-background:			transparent;
+$btn-link-border:				transparent;
+$btn-link-color:				$base-text-color;
+$btn-dark-background:			$base-text-color;
+$btn-dark-border:				$base-text-color;
+$btn-dark-color:				$white;
+$btn-font-size:					16px;
+$btn-padding:					6px 10px 7px;
+
+// Forms
+$form-element-padding:			5px 9px 6px;
+$form-element-background:		$white;
+$form-element-border-color:		$border-color-base;
+$placeholder-color:				$gray !default;
+
+// Headers
+$h1-font-size:					24px;
+$h2-font-size:					22px;
+$h3-font-size:					18px;
+$h4-font-size:					21px !default;
+$h5-font-size:					17px !default;
+$h6-font-size:					15px !default;
+
+$headings-font-family:			inherit !default;
+$headings-color:				#383a3a;
+
+$animation-speed:				0.3s;
+
+$gutter-width:					23px;
