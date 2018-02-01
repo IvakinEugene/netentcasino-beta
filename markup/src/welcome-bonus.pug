@@ -1,0 +1,73 @@
+extends pug/extends/master
+
+block content
+	- var page_class = "hide-nav hide-offer hide-bonus"
+	include pug/includes/header
+	#main
+		//- 
+		section.section-breadcrumbs
+			.holder
+				div
+					ul.breadcrumbs
+						li
+							a(href="#") Home
+						li
+							a(href="#") NetEnt Game &amp; Jackpots
+						li Mega Fortune Jackpot
+				div
+					p Last updated - 
+						strong 2 days ago!
+		//- 
+			section.section-intro
+				.holder
+					//- 
+						.casino-logo
+							img(src="http://via.placeholder.com/207x69")
+					.content
+						.game-box
+							.media-holder
+								a(href="#").bg-stretch
+									- var image = "http://via.placeholder.com/562x280/ff0000/ffffff"
+									include pug/extends/retina-single
+									span.hover-box
+										span
+											span.icon-play
+											| Play at Betsson
+									span.sticker £2,061.762
+								strong.media-title Planet of the Apes 2
+				- var image = "banner-concept-4"
+				include pug/extends/retina-images
+		section.template-casinos-list
+			.subsection.content
+				.holder
+					h1 NetEnt Welcome Bonuses
+					strong.subtitle 314 casinos offering Welcome Bonuses
+					p An overview of the best welcome bonuses from the new NetEnt casinos. The complete overview of NetEnt Welcome Bonuses, with information on the type of bonus, height of the bonus, and how many times the bonus amount must be wagered before it can be cashed out. Take maximum advantage of playing on Net Entertainment software and apply at various online casinos in order to cash a new welcome bonus every time. A welcome bonus is a casino bonus you will get when you apply to a casino where you have never played before.
+			.subsection.boxes-holder
+				.holder
+					ul
+						li
+							.casino-box
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") Unibet
+										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+										a(href="#").btn.btn-secondary casino review
+								.content
+									.frame
+										h3 £1000 + 20 Free Spins
+										p 100% up to £500 + 20 Free Spins
+									.button-holder
+										.sticker
+											span.icon icon
+											p Recommended by Casino Experts
+										.button-frame
+											a(href="#").btn.btn-primary Go to Unibet
+					.button-holder.text-center
+						a(href="#").btn.btn-secondary Show more casinos
+		include pug/includes/sections/related-posts
+	include pug/includes/footer

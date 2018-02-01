@@ -225,3 +225,13 @@
 	.casino-box{
 	}
 }
+
+[id*="cb"]{
+	background:$white;
+	box-shadow: 0 0 2px $shadow;
+}
+
+#cb1{
+	background:$white;
+	box-shadow: 0 0 2px $shadow;
+}
