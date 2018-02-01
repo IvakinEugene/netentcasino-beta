@@ -45,6 +45,7 @@
 	.section-related-posts{
 		background:none;
 		border-width: 0;
+		width:100%;
 		@include media(">=desktop") {
 			&:nth-child(2n) {
 				background:$white;
