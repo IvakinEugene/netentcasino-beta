@@ -12,199 +12,12 @@
 		margin:0 0 10px;
 	}
 	.boxes-holder{
-		ul{
-			li{
+		ul:not([class]){
+			> li{
 				padding:0 0 10px;
 				&:before {
 					display:none;
 				}
-			}
-		}
-	}
-	.casino-box{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-		align-content: stretch;
-		align-items: stretch;
-		background:$white;
-		box-shadow: 0 0 2px $shadow;
-		color:$base-gray;
-		font-size:12px;
-		line-height:1.25;
-		text-align:center;
-		@include media(">=desktop") {
-			font-size: 20px;
-			max-width: 1252px; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		}
-		.heading{
-			display: flex;
-			flex-direction: column;
-			flex-wrap: nowrap;
-			justify-content: center;
-			align-content: stretch;
-			align-items: stretch;
-			border-right: 1px solid $border-color-base;
-			min-width: 91px;
-			padding:23px 15px 20px;
-			padding:18px;
-			@include media(">=desktop") {
-				// display: flex;
-				flex-direction: row;
-				// flex-wrap: nowrap;
-				// justify-content: center;
-				align-content: center;
-				align-items: center;
-				// min-width: 457px;
-				min-width: 36.5016%;
-			}
-			.btn{
-				display:none;
-				@include media(">=desktop") {
-					display:inline-block;
-					font-size: 14px;
-					min-width: 0;
-					padding:8px 13px 6px;
-				}
-			}
-		}
-		.logo-holder{
-			margin-bottom: 7px;
-			@include media(">=desktop") {
-				margin-bottom: 0;
-				width:120px;
-			}
-		}
-		.txt{
-			@include media(">=desktop") {
-				min-width: 225px;
-				padding:0 0 12px 15px;
-				text-align:left;
-			}
-		}
-		h2{
-			font-size: 12px;
-			margin:0 0 4px;
-			@include media(">=desktop") {
-				font-size: 26px;
-				margin:0;
-			}
-			a{
-				@include media(">=desktop") {
-					text-decoration:none;
-				}
-			}
-		}
-		.stars{
-			width:53px;
-			@include media(">=desktop") {
-				margin:0 0 10px;
-				width:145px;
-			}
-		}
-		.content{
-			flex: 1 1 auto;
-			padding:24px 15px 25px;
-			@include media(">=desktop") {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: nowrap;
-				justify-content: flex-start;
-				align-content: stretch;
-				align-items: stretch;
-				padding:0;
-			}
-		}
-		.frame{
-			@include media(">=desktop") {
-				display: flex;
-				flex-direction: column;
-				flex-wrap: nowrap;
-				justify-content: center;
-				align-content: stretch;
-				align-items: stretch;
-				padding:10px 15px 15px;
-				width:50%;
-			}
-		}
-		h3{
-			font-size: 18px;
-			margin:0;
-			text-transform:uppercase;
-			@include media(">=tablet") {
-				font-size: 30px;
-			}
-		}
-		p{
-			margin:0 0 14px;
-			@include media(">=desktop") {
-				margin:0;
-			}
-		}
-		.button-holder{
-			@include media(">=desktop") {
-				display: flex;
-				flex-direction: column;
-				flex-wrap: nowrap;
-				justify-content: flex-start;
-				align-content: stretch;
-				align-items: stretch;
-				border: 0 solid $border-color-base;
-				border-width: 0 0 0 1px;
-				position:relative;
-				width:50%;
-			}
-		}
-		.button-frame{
-			@include media(">=desktop") {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: nowrap;
-				justify-content: center;
-				align-content: center;
-				align-items: center;
-				flex:1 1 auto;
-			}
-		}
-		.sticker{
-			display:none;
-			@include media(">=desktop") {
-				background:$theme-color-add;
-				color:$headings-color;
-				display:block;
-				font-size:14px;
-				line-height:1.1429;
-				// left:0;
-				padding:10px 15px 20px;
-				// position:absolute;
-				// top:0;
-				// width:100%;
-			}
-			> * {
-				@include media(">=desktop") {
-					display:inline;
-					margin:0 5px;
-				}
-			}
-			.icon{
-				@include media(">=desktop") {
-					background:$base-gray;
-					// width:20px;
-				}
-			}
-		}
-		.btn{
-			font-size: 14px;
-			max-width: 189px;
-			min-width: 0;
-			padding-top: 5px;
-			padding-bottom: 5px;
-			width:100%;
-			@include media(">=desktop") {
-				font-size: 18px;
-				min-width: 280px;
-				width:auto;
 			}
 		}
 	}
@@ -232,7 +45,9 @@
 	box-shadow: 0 0 2px $shadow;
 }
 
-#cb1{
+#cb1,
+#cb2,
+#cb5{
 	background:$white;
 	box-shadow: 0 0 2px $shadow;
 	color:$base-gray;
@@ -248,7 +63,7 @@
 	    font-size: 20px;
 	    max-width: 1252px;
 	}
-	div {
+	div{
 		border: 0 solid $border-color-base;
 	}
 	.heading{
@@ -321,7 +136,7 @@
 		overflow:hidden;
 		padding:5px 5px 7px;
 	}
-	.content {
+	.content{
 		display: flex;
 	    flex-direction: column;
 	    flex-wrap: nowrap;
@@ -398,11 +213,13 @@
 			    align-content: stretch;
 			    align-items: stretch;
 			    flex:1 1 auto;
-			    padding:10px 29px;
+			    padding:19px 29px;
 			}
 			&:first-child {
 				@include media(">=tablet") {
 					border-width: 0;
+					padding-top: 10px;
+					padding-bottom: 10px;
 				}
 			}
 		}
@@ -445,6 +262,63 @@
 			color:$headings-color;
 			font-weight:normal;
 		}
+		ul{
+			font-size:12px;
+			line-height:1.25;
+			padding:1px 12px 0;
+			text-align:left;
+			@include media(">=tablet") {
+				font-size: 16px;
+				padding:0;
+			}
+			li{
+				&:before {
+					top:0;
+					@include media(">=tablet") {
+						top:3px;
+					}
+				}
+				+ li{
+					margin-top: 10px;
+				}
+			}
+			+ ul{
+				margin-top: 9px;
+				@include media(">=tablet") {
+					margin-top: 10px;
+				}
+			}
+		}
+		dl{
+			color:$headings-color;
+			font-size: 12px;
+			font-weight:normal;
+			margin:-5px 0 0;
+			padding:0 12px;
+			text-align:left;
+			@include media(">=tablet") {
+				font-size: 17px;
+				padding:0;
+			}
+			dt{
+				color:$base-gray;
+				font-weight:200;
+				margin:0 0 -6px;
+				@include media(">=tablet") {
+					font-size: inherit;
+					font-weight:normal;
+					margin:0 0 -1px;
+				}
+			}
+			dd{
+				font-size: 14px;
+				margin:0 0 -1px;
+				@include media(">=tablet") {
+					font-size: 19px;
+					margin:0 0 18px;
+				}
+			}
+		}
 	}
 	.bottom{
 		border-width: 1px 0 0;
@@ -458,6 +332,242 @@
 			min-width: 200px;
 			padding-top: 5px;
 			padding-bottom: 5px;
+		}
+	}
+}
+
+#cb3,
+#cb4{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
+	background:$white;
+	box-shadow: 0 0 2px $shadow;
+	color:$base-gray;
+	font-size:12px;
+	line-height:1.25;
+	text-align:center;
+	@include media(">=desktop") {
+		font-size: 20px;
+		max-width: 1252px; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	}
+	.heading{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: stretch;
+		align-items: stretch;
+		border-right: 1px solid $border-color-base;
+		min-width: 91px;
+		padding:23px 15px 20px;
+		padding:18px;
+		@include media(">=desktop") {
+			// display: flex;
+			flex-direction: row;
+			// flex-wrap: nowrap;
+			// justify-content: center;
+			align-content: center;
+			align-items: center;
+			// min-width: 457px;
+			min-width: 36.5016%;
+		}
+		.btn{
+			display:none;
+			@include media(">=desktop") {
+				display:inline-block;
+				font-size: 14px;
+				min-width: 0;
+				padding:8px 13px 6px;
+			}
+		}
+		.note{
+			display:block;
+			font-size: 10px;
+			line-height:1.2;
+			padding:5px 0 0;
+			@include media(">=tablet") {
+				font-size: 14px;
+				margin:-5px 0 9px;
+				padding:0;
+			}
+			br{
+				@include media(">=tablet") {
+					display:none;
+				}
+			}
+		}
+	}
+	.logo-holder{
+		margin-bottom: 7px;
+		@include media(">=desktop") {
+			margin-bottom: 0;
+			width:120px;
+		}
+	}
+	.txt{
+		@include media(">=desktop") {
+			min-width: 225px;
+			padding:0 0 12px 15px;
+			text-align:left;
+		}
+	}
+	h2{
+		font-size: 12px;
+		margin:0 0 4px;
+		@include media(">=desktop") {
+			font-size: 26px;
+			margin:0;
+		}
+		a{
+			@include media(">=desktop") {
+				text-decoration:none;
+			}
+		}
+	}
+	.stars{
+		width:53px;
+		@include media(">=desktop") {
+			margin:0 0 10px;
+			width:145px;
+		}
+	}
+	.content{
+		display: flex;
+	    flex-direction: column;
+	    flex-wrap: nowrap;
+	    justify-content: center;
+	    align-content: stretch;
+	    align-items: stretch;
+		flex: 1 1 auto;
+		padding:24px 15px 25px;
+		position:relative;
+		@include media(">=desktop") {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: stretch;
+			align-items: stretch;
+			padding:0;
+		}
+	}
+	.frame{
+		@include media(">=desktop") {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: stretch;
+			align-items: stretch;
+			padding:10px 15px 15px;
+			width:50%;
+		}
+	}
+	h3{
+		font-size: 18px;
+		margin:0;
+		text-transform:uppercase;
+		@include media(">=tablet") {
+			font-size: 30px;
+		}
+	}
+	p{
+		margin:0 0 14px;
+		@include media(">=desktop") {
+			margin:0;
+		}
+	}
+	.button-holder{
+		@include media(">=desktop") {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: stretch;
+			align-items: stretch;
+			border: 0 solid $border-color-base;
+			border-width: 0 0 0 1px;
+			position:relative;
+			width:50%;
+		}
+	}
+	.button-frame{
+		@include media(">=desktop") {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			flex:1 1 auto;
+		}
+	}
+	.sticker{
+		display:none;
+		@include media(">=desktop") {
+			background:$theme-color-add;
+			color:$headings-color;
+			display:block;
+			font-size:14px;
+			line-height:1.1429;
+			padding:10px 15px 20px;
+		}
+		&.new {
+			display:block;
+			// left:0;
+			position:absolute;
+			right:0;
+			text-align:left;
+			top:0;
+			width:100%;
+			@include media(">=tablet") {
+				background:none;
+				padding:0;
+				width:50%;
+			}
+			strong{
+				background:$theme-color-add;
+				color:$headings-color;
+				display:inline-block;
+				vertical-align:baseline;
+				font-size: 14px;
+				line-height:1;
+				margin:0 7px 0 0;
+				padding:5px 10px 3px;
+				text-transform:uppercase;
+			}
+			+ .frame{
+				margin-top: 18px;
+			}
+		}
+		> * {
+			@include media(">=desktop") {
+				display:inline;
+				margin:0 5px;
+			}
+		}
+		.icon{
+			@include media(">=desktop") {
+				background:$base-gray;
+				// width:20px;
+			}
+		}
+	}
+	.btn{
+		font-size: 14px;
+		max-width: 189px;
+		min-width: 0;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		width:100%;
+		@include media(">=desktop") {
+			font-size: 18px;
+			min-width: 280px;
+			width:auto;
 		}
 	}
 }

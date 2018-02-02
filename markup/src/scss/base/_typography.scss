@@ -103,7 +103,7 @@ hr{
 ul{
 	@extend %listreset;
 	&:not([class]) {
-		li{
+		> li{
 			overflow:hidden;
 			padding:0 0 10px;
 			// position:relative;

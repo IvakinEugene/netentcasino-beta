@@ -5,48 +5,49 @@ block content
 	include pug/includes/header
 	#main
 		//- 
-			section.section-breadcrumbs
-				.holder
-					div
-						ul.breadcrumbs
-							li
-								a(href="#") Home
-							li
-								a(href="#") NetEnt Game &amp; Jackpots
-							li Mega Fortune Jackpot
-					div
-						p Last updated - 
-							strong 2 days ago!
+		section.section-breadcrumbs
+			.holder
+				div
+					ul.breadcrumbs
+						li
+							a(href="#") Home
+						li
+							a(href="#") NetEnt Game &amp; Jackpots
+						li Mega Fortune Jackpot
+				div
+					p Last updated - 
+						strong 2 days ago!
 		//- 
-			section.section-intro
-				.holder
-					//- 
-						.casino-logo
-							img(src="http://via.placeholder.com/207x69")
-					.content
-						.game-box
-							.media-holder
-								a(href="#").bg-stretch
-									- var image = "http://via.placeholder.com/562x280/ff0000/ffffff"
-									include pug/extends/retina-single
-									span.hover-box
-										span
-											span.icon-play
-											| Play at Betsson
-									span.sticker £2,061.762
-								strong.media-title Planet of the Apes 2
-				- var image = "banner-concept-4"
-				include pug/extends/retina-images
+		section.section-intro
+			.holder
+				//- 
+					.casino-logo
+						img(src="http://via.placeholder.com/207x69")
+				.content
+					.game-box
+						.media-holder
+							a(href="#").bg-stretch
+								- var image = "http://via.placeholder.com/562x280/ff0000/ffffff"
+								include pug/extends/retina-single
+								span.hover-box
+									span
+										span.icon-play
+										| Play at Betsson
+								span.sticker £2,061.762
+							strong.media-title Planet of the Apes 2
+			- var image = "banner-concept-4"
+			include pug/extends/retina-images
 		section.template-casinos-list
 			//- 
-				.subsection.content
-					.holder
-						h1 Top Bitcoin Casinos
-						strong 12 casinos offering Bitcoin
-						p You may have seen or heard something about Bitcoin Casinos before, probably even right here on our site. There are many advantages to having a Bitcoin Casino over a regular one, as many casino players can surely appreciate, there is a simply an unrivalled sense of anonymity and (if you know what you are doing) security.
+			.subsection.content
+				.holder
+					h1 Top Bitcoin Casinos
+					strong 12 casinos offering Bitcoin
+					p You may have seen or heard something about Bitcoin Casinos before, probably even right here on our site. There are many advantages to having a Bitcoin Casino over a regular one, as many casino players can surely appreciate, there is a simply an unrivalled sense of anonymity and (if you know what you are doing) security.
 			.subsection.boxes-holder
 				.holder
 					ul
+						//- 
 						li
 							#cb1
 								.heading
@@ -78,31 +79,40 @@ block content
 								.bottom
 									a(href="#").btn.btn-primary Go to Casino
 						li
-							#cb1
-								.top
-									.heading
-										.logo-holder
-											a(href="#")
-												img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+							#cb2
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
 										h2
-											a(href="#") SlotsMillion
+											a(href="#") Betsson
 										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
-									.content
-										.cell
-											h3 £150 + 50 Free Spins
-											p 50% up to £100 + 50 Free Spins
-										.cell
-											h4
-												strong £10
-												|  Min. Deposit
-								.middle
-									p
-										strong 30 mins - 4 hours (avg)
-										|  Withdrawal Time
+										a(href="#").btn.btn-secondary Casino review
+								.cell.content
+									.sticker 
+										span.icon
+										p Recommended by Casino Experts
+									.content-frame
+										h3 £1000 + 20 Free Spins
+										p 100% up to £500 + 20 Free Spins
+										a(href="#").btn.btn-primary Go to Casino
+								.desktop-middle
+									.cell
+										h4
+											strong +180
+											|  NetEnt Games
+									.middle
+										ul.list-advantages
+											li NetEnt Pooled Jackpots.
+											li Almost all Netent Games.
+											li Mobile Casino featuring Netent Touch.
+										ul.list-disadvantages
+											li No Netent Live Casino.
 								.bottom
 									a(href="#").btn.btn-primary Go to Casino
 						li
-							.casino-box
+							#cb3
 								.heading
 									.logo-holder
 										a(href="#")
@@ -123,110 +133,62 @@ block content
 										.button-frame
 											a(href="#").btn.btn-primary Go to Unibet
 						li
-							.casino-box.cb2
+							#cb4
 								.heading
 									.logo-holder
 										a(href="#")
 											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
 									.txt
 										h2
-											a(href="#") Unibet
+											a(href="#") LadyLucks
 										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										a(href="#").btn.btn-secondary casino review
+										span.note
+											| Added 
+											br
+											| 2 days ago!
+										a(href="#").btn.btn-secondary Casino review
 								.content
+									span.sticker.new
+										strong new
+										|  - Added Today!
 									.frame
-										h3 £1000 + 20 Free Spins
-										p 100% up to £500 + 20 Free Spins
+										h3 £150 + 50 Free Spins
+										p 50% up to £100 + 50 Free Spins (Exclusive Offer)
 									.button-holder
-										.sticker
-											span.icon icon
-											p Recommended by Casino Experts
 										.button-frame
-											a(href="#").btn.btn-primary Go to Unibet
+											a(href="#").btn.btn-primary Go to LadyLucks
 						li
-							.casino-box.cb3
+							#cb5
 								.heading
 									.logo-holder
 										a(href="#")
 											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
 									.txt
 										h2
-											a(href="#") Unibet
-										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										a(href="#").btn.btn-secondary casino review
-								.content
-									.frame
+											a(href="#") Betsson
+										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+										a(href="#").btn.btn-secondary Casino review
+								.cell.content
+									.sticker 
+										span.icon
+										p Recommended by Casino Experts
+									.content-frame
 										h3 £1000 + 20 Free Spins
 										p 100% up to £500 + 20 Free Spins
-									.button-holder
-										.sticker
-											span.icon icon
-											p Recommended by Casino Experts
-										.button-frame
-											a(href="#").btn.btn-primary Go to Unibet
-						li
-							.casino-box.cb4
-								.heading
-									.logo-holder
-										a(href="#")
-											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") Unibet
-										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										a(href="#").btn.btn-secondary casino review
-								.content
-									.frame
-										h3 £1000 + 20 Free Spins
-										p 100% up to £500 + 20 Free Spins
-									.button-holder
-										.sticker
-											span.icon icon
-											p Recommended by Casino Experts
-										.button-frame
-											a(href="#").btn.btn-primary Go to Unibet
-						li
-							.casino-box.cb5
-								.heading
-									.logo-holder
-										a(href="#")
-											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") Unibet
-										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										a(href="#").btn.btn-secondary casino review
-								.content
-									.frame
-										h3 £1000 + 20 Free Spins
-										p 100% up to £500 + 20 Free Spins
-									.button-holder
-										.sticker
-											span.icon icon
-											p Recommended by Casino Experts
-										.button-frame
-											a(href="#").btn.btn-primary Go to Unibet
-						li
-							.casino-box.cb6
-								.heading
-									.logo-holder
-										a(href="#")
-											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") Unibet
-										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										a(href="#").btn.btn-secondary casino review
-								.content
-									.frame
-										h3 £1000 + 20 Free Spins
-										p 100% up to £500 + 20 Free Spins
-									.button-holder
-										.sticker
-											span.icon icon
-											p Recommended by Casino Experts
-										.button-frame
-											a(href="#").btn.btn-primary Go to Unibet
+										a(href="#").btn.btn-primary Go to Casino
+								.desktop-middle
+									.cell
+										h4
+											strong +180
+											|  NetEnt Games
+									.middle
+										dl
+											dt Before Deposit
+											dd 25 no deposit free spins
+											dt After Deposit
+											dd 100% to €100 + 20 Super Spins
+								.bottom
+									a(href="#").btn.btn-primary Go to Casino
 					.button-holder.text-center
 						a(href="#").btn.btn-secondary View more casinos
 		//- 

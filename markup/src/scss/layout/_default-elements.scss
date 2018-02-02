@@ -1,23 +1,25 @@
 #navigation-links{
-	left:0;
-	padding:15px 15px 0;
-	position:fixed;
-	top:0;
-	z-index:50;
+	padding:30px;
+	#header & {
+		left:0;
+		padding:5px 5px 0;
+		position:fixed;
+		top:0;
+		z-index:50;
+	}
 	li{
-		display:inline-block;
-		vertical-align:top;
-		margin:0 10px 10px 0;
+		margin:0 0 15px;
 		overflow:visible;
 		&:before {
 			display:none;
 		}
 	}
 	a{
-		background:white;
-		box-shadow: 0 0 10px #000;
-		color:$theme-color-base;
-		text-decoration:none;
+		// background:white;
+		// box-shadow: 0 0 10px #000;
+		// color:$theme-color-base;
+		// padding:$btn-padding;
+		// text-decoration:none;
 	}
 }
 
