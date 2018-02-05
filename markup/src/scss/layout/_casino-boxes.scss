@@ -7,6 +7,17 @@
 	&:hover {
 		border-color: $theme-color-base;
 	}
+	&.logo-heading {
+		float:left;
+		margin:-2px 18px 10px -1px;
+		@include media(">=tablet") {
+			margin:-2px 47px 10px 0;
+			width:120px;
+		}
+		+ h1 {
+			margin-right: -5px;
+		}
+	}
 	a{
 		display: flex;
 		flex-direction: row;

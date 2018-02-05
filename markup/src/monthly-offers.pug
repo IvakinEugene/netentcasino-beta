@@ -18,115 +18,25 @@ block content
 					p Last updated - 
 						strong 2 days ago!
 		//- 
-			section.section-intro
-				.holder
-					//- 
-						.casino-logo
-							img(src="http://via.placeholder.com/207x69")
-					.content
-						.game-box
-							.media-holder
-								a(href="#").bg-stretch
-									- var image = "http://via.placeholder.com/562x280/ff0000/ffffff"
-									include pug/extends/retina-single
-									span.hover-box
-										span
-											span.icon-play
-											| Play at Betsson
-									span.sticker £2,061.762
-								strong.media-title Planet of the Apes 2
-				- var image = "banner-concept-4"
-				include pug/extends/retina-images
+		section.section-intro
+			- var image = "banner-concept-4"
+			include pug/extends/retina-images
 		section.template-casinos-list
-			.subsection.content
+			//- 
+			.subsection.content.heading
 				.holder
 					h1 Novembers’ Top Casinos Offers
-					strong.subtitle
+					strong.subtitle.green
 						| London, United Kingdom - 
 						a(href="#") Change Location
 					p A list of the best bonuses &amp; offers for November, 2017. This page is updated on a monthly basis with all the best offers for the month. The casinos below are corresponding to your country (licenses). You are able to change the country restriction from above.
-					strong.offer-sticker
-						span.icon
-						| Offers will expire in - 18 Days  21 Hours 18 Minutes
+					strong.offer-sticker.icon-time
+						| Offers will expire in - 
+						strong 18 Days  21 Hours 18 Minutes
 			.subsection.boxes-holder
 				.holder
 					ol
 						li
-							.casino-box
-								.heading
-									.logo-holder
-										a(href="#")
-											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") Unibet
-										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										a(href="#").btn.btn-secondary casino review
-								.content
-									.frame
-										h3 £1000 + 20 Free Spins
-										p 100% up to £500 + 20 Free Spins
-									.button-holder
-										.sticker
-											span.icon icon
-											p Recommended by Casino Experts
-										.button-frame
-											a(href="#").btn.btn-primary Go to Unibet
 						li
-							.casino-box
-								.heading
-									.logo-holder
-										a(href="#")
-											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") LeoVegas
-										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										a(href="#").btn.btn-secondary casino review
-								.content
-									.frame
-										h3 £1500 + 50 Free Spins
-										p 200% up to £500 + 50 Free Spins
-									.button-holder
-										.button-frame
-											a(href="#").btn.btn-primary Go to LeoVegas
 						li
-							.casino-box
-								.heading
-									.logo-holder
-										a(href="#")
-											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") Thrills
-										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										a(href="#").btn.btn-secondary casino review
-								.content
-									.frame
-										h3 £150 + 50 Free Spins
-										p 50% up to £100 + 50 Free Spins
-									.button-holder
-										.sticker
-											span.icon icon
-											p Free Spins Before Depsoit
-										.button-frame
-											a(href="#").btn.btn-primary Go to Thrills
-						li
-							.casino-box
-								.heading
-									.logo-holder
-										a(href="#")
-											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") VideoSlots
-										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										a(href="#").btn.btn-secondary casino review
-								.content
-									.frame
-										h3 £1000 + 20 Free Spins
-										p 100% up to £500 + 20 Free Spins
-									.button-holder
-										.button-frame
-											a(href="#").btn.btn-primary Go to VideoSlots
 	include pug/includes/footer

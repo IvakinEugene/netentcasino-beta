@@ -34,6 +34,7 @@ section{
 .section-intro{
 	background:$white;
 	min-height: 247px;
+	overflow:hidden;
 	position:relative;
 	.holder,
 	.search-box{
@@ -52,6 +53,8 @@ section{
 		    align-items: flex-start;
 		    padding-top: 43px;
 		    padding-bottom: 19px;
+		    position:relative;
+		    z-index:5;
 		}
 	}
 	.casino-logo{

@@ -672,6 +672,7 @@
 		text-align:center;
 		@include media(">=tablet") {
 			display: flex;
+			display:none;
 		    flex-direction: column;
 		    flex-wrap: nowrap;
 		    justify-content: space-between;

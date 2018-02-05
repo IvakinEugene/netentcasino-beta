@@ -12,44 +12,29 @@ block content
 						li
 							a(href="#") Home
 						li
-							a(href="#") NetEnt Game &amp; Jackpots
-						li Mega Fortune Jackpot
+							a(href="#") Payments
+						li Bitcoin
 				div
 					p Last updated - 
 						strong 2 days ago!
 		//- 
-		section.section-intro
-			.holder
-				//- 
-					.casino-logo
-						img(src="http://via.placeholder.com/207x69")
-				.content
-					.game-box
-						.media-holder
-							a(href="#").bg-stretch
-								- var image = "http://via.placeholder.com/562x280/ff0000/ffffff"
-								include pug/extends/retina-single
-								span.hover-box
-									span
-										span.icon-play
-										| Play at Betsson
-								span.sticker £2,061.762
-							strong.media-title Planet of the Apes 2
-			- var image = "banner-concept-4"
-			include pug/extends/retina-images
 		section.template-casinos-list
 			//- 
-			.subsection.content
+			.subsection.content.heading
 				.holder
+					.logo-holder.logo-heading
+						a(href="#")
+							img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
 					h1 Top Bitcoin Casinos
-					strong 12 casinos offering Bitcoin
-					p You may have seen or heard something about Bitcoin Casinos before, probably even right here on our site. There are many advantages to having a Bitcoin Casino over a regular one, as many casino players can surely appreciate, there is a simply an unrivalled sense of anonymity and (if you know what you are doing) security.
+					strong.subtitle.green 12 casinos offering Bitcoin
+					p There are many advantages to having a Bitcoin Casino over a regular one, as many casino players can surely appreciate, there is a simply an unrivalled sense of anonymity and (if you know what you are doing) security.
+			//- 
 			.subsection.boxes-holder
 				.holder
 					ul
 						//- 
 						li
-							#cb1
+							.casino-box-content
 								.heading
 									.logo-holder
 										a(href="#")
@@ -60,8 +45,8 @@ block content
 										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
 										a(href="#").btn.btn-secondary Casino review
 								.cell.content
-									.sticker 
-										span.icon
+									.sticker
+										span.icon ICON
 										p Recommended by Casino Experts
 									.content-frame
 										h3 £150 + 50 Free Spins
@@ -79,20 +64,44 @@ block content
 								.bottom
 									a(href="#").btn.btn-primary Go to Casino
 						li
-							#cb2
+							.casino-box-content
 								.heading
 									.logo-holder
 										a(href="#")
 											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
 									.txt
 										h2
-											a(href="#") Betsson
+											a(href="#") Dunder
 										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
 										a(href="#").btn.btn-secondary Casino review
 								.cell.content
-									.sticker 
-										span.icon
-										p Recommended by Casino Experts
+									.content-frame
+										h3 £1500 + 50 Free Spins
+										p 200% up to £500 + 50 Free Spins
+										a(href="#").btn.btn-primary Go to Casino
+								.desktop-middle
+									.cell
+										h4
+											strong £5
+											|  Min. Deposit
+									.middle
+										p
+											strong 30 mins - 1 hour (avg)
+											|  Withdrawal Time
+								.bottom
+									a(href="#").btn.btn-primary Go to Casino
+						li
+							.casino-box-content
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") LeoVegas
+										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+										a(href="#").btn.btn-secondary Casino review
+								.cell.content
 									.content-frame
 										h3 £1000 + 20 Free Spins
 										p 100% up to £500 + 20 Free Spins
@@ -100,40 +109,43 @@ block content
 								.desktop-middle
 									.cell
 										h4
-											strong +180
-											|  NetEnt Games
+											strong £20
+											|  Min. Deposit
 									.middle
-										ul.list-advantages
-											li NetEnt Pooled Jackpots.
-											li Almost all Netent Games.
-											li Mobile Casino featuring Netent Touch.
-										ul.list-disadvantages
-											li No Netent Live Casino.
+										p
+											strong 5 mins - 4 hours (avg)
+											|  Withdrawal Time
 								.bottom
 									a(href="#").btn.btn-primary Go to Casino
 						li
-							#cb3
+							.casino-box-content
 								.heading
 									.logo-holder
 										a(href="#")
 											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
 									.txt
 										h2
-											a(href="#") Unibet
-										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										a(href="#").btn.btn-secondary casino review
-								.content
-									.frame
-										h3 £1000 + 20 Free Spins
-										p 100% up to £500 + 20 Free Spins
-									.button-holder
-										.sticker
-											span.icon icon
-											p Recommended by Casino Experts
-										.button-frame
-											a(href="#").btn.btn-primary Go to Unibet
+											a(href="#") Casumo
+										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+										a(href="#").btn.btn-secondary Casino review
+								.cell.content
+									.content-frame
+										h3 £150 + 50 Free Spins
+										p 50% up to £100 + 50 Free Spins
+										a(href="#").btn.btn-primary Go to Casino
+								.desktop-middle
+									.cell
+										h4
+											strong £10
+											|  Min. Deposit
+									.middle
+										p
+											strong 30 mins - 24 hours (avg)
+											|  Withdrawal Time
+								.bottom
+									a(href="#").btn.btn-primary Go to Casino
 						li
-							#cb4
+							.casino-box-content
 								.heading
 									.logo-holder
 										a(href="#")
@@ -141,144 +153,197 @@ block content
 									.txt
 										h2
 											a(href="#") LadyLucks
-										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-										span.note
-											| Added 
-											br
-											| 2 days ago!
-										a(href="#").btn.btn-secondary Casino review
-								.content
-									span.sticker.new
-										strong new
-										|  - Added Today!
-									.frame
-										h3 £150 + 50 Free Spins
-										p 50% up to £100 + 50 Free Spins (Exclusive Offer)
-									.button-holder
-										.button-frame
-											a(href="#").btn.btn-primary Go to LadyLucks
-						li
-							#cb5
-								.heading
-									.logo-holder
-										a(href="#")
-											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") Betsson
 										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
 										a(href="#").btn.btn-secondary Casino review
 								.cell.content
-									.sticker 
-										span.icon
-										p Recommended by Casino Experts
 									.content-frame
-										h3 £1000 + 20 Free Spins
-										p 100% up to £500 + 20 Free Spins
+										h3 £150 + 50 Free Spins
+										p 50% up to £100 + 50 Free Spins
 										a(href="#").btn.btn-primary Go to Casino
 								.desktop-middle
 									.cell
 										h4
-											strong +180
-											|  NetEnt Games
+											strong £10
+											|  Min. Deposit
 									.middle
-										dl
-											dt Before Deposit
-											dd 25 no deposit free spins
-											dt After Deposit
-											dd 100% to €100 + 20 Super Spins
+										p
+											strong 30 mins - 2 hours (avg)
+											|  Withdrawal Time
 								.bottom
 									a(href="#").btn.btn-primary Go to Casino
+						//- 
+							li
+								
+							li
+								.casino-box-title
+									.heading
+										.logo-holder
+											a(href="#")
+												img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+										.txt
+											h2
+												a(href="#") Unibet
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+											a(href="#").btn.btn-secondary casino review
+									.content
+										.frame
+											h3 £1000 + 20 Free Spins
+											p 100% up to £500 + 20 Free Spins
+										.button-holder
+											.sticker
+												span.icon icon
+												p Recommended by Casino Experts
+											.button-frame
+												a(href="#").btn.btn-primary Go to Unibet
+							li
+								.casino-box-title
+									.heading
+										.logo-holder
+											a(href="#")
+												img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+										.txt
+											h2
+												a(href="#") LadyLucks
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+											span.note
+												| Added 
+												br
+												| 2 days ago!
+											a(href="#").btn.btn-secondary Casino review
+									.content
+										span.sticker.new
+											strong new
+											|  - Added Today!
+										.frame
+											h3 £150 + 50 Free Spins
+											p 50% up to £100 + 50 Free Spins (Exclusive Offer)
+										.button-holder
+											.button-frame
+												a(href="#").btn.btn-primary Go to LadyLucks
+							li
+								.casino-box-content
+									.heading
+										.logo-holder
+											a(href="#")
+												img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+										.txt
+											h2
+												a(href="#") Betsson
+											img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+											a(href="#").btn.btn-secondary Casino review
+									.cell.content
+										.sticker 
+											span.icon
+											p Recommended by Casino Experts
+										.content-frame
+											h3 £1000 + 20 Free Spins
+											p 100% up to £500 + 20 Free Spins
+											a(href="#").btn.btn-primary Go to Casino
+									.desktop-middle
+										.cell
+											h4
+												strong +180
+												|  NetEnt Games
+										.middle
+											dl
+												dt Before Deposit
+												dd 25 no deposit free spins
+												dt After Deposit
+												dd 100% to €100 + 20 Super Spins
+									.bottom
+										a(href="#").btn.btn-primary Go to Casino
 					.button-holder.text-center
-						a(href="#").btn.btn-secondary View more casinos
-		//- 
-			.subsection.content
+						a(href="#").btn.btn-secondary Load MOre Casinos
+			//- 
+			.subsection.currency-calculator
 				.holder
-					h1 BitCoin Exchange
-					p 1 Bitcoin (equals) =
-						strong £6136.29
-					.casino-description
+					h2 BitCoin Exchange
+					.calc
+						strong.title
+							span 1 Bitcoin (equals) 
+							strong £6136.29
+						.casino-description
+							div
+								.row
+									.heading
+										strong Bitcoin
+									.content
+										p 1
+								.row
+									.heading
+										strong British pound
+									.content
+										p 6136.29
+			//- 
+			.subsection.section-top-casinos
+				.holder
+					.section-heading
+						h1 Top Bitcoin Brokers
+						strong.subtitle Open your Bitcoin Wallet
+					.boxes-holder
 						div
-							.row
-								.heading
-									strong Bitcoin
-								.content
-									p 1
-							.row
-								.heading
-									strong British pound
-								.content
-									p 6136.29
-	//- 
-		section.section-top-casinos
-			.holder
-				.section-heading
-					h1 Top Casinos Offering Blackjack
-					strong.subtitle Exclusive Casino Bonuses
-				.boxes-holder
-					div
-						.casino-box
-							.top
-								.heading
-									.logo-holder
-										a(href="#")
-											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.logo-description
-										h2
-											a(href="#") SlotsMillion
-										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-								.content
-									.frame
-										h3 £1000 + 20 Free Spins
-										p 100% up to £500 + 20 Free Spins
-									.counter
-										strong +24
-										|  Blackjack Games
-							.button-holder.text-center
-								a(href="#").btn.btn-primary Play at Betsson
-					div
-						.casino-box
-							.top
-								.heading
-									.logo-holder
-										a(href="#")
-											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.logo-description
-										h2
-											a(href="#") Dunder
-										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-								.content
-									.frame
-										h3 £1500 + 50 Free Spins
-										p 200% up to £500 + 50 Free Spins
-									.counter
-										strong +55
-										|  Blackjack Games
-							.button-holder.text-center
-								a(href="#").btn.btn-primary Play at Unibet
-					div
-						.casino-box
-							.top
-								.heading
-									.logo-holder
-										a(href="#")
-											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.logo-description
-										h2
-											a(href="#") LeoVegas
-										img(src="images/stars.png", alt="Image description", width="55", height="10").stars
-								.content
-									.frame
-										h3 £1000 + 20 Free Spins
-										p 100% up to £500 + 20 Free Spins
-									.counter
-										strong +12
-										|  Blackjack Games
-							.button-holder.text-center
-								a(href="#").btn.btn-primary Play at Betsson
-				.button-holder.text-center
-					a(href="#").btn.btn-secondary View more exclusive offers
-		section.section-top-casinos
+							.casino-box
+								.top
+									.heading
+										.logo-holder
+											a(href="#")
+												img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+										.logo-description
+											h2
+												a(href="#") SlotsMillion
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+									.content
+										.frame
+											h3 £1000 + 20 Free Spins
+											p 100% up to £500 + 20 Free Spins
+										.counter
+											strong +24
+											|  Blackjack Games
+								.button-holder.text-center
+									a(href="#").btn.btn-primary Play at Betsson
+						div
+							.casino-box
+								.top
+									.heading
+										.logo-holder
+											a(href="#")
+												img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+										.logo-description
+											h2
+												a(href="#") Dunder
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+									.content
+										.frame
+											h3 £1500 + 50 Free Spins
+											p 200% up to £500 + 50 Free Spins
+										.counter
+											strong +55
+											|  Blackjack Games
+								.button-holder.text-center
+									a(href="#").btn.btn-primary Play at Unibet
+						div
+							.casino-box
+								.top
+									.heading
+										.logo-holder
+											a(href="#")
+												img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+										.logo-description
+											h2
+												a(href="#") LeoVegas
+											img(src="images/stars.png", alt="Image description", width="55", height="10").stars
+									.content
+										.frame
+											h3 £1000 + 20 Free Spins
+											p 100% up to £500 + 20 Free Spins
+										.counter
+											strong +12
+											|  Blackjack Games
+								.button-holder.text-center
+									a(href="#").btn.btn-primary Play at Betsson
+					.button-holder.text-center
+						a(href="#").btn.btn-secondary View more exclusive offers
+			//- 
 			.subsection.content
 				.holder
 					h1 Bitcoin Casino - The Future of iGaming
@@ -286,4 +351,4 @@ block content
 					p Anonymity is also a big advantage over traditional currencies. Transactions are completely private, with both parties’ identities totally obscured behind a simple string of code that cannot be connected to any personal details.
 					p
 						a(href="#") Read More
-	//- include pug/includes/footer
+	include pug/includes/footer
