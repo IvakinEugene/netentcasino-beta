@@ -196,10 +196,10 @@
 .by{
 	color:$theme-color-base;
 	font-size: 16px;
-	margin:3px 0 8px;
+	margin:3px 0 10px;
 	@include media(">=tablet") {
 		font-size: 20px;
-		margin-bottom: 13px;
+		// margin-bottom: 10px;
 	}
 	a{
 		color:inherit;
@@ -457,10 +457,10 @@
 		h3{
 			font-size:16px;
 			line-height:1.125;
-			margin:0 0 4px;
+			margin:0 0 5px;
 			text-transform:uppercase;
 			@include media(">=tablet") {
-				margin:0 0 12px;
+				// margin:0 0 5px;
 			}
 		}
 		.by{
