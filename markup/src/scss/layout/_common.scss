@@ -31,6 +31,19 @@ section{
 	}
 }
 
+.section-intro2{
+	background:$white;
+	// min-height: 247px;
+	position:relative;
+	> .bg-stretch{
+		// background-position:50% 0;
+		height:247px;
+		@include media(">=tablet") {
+			height:278px;
+		}
+	}
+}
+
 .section-intro{
 	background:$white;
 	min-height: 247px;
@@ -55,6 +68,11 @@ section{
 		    padding-bottom: 19px;
 		    position:relative;
 		    z-index:5;
+		}
+		> .content{
+			@include media(">=tablet") {
+				min-width: 588px;
+			}
 		}
 	}
 	.casino-logo{
@@ -165,11 +183,14 @@ section{
 			font-size: 16px;
 		}
 	}
+	.game-box{
+		max-width: 562px;
+	}
 	> .bg-stretch{
 		// background-position:50% 0;
 		height:247px;
 		@include media(">=tablet") {
-			height:346px;
+			height:278px;
 		}
 	}
 }

@@ -9,7 +9,25 @@ jQuery(function() {
 	initAnchors();
 	initCustomAnchor();
 	initOpenClose();
+	initCustomFixed();
 });
+
+// custom fixed blocks
+function initCustomFixed() {
+	var block = jQuery('.section-intro'),
+		offset = block.outerHeight() + block.offset().top,
+		win = jQuery(window),
+		activeClass = 'intro-passed';
+
+	// console.log(block.outerHeight(), block.offset().top);
+	win.on('scroll', function(){
+		if (win.scrollTop() >= offset) {
+			jQuery('body').addClass(activeClass)
+		} else {
+			jQuery('body').removeClass(activeClass)
+		}
+	});
+};
 
 // open-close init
 function initOpenClose() {
@@ -30,7 +48,7 @@ function initOpenClose() {
 			}
 		}
 	});
-}
+};
 
 function initCustomAnchor() {
 	var elements = jQuery('.widget ul ul'),

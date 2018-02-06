@@ -62,6 +62,9 @@
 	line-height:1.25;
 	position:relative;
 	z-index:5;
+	body:not([class*="intro-passed"]) & {
+		position:relative !important;
+	}
 	.hide-bonus & {
 		display:none;
 	}

@@ -98,6 +98,27 @@ a {
 			font-size: 20px;
 			margin:-6px 0 9px;
 		}
+		br{
+			@include media(">=tablet") {
+				display:none;
+			}
+		}
+		a{
+			@include media(">=tablet") {
+				display:inline-block;
+				vertical-align:top;
+				margin:0 0 0 12px;
+				position:relative;
+				&:before {
+					content: '-';
+					margin:0 4px 0 0;
+					pointer-events:none;
+					position:absolute;
+					right:100%;
+					top:0;
+				}
+			}
+		}
 	}
 }
 
@@ -129,12 +150,14 @@ ul{
 	}
 }
 
-.list-advantages,
-.list-disadvantages{
+[class*="advant"]
+// .list-advantages,
+// .list-disadvantages
+{
 	line-height:1.3571;
-	@extend %listreset;
+	// @extend %listreset;
 	li{
-		overflow:hidden;
+		overflow:visible;
 		padding:0 0 0 30px;
 		position:relative;
 		vertical-align:top;

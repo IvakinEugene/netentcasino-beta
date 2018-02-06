@@ -9,7 +9,7 @@
 	}
 	&.logo-heading {
 		float:left;
-		margin:-2px 18px 10px -1px;
+		margin:-2px 18px 10px 49px;
 		@include media(">=tablet") {
 			margin:-2px 47px 10px 0;
 			width:120px;
@@ -159,6 +159,26 @@
 			padding:5px 9px 6px;
 			position:relative;
 			text-transform:none;
+		}
+	}
+	&.large {
+		.media-holder{
+			@include media(">=tablet") {
+				height:280px;
+			}
+			.sticker{
+				@include media(">=tablet") {
+					font-size: 24px;
+					padding:1px 19px;
+					top:20px;
+				}
+			}
+		}
+		.media-title{
+			@include media(">=tablet") {
+				font-size: 18px;
+				padding:9px 18px;
+			}
 		}
 	}
 	.media-holder{

@@ -526,6 +526,9 @@
 	}
 	&[class*="icon-"] {
 		padding-left: 21px;
+		@include media(">=tablet") {
+			padding-left: 33px;
+		}
 		&:before {
 			background:$base-gray;
 			content: '';
@@ -534,6 +537,11 @@
 			position:absolute;
 			top:4px;
 			width:14px;
+			@include media(">=tablet") {
+				height:19px;
+				top:5px;
+				width:18px;
+			}
 		}
 	}
 	&:after {
