@@ -31,169 +31,227 @@ section{
 	}
 }
 
-.section-intro2{
-	background:$white;
-	// min-height: 247px;
-	position:relative;
-	> .bg-stretch{
-		// background-position:50% 0;
-		height:247px;
-		@include media(">=tablet") {
-			height:278px;
-		}
-	}
-}
-
 .section-intro{
 	background:$white;
-	min-height: 247px;
-	overflow:hidden;
+	// min-height: 247px;
+	margin:0 0 -3px;
 	position:relative;
-	.holder,
-	.search-box{
-		position:relative;
-		z-index:5;
+	@include media(">=tablet") {
+		margin:0 0 -13px;
 	}
-	.holder{
-		padding-top: 14px;
-		padding-bottom: 14px;
-		@include media(">=desktop") {
+	> .holder{
+		overflow:hidden;
+	    position:relative;
+	    z-index:5;
+	    @include media(">=tablet") {
 			display: flex;
 		    flex-direction: row;
 		    flex-wrap: nowrap;
 		    justify-content: space-between;
 		    align-content: flex-start;
 		    align-items: flex-start;
-		    padding-top: 43px;
-		    padding-bottom: 19px;
-		    position:relative;
-		    z-index:5;
+	    }
+		.aside{
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: center;
+		    align-content: center;
+		    align-items: center;
+			// background:#0f0;
+			height:97px;
+			flex:1 1 auto;
+			padding:28px 0 20px;
+			@include media(">=tablet") {
+				// display:flex;// !!!!!!!!!!!!!!!!!!!!
+				height:278px;
+				order: 1;
+				padding:0 0 0 24px;
+			}
+			img{
+				max-height: 100%;
+			}
 		}
 		> .content{
+			// background:#f00;
+			// height:400px;
+			// padding:19px 0 0;
+			// width:620px;
 			@include media(">=tablet") {
-				min-width: 588px;
+				padding:40px 0 0;
 			}
 		}
-	}
-	.casino-logo{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: center;
-		align-content: center;
-		align-items: center;
-		height:84px;
-		@include media(">=desktop") {
-			// display: flex;
-		    // flex-direction: row;
-		    // flex-wrap: nowrap;
-		    // justify-content: center;
-		    // align-content: center;
-		    // align-items: center;
-			flex:1 1 auto;
-			order: 1;
-			min-height: 258px;
-			padding:0 $gutter-width;
-		}
-	}
-	.casino-review-box{
-		@include media(">=desktop") {
-			width:890px;
-		}
-	}
-	.search-box{
-		background:$white;
-		box-shadow:0 0 4px $shadow;
-		> div{
-			+ div{
-				border-top: 1px solid $border-color-base;
-			}
-		}
-		form{
-			.form-content{
-				padding:0 0 0 43px;
-				position:relative;
-				[class*="icon-"] {
-					left:25px;
-					position:absolute;
-					top:50%;
-					transform:translateY(-50%);
-					z-index:5;
-				}
-				input[type=text]{
-					border-width: 0;
-					font-size:16px;
-					height:47px;
-					line-height:25px;
-					padding-bottom:10px;
-					padding-top:10px;
-					position:relative;
-					z-index:1;
-					@include placeholder {
-						color:$headings-color;
-					}
-				}
-			}
-		}
-	}
-	.read-more-button{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-		align-content: center;
-		align-items: center;
-		font-size:12px;
-		padding:8px 15px 10px;
-		text-decoration:none;
-		&:hover {
-			color:$base-link-color;
-			[class*="icon-"]{
-				color:$theme-color-base-lighten;
-			}
-		}
-		> span{
-			&:nth-child(2) {
-				flex: 1 1 auto;
-			}
-		}
-		.count{
-			color:$theme-color-base;
-			font-size: 32px;
-			font-weight:500;
-			line-height:1;
-			min-width: 82px;
-			text-align:center;
-		}
-		.content{
-			color:$base-gray;
-			padding:0 0 0 15px;
-		}
-		.title{
-			color:$headings-color;
-			display:block;
-			font-size: 16px;
-			font-weight:500;
-			margin:0 0 -3px;
-			text-transform:uppercase;
-		}
-		[class*="icon-"]{
-			display:inline-block;
-			vertical-align:top;
-			font-size: 16px;
-		}
-	}
-	.game-box{
-		max-width: 562px;
 	}
 	> .bg-stretch{
-		// background-position:50% 0;
-		height:247px;
+		height:210px;
 		@include media(">=tablet") {
 			height:278px;
 		}
 	}
+	.game-box{
+		margin:0 auto;
+		max-width: 562px;
+		@include media(">=tablet") {
+			max-width: none;
+			width: 430px;
+		}
+		@include media(">=desktop") {
+			width:562px;
+		}
+	}
+	.casino-review-box{
+		margin:0 0 30px;
+	}
 }
+
+// .section-intro{
+// 	background:$white;
+// 	min-height: 247px;
+// 	overflow:hidden;
+// 	position:relative;
+// 	.holder,
+// 	.search-box{
+// 		position:relative;
+// 		z-index:5;
+// 	}
+// 	.holder{
+// 		padding-top: 14px;
+// 		padding-bottom: 14px;
+// 		@include media(">=desktop") {
+// 			display: flex;
+// 		    flex-direction: row;
+// 		    flex-wrap: nowrap;
+// 		    justify-content: space-between;
+// 		    align-content: flex-start;
+// 		    align-items: flex-start;
+// 		    padding-top: 43px;
+// 		    padding-bottom: 19px;
+// 		    position:relative;
+// 		    z-index:5;
+// 		}
+// 		> .content{
+// 			@include media(">=tablet") {
+// 				min-width: 588px;
+// 			}
+// 		}
+// 	}
+// 	.casino-logo{
+// 		display: flex;
+// 		flex-direction: row;
+// 		flex-wrap: nowrap;
+// 		justify-content: center;
+// 		align-content: center;
+// 		align-items: center;
+// 		height:84px;
+// 		@include media(">=desktop") {
+// 			// display: flex;
+// 		    // flex-direction: row;
+// 		    // flex-wrap: nowrap;
+// 		    // justify-content: center;
+// 		    // align-content: center;
+// 		    // align-items: center;
+// 			flex:1 1 auto;
+// 			order: 1;
+// 			min-height: 258px;
+// 			padding:0 $gutter-width;
+// 		}
+// 	}
+// 	.casino-review-box{
+// 		@include media(">=desktop") {
+// 			width:890px;
+// 		}
+// 	}
+// 	.search-box{
+// 		background:$white;
+// 		box-shadow:0 0 4px $shadow;
+// 		> div{
+// 			+ div{
+// 				border-top: 1px solid $border-color-base;
+// 			}
+// 		}
+// 		form{
+// 			.form-content{
+// 				padding:0 0 0 43px;
+// 				position:relative;
+// 				[class*="icon-"] {
+// 					left:25px;
+// 					position:absolute;
+// 					top:50%;
+// 					transform:translateY(-50%);
+// 					z-index:5;
+// 				}
+// 				input[type=text]{
+// 					border-width: 0;
+// 					font-size:16px;
+// 					height:47px;
+// 					line-height:25px;
+// 					padding-bottom:10px;
+// 					padding-top:10px;
+// 					position:relative;
+// 					z-index:1;
+// 					@include placeholder {
+// 						color:$headings-color;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// 	.read-more-button{
+// 		display: flex;
+// 		flex-direction: row;
+// 		flex-wrap: nowrap;
+// 		justify-content: flex-start;
+// 		align-content: center;
+// 		align-items: center;
+// 		font-size:12px;
+// 		padding:8px 15px 10px;
+// 		text-decoration:none;
+// 		&:hover {
+// 			color:$base-link-color;
+// 			[class*="icon-"]{
+// 				color:$theme-color-base-lighten;
+// 			}
+// 		}
+// 		> span{
+// 			&:nth-child(2) {
+// 				flex: 1 1 auto;
+// 			}
+// 		}
+// 		.count{
+// 			color:$theme-color-base;
+// 			font-size: 32px;
+// 			font-weight:500;
+// 			line-height:1;
+// 			min-width: 82px;
+// 			text-align:center;
+// 		}
+// 		.content{
+// 			color:$base-gray;
+// 			padding:0 0 0 15px;
+// 		}
+// 		.title{
+// 			color:$headings-color;
+// 			display:block;
+// 			font-size: 16px;
+// 			font-weight:500;
+// 			margin:0 0 -3px;
+// 			text-transform:uppercase;
+// 		}
+// 		[class*="icon-"]{
+// 			display:inline-block;
+// 			vertical-align:top;
+// 			font-size: 16px;
+// 		}
+// 	}
+	
+// 	> .bg-stretch{
+// 		// background-position:50% 0;
+// 		height:247px;
+// 		@include media(">=tablet") {
+// 			height:278px;
+// 		}
+// 	}
+// }
 
 .section-casinos-list{
 	.holder{

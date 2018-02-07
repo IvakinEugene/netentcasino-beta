@@ -236,6 +236,11 @@
 		}
 		.heading{
 			@include media(">=tablet") {
+				max-width: 260px;
+				min-width: 260px;
+			}
+			@include media(">=desktop") {
+				max-width: 348px;
 				min-width: 348px;
 			}
 		}
@@ -278,12 +283,15 @@
 	}
 	.heading{
 		background:#f2f5f4;
+		max-width: 144px;
 		min-width: 144px;
 		padding:13px;
 		@include media(">=tablet") {
+			max-width: 165px;
 			min-width: 165px;
 		}
 		@include media(">=desktop") {
+			max-width: 221px;
 			min-width: 221px;
 			padding:18px 20px;
 		}
@@ -294,7 +302,7 @@
 	.content{
 		border: 1px solid $border-color-base;
 		flex:1 1 auto;
-		padding:13px 15px 5px;
+		padding:13px 15px 11px;
 		@include media(">=desktop") {
 			border: 0;
 			box-shadow: 0 0 2px $shadow;
