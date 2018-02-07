@@ -15,11 +15,13 @@ jQuery(function() {
 // custom fixed blocks
 function initCustomFixed() {
 	var block = jQuery('.section-intro'),
-		offset = block.outerHeight() + block.offset().top,
+		offset = 0,
 		win = jQuery(window),
 		activeClass = 'intro-passed';
 
-	// console.log(block.outerHeight(), block.offset().top);
+	if (block.length != 0) {
+		offset = block.outerHeight() + block.offset().top;
+	}
 	win.on('scroll', function(){
 		if (win.scrollTop() >= offset) {
 			jQuery('body').addClass(activeClass)

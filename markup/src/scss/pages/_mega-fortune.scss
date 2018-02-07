@@ -35,8 +35,8 @@
 		margin-top: 0;
 	}
 	.boxes-holder{
-		ul,
-		ol{
+		> .holder > ul,
+		> .holder > ol{
 			&:not([class]) {
 				padding:0 0 15px;
 				@include media(">=desktop") {
@@ -52,7 +52,7 @@
 				}
 			}
 		}
-		ol:not([class]){
+		> .holder > ol:not([class]){
 			counter-reset: step;
 			@extend %listreset;
 			> li{
@@ -77,6 +77,14 @@
 						padding-top: 6px;
 						padding-bottom: 6px;
 					}
+				}
+			}
+		}
+		.bonuses-list{
+			> li{
+				padding:0 0 9px;
+				@include media(">=tablet") {
+					width:33.3333%;
 				}
 			}
 		}
@@ -752,3 +760,12 @@
 		}
 	}
 }
+
+// .section-bonus-calc{
+// 	.holder{
+// 		position:relative;
+// 	}
+// 	.sticker{
+		
+// 	}
+// }

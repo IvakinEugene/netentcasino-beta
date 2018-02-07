@@ -372,6 +372,7 @@ section{
 
 .section-bonus-calc{
 	background:#e5eae8;
+	color:$base-gray;
 	line-height:1.2143;
 	position:relative;
 	.holder{
@@ -410,6 +411,15 @@ section{
 		position:absolute;
 		text-transform:uppercase;
 		top:10px;
+		&:after {
+			background:$theme-color-add;
+			bottom:0;
+			content: '';
+			position:absolute;
+			right:100%;
+			top:0;
+			width:200px;
+		}
 	}
 }
 
