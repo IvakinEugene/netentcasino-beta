@@ -1,16 +1,16 @@
 #wrapper{
 	background:#f5f7f6;
 	overflow:hidden;
-	max-width: 320px;
-	@include media(">=375px") {
-		max-width: 375px;
-	}
-	@include media(">=tablet") {
-		max-width: 992px;
-	}
-	@include media(">=widescreen") {
-		max-width:1440px;
-	}
+	// max-width: 320px;
+	// @include media(">=375px") {
+	// 	max-width: 375px;
+	// }
+	// @include media(">=tablet") {
+	// 	max-width: 992px;
+	// }
+	// @include media(">=widescreen") {
+	// 	max-width:1440px;
+	// }
 }
 
 #main{
@@ -86,6 +86,9 @@ section{
 		height:210px;
 		@include media(">=tablet") {
 			height:278px;
+		}
+		&:only-child {
+			position:static;
 		}
 	}
 	.game-box{
@@ -375,6 +378,9 @@ section{
 	color:$base-gray;
 	line-height:1.2143;
 	position:relative;
+	@include media(">=tablet") {
+		display:none;
+	}
 	.holder{
 		padding:34px 42px 12px;
 	}

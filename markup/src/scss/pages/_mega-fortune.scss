@@ -81,9 +81,22 @@
 			}
 		}
 		.bonuses-list{
+			@include media(">=tablet") {
+				display: flex;
+			    flex-direction: row;
+			    flex-wrap: wrap;
+			    justify-content: flex-start;
+			    align-content: flex-start;
+			    align-items: flex-start;
+			    margin:-8px;
+			}
 			> li{
 				padding:0 0 9px;
 				@include media(">=tablet") {
+					padding:8px;
+					width:50%;
+				}
+				@include media(">=desktop") {
 					width:33.3333%;
 				}
 			}
