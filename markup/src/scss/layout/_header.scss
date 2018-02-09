@@ -58,11 +58,16 @@
 	background:$white;
 	box-shadow: 0 1px 2px $shadow;
 	color:$base-gray;
+	// display:none;
 	font-size:12px;
 	line-height:1.25;
-	position:relative;
+	left:0;
+	position:fixed;
+	top:0;
+	width:100%;
 	z-index:5;
 	body:not([class*="intro-passed"]) & {
+		display:none;
 		position:relative !important;
 	}
 	.hide-bonus & {
@@ -610,12 +615,12 @@
 			vertical-align:top;
 			padding:3px 0 3px 23px;
 			&:hover,
-			&.active {
+			&.current-menu-item {
 				> a{
 					color:$theme-color-base;
 				}
 			}
-			&.active {
+			&.current-menu-item {
 				> a{
 					font-weight:500;
 				}

@@ -104,9 +104,16 @@
 			float:left;
 			padding-top: 10px;
 			width:100%;
-			&:only-child {
+		}
+		&:only-child {
+			@include media(">=desktop") {
 				float:none;
 				width:auto;
+			}
+			.content-holder{
+				@include media(">=desktop") {
+					max-resolution:0 !important;
+				}
 			}
 		}
 	}

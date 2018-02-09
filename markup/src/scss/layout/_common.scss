@@ -683,6 +683,25 @@ section{
 				}
 			}
 		}
+		span[rel*="child"],
+		.breadcrumb_last{
+			@include media(">=desktop") {
+				display:inline-block;
+				vertical-align:top;
+				margin:0 0 0 4px;
+				padding:0 4px 0 18px;
+				position:relative;
+			}
+			&:before {
+				@include media(">=desktop") {
+					color:$theme-color-base;
+					content: '>';
+					left:0;
+					position:absolute;
+					top:0;
+				}
+			}
+		}
 	}
 	p{
 		@include media(">=desktop") {
