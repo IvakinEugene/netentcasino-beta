@@ -1,0 +1,294 @@
+extends pug/extends/master
+
+block content
+	- var page_class = "hide-nav hide-offer hide-bonus"
+	include pug/includes/header
+	#main
+		//- 
+		section.section-breadcrumbs
+			.holder
+				div
+					ul.breadcrumbs
+						li
+							a(href="#") Home
+						li
+							a(href="#") Payments
+						li Bitcoin
+				div
+					p Last updated - 
+						strong 2 days ago!
+		//- 
+		section.template-casinos-list
+			//- 
+			.subsection.content.heading
+				.holder
+					.logo-holder.logo-heading
+						a(href="#")
+							img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+					h1 Top Bitcoin Casinos
+					strong.subtitle.green 12 casinos offering Bitcoin
+					p There are many advantages to having a Bitcoin Casino over a regular one, as many casino players can surely appreciate, there is a simply an unrivalled sense of anonymity and (if you know what you are doing) security.
+			//- 
+			.subsection.boxes-holder
+				.holder
+					ul
+						//- 
+						li
+							.casino-box-content
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") SlotsMillion
+										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+										a(href="#").btn.btn-secondary Casino review
+								.cell.content
+									.sticker
+										span.icon ICON
+										p Recommended by Casino Experts
+									.content-frame
+										h3 £150 + 50 Free Spins
+										p 50% up to £100 + 50 Free Spins
+										a(href="#").btn.btn-primary Go to Casino
+								.desktop-middle
+									.cell
+										h4
+											strong £10
+											|  Min. Deposit
+									.middle
+										p
+											strong 30 mins - 4 hours (avg)
+											|  Withdrawal Time
+								.bottom
+									a(href="#").btn.btn-primary Go to Casino
+						li
+							.casino-box-content
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") Dunder
+										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+										a(href="#").btn.btn-secondary Casino review
+								.cell.content
+									.content-frame
+										h3 £1500 + 50 Free Spins
+										p 200% up to £500 + 50 Free Spins
+										a(href="#").btn.btn-primary Go to Casino
+								.desktop-middle
+									.cell
+										h4
+											strong £5
+											|  Min. Deposit
+									.middle
+										p
+											strong 30 mins - 1 hour (avg)
+											|  Withdrawal Time
+								.bottom
+									a(href="#").btn.btn-primary Go to Casino
+						li
+							.casino-box-content
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") LeoVegas
+										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+										a(href="#").btn.btn-secondary Casino review
+								.cell.content
+									.content-frame
+										h3 £1000 + 20 Free Spins
+										p 100% up to £500 + 20 Free Spins
+										a(href="#").btn.btn-primary Go to Casino
+								.desktop-middle
+									.cell
+										h4
+											strong £20
+											|  Min. Deposit
+									.middle
+										p
+											strong 5 mins - 4 hours (avg)
+											|  Withdrawal Time
+								.bottom
+									a(href="#").btn.btn-primary Go to Casino
+						li
+							.casino-box-content
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") Casumo
+										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+										a(href="#").btn.btn-secondary Casino review
+								.cell.content
+									.content-frame
+										h3 £150 + 50 Free Spins
+										p 50% up to £100 + 50 Free Spins
+										a(href="#").btn.btn-primary Go to Casino
+								.desktop-middle
+									.cell
+										h4
+											strong £10
+											|  Min. Deposit
+									.middle
+										p
+											strong 30 mins - 24 hours (avg)
+											|  Withdrawal Time
+								.bottom
+									a(href="#").btn.btn-primary Go to Casino
+						li
+							.casino-box-content
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") LadyLucks
+										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+										a(href="#").btn.btn-secondary Casino review
+								.cell.content
+									.content-frame
+										h3 £150 + 50 Free Spins
+										p 50% up to £100 + 50 Free Spins
+										a(href="#").btn.btn-primary Go to Casino
+								.desktop-middle
+									.cell
+										h4
+											strong £10
+											|  Min. Deposit
+									.middle
+										p
+											strong 30 mins - 2 hours (avg)
+											|  Withdrawal Time
+								.bottom
+									a(href="#").btn.btn-primary Go to Casino
+					.button-holder.text-center
+						a(href="#").btn.btn-secondary Load MOre Casinos
+			//- 
+			.subsection.currency-calculator
+				.holder
+					h2 BitCoin Exchange
+					.calc
+						strong.title
+							span 1 Bitcoin (equals) 
+							strong £6136.29
+						.casino-description
+							div
+								.row
+									.heading
+										strong Bitcoin
+									.content
+										p 1
+								.row
+									.heading
+										strong British pound
+									.content
+										p 6136.29
+			//- 
+			.subsection.section-top-casinos
+				.holder
+					.section-heading
+						h1 Top Casinos Offering Blackjack
+						strong.subtitle Exclusive Casino Bonuses
+					.boxes-holder
+						div
+							.casino-top-box
+								.top
+									.heading
+										.left
+											.logo-holder
+												a(href="#")
+													img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+											.txt
+												h2
+													a(href="#") SlotsMillion
+												em.note Launched 2 days ago!
+										.right
+											span.rate
+												strong 4
+												span /5
+											img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+									.content
+										.top
+											h3 £1000 + 20 Free Spins
+											p 100% up to £500 + 20 Free Spins
+										.bottom
+											span
+												strong +24
+												|  Blackjack Games
+								.button-holder
+									a(href="#").btn.btn-primary Play at Betsson
+						div
+							.casino-top-box
+								.top
+									.heading
+										.left
+											.logo-holder
+												a(href="#")
+													img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+											.txt
+												h2
+													a(href="#") Dunder
+												em.note Launched 2 days ago!
+										.right
+											span.rate
+												strong 4
+												span /5
+											img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+									.content
+										.top
+											h3 £1500 + 50 Free Spins
+											p 200% up to £500 + 50 Free Spins
+										.bottom
+											span
+												strong +55
+												|  Blackjack Games
+								.button-holder
+									a(href="#").btn.btn-primary Play at Unibet
+						div
+							.casino-top-box
+								.top
+									.heading
+										.left
+											.logo-holder
+												a(href="#")
+													img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+											.txt
+												h2
+													a(href="#") LeoVegas
+												em.note Launched 2 days ago!
+										.right
+											span.rate
+												strong 4
+												span /5
+											img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+									.content
+										.top
+											h3 £1000 + 20 Free Spins
+											p 100% up to £500 + 20 Free Spins
+										.bottom
+											span
+												strong +12
+												|  Blackjack Games
+								.button-holder
+									a(href="#").btn.btn-primary Play at LeoVegas
+					.button-holder.text-center
+						a(href="#").btn.btn-secondary View more exclusive offers
+			//- 
+			.subsection.content
+				.holder
+					h1 Bitcoin Casino - The Future of iGaming
+					p Why choose a Bitcoin casino? Well, there are a number of perks that are unique to cryptocurrencies. Because it is decentralised, i.e. not under the control of any banking institution, this currency is completely resistant to inflation and to corruption. Transactions take place directly between the users exchanging the currency – no middle man involved.
+					p Anonymity is also a big advantage over traditional currencies. Transactions are completely private, with both parties’ identities totally obscured behind a simple string of code that cannot be connected to any personal details.
+					p
+						a(href="#") Read More
+	include pug/includes/footer

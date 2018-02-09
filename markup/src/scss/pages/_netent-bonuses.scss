@@ -1,153 +1,263 @@
-span.stick{
-	display:inline-block;
-	position: relative;
-	z-index:1;
-	font-size: 13px;
-	padding:7px 20px 7px 0;
-	&:before{
-		content: '';
-		position: absolute;
-		z-index:-1;
-		top: 0;
-		left: -9999px;
-		bottom: 0;
-		background: #FED958;
-		box-shadow: 0 1px 2px rgba(58, 58, 58, 0.25);
-		right: 0;
-	}
-	@include media(">=desktop") {
-		font-size: 16px;
-	}
-}
-.widget-bonuses-block{
-	padding: 29px 0 20px;
-	@include media(">=desktop") {
-		margin: 0 -7px;
-		display:flex;
-		flex-wrap: wrap;
-	}
-	li{
-		padding:0 0 25px;
-		width: 100%;
-		@include media(">=desktop") {
-			max-width: 33.333%;
-			padding:0 7px 25px;
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: flex-start;
-			align-content: stretch;
-			align-items: stretch;
+.bonus-box{
+	background:$white;
+	box-shadow: 0 0 3px $shadow;
+	color:$base-gray;
+	font-size: 12px;
+	line-height:1.25;
+	> .heading{
+		padding:17px $gutter-width;
+		p{
+			margin:0;
 		}
 	}
-	.widget-box{
-		background: $white;
-		box-shadow: 0 0 2px rgba(58, 58, 58, 0.25);
-		display:flex;
-		flex-direction: column;
-		.section-heading{
-			padding: 20px 20px 18px;
-			border-bottom: 1px solid #CBD6D2;
-			flex:1;
-			h2{
-				margin: 0;
-				text-transform:uppercase;
-				font-size: 18px;
-			}
-			p{
-				font-size: 12px;
-				@include media(">=desktop") {
-					font-size: 14px;
-				}
-			}
-		}
-		.btn-bottom{
-			text-align:center;
-			a{
-				display:block;
-				font-size: 16px;
-				text-transform:uppercase;
-				font-weight: 500;
-				text-decoration:none;
-				padding: 20px 10px;
-			}
+	> .content{
+		border: 0 solid $border-color-base;
+		border-width: 1px 0;
+	}
+	> .footer{
+		.btn{
+			border-color: transparent;
+			display:block;
+			min-width: 0;
+			padding-top: 20px;
+			padding-bottom: 21px;
 		}
 	}
-	.widget-holder{
+	h2{
+		font-size: 18px;
+		margin:0 0 2px;
+		text-transform:uppercase;
+	}
+    ul{
+    	padding:0;
+    	li{
+    		padding:0;
+    		+ li{
+    			border-top: 1px solid $border-color-base;
+    		}
+    		&:before {
+    			display:none;
+    		}
+    	}
+    }
+	.single{
 		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-		align-content: stretch;
-		align-items: stretch;
-		border-bottom: 1px solid #cbd6d2;
-		flex:1;
-		&-wrap {
-			display: flex;
-			flex-direction: column;
-			align-items: stretch;
-		}
-		.logo-img{
-			border: 1px solid #cbd6d2;
-			border-radius: 100%;
-			margin: 0 auto;
-			overflow: hidden;
-			width: 50px;
-			a{
-				display: flex;
-				flex-direction: row;
-				flex-wrap: nowrap;
-				justify-content: center;
-				align-content: center;
-				align-items: center;
-				height: 100%;
-				text-decoration: none;
-			}
-		}
-		.heading{
-			display: flex;
-			flex-direction: column;
-			flex-wrap: nowrap;
-			justify-content: center;
-			align-content: center;
-			align-items: center;
-			border-right: 1px solid #cbd6d2;
-			min-width: 100px;
-			h3{
-				font-size: 12px;
-				font-weight: 500;
-			}
-		}
-		.content{
-			position: relative;
-			padding: 10px;
-			width: 100%;
-			text-align:center;
-			display:flex;
-			flex-direction: column;
-			justify-content:space-between;
-			@include media(">=desktop") {
-				padding: 14px 10px;
-			}
-			h4{
-				font-size: 18px;
-				line-height: 19px;
-				margin:0;
-				text-transform:uppercase;
-			}
-			p{
-				font-size: 12px;
-				@include media(">=desktop") {
-					font-size: 14px;
-				}
-			}
-			.btn{
-				min-width: 0;
-				max-width: 200px;
-				display:block;
-				margin:0 auto;
-				font-size: 13px;
-			}
-		}
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    justify-content: flex-start;
+	    align-content: stretch;
+    	align-items: stretch;
+		text-align:center;
+	    .heading{
+	    	display: flex;
+		    flex-direction: column;
+		    flex-wrap: nowrap;
+		    justify-content: flex-start;
+		    align-content: stretch;
+		    align-items: stretch;
+			border-right: 1px solid $border-color-base;
+			min-width: 92px;
+			padding:10px 5px 13px;
+	    }
+	    .logo-holder{
+	    	margin-bottom: 7px;
+	    }
+	    h3{
+	    	font-size: 12px;
+	    	margin:0 0 4px;
+	    }
+	    .stars{
+	    	width:53px;
+	    }
+	    .content{
+	    	display: flex;
+		    flex-direction: column;
+		    flex-wrap: nowrap;
+		    justify-content: flex-start;
+		    align-content: stretch;
+		    align-items: stretch;
+	    	flex: 1 1 auto;
+	    }
+	    .frame{
+	    	display: flex;
+		    flex-direction: column;
+		    flex-wrap: nowrap;
+		    justify-content: center;
+		    align-content: stretch;
+		    align-items: stretch;
+	    	flex:1 1 auto;
+	    }
+	    h4{
+	    	font-size: 18px;
+	    	font-weight:normal;
+	    	margin:0;
+	    	text-transform:uppercase;
+	    }
+	    p{
+	    	margin:2px 0 0;
+	    }
+	    .button-holder{
+	    	padding:0 5px 13px;
+	    }
+	    .btn{
+	    	font-size: 14px;
+	    	min-width: 189px;
+	    	padding-top: 4px;
+	    	padding-bottom: 6px;
+	    }
 	}
 }
+
+// span.stick{
+// 	display:inline-block;
+// 	position: relative;
+// 	z-index:1;
+// 	font-size: 13px;
+// 	padding:7px 20px 7px 0;
+// 	&:before{
+// 		content: '';
+// 		position: absolute;
+// 		z-index:-1;
+// 		top: 0;
+// 		left: -9999px;
+// 		bottom: 0;
+// 		background: #FED958;
+// 		box-shadow: 0 1px 2px rgba(58, 58, 58, 0.25);
+// 		right: 0;
+// 	}
+// 	@include media(">=desktop") {
+// 		font-size: 16px;
+// 	}
+// }
+// .widget-bonuses-block{
+// 	padding: 29px 0 20px;
+// 	@include media(">=desktop") {
+// 		margin: 0 -7px;
+// 		display:flex;
+// 		flex-wrap: wrap;
+// 	}
+// 	li{
+// 		padding:0 0 25px;
+// 		width: 100%;
+// 		@include media(">=desktop") {
+// 			max-width: 33.333%;
+// 			padding:0 7px 25px;
+// 			display: flex;
+// 			flex-direction: row;
+// 			flex-wrap: nowrap;
+// 			justify-content: flex-start;
+// 			align-content: stretch;
+// 			align-items: stretch;
+// 		}
+// 	}
+// 	.widget-box{
+// 		background: $white;
+// 		box-shadow: 0 0 2px rgba(58, 58, 58, 0.25);
+// 		display:flex;
+// 		flex-direction: column;
+// 		.section-heading{
+// 			padding: 20px 20px 18px;
+// 			border-bottom: 1px solid #CBD6D2;
+// 			flex:1;
+// 			h2{
+// 				margin: 0;
+// 				text-transform:uppercase;
+// 				font-size: 18px;
+// 			}
+// 			p{
+// 				font-size: 12px;
+// 				@include media(">=desktop") {
+// 					font-size: 14px;
+// 				}
+// 			}
+// 		}
+// 		.btn-bottom{
+// 			text-align:center;
+// 			a{
+// 				display:block;
+// 				font-size: 16px;
+// 				text-transform:uppercase;
+// 				font-weight: 500;
+// 				text-decoration:none;
+// 				padding: 20px 10px;
+// 			}
+// 		}
+// 	}
+// 	.widget-holder{
+// 		display: flex;
+// 		flex-direction: row;
+// 		flex-wrap: nowrap;
+// 		justify-content: flex-start;
+// 		align-content: stretch;
+// 		align-items: stretch;
+// 		border-bottom: 1px solid #cbd6d2;
+// 		flex:1;
+// 		&-wrap {
+// 			display: flex;
+// 			flex-direction: column;
+// 			align-items: stretch;
+// 		}
+// 		.logo-img{
+// 			border: 1px solid #cbd6d2;
+// 			border-radius: 100%;
+// 			margin: 0 auto;
+// 			overflow: hidden;
+// 			width: 50px;
+// 			a{
+// 				display: flex;
+// 				flex-direction: row;
+// 				flex-wrap: nowrap;
+// 				justify-content: center;
+// 				align-content: center;
+// 				align-items: center;
+// 				height: 100%;
+// 				text-decoration: none;
+// 			}
+// 		}
+// 		.heading{
+// 			display: flex;
+// 			flex-direction: column;
+// 			flex-wrap: nowrap;
+// 			justify-content: center;
+// 			align-content: center;
+// 			align-items: center;
+// 			border-right: 1px solid #cbd6d2;
+// 			min-width: 100px;
+// 			h3{
+// 				font-size: 12px;
+// 				font-weight: 500;
+// 			}
+// 		}
+// 		.content{
+// 			position: relative;
+// 			padding: 10px;
+// 			width: 100%;
+// 			text-align:center;
+// 			display:flex;
+// 			flex-direction: column;
+// 			justify-content:space-between;
+// 			@include media(">=desktop") {
+// 				padding: 14px 10px;
+// 			}
+// 			h4{
+// 				font-size: 18px;
+// 				line-height: 19px;
+// 				margin:0;
+// 				text-transform:uppercase;
+// 			}
+// 			p{
+// 				font-size: 12px;
+// 				@include media(">=desktop") {
+// 					font-size: 14px;
+// 				}
+// 			}
+// 			.btn{
+// 				min-width: 0;
+// 				max-width: 200px;
+// 				display:block;
+// 				margin:0 auto;
+// 				font-size: 13px;
+// 			}
+// 		}
+// 	}
+// }

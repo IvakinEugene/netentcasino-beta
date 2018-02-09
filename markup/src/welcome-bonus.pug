@@ -1,0 +1,121 @@
+extends pug/extends/master
+
+block content
+	- var page_class = "hide-nav hide-offer hide-bonus"
+	include pug/includes/header
+	#main
+		//- 
+		section.section-breadcrumbs
+			.holder
+				div
+					ul.breadcrumbs
+						li
+							a(href="#") Home
+						li
+							a(href="#") NetEnt Game &amp; Jackpots
+						li Mega Fortune Jackpot
+				div
+					p Last updated - 
+						strong 2 days ago!
+		section.template-casinos-list
+			.subsection.content
+				.holder
+					h1 NetEnt Welcome Bonuses
+					strong.subtitle.green 314 casinos offering Welcome Bonuses
+					p Virtually all Netent Casinos offer new players an attractive welcome bonus so they can explore the casino in an advantageous manner.
+			.subsection.boxes-holder
+				.holder
+					ul
+						li
+							.casino-box-content
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") SlotsMillion
+										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+										a(href="#").btn.btn-secondary Casino review
+								.cell.content
+									.sticker 
+										span.icon
+										p Recommended by Casino Experts
+									.content-frame
+										h3 £1000 + 20 Free Spins
+										p 50% up to £100 + 50 Free Spins
+										a(href="#").btn.btn-primary Go to Casino
+								.desktop-middle
+									.cell
+										h4
+											strong £10
+											|  Min. Deposit
+									.middle
+										dl
+											dt Before Deposit
+											dd 25 no deposit free spins
+											dt After Deposit
+											dd 100% to €100 + 20 Super Spins
+								.bottom
+									a(href="#").btn.btn-primary Go to Casino
+						li
+							.casino-box-content
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") LeoVegas
+										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+										a(href="#").btn.btn-secondary Casino review
+								.cell.content
+									.content-frame
+										h3 £1500 + 60 Free Spins
+										p 50% up to £100 + 50 Free Spins
+										a(href="#").btn.btn-primary Go to Casino
+								.desktop-middle
+									.cell
+										h4
+											strong £10
+											|  Min. Deposit
+									.middle
+										dl
+											dt Before Deposit
+											dd 10 no deposit free spins
+											dt After Deposit
+											dd 200% up to £500 + 50 Free Spins
+								.bottom
+									a(href="#").btn.btn-primary Go to Casino
+						li
+							.casino-box-content
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") Casumo
+										img(src="images/stars.png", alt="Image description", width="148", height="23").stars
+										a(href="#").btn.btn-secondary Casino review
+								.cell.content
+									.content-frame
+										h3 £1000 + 20 Super Spins
+										p 50% up to £100 + 50 Free Spins
+										a(href="#").btn.btn-primary Go to Casino
+								.desktop-middle
+									.cell
+										h4
+											strong £10
+											|  Min. Deposit
+									.middle
+										dl
+											dt Before Deposit
+											dd 25 no deposit free spins
+											dt After Deposit
+											dd 100% to €100 + 20 Super Spins
+								.bottom
+									a(href="#").btn.btn-primary Go to Casino
+					.button-holder.text-center
+						a(href="#").btn.btn-secondary Load More Casinos
+	include pug/includes/footer

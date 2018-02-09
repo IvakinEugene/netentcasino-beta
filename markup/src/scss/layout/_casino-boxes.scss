@@ -7,6 +7,17 @@
 	&:hover {
 		border-color: $theme-color-base;
 	}
+	&.logo-heading {
+		float:left;
+		margin:-2px 18px 10px 49px;
+		@include media(">=tablet") {
+			margin:-2px 47px 10px 0;
+			width:120px;
+		}
+		+ h1 {
+			margin-right: -5px;
+		}
+	}
 	a{
 		display: flex;
 		flex-direction: row;
@@ -150,6 +161,26 @@
 			text-transform:none;
 		}
 	}
+	&.large {
+		.media-holder{
+			@include media(">=tablet") {
+				height:280px;
+			}
+			.sticker{
+				@include media(">=tablet") {
+					font-size: 24px;
+					padding:1px 19px;
+					top:20px;
+				}
+			}
+		}
+		.media-title{
+			@include media(">=tablet") {
+				font-size: 18px;
+				padding:9px 18px;
+			}
+		}
+	}
 	.media-holder{
 		height:149px;
 		position:relative;
@@ -173,7 +204,7 @@
 			left:0;
 			font-weight:500;
 			max-width: 100%;
-			padding:0 19px 3px;
+			padding:1px 19px 2px;
 			position:absolute;
 			text-transform:uppercase;
 			top:10px;

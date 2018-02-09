@@ -13,9 +13,9 @@ h6, .h6,
 	color: $headings-color;
 	a{
 		color:inherit;
-		text-decoration:underline;
+		text-decoration:none;
 		&:hover {
-			color:$base-link-color;
+			color:$theme-color-base;
 		}
 	}
 }
@@ -89,6 +89,37 @@ a {
 	@include media(">=tablet") {
 		font-size: 14px;
 	}
+	&.green {
+		color:$theme-color-base;
+		font-size: 16px;
+		font-weight:normal;
+		margin:-6px 0 7px;
+		@include media(">=tablet") {
+			font-size: 20px;
+			margin:-6px 0 9px;
+		}
+		br{
+			@include media(">=tablet") {
+				display:none;
+			}
+		}
+		a{
+			@include media(">=tablet") {
+				display:inline-block;
+				vertical-align:top;
+				margin:0 0 0 12px;
+				position:relative;
+				&:before {
+					content: '-';
+					margin:0 4px 0 0;
+					pointer-events:none;
+					position:absolute;
+					right:100%;
+					top:0;
+				}
+			}
+		}
+	}
 }
 
 hr{
@@ -103,7 +134,7 @@ hr{
 ul{
 	@extend %listreset;
 	&:not([class]) {
-		li{
+		> li{
 			overflow:hidden;
 			padding:0 0 10px;
 			// position:relative;
@@ -119,12 +150,14 @@ ul{
 	}
 }
 
-.list-advantages,
-.list-disadvantages{
+[class*="advant"]
+// .list-advantages,
+// .list-disadvantages
+{
 	line-height:1.3571;
-	@extend %listreset;
+	// @extend %listreset;
 	li{
-		overflow:hidden;
+		overflow:visible;
 		padding:0 0 0 30px;
 		position:relative;
 		vertical-align:top;

@@ -1,23 +1,25 @@
 #navigation-links{
-	left:0;
-	padding:15px 15px 0;
-	position:fixed;
-	top:0;
-	z-index:50;
+	padding:30px;
+	#header & {
+		left:0;
+		padding:5px 5px 0;
+		position:fixed;
+		top:0;
+		z-index:50;
+	}
 	li{
-		display:inline-block;
-		vertical-align:top;
-		margin:0 10px 10px 0;
+		margin:0 0 15px;
 		overflow:visible;
 		&:before {
 			display:none;
 		}
 	}
 	a{
-		background:white;
-		box-shadow: 0 0 10px #000;
-		color:$theme-color-base;
-		text-decoration:none;
+		// background:white;
+		// box-shadow: 0 0 10px #000;
+		// color:$theme-color-base;
+		// padding:$btn-padding;
+		// text-decoration:none;
 	}
 }
 
@@ -54,8 +56,9 @@
 				height:117px;
 			}
 			&:hover {
-				background:$white;
-				box-shadow: 0 0 10px $shadow;
+				.logo-holder{
+					border-color: $theme-color-base
+				}
 			}
 		}
 		.logo-holder{
@@ -86,7 +89,8 @@
 		text-decoration:none;
 		width:71px;
 		&:hover {
-			background:$base-gray;
+			border-color: $theme-color-base;
+			color:$theme-color-base;
 		}
 	}
 }
@@ -207,6 +211,7 @@
 }
 
 .casino-description{
+	margin:0 0 -9px;
 	@include media(">=tablet") {
 		display: flex;
 	    flex-direction: row;
@@ -216,7 +221,7 @@
 	    align-items: stretch;
 		font-size:16px;
 		line-height:1.5556;
-		margin:0 -6px;
+		margin:0 -6px -11px;
 		padding:16px 0 0;
 	}
 	@include media(">=desktop") {
@@ -231,6 +236,11 @@
 		}
 		.heading{
 			@include media(">=tablet") {
+				max-width: 260px;
+				min-width: 260px;
+			}
+			@include media(">=desktop") {
+				max-width: 348px;
 				min-width: 348px;
 			}
 		}
@@ -246,6 +256,11 @@
 			padding:0 6px;
 			width:50%;
 		}
+		&:only-child {
+			@include media(">=tablet") {
+				width:100%;
+			}
+		}
 	}
 	.row{
 		display: flex;
@@ -254,11 +269,11 @@
 	    justify-content: flex-start;
 	    align-content: stretch;
 	    align-items: stretch;
+	    padding:0 0 9px;
+	    @include media(">=tablet") {
+	    	padding:0 0 11px;
+	    }
 		+ .row{
-			padding-top: 9px;
-			@include media(">=tablet") {
-				padding-top: 11px;
-			}
 			&:last-child {
 				@include media(">=tablet") {
 					flex:1 1 auto;
@@ -268,12 +283,15 @@
 	}
 	.heading{
 		background:#f2f5f4;
+		max-width: 144px;
 		min-width: 144px;
 		padding:13px;
 		@include media(">=tablet") {
+			max-width: 165px;
 			min-width: 165px;
 		}
 		@include media(">=desktop") {
+			max-width: 221px;
 			min-width: 221px;
 			padding:18px 20px;
 		}
@@ -284,7 +302,7 @@
 	.content{
 		border: 1px solid $border-color-base;
 		flex:1 1 auto;
-		padding:13px 15px 5px;
+		padding:13px 15px 11px;
 		@include media(">=desktop") {
 			border: 0;
 			box-shadow: 0 0 2px $shadow;
@@ -477,6 +495,81 @@
 	margin:0 auto;
 }
 
+// .boxes-holder{
+// 	&.grid {
+// 		@include media(">=tablet") {
+// 			display: flex;
+// 		    flex-direction: row;
+// 		    flex-wrap: wrap;
+// 		    justify-content: flex-start;
+// 		    align-content: flex-start;
+// 		    align-items: flex-start;
+// 		}
+// 		> div{
+// 			@include media(">=tablet") {
+// 				padding:5px;
+// 			}
+// 		}
+// 	}
+// 	> div{
+// 		padding:0 0 10px;
+// 	}
+// }
+
+.offer-sticker{
+	background:$theme-color-add;
+	display:block;
+	font-size: 13px;
+	font-weight:200;
+	letter-spacing: -0.02em;
+	margin:18px 0 11px;
+	padding:6px 9px 5px 0;
+	position:relative;
+	@include media(">=tablet") {
+		box-shadow: 0 1px 1px $shadow;
+		display:inline-block;
+		vertical-align:top;
+		font-size: 18px;
+		padding:6px 29px 8px 0;
+	}
+	&[class*="icon-"] {
+		padding-left: 21px;
+		@include media(">=tablet") {
+			padding-left: 33px;
+		}
+		&:before {
+			background:$base-gray;
+			content: '';
+			height:15px;
+			left:0;
+			position:absolute;
+			top:4px;
+			width:14px;
+			@include media(">=tablet") {
+				height:19px;
+				top:5px;
+				width:18px;
+			}
+		}
+	}
+	&:after {
+		background:$theme-color-add;
+		bottom:0;
+		content: '';
+		right:100%;
+		position:absolute;
+		top:0;
+		width:100%;
+		@include media(">=tablet") {
+			box-shadow: 0 1px 1px $shadow;
+			width:9999px;
+		}
+	}
+	strong{
+		font-weight:normal;
+	}
+}
+
 .back-to-top{
 	background:$white;
 	border-radius: 100%;
@@ -486,7 +579,7 @@
 	position:fixed;
 	right:10px;
 	width:50px;
-	z-index:20;
+	z-index:1;
 	@include media(">=desktop") {
 		display:none;
 	}
@@ -513,6 +606,50 @@
 			margin:-5px 0 0 -5px;
 			transform:none;
 			width:10px;
+		}
+	}
+}
+
+.grid{
+	@include media(">=tablet") {
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    justify-content: flex-start;
+	    align-content: stretch;
+	    align-items: stretch;
+		margin:-8px;
+	}
+	&.col-2 {
+		> li{
+			@include media(">=desktop") {
+				width:50%;
+			}
+		}
+	}
+	+ .load-more{
+		padding:10px 0 0;
+		@include media(">=tablet") {
+			padding:20px 0 0;
+		}
+	}
+	> li{
+		padding:0 0 9px;
+		@include media(">=tablet") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: flex-start;
+		    align-content: stretch;
+		    align-items: stretch;
+			padding:8px;
+			width:50%;
+			> *{
+				width:100%;
+			}
+		}
+		@include media(">=desktop") {
+			width:33.3333%;
 		}
 	}
 }

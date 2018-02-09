@@ -9,8 +9,38 @@ jQuery(function() {
 	initAnchors();
 	initCustomAnchor();
 	initOpenClose();
+	initCustomFixed();
 	initSameHeight();
 });
+
+// align blocks height
+function initSameHeight() {
+	jQuery('.sh-holder').sameHeight({
+		elements: '.sh-column',
+		useMinHeight: true,
+		flexible: true,
+		multiLine: true
+	});
+}
+
+// custom fixed blocks
+function initCustomFixed() {
+	var block = jQuery('.section-intro'),
+		offset = 0,
+		win = jQuery(window),
+		activeClass = 'intro-passed';
+
+	if (block.length != 0) {
+		offset = block.outerHeight() + block.offset().top;
+	}
+	win.on('scroll', function(){
+		if (win.scrollTop() >= offset) {
+			jQuery('body').addClass(activeClass)
+		} else {
+			jQuery('body').removeClass(activeClass)
+		}
+	});
+};
 
 // open-close init
 function initOpenClose() {
@@ -31,7 +61,7 @@ function initOpenClose() {
 			}
 		}
 	});
-}
+};
 
 function initCustomAnchor() {
 	var elements = jQuery('.widget ul ul'),
@@ -131,7 +161,7 @@ function initMobileNav() {
 // initialize smooth anchor links
 function initAnchors() {
 	new SmoothScroll({
-		anchorLinks: '.anchor-links a[href^="#"]:not([href="#"]), .back-to-top, .aside a[href^="#"]:not([href="#"])',
+		anchorLinks: 'a[href^="#"]:not([href="#"]):not([href*="popup"])',
 		activeClasses: 'parent',
 		anchorActiveClass: 'anchor-active',
 		wheelBehavior: 'none',
@@ -1186,7 +1216,7 @@ jQuery.fn.clickClass = function(opt) {
 						position: this.options.positionType
 					});
 					if (this.isWrap) {
-						if (jQuery(this.$stickyBox).css('display') != 'none'){
+						if ((jQuery(this.$stickyBox).css('display') != 'none') && (jQuery(this.$stickyBox).outerHeight() != 0) ){
 							this.$stickyBoxWrap.css({
 								height: this.data.boxFullHeight
 							});
@@ -1403,11 +1433,16 @@ jQuery.fn.clickClass = function(opt) {
 						self.hideSlide();
 					}
 				}
+				if (!jQuery(e.target).hasClass('opener')) {
+					self.hideSlide();
+				}
 			};
 
 			// set initial styles
 			if (this.holder.hasClass(this.options.activeClass)) {
-				$(document).on('click touchstart', self.outsideClickHandler);
+				$(document).on('click touchstart', function(){
+					self.outsideClickHandler;
+				});
 			} else {
 				this.slider.addClass(slideHiddenClass);
 			}
@@ -1537,17 +1572,6 @@ jQuery.fn.clickClass = function(opt) {
 	};
 }(jQuery));
 
-// align blocks height
-function initSameHeight() {
-	jQuery('.widget-bonuses-block').sameHeight({
-		elements: '.widget-holder',
-		flexible: true,
-		multiLine: true,
-		biggestHeight: true
-	});
-}
-
-
 /*
  * jQuery SameHeight plugin
  */
@@ -1672,6 +1696,83 @@ function initSameHeight() {
 		return calcHeight;
 	}
 }(jQuery));
+
+/*
+ * Browser platform detection
+ */
+PlatformDetect = (function(){
+	var detectModules = {};
+
+	return {
+		options: {
+			cssPath: window.pathInfo ? pathInfo.base + pathInfo.css : 'css/'
+		},
+		addModule: function(obj) {
+			detectModules[obj.type] = obj;
+		},
+		addRule: function(rule) {
+			if(this.matchRule(rule)) {
+				this.applyRule(rule);
+				return true;
+			}
+		},
+		matchRule: function(rule) {
+			return detectModules[rule.type].matchRule(rule);
+		},
+		applyRule: function(rule) {
+			var head = document.getElementsByTagName('head')[0], fragment, cssText;
+			if(rule.css) {
+				cssText = '<link rel="stylesheet" href="' + this.options.cssPath + rule.css + '" />';
+				if(head) {
+					fragment = document.createElement('div');
+					fragment.innerHTML = cssText;
+					head.appendChild(fragment.childNodes[0]);
+				} else {
+					document.write(cssText);
+				}
+			}
+
+			if(rule.meta) {
+				if(head) {
+					fragment = document.createElement('div');
+					fragment.innerHTML = rule.meta;
+					head.appendChild(fragment.childNodes[0]);
+				} else {
+					document.write(rule.meta);
+				}
+			}
+		},
+		matchVersions: function(host, target) {
+			target = target.toString();
+			host = host.toString();
+
+			var majorVersionMatch = parseInt(target, 10) === parseInt(host, 10);
+			var minorVersionMatch = (host.length > target.length ? host.indexOf(target) : target.indexOf(host)) === 0;
+
+			return majorVersionMatch && minorVersionMatch;
+		}
+	};
+}()); 
+
+ // All Mobile detection
+PlatformDetect.addModule({
+	type: 'allmobile',
+	uaMatch: function(str) {
+		if (!this.ua) {
+			this.ua = navigator.userAgent.toLowerCase();
+		}
+		return this.ua.indexOf(str.toLowerCase()) != -1;
+	},
+	matchRule: function(rule) {
+		return this.uaMatch('mobi') || this.uaMatch('midp') || this.uaMatch('ppc') || this.uaMatch('webos') || this.uaMatch('android') || this.uaMatch('phone os') || this.uaMatch('touch');
+	}
+}); 
+
+ 
+
+ 
+// All Mobile detect rules
+PlatformDetect.addRule({ type: 'allmobile', css: 'allmobile.css' });
 
 /*!
 * FitVids 1.0.3

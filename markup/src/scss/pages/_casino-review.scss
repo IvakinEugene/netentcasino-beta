@@ -78,6 +78,7 @@
 	}
 	h3{
 		font-size: 18px;
+		font-weight:600;
 		margin:0 0 -5px;
 		@include media(">=tablet") {
 			font-size: 30px;
@@ -197,6 +198,11 @@
 			@include media(">=tablet") {
 				font-size: 40px;
 			}
+		}
+	}
+	.stars{
+		@include media(">=desktop") {
+			width:110px;
 		}
 	}
 	.total{
@@ -510,6 +516,7 @@
 				margin:0 0 2px;
 			}
 			.content{
+				border-width: 0;
 				flex:1 1 auto;
 				padding:25px 20px 18px;
 				position:relative;
@@ -710,7 +717,26 @@ dl{
 			height:164px;
 			width:140px;
 		}
+		&:hover {
+			box-shadow: 0 0 6px $shadow;
+			color:$theme-color-base;
+			.logo-holder{
+				border-color: $theme-color-base
+			}
+			.h2{
+				color:inherit;
+			}
+		}
+		> span{
+			display:block;
+		}
 		.logo-holder{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
 			margin-bottom: 7px;
 			@include media(">=tablet") {
 				height:68px;
@@ -718,7 +744,7 @@ dl{
 				width:68px;
 			}
 		}
-		h2{
+		.h2{
 			font-size: 12px;
 			margin:0 0 10px;
 			@include media(">=tablet") {
@@ -727,6 +753,9 @@ dl{
 		}
 		.stars{
 			margin:0 auto;
+			@include media(">=desktop") {
+				width:110px;
+			}
 		}
 	}
 }
