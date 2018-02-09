@@ -377,130 +377,131 @@
 		padding-top: 20px;
 		padding-bottom: 30px;
 	}
-	.boxes-holder{
-		padding:6px 0 0;
-		&.twocolumns {
-			> div{
-				@include media(">=desktop") {
-					max-width: 50%;
-				}
-			}
-		}
-		@include media(">=desktop") {
-			display: flex;
-		    flex-direction: row;
-		    flex-wrap: wrap;
-		    justify-content: flex-start;
-		    align-content: stretch;
-		    align-items: stretch;
-		    margin:-4px -8px 0;
-		    padding:0;
-		}
-		> div{
-			padding:0 0 10px;
-			@include media(">=desktop") {
-				display: flex;
-			    flex-direction: row;
-			    flex-wrap: nowrap;
-			    justify-content: flex-start;
-			    align-content: stretch;
-			    align-items: stretch;
-				max-width: 33.3333%;
-				padding:8px;
-				width:100%;
-			}
-		}
+	// .boxes-holder{
+	// 	padding:6px 0 0;
+	// 	&.twocolumns {
+	// 		> div{
+	// 			@include media(">=desktop") {
+	// 				max-width: 50%;
+	// 			}
+	// 		}
+	// 	}
+	// 	@include media(">=desktop") {
+	// 		display: flex;
+	// 	    flex-direction: row;
+	// 	    flex-wrap: wrap;
+	// 	    justify-content: flex-start;
+	// 	    align-content: stretch;
+	// 	    align-items: stretch;
+	// 	    margin:-4px -8px 0;
+	// 	    padding:0;
+	// 	}
+	// 	> div{
+	// 		padding:0 0 10px;
+	// 		@include media(">=desktop") {
+	// 			display: flex;
+	// 		    flex-direction: row;
+	// 		    flex-wrap: nowrap;
+	// 		    justify-content: flex-start;
+	// 		    align-content: stretch;
+	// 		    align-items: stretch;
+	// 			max-width: 33.3333%;
+	// 			padding:8px;
+	// 			width:100%;
+	// 		}
+	// 	}
+	// }
+	// .view-more-button{
+	// 	padding:10px 0 0;
+	// 	@include media(">=tablet") {
+	// 		padding:21px 0 0;
+	// 	}
+	// 	+ .boxes-holder{
+	// 		padding-top: 20px;
+	// 		@include media(">=tablet") {
+	// 			padding-top: 26px;
+	// 		}
+	// 	}
+	// }
+}
+
+.post-preview{
+	background:$white;
+	border: 1px solid $border-color-base;
+	box-shadow: 0 2px 4px $shadow;
+	line-height:1.3571;
+	padding:0 18px 20px;
+	@include media(">=tablet") {
+		line-height:$line-height-base;
+		padding:0 21px 74px;
+		position:relative;
+		width:100%;
 	}
-	.post-preview{
-		background:$white;
-		border: 1px solid $border-color-base;
-		box-shadow: 0 2px 4px $shadow;
-		line-height:1.3571;
-		padding:0 18px 20px;
+	&.no-image {
+		padding-top: 20px;
 		@include media(">=tablet") {
-			line-height:$line-height-base;
-			padding:0 21px 74px;
-			position:relative;
-			width:100%;
-		}
-		&.no-image {
-			padding-top: 20px;
-			@include media(">=tablet") {
-				font-size:16px;
-				line-height:1.5625;
-				padding:25px 29px 79px;
-			}
-			h2,
-			h3{
-				@include media(">=tablet") {
-					font-size: 26px;
-					margin:0 0 2px;
-				}
-			}
-			.button-holder{
-				@include media(">=tablet") {
-					bottom:31px;
-					left:30px;
-					padding:0;
-					right:30px;
-				}
-				.btn{
-					@include media(">=tablet") {
-						max-width: none;
-						min-width: 0;
-						padding:9px 26px 9px;
-						width:auto;
-					}
-				}
-			}
-		}
-		.post-image{
-			border-radius: 0;
-			margin:0 -19px 15px;
-			@include media(">=tablet") {
-				margin:0 -22px 21px;
-			}
+			font-size:16px;
+			line-height:1.5625;
+			padding:25px 29px 79px;
 		}
 		h2,
 		h3{
-			font-size:16px;
-			line-height:1.125;
-			margin:0 0 5px;
-			text-transform:uppercase;
 			@include media(">=tablet") {
-				// margin:0 0 5px;
+				font-size: 26px;
+				margin:0 0 2px;
 			}
-		}
-		.by{
-			font-size: 12px;
-			margin:0 0 7px;
 		}
 		.button-holder{
-			padding:19px 0 0;
 			@include media(">=tablet") {
-				bottom:20px;
-				left:21px;
-				position:absolute;
-				right:21px;
+				bottom:31px;
+				left:30px;
+				padding:0;
+				right:30px;
 			}
-		}
-		.btn{
-			@include media(">=tablet") {
-				max-width: 300px;
-				width:100%;
+			.btn{
+				@include media(">=tablet") {
+					max-width: none;
+					min-width: 0;
+					padding:9px 26px 9px;
+					width:auto;
+				}
 			}
 		}
 	}
-	.view-more-button{
-		padding:10px 0 0;
+	.post-image{
+		border-radius: 0;
+		margin:0 -19px 15px;
 		@include media(">=tablet") {
-			padding:21px 0 0;
+			margin:0 -22px 21px;
 		}
-		+ .boxes-holder{
-			padding-top: 20px;
-			@include media(">=tablet") {
-				padding-top: 26px;
-			}
+	}
+	h2,
+	h3{
+		font-size:16px;
+		line-height:1.125;
+		margin:0 0 5px;
+		text-transform:uppercase;
+		@include media(">=tablet") {
+			// margin:0 0 5px;
+		}
+	}
+	.by{
+		font-size: 12px;
+		margin:0 0 7px;
+	}
+	.button-holder{
+		padding:19px 0 0;
+		@include media(">=tablet") {
+			bottom:20px;
+			left:21px;
+			position:absolute;
+			right:21px;
+		}
+	}
+	.btn{
+		@include media(">=tablet") {
+			max-width: 300px;
+			width:100%;
 		}
 	}
 }

@@ -1,16 +1,28 @@
+html.mp-opened{
+	height:100%;
+	left:0;
+	// min-height:100%;
+	position:fixed;
+	top:0;
+	body{
+		height:100%;
+		overflow:hidden;
+	}
+}
+
 #wrapper{
 	background:#f5f7f6;
 	overflow:hidden;
-	// max-width: 320px;
-	// @include media(">=375px") {
-	// 	max-width: 375px;
-	// }
-	// @include media(">=tablet") {
-	// 	max-width: 992px;
-	// }
-	// @include media(">=widescreen") {
-	// 	max-width:1440px;
-	// }
+	max-width: 320px;
+	@include media(">=375px") {
+		max-width: 375px;
+	}
+	@include media(">=tablet") {
+		max-width: 992px;
+	}
+	@include media(">=widescreen") {
+		max-width:1440px;
+	}
 }
 
 #main{

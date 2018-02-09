@@ -13,9 +13,9 @@ h6, .h6,
 	color: $headings-color;
 	a{
 		color:inherit;
-		text-decoration:underline;
+		text-decoration:none;
 		&:hover {
-			color:$base-link-color;
+			color:$theme-color-base;
 		}
 	}
 }

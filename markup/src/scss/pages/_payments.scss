@@ -1,0 +1,27 @@
+.post-preview{
+	&.payments{
+		.post-image{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			height:150px !important;
+			border-bottom: 1px solid #CBD6D2;
+			img{
+				width: auto;
+			}
+			.logo-holder{
+				width: 120px;
+				height:120px;
+			}
+		}
+		h3{
+			font-size: 22px;
+			font-weight: 500;
+			text-transform:none;
+		}
+	}
+}
+
