@@ -284,9 +284,10 @@
 			}
 			&:before {
 				content: 'UP';
+				padding:15px 15px 16px;
 				position:absolute;
-				right:20px;
-				top:16px;
+				right:5px;
+				top:0;
 				transition:transform $animation-speed;
 			}
 		}
@@ -296,7 +297,7 @@
 			top:0;
 			width:100%;
 			@include media(">=desktop") {
-				position:static;
+				position:static !important;
 			}
 		}
 	}

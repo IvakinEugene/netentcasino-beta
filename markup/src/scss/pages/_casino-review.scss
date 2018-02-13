@@ -203,7 +203,16 @@
 	.stars{
 		@include media(">=desktop") {
 			width:110px;
+			font-size: 18px;
 		}
+		[class*="icon"]{
+			@include media(">=desktop") {
+				margin:0 3px;
+			}
+		}
+	}
+	div.stars{
+		width:auto !important;
 	}
 	.total{
 		padding:7px 15px 20px;

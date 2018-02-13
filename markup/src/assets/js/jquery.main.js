@@ -5,13 +5,25 @@ jQuery(function() {
 	initAddClasses();
 	initFitVids();
 	initFocusClass();
-	initStickyScrollBlock();
 	initAnchors();
 	initCustomAnchor();
 	initOpenClose();
 	initCustomFixed();
 	initSameHeight();
+	initStickyScrollBlock();
+	initPreloader();
+	// checkSize();
 });
+
+// $(document).ready(function(){
+// 	checkSize();
+// });
+
+// function checkSize(){
+// 	var block = jQuery('.header-content').outerHeight();
+
+// 	alert(block)
+// }
 
 // align blocks height
 function initSameHeight() {
