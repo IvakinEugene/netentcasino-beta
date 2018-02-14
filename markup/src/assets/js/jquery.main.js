@@ -11,19 +11,17 @@ jQuery(function() {
 	initCustomFixed();
 	initSameHeight();
 	initStickyScrollBlock();
-	initPreloader();
-	// checkSize();
+	// initPreloader();
 });
 
-// $(document).ready(function(){
-// 	checkSize();
-// });
-
-// function checkSize(){
-// 	var block = jQuery('.header-content').outerHeight();
-
-// 	alert(block)
-// }
+(function(w) {
+	w.addEventListener('load', function() {
+		var loader = document.querySelector('html');
+		if (loader) {
+			loader.classList.add('loaded');
+		}
+	});
+}(window));
 
 // align blocks height
 function initSameHeight() {
@@ -297,6 +295,12 @@ function initFitVids() {
 			}
 
 			this.makeCallback('beforeToggle');
+
+			if (jQuery('.fixed-aside').data('StickyScrollBlock').length != 0) {
+				setTimeout(function(){
+					jQuery('.fixed-aside').data('StickyScrollBlock').onResize()
+				}, this.options.animSpeed);
+			}
 		},
 
 		show: function($item) {

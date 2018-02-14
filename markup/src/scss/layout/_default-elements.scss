@@ -639,12 +639,19 @@ div.stars{
 			}
 		}
 	}
-	+ .load-more{
-		padding:10px 0 0;
-		@include media(">=tablet") {
-			padding:20px 0 0;
+	&.col-4 {
+		> li{
+			@include media(">=desktop") {
+				width:25%;
+			}
 		}
 	}
+	// + .load-more{
+	// 	padding:10px 0 0;
+	// 	@include media(">=tablet") {
+	// 		padding:20px 0 0;
+	// 	}
+	// }
 	> li{
 		padding:0 0 9px;
 		@include media(">=tablet") {
@@ -666,22 +673,14 @@ div.stars{
 	}
 }
 
-@keyframes arrow {
-	0% {
-		opacity: 1;
+.load-more{
+	@include media(">=tablet") {
+		padding:29px 0 30px;
 	}
-	100%{
-		opacity: 0;
-		transform: translate(10px, 10px)
-	}
-}
-
-@-webkit-keyframes arrow {
-	0% {
-		opacity: 1;
-	}
-	100%{
-		opacity: 0;
-		transform: translate(10px, 10px)
+	.btn{
+		@include media(">=tablet") {
+			padding-top: 9px;
+			padding-bottom: 9px;
+		}
 	}
 }
