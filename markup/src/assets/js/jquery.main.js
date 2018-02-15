@@ -1,3 +1,15 @@
+(function(w) {
+	w.addEventListener('load', function() {
+		var loader = document.querySelector('html');
+		if (loader) {
+			loader.classList.add('loaded');
+			setTimeout(function(){
+				loader.classList.add('hide-preloader');
+			}, 1000);
+		}
+	});
+}(window));
+
 jQuery(function() {
 	initAccordion();
 	initMobileNav();
@@ -11,17 +23,30 @@ jQuery(function() {
 	initCustomFixed();
 	initSameHeight();
 	initStickyScrollBlock();
-	// initPreloader();
+	initBackToTop();
 });
 
-(function(w) {
-	w.addEventListener('load', function() {
-		var loader = document.querySelector('html');
-		if (loader) {
-			loader.classList.add('loaded');
-		}
+// init back-to-top button
+function initBackToTop() {
+	var button = jQuery('a.back-to-top')
+		win = jQuery(window),
+		value = win.height(),
+		parent = jQuery('body'),
+		activeClass = 'show-btt-button';
+
+	win.on({
+		'scroll': function() {
+					if (win.scrollTop() > value) {
+						parent.addClass(activeClass)
+					} else {
+						parent.removeClass(activeClass)
+					}
+				},
+		'resize orientationchange': function() {
+					value = win.height();
+				}
 	});
-}(window));
+}
 
 // align blocks height
 function initSameHeight() {

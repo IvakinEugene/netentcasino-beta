@@ -8,11 +8,16 @@
 	background:$white;
 	height:100%;
 	left:0;
+	pointer-events:none;
 	position:fixed;
 	top:0;
+	transition:opacity $animation-speed;
 	width:100%;
 	z-index:20;
 	.loaded & {
+		opacity:0;
+	}
+	.hide-preloader & {
 		display:none;
 	}
 	> .holder{

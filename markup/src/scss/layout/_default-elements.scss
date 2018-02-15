@@ -587,13 +587,22 @@ div.stars{
 	border-radius: 100%;
 	box-shadow: 0 0 5px $shadow;
 	bottom:10px;
+	// display:none;
 	height:50px;
+	opacity:0;
+	pointer-events:none;
 	position:fixed;
 	right:10px;
+	transition:opacity $animation-speed;
 	width:50px;
 	z-index:1;
 	@include media(">=desktop") {
-		display:none;
+		display:none !important;
+	}
+	.show-btt-button & {
+		// display:block;
+		opacity:1;
+		pointer-events:auto;
 	}
 	span{
 		&,
