@@ -1,0 +1,28 @@
+.template-default-page{
+	.page-heading{
+		background:$white;
+		border-bottom: 1px solid $border-color-base;
+		padding: 23px 0 9px;
+		.logo-holder{
+			float:left;
+			margin:-1px 18px 12px -2px;
+			@include media(">=desktop") {
+				margin:-1px 46px 12px 31px;
+				width:120px;
+			}
+		}
+	}
+	h1{
+		margin:0 0 3px;
+	}
+	.offer-sticker{
+		margin:18px 0 11px;
+	}
+	.subtitle.green{
+		margin:0 0 11px;
+	}
+	.page-content{
+		background:$white;
+		padding: 16px 0 9px;
+	}
+}
