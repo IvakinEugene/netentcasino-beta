@@ -15,24 +15,25 @@ block content
 				div
 					p Last updated - 
 						strong 2 days ago!
-		section.section-gj
+		section.template-default-page
 			//- 
 			.anchor-links
 				.holder
 					ul
 						li
-							a(href="#") Jackpots
+							a(href="#anchor1") Jackpots
 						li
-							a(href="#") Games
-			.holder
-				h1 NetEnt Jackpots
-				h2 Highest progressive jackpots right now!
-				p Whether you’re aiming for those multi-million wins or are content with smaller prize pools, NetEnt’s selection of local and networked jackpot games are second-to-none. These titles are all progressive, meaning that the overall total keeps rising until one lucky player cracks it open.
-				p These creations are also unique in the sense that they’re perfect for both the casual player and high rollers alike, with a history of life-changing sums bestowed in a matter of moments. Fancy joining the club? Take your pick from the list of NetEnt jackpots to give yourself that very chance!
+							a(href="#anchor2") Games
+			.subsection.page-heading#anchor1
+				.holder
+					h1 NetEnt Jackpots
+					strong.subtitle.green Highest progressive jackpots right now!
+					p Whether you’re aiming for those multi-million wins or are content with smaller prize pools, NetEnt’s selection of local and networked jackpot games are second-to-none. These titles are all progressive, meaning that the overall total keeps rising until one lucky player cracks it open.
+					p These creations are also unique in the sense that they’re perfect for both the casual player and high rollers alike, with a history of life-changing sums bestowed in a matter of moments. Fancy joining the club? Take your pick from the list of NetEnt jackpots to give yourself that very chance!
 			.subsection
 				.holder
-					.boxes-grid
-						div
+					ul.grid
+						li
 							.game-box
 								.media-holder
 									a(href="#").bg-stretch
@@ -44,7 +45,7 @@ block content
 												| Play at Mega Fortune
 										span.sticker £2,061.762
 									strong.media-title Mega Fortune
-								ul.games-list2
+								ul.games-list
 									li
 										.game
 											.heading
@@ -83,7 +84,7 @@ block content
 												a(href="#").btn.btn-primary Play Game
 								.footer
 									a(href="#").btn.btn-link View all 314 Casinos
-						div
+						li
 							.game-box
 								.media-holder
 									a(href="#").bg-stretch
@@ -95,7 +96,7 @@ block content
 												| Play at Mega Fortune
 										span.sticker £3,654,000
 									strong.media-title Mega Fortune Dreams
-								ul.games-list2
+								ul.games-list
 									li
 										.game
 											.heading
@@ -134,7 +135,7 @@ block content
 												a(href="#").btn.btn-primary Play Game
 								.footer
 									a(href="#").btn.btn-link View all 135 Casinos
-						div
+						li
 							.game-box
 								.media-holder
 									a(href="#").bg-stretch
@@ -146,7 +147,7 @@ block content
 												| Play at Mega Fortune
 										span.sticker £832,000
 									strong.media-title Cosmic Fortune
-								ul.games-list2
+								ul.games-list
 									li
 										.game
 											.heading
@@ -185,103 +186,121 @@ block content
 												a(href="#").btn.btn-primary Play Game
 								.footer
 									a(href="#").btn.btn-link View all 314 Casinos
-					.button-holder.text-center
+					.load-more.text-center
 						a(href="#").btn.btn-secondary View all 176 Jackpots
 		include pug/includes/sections/related-posts
-		section.section-popular
-			.holder
-				h1 NetEnt Games
-				strong.title Popular NetEnt Casino Games &amp; Slots
-				p Take your pick from the latest NetEnt casino games below, with this list continually updating as new slots and titles are released. If you’re a beginner within the iGaming world and are interested in learning some of the classics, NetEnt’s Starburst, Gonzo’s Quest, Bloodsuckers and networked jackpot Mega Fortune are a few fan-favourites.
-				.games-slider
-					div
-						.game-box
-							.media-holder
-								a(href="#").bg-stretch
-									- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
-									include pug/extends/retina-single
-									span.hover-box
-										span
-											span.icon-play
-											| Play at Betsson
-									span.sticker 15 Days
-								strong.media-title Finn and the Swirly Spin
-					div
-						.game-box
-							.media-holder
-								a(href="#").bg-stretch
-									- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
-									include pug/extends/retina-single
-									//- img(src="")
-									span.hover-box
-										span
-											span.icon-play
-											| Play at Betsson
-									span.sticker 15 days
+		section.template-default-page
+			.subsection.page-heading#anchor2
+				.holder
+					h1 NetEnt Games
+					strong.subtitle.green Popular NetEnt Casino Games &amp; Slots
+					p Take your pick from the latest NetEnt casino games below, with this list continually updating as new slots and titles are released. If you’re a beginner within the iGaming world and are interested in learning some of the classics, NetEnt’s Starburst, Gonzo’s Quest, Bloodsuckers and networked jackpot Mega Fortune are a few fan-favourites.
+			.subsection
+				.holder
+					.games-slider
+						div
+							.game-box
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+										include pug/extends/retina-single
+										span.hover-box
+											span
+												span.icon-play
+												| Play at Betsson
+										span.sticker 15 Days
+									strong.media-title Finn and the Swirly Spin
+						div
+							.game-box
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+										include pug/extends/retina-single
+										//- img(src="")
+										span.hover-box
+											span
+												span.icon-play
+												| Play at Betsson
+										span.sticker 15 days
+									strong.media-title Planet of the Apes
+					//- 
+						div
+							.game-box
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+										include pug/extends/retina-single
+										//- img(src="")
+										span.hover-box
+											span
+												span.icon-play
+												| Play at Betsson
+										span.sticker 15 days
+									strong.media-title Planet of the Apes
+					ul.grid.col-4
+						li
+							.game-box.small
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+										include pug/extends/retina-single
 								strong.media-title Planet of the Apes
-				ul.games-list3
-					li
-						.game-box.small
-							.media-holder
-								a(href="#").bg-stretch
-									- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
-									include pug/extends/retina-single
-							strong.media-title Planet of the Apes
-					li
-						.game-box.small
-							.media-holder
-								a(href="#").bg-stretch
-									- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
-									include pug/extends/retina-single
-							strong.media-title Planet of the Apes
-					li
-						.game-box.small
-							.media-holder
-								a(href="#").bg-stretch
-									- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
-									include pug/extends/retina-single
-							strong.media-title The Legend of Shangri-La
-					li
-						.game-box.small
-							.media-holder
-								a(href="#").bg-stretch
-									- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
-									include pug/extends/retina-single
-							strong.media-title Wolf Club
-					li
-						.game-box.small
-							.media-holder
-								a(href="#").bg-stretch
-									- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
-									include pug/extends/retina-single
-							strong.media-title Planet of the Apes
-					li
-						.game-box.small
-							.media-holder
-								a(href="#").bg-stretch
-									- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
-									include pug/extends/retina-single
-							strong.media-title Blood Suckers 2
-					li
-						.game-box.small
-							.media-holder
-								a(href="#").bg-stretch
-									- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
-									include pug/extends/retina-single
-							strong.media-title The Legend of Shangri-La
-					li
-						.game-box.small
-							.media-holder
-								a(href="#").bg-stretch
-									- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
-									include pug/extends/retina-single
-							strong.media-title Wolf Club
-				.button-holder.text-center
-					a(href="#").btn.btn-secondary View More Games
-			.holder
-				h2 NetEnt Games have been Breaking Records for over a decade!
-				p It’s pretty incredible to think that NetEnt’s longest running pooled jackpot in Arabian Nights was released way back in 2005. Multiple gamers have become millionaires in one simple spin since, and the Swedish slot developer has been smashing records left, right and centre in the process.
-				p They’ve been inducted into the Guinness World Records for highest payout ever and highest payout on mobile in previous years, while it’s roundly observed that comfortably more than €500m has been dished out in prizes since their beginning. How long until it reaches €1bn we wonder…
-				p
-					a(href="#") Read More
+						li
+							.game-box.small
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+										include pug/extends/retina-single
+								strong.media-title Planet of the Apes
+						li
+							.game-box.small
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+										include pug/extends/retina-single
+								strong.media-title The Legend of Shangri-La
+						li
+							.game-box.small
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+										include pug/extends/retina-single
+								strong.media-title Wolf Club
+						li
+							.game-box.small
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+										include pug/extends/retina-single
+								strong.media-title Planet of the Apes
+						li
+							.game-box.small
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+										include pug/extends/retina-single
+								strong.media-title Blood Suckers 2
+						li
+							.game-box.small
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+										include pug/extends/retina-single
+								strong.media-title The Legend of Shangri-La
+						li
+							.game-box.small
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+										include pug/extends/retina-single
+								strong.media-title Wolf Club
+					.load-more.text-center
+						a(href="#").btn.btn-secondary View More Games
+			.subsection.page-content
+				.holder
+					h2 NetEnt Games have been Breaking Records for over a decade!
+					p It’s pretty incredible to think that NetEnt’s longest running pooled jackpot in Arabian Nights was released way back in 2005. Multiple gamers have become millionaires in one simple spin since, and the Swedish slot developer has been smashing records left, right and centre in the process.
+					p They’ve been inducted into the Guinness World Records for highest payout ever and highest payout on mobile in previous years, while it’s roundly observed that comfortably more than €500m has been dished out in prizes since their beginning. How long until it reaches €1bn we wonder…
+					p
+						a(href="#") Read More
 	include pug/includes/footer

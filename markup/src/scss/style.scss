@@ -34,28 +34,26 @@ $media-expressions: (
 @import 'base/buttons';
 
 @import 'base/_icons.scss';
-@import 'vendors/_slick-custom.scss';
+@import 'layout/_preloader.scss';
 @import 'layout/_default-elements.scss';
+@import 'layout/_casino-boxes.scss';
+@import 'vendors/_slick-custom.scss';
 
-@import 'layout/header';
-@import 'layout/common';
-@import 'layout/footer';
-
-
-
+@import 'layout/_header.scss';
+@import 'layout/_common.scss';
+@import 'layout/_footer.scss';
 
 @import 'pages/_default-page.scss';
-@import 'pages/_article.scss';
+@import 'pages/_default-content-page.scss';
 @import 'pages/_casino-review.scss';
-@import 'pages/news';
-@import 'pages/_g-and-j.scss';
-@import 'pages/_mega-fortune.scss';
-@import 'pages/_netent-bonuses.scss';
-@import 'pages/_payments.scss';
+
+// @import 'pages/news';
+// @import 'pages/_g-and-j.scss';
+// @import 'pages/_mega-fortune.scss';
+// @import 'pages/_netent-bonuses.scss';
+// @import 'pages/_payments.scss';
 
 
-@import 'layout/_popups.scss';
-@import 'layout/_casino-boxes.scss';
-@import 'layout/post';
-@import 'layout/_preloader.scss';
+// @import 'layout/_popups.scss';
+// @import 'layout/post';
 @import 'layout/_animations.scss';

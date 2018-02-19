@@ -93,10 +93,10 @@ a {
 		color:$theme-color-base;
 		font-size: 16px;
 		font-weight:normal;
-		margin:-6px 0 7px;
+		margin:0 0 9px;
 		@include media(">=tablet") {
 			font-size: 20px;
-			margin:-6px 0 9px;
+			margin:0 0 9px;
 		}
 		br{
 			@include media(">=tablet") {

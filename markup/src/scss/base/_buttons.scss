@@ -72,12 +72,16 @@
 }
 
 .fake-select{
+	display:block;
 	font-size: 18px;
 	font-weight:500;
 	min-width: 0;
 	padding:11px 45px 10px 19px;
 	position:relative;
 	text-align:left;
+	@include media(">=desktop") {
+		display:none;
+	}
 	&:hover {
 		&:before {
 			background:$white;
