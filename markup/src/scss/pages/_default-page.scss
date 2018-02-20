@@ -11,6 +11,9 @@
 				width:120px;
 			}
 		}
+		.fake-select{
+			margin:31px 0 11px;
+		}
 	}
 	h1{
 		margin:0 0 5px;
@@ -18,11 +21,34 @@
 	.offer-sticker{
 		margin:18px 0 11px;
 	}
-	// .subtitle.green{
-	// 	margin:0 0 11px;
-	// }
 	.page-content{
 		background:$white;
 		padding: 16px 0 9px;
+	}
+}
+
+.filtered-list{
+	.section-related-posts{
+		width:100%;
+		// &:first-child {
+		// 	border-width: 0;
+		// }
+		&:nth-child(2n-1) {
+			background:transparent;
+			box-shadow: none;
+		}
+		.section-heading{
+			display:none;
+			@include media(">=desktop") {
+				display:block;
+			}
+		}
+		h2{
+			@include media(">=desktop") {
+				font-size: 26px;
+				margin:0 0 2px;
+				text-transform:uppercase;
+			}
+		}
 	}
 }

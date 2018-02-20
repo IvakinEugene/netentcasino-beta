@@ -10,7 +10,8 @@
 	});
 }(window));
 
-jQuery(function() {
+jQuery(window).on('load', function(){
+	initIsotope();
 	initAccordion();
 	initMobileNav();
 	initRetinaCover();
@@ -24,7 +25,97 @@ jQuery(function() {
 	initSameHeight();
 	initStickyScrollBlock();
 	initBackToTop();
+	initMP();
+	initSlick();
 });
+
+// init slickCarousel
+function initSlick() {
+	$('.slick-slider').slick({});
+	$('.games-slider').slick({
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		arrows: false,
+		dots: true,
+		infinite: false,
+		adaptiveHeight: true,
+		responsive: [
+			{
+		    	breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+	$('.images-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		// infinite: false,
+		adaptiveHeight: true,
+		fade: true
+	});
+	ResponsiveHelper.addRange({
+		'..767': {
+			on: function() {
+				$('.casinos-tiles-slider').slick({
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					infinite: false,
+					dots: true,
+					arrows: false
+				});
+			},
+			off: function() {
+				$('.casinos-tiles-slider').slick('unslick');
+			}
+		}
+	});
+}
+
+// init Magnific Popup
+function initMP() {
+	$('.lightbox-opener').magnificPopup({
+		closeMarkup: "<button title=\"%title%\" type=\"button\" class=\"mfp-close icon-close\"></button>",
+		callbacks: {
+			open: function() {
+				initIsotope();
+				jQuery('html').addClass('mp-opened')
+			},
+			close: function() {
+				jQuery('html').removeClass('mp-opened')
+			}
+		}
+	});
+}
+
+// init Isotope
+function initIsotope(){
+	var $grid = $('.filtered-list').isotope({
+		itemSelector: '.filtered-item',
+		layoutMode: 'fitRows'
+	});
+	$('.filter-list').on('click', 'a', function(e){
+		e.preventDefault();
+		var filterValue = $(this).attr('data-filter');
+		$grid.isotope({
+			filter: filterValue
+		});
+		if ($(this).closest('.mfp-wrap')){
+			$.magnificPopup.close();
+			jQuery('.fake-select .txt').html($(this).text());
+		}
+
+	});
+	$('.filter-list').each( function( i, buttonGroup ) {
+		var $buttonGroup = $( buttonGroup );
+		$buttonGroup.on( 'click', 'a', function() {
+			$buttonGroup.parent().find('.is-checked').removeClass('is-checked');
+			$( this ).parent().addClass('is-checked');
+		});
+	});
+};
 
 // init back-to-top button
 function initBackToTop() {
@@ -52,6 +143,12 @@ function initBackToTop() {
 function initSameHeight() {
 	jQuery('.sh-holder').sameHeight({
 		elements: '.sh-column',
+		useMinHeight: true,
+		flexible: true,
+		multiLine: true
+	});
+	jQuery('.filtered-list').sameHeight({
+		elements: '.filtered-item:not([class*="section"])',
 		useMinHeight: true,
 		flexible: true,
 		multiLine: true
@@ -155,6 +252,7 @@ function initStickyScrollBlock() {
 	jQuery('.anchor-links').stickyScrollBlock({
 		setBoxHeight: true,
 		activeClass: 'fixed-position',
+		container: ".template-default-page",
 		positionType: 'fixed',
 		extraTop: function() {
 			var totalHeight = 0;
@@ -1809,8 +1907,113 @@ PlatformDetect.addModule({
 	}
 }); 
 
- 
+/*
+ * Responsive Layout helper
+ */
+window.ResponsiveHelper = (function($){
+	// init variables
+	var handlers = [],
+		prevWinWidth,
+		win = $(window),
+		nativeMatchMedia = false;
 
+	// detect match media support
+	if(window.matchMedia) {
+		if(window.Window && window.matchMedia === Window.prototype.matchMedia) {
+			nativeMatchMedia = true;
+		} else if(window.matchMedia.toString().indexOf('native') > -1) {
+			nativeMatchMedia = true;
+		}
+	}
+
+	// prepare resize handler
+	function resizeHandler() {
+		var winWidth = win.width();
+		if(winWidth !== prevWinWidth) {
+			prevWinWidth = winWidth;
+
+			// loop through range groups
+			$.each(handlers, function(index, rangeObject){
+				// disable current active area if needed
+				$.each(rangeObject.data, function(property, item) {
+					if(item.currentActive && !matchRange(item.range[0], item.range[1])) {
+						item.currentActive = false;
+						if(typeof item.disableCallback === 'function') {
+							item.disableCallback();
+						}
+					}
+				});
+
+				// enable areas that match current width
+				$.each(rangeObject.data, function(property, item) {
+					if(!item.currentActive && matchRange(item.range[0], item.range[1])) {
+						// make callback
+						item.currentActive = true;
+						if(typeof item.enableCallback === 'function') {
+							item.enableCallback();
+						}
+					}
+				});
+			});
+		}
+	}
+	win.bind('load resize orientationchange', resizeHandler);
+
+	// test range
+	function matchRange(r1, r2) {
+		var mediaQueryString = '';
+		if(r1 > 0) {
+			mediaQueryString += '(min-width: ' + r1 + 'px)';
+		}
+		if(r2 < Infinity) {
+			mediaQueryString += (mediaQueryString ? ' and ' : '') + '(max-width: ' + r2 + 'px)';
+		}
+		return matchQuery(mediaQueryString, r1, r2);
+	}
+
+	// media query function
+	function matchQuery(query, r1, r2) {
+		if(window.matchMedia && nativeMatchMedia) {
+			return matchMedia(query).matches;
+		} else if(window.styleMedia) {
+			return styleMedia.matchMedium(query);
+		} else if(window.media) {
+			return media.matchMedium(query);
+		} else {
+			return prevWinWidth >= r1 && prevWinWidth <= r2;
+		}
+	}
+
+	// range parser
+	function parseRange(rangeStr) {
+		var rangeData = rangeStr.split('..');
+		var x1 = parseInt(rangeData[0], 10) || -Infinity;
+		var x2 = parseInt(rangeData[1], 10) || Infinity;
+		return [x1, x2].sort(function(a, b){
+			return a - b;
+		});
+	}
+
+	// export public functions
+	return {
+		addRange: function(ranges) {
+			// parse data and add items to collection
+			var result = {data:{}};
+			$.each(ranges, function(property, data){
+				result.data[property] = {
+					range: parseRange(property),
+					enableCallback: data.on,
+					disableCallback: data.off
+				};
+			});
+			handlers.push(result);
+
+			// call resizeHandler to recalculate all events
+			prevWinWidth = null;
+			resizeHandler();
+		}
+	};
+}(jQuery));
  
 // All Mobile detect rules
 PlatformDetect.addRule({ type: 'allmobile', css: 'allmobile.css' });

@@ -580,10 +580,14 @@ section{
 // }
 
 .section-top-casinos{
-	padding: 20px 0 25px;
+	padding:27px 0 0;
 	@include media(">=tablet") {
 		border-top: 1px solid $border-color-base;
-		padding: 32px 0 31px;
+		padding: 32px 0 0;
+	}
+	h1{
+		line-height:1;
+		// margin:0 0 8px !important;
 	}
 	.casino-top-box{
 		background:$white;
@@ -618,7 +622,7 @@ section{
 			border: 0 solid $border-color-base;
 			border-width: 0 1px 0 0;
 			min-width: 91px;
-			padding:11px 0 14px;
+			padding:11px 0 4px;
 			@include media(">=tablet") {
 				display: flex;
 			    flex-direction: row;

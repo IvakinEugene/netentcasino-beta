@@ -37,7 +37,7 @@ h2, .h2 {
 	font-weight:normal;
 	letter-spacing: -0.025em;
 	line-height:1.2727;
-	margin:20px 0 13px;
+	margin:-6px 0 13px;
 	@include media(">=tablet") {
 		font-size:20px;
 		line-height:1.55;
@@ -86,9 +86,9 @@ a {
 	font-size: 16px;
 	font-weight:normal;
 	line-height:1.25;
-	@include media(">=tablet") {
-		font-size: 14px;
-	}
+	// @include media(">=tablet") {
+	// 	font-size: 14px;
+	// }
 	&.green {
 		color:$theme-color-base;
 		font-size: 16px;

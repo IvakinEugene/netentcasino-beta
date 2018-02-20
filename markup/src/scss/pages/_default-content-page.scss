@@ -95,6 +95,7 @@
 	> .holder{
 		padding-top: 47px;
 		@include media(">=desktop") {
+			max-width: 1440px;
 			overflow:hidden;
 			padding-top: 0;
 		}
@@ -307,10 +308,15 @@
 		}
 	}
 	.content-casino-boxes{
-		padding:16px 0 19px;
-		li{
-			+ li{
-				padding:9px 0 0;
+		padding:16px 0 38px;
+		@include media(">=desktop") {
+			padding:30px 0 9px;
+		}
+		+ .content-casino-boxes{
+			margin-top: -29px;
+			padding-top: 0 !important;
+			@include media(">=desktop") {
+				margin-top: 0;
 			}
 		}
 		.box{
@@ -330,9 +336,15 @@
 				font-size: 20px;
 			}
 			.heading{
+				display: flex;
+			    flex-direction: column;
+			    flex-wrap: nowrap;
+			    justify-content: center;
+			    align-content: stretch;
+			    align-items: stretch;
 				border-right: 1px solid $border-color-base;
 				min-width: 92px;
-				padding:10px;
+				padding:10px 8px 6px;
 				@include media(">=tablet") {
 					display: flex;
 				    flex-direction: row;
@@ -460,15 +472,11 @@
 
 .section-related-posts{
 	background:$white;
-	border: 0 solid $border-color-base;
-	border-width: 1px 0 0;
-	padding: 20px 0 30px;
-	&:first-child {
-		border-width: 0;
-	}
-	// &:nth-child(2n-1) {
-	// 	background:transparent;
-	// }
+	box-shadow:0 -1px 0 $border-color-base inset, 0 -1px 0 $border-color-base;
+	// border: 0 solid $border-color-base;
+	// border-width: 0 0 1px;
+	padding: 25px 0 9px;
+	position:relative;
 }
 
 .post-preview{
@@ -476,7 +484,7 @@
 	border: 1px solid $border-color-base;
 	box-shadow: 0 2px 4px $shadow;
 	line-height:1.3571;
-	padding:0 18px 20px;
+	padding:0 18px 62px;
 	position:relative;
 	@include media(">=tablet") {
 		line-height:$line-height-base;
@@ -540,7 +548,7 @@
 	}
 	.post-image{
 		border-radius: 0;
-		margin:0 -19px 15px;
+		margin:0 -19px 14px;
 		@include media(">=tablet") {
 			margin:0 -22px 21px;
 		}
@@ -549,7 +557,7 @@
 	h3{
 		font-size:16px;
 		line-height:1.125;
-		margin:0 0 5px;
+		margin:0 0 4px;
 		text-transform:uppercase;
 		@include media(">=tablet") {
 			// margin:0 0 5px;
@@ -560,10 +568,10 @@
 		margin:0 0 7px;
 	}
 	.button-holder{
-		bottom:20px;
-		left:21px;
+		bottom:21px;
+		left:18px;
 		position:absolute;
-		right:21px;
+		right:18px;
 	}
 	.btn{
 		@include media(">=tablet") {
@@ -571,4 +579,9 @@
 			width:100%;
 		}
 	}
+}
+
+img.stars{
+	display:block;
+	margin:0 auto;
 }
