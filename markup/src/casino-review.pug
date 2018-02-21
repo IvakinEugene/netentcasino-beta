@@ -4,6 +4,7 @@ block content
 	- var page_class = "hide-nav hide-offer"
 	include pug/includes/header
 	#main
+		//- 
 		section.section-breadcrumbs
 			.holder
 				div
@@ -38,8 +39,7 @@ block content
 									span.rate
 										strong 5
 										span /5
-									img(src="assets/images/stars.png", alt="Image description", width="55", height="10").stars
-									div.stars
+									.stars
 										span.icon-star
 										span.icon-star
 										span.icon-star
@@ -97,8 +97,8 @@ block content
 								a(href="#").btn.btn-primary Go to Betsson
 			- var image = "banner-concept-4"
 			include pug/extends/retina-images
+		//- 
 		section.section-casino
-			//- 
 			.anchor-links
 				.holder
 					ul

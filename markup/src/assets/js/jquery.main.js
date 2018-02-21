@@ -18,21 +18,21 @@ jQuery(window).on('load', function(){
 	initAddClasses();
 	initFitVids();
 	initFocusClass();
-	initAnchors();
 	initCustomAnchor();
 	initOpenClose();
 	initCustomFixed();
 	initSameHeight();
-	initStickyScrollBlock();
-	initBackToTop();
 	initMP();
 	initSlick();
+	initBackToTop();
+	initStickyScrollBlock();
+	initAnchors();
 });
 
 // init slickCarousel
 function initSlick() {
-	$('.slick-slider').slick({});
-	$('.games-slider').slick({
+	// $('.slick-slider').slick({});
+	$('.games-slider:not([class*="col"])').slick({
 		slidesToShow: 2,
 		slidesToScroll: 2,
 		arrows: false,
@@ -41,7 +41,31 @@ function initSlick() {
 		adaptiveHeight: true,
 		responsive: [
 			{
-		    	breakpoint: 1024,
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+	$('.games-slider.col-3').slick({
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		arrows: false,
+		dots: true,
+		infinite: false,
+		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1
@@ -252,7 +276,7 @@ function initStickyScrollBlock() {
 	jQuery('.anchor-links').stickyScrollBlock({
 		setBoxHeight: true,
 		activeClass: 'fixed-position',
-		container: ".template-default-page",
+		container: '.' + jQuery('.anchor-links').closest('section').attr('class'),
 		positionType: 'fixed',
 		extraTop: function() {
 			var totalHeight = 0;
@@ -262,6 +286,7 @@ function initStickyScrollBlock() {
 			return totalHeight;
 		}
 	});
+	// console.log(jQuery('.anchor-links').closest('section').attr('class'))
 }
 
 // add class when element is in focus

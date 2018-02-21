@@ -16,6 +16,10 @@
 	}
 }
 
+.resize-active *{
+	transition:none !important;
+}
+
 .logo-holder{
 	border: 1px solid $border-color-base;
 	border-radius: 100%;
@@ -197,13 +201,18 @@
 .section-heading{
 	padding:0 0 17px;
 	@include media(">=desktop") {
-		padding:0 0 28px;
+		padding:0 0 14px;
 	}
 	h1,
 	h2{
-		margin:0 0 8px;
+		margin:0 0 8px !important;
 		@include media(">=desktop") {
-			margin:0 0 2px;
+			margin:0 0 2px !important;
+		}
+	}
+	.subtitle{
+		@include media(">=desktop") {
+			margin:0 0 14px;
 		}
 	}
 }
@@ -212,17 +221,18 @@
 	background:$white;
 	border-bottom: 1px solid $border-color-base;
 	color:$base-gray;
+	display:none;
 	font-size:18px;
 	letter-spacing: -0.025em;
 	line-height:1.1111;
 	// margin:0 0 -1px;
 	position:relative;
-	z-index:5;
-	&.hide-on-mobile {
-		@include media("<desktop") {
-			display:none;
+	z-index:7;
+	// &.hide-on-mobile {
+		@include media(">=desktop") {
+			display:block;
 		}
-	}
+	// }
 	.holder{
 		overflow:auto;
 		padding:0 23px;
@@ -277,19 +287,19 @@
 	}
 }
 
-// .languages-list{
-// 	font-size:0;
-// 	line-height:1;
-// 	@extend %listreset;
-// 	li{
-// 		display:inline-block;
-// 		vertical-align:top;
-// 		margin:0 10px 10px 0;
-// 	}
-// 	img{
-// 		max-width: none;
-// 	}
-// }
+.languages-list{
+	font-size:0;
+	line-height:1;
+	@extend %listreset;
+	li{
+		display:inline-block;
+		vertical-align:top;
+		margin:0 10px 10px 0;
+	}
+	img{
+		max-width: none;
+	}
+}
 
 .casino-description{
 	margin:0 0 -9px;
@@ -604,54 +614,54 @@
 // // 	}
 // // }
 
-// .back-to-top{
-// 	background:$white;
-// 	border-radius: 100%;
-// 	box-shadow: 0 0 5px $shadow;
-// 	bottom:10px;
-// 	// display:none;
-// 	height:50px;
-// 	opacity:0;
-// 	pointer-events:none;
-// 	position:fixed;
-// 	right:10px;
-// 	transition:opacity $animation-speed;
-// 	width:50px;
-// 	z-index:1;
-// 	@include media(">=desktop") {
-// 		display:none !important;
-// 	}
-// 	.show-btt-button & {
-// 		// display:block;
-// 		opacity:1;
-// 		pointer-events:auto;
-// 	}
-// 	span{
-// 		&,
-// 		&:before {
-// 			border: 0 solid $theme-color-base;
-// 			border-width: 1px 0 0 1px;
-// 			// bottom:10px;
-// 			display:block;
-// 			height:16px;
-// 			left:50%;
-// 			margin:-5px 0 0 -8px;
-// 			position:absolute;
-// 			top:50%;
-// 			transform:rotate(45deg);
-// 			width:16px;
-// 		}
-// 		&:before {
-// 			animation:2s arrow infinite;
-// 			border-width: 1px 0 0 1px;
-// 			content: '';
-// 			height:10px;
-// 			margin:-5px 0 0 -5px;
-// 			transform:none;
-// 			width:10px;
-// 		}
-// 	}
-// }
+.back-to-top{
+	background:$white;
+	border-radius: 100%;
+	box-shadow: 0 0 5px $shadow;
+	bottom:10px;
+	// display:none;
+	height:50px;
+	opacity:0;
+	pointer-events:none;
+	position:fixed;
+	right:10px;
+	transition:opacity $animation-speed;
+	width:50px;
+	z-index:1;
+	@include media(">=desktop") {
+		display:none !important;
+	}
+	.show-btt-button & {
+		// display:block;
+		opacity:1;
+		pointer-events:auto;
+	}
+	span{
+		&,
+		&:before {
+			border: 0 solid $theme-color-base;
+			border-width: 1px 0 0 1px;
+			// bottom:10px;
+			display:block;
+			height:16px;
+			left:50%;
+			margin:-5px 0 0 -8px;
+			position:absolute;
+			top:50%;
+			transform:rotate(45deg);
+			width:16px;
+		}
+		&:before {
+			animation:2s arrow infinite;
+			border-width: 1px 0 0 1px;
+			content: '';
+			height:10px;
+			margin:-5px 0 0 -5px;
+			transform:none;
+			width:10px;
+		}
+	}
+}
 
 .grid{
 	margin:0 0 -9px;
@@ -674,6 +684,9 @@
 		}
 	}
 	&.col-2 {
+		.load-more + & {
+			padding-top: 24px;
+		}
 		> li{
 			@include media(">=desktop") {
 				width:50%;
@@ -739,7 +752,7 @@ ol.grid{
 }
 
 .load-more{
-	padding:29px 0 30px;
+	padding:29px 0 5px;
 	// @include media(">=tablet") {
 	// 	padding:29px 0 30px;
 	// }
@@ -786,4 +799,22 @@ ol.grid{
 			color:$theme-color-base-lighten;
 		}
 	}
+}
+
+.games-boxes-list{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    margin:-10px -2px;
+	> li{
+		padding:10px 2px;
+		width:50%;
+	}
+}
+
+.search-box{
+	background:$white;
 }

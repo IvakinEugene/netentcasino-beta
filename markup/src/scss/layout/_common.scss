@@ -13,16 +13,16 @@ html.mp-opened{
 #wrapper{
 	background:#f5f7f6;
 	overflow:hidden;
-	// max-width: 320px;
-	// @include media(">=375px") {
-	// 	max-width: 375px;
-	// }
-	// @include media(">=tablet") {
-	// 	max-width: 992px;
-	// }
-	// @include media(">=widescreen") {
-	// 	max-width:1440px;
-	// }
+	max-width: 320px;
+	@include media(">=375px") {
+		max-width: 375px;
+	}
+	@include media(">=tablet") {
+		max-width: 992px;
+	}
+	@include media(">=widescreen") {
+		max-width:1440px;
+	}
 }
 
 #main{
@@ -138,7 +138,8 @@ section{
 
 .section-promo{
 	background:$white;
-	border-top:1px solid $border-color-base;
+	// border-top:1px solid $border-color-base;
+	box-shadow:0 -1px 0 $border-color-base inset, 0 -1px 0 $border-color-base;
 	line-height:1.2143;
 	text-align:center;
 	@include media(">=tablet") {
@@ -580,10 +581,10 @@ section{
 // }
 
 .section-top-casinos{
-	padding:27px 0 0;
+	padding:27px 0 21px;
 	@include media(">=tablet") {
 		border-top: 1px solid $border-color-base;
-		padding: 32px 0 0;
+		padding: 32px 0 27px;
 	}
 	h1{
 		line-height:1;
@@ -622,7 +623,7 @@ section{
 			border: 0 solid $border-color-base;
 			border-width: 0 1px 0 0;
 			min-width: 91px;
-			padding:11px 0 4px;
+			padding:11px 0;
 			@include media(">=tablet") {
 				display: flex;
 			    flex-direction: row;

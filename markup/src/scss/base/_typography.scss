@@ -37,7 +37,7 @@ h2, .h2 {
 	font-weight:normal;
 	letter-spacing: -0.025em;
 	line-height:1.2727;
-	margin:-6px 0 13px;
+	margin:20px 0 13px;
 	@include media(">=tablet") {
 		font-size:20px;
 		line-height:1.55;

@@ -1,27 +1,30 @@
 .section-casino{
+	// position:relative;
 	.subsection{
 		background:$white;
-		border-top: 1px solid $border-color-base;
+		// border: 1px solid $border-color-base;
 		padding:0 0 20px;
 		// &#section1 {
 		// 	border-top-width: 0;
 		// }
-		// &#section2 {
+		&#section2,
+		&#section5 {
+			box-shadow:0 -1px 0 $border-color-base inset, 0 -1px 0 $border-color-base;
 		// 	.twocolumns{
 		// 		margin-bottom: -20px;
 		// 	}
-		// }
-		// &#section3,
-		// &#section6 {
-		// 	background:none;
-		// }
-		// &#section3 {
-		// 	.section-heading{
-		// 		@include media(">=tablet") {
-		// 			min-height: 63px;
-		// 		}
-		// 	}
-		// }
+		}
+		&#section3,
+		&#section6 {
+			background:none;
+		}
+		&#section3 {
+			.section-heading{
+				@include media(">=tablet") {
+					min-height: 78px;
+				}
+			}
+		}
 		// &#section4 {
 		// 	@include media(">=tablet") {
 		// 		padding:0;

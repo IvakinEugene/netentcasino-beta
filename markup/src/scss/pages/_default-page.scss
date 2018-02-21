@@ -23,7 +23,17 @@
 	}
 	.page-content{
 		background:$white;
+		box-shadow:0 -1px 0 $border-color-base inset, 0 -1px 0 $border-color-base;
 		padding: 16px 0 9px;
+		@include media(">=desktop") {
+			padding:34px 0 13px;
+		}
+	}
+	.boxes-holder{
+		padding:19px 0 21px;
+		@include media(">=desktop") {
+			padding:30px 0 21px;
+		}
 	}
 }
 
