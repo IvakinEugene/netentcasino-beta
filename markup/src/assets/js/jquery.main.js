@@ -1862,77 +1862,6 @@ jQuery.fn.clickClass = function(opt) {
 }(jQuery));
 
 /*
- * Browser platform detection
- */
-PlatformDetect = (function(){
-	var detectModules = {};
-
-	return {
-		options: {
-			cssPath: window.pathInfo ? pathInfo.base + pathInfo.css : 'css/'
-		},
-		addModule: function(obj) {
-			detectModules[obj.type] = obj;
-		},
-		addRule: function(rule) {
-			if(this.matchRule(rule)) {
-				this.applyRule(rule);
-				return true;
-			}
-		},
-		matchRule: function(rule) {
-			return detectModules[rule.type].matchRule(rule);
-		},
-		applyRule: function(rule) {
-			var head = document.getElementsByTagName('head')[0], fragment, cssText;
-			if(rule.css) {
-				cssText = '<link rel="stylesheet" href="' + this.options.cssPath + rule.css + '" />';
-				if(head) {
-					fragment = document.createElement('div');
-					fragment.innerHTML = cssText;
-					head.appendChild(fragment.childNodes[0]);
-				} else {
-					document.write(cssText);
-				}
-			}
-
-			if(rule.meta) {
-				if(head) {
-					fragment = document.createElement('div');
-					fragment.innerHTML = rule.meta;
-					head.appendChild(fragment.childNodes[0]);
-				} else {
-					document.write(rule.meta);
-				}
-			}
-		},
-		matchVersions: function(host, target) {
-			target = target.toString();
-			host = host.toString();
-
-			var majorVersionMatch = parseInt(target, 10) === parseInt(host, 10);
-			var minorVersionMatch = (host.length > target.length ? host.indexOf(target) : target.indexOf(host)) === 0;
-
-			return majorVersionMatch && minorVersionMatch;
-		}
-	};
-}()); 
-
- // All Mobile detection
-PlatformDetect.addModule({
-	type: 'allmobile',
-	uaMatch: function(str) {
-		if (!this.ua) {
-			this.ua = navigator.userAgent.toLowerCase();
-		}
-		return this.ua.indexOf(str.toLowerCase()) != -1;
-	},
-	matchRule: function(rule) {
-		return this.uaMatch('mobi') || this.uaMatch('midp') || this.uaMatch('ppc') || this.uaMatch('webos') || this.uaMatch('android') || this.uaMatch('phone os') || this.uaMatch('touch');
-	}
-}); 
-
-/*
  * Responsive Layout helper
  */
 window.ResponsiveHelper = (function($){
@@ -2039,10 +1968,53 @@ window.ResponsiveHelper = (function($){
 		}
 	};
 }(jQuery));
- 
-// All Mobile detect rules
-PlatformDetect.addRule({ type: 'allmobile', css: 'allmobile.css' });
 
+/*
+ * Window Height CSS rules
+ */
+;(function() {
+	var styleSheet;
+
+	var getWindowHeight = function() {
+		return window.innerHeight || document.documentElement.clientHeight;
+	};
+
+	var createStyleTag = function() {
+		// create style tag
+		var styleTag = jQuery('<style>').appendTo('head');
+		styleSheet = styleTag.prop('sheet') || styleTag.prop('styleSheet');
+
+		// crossbrowser style handling
+		var addCSSRule = function(selector, rules, index) {
+			if(styleSheet.insertRule) {
+				styleSheet.insertRule(selector + '{' + rules + '}', index);
+			} else {
+				styleSheet.addRule(selector, rules, index);
+			}
+		};
+
+		// create style rules
+		addCSSRule('.win-min-height', 'min-height:0');
+		addCSSRule('.win-height', 'height:auto');
+		addCSSRule('.win-max-height', 'max-height:100%');
+		resizeHandler();
+	};
+
+	var resizeHandler = function() {
+		// handle changes in style rules
+		var currentWindowHeight = getWindowHeight(),
+			styleRules = styleSheet.cssRules || styleSheet.rules;
+
+		jQuery.each(styleRules, function(index, currentRule) {
+			var currentProperty = currentRule.selectorText.toLowerCase().replace('.win-', '').replace('-h','H');
+			currentRule.style[currentProperty] = currentWindowHeight + 'px';
+		});
+	};
+
+	createStyleTag();
+	jQuery(window).on('resize orientationchange', resizeHandler);
+}());
+ 
 /*!
 * FitVids 1.0.3
 *

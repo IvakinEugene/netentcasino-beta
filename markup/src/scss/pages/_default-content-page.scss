@@ -552,8 +552,31 @@
 	.post-image{
 		border-radius: 0;
 		margin:0 -19px 14px;
+		position:relative;
 		@include media(">=tablet") {
 			margin:0 -22px 21px;
+		}
+		&:hover {
+			.icon-play{
+				opacity:0.7;
+			}
+		}
+		&.post-video {
+			.icon-play{
+				display:block;
+			}
+		}
+		.icon-play{
+			background:$white;
+			border-radius: 100%;
+			display:none;
+			height:55px;
+			left:50%;
+			position:absolute;
+			top:50%;
+			transform:translate(-50%, -50%);
+			width:55px;
+			z-index:5;
 		}
 	}
 	h2,

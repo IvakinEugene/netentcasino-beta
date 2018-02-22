@@ -1,7 +1,8 @@
 extends pug/extends/master
 
 block content
-	- var page_class = "hide-nav hide-offer hide-bonus"
+	//- 
+	- var page_class = "hide-bonus"
 	include pug/includes/header
 	#main
 		//- 
@@ -26,6 +27,8 @@ block content
 					h1 Heading 1
 					strong.subtitle.green Heading 2
 					p You may have seen or heard something about Bitcoin Casinos before, probably even right here on our site. There are many advantages to having a Bitcoin Casino over a regular one, as many casino players can surely appreciate, there is a simply an unrivalled sense of anonymity and (if you know what you are doing) security.
+					p
+						a(href="#default-popup").lightbox-opener t&amp;c apply
 					strong.offer-sticker
 						strong 624 Bonuses Available
 						|  - Last updated 2 days ago
@@ -34,4 +37,5 @@ block content
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, exercitationem nulla debitis repudiandae suscipit id qui alias ipsum voluptatem unde.
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, exercitationem nulla debitis repudiandae suscipit id qui alias ipsum voluptatem unde.
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, exercitationem nulla debitis repudiandae suscipit id qui alias ipsum voluptatem unde.
+	include pug/includes/popups/_main
 	include pug/includes/footer
