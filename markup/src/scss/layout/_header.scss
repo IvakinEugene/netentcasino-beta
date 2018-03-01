@@ -166,6 +166,9 @@
 	font-size:12px;
 	letter-spacing: -0.025em;
 	line-height:1.25;//15
+	@include media(">=desktop") {
+		height:59px;
+	}
 	.hide-offer & {
 		display:none;
 	}

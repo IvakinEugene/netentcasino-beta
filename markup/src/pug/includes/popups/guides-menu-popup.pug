@@ -1,9 +1,10 @@
-.default-popup.win-height#guides-popup
+.default-popup.win-height#guides-menu-popup
+	.popup-top
+		a(href="#").btn.btn-search
+			span.icon-search
+			| Search Guides
 	.popup-content
 		.popup-frame
-			form(action="#").search-bar
-				button(type="submit").icon-search
-				input(type="text", placeholder="Search Guides")
 			ul.guides-list.filter-list
 				li
 					a(href="#", data-filter="*")

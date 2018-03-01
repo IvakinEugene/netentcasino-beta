@@ -27,7 +27,28 @@ jQuery(window).on('load', function(){
 	initBackToTop();
 	initStickyScrollBlock();
 	initAnchors();
+	initMagicOpener();
 });
+
+// init button for open mobile nav and set focus to search input
+function initMagicOpener() {
+	var button = jQuery('[class*="popup"] .btn-search'),
+		defaultNavOpener = jQuery('.mobile-nav .nav-opener');
+
+	button.on('click', function(e){
+		e.preventDefault();
+
+		$.magnificPopup.close();
+
+		setTimeout(function(){
+			defaultNavOpener.click();
+			setTimeout(function(){
+				jQuery('#m-autocomplete').focus();
+			}, 400);
+		}, 100);
+
+	});
+}
 
 // init slickCarousel
 function initSlick() {
@@ -104,11 +125,23 @@ function initMP() {
 		closeMarkup: "<button title=\"%title%\" type=\"button\" class=\"mfp-close icon-close\"></button>",
 		callbacks: {
 			open: function() {
-				initIsotope();
+				setTimeout(function(){
+					initIsotope();
+				}, 200);
 				jQuery('html').addClass('mp-opened')
 			},
 			close: function() {
+				initIsotope();
 				jQuery('html').removeClass('mp-opened')
+			},
+			change: function() {
+				setTimeout(function(){
+					initIsotope();
+				}, 200);
+				this.content.find('.btn-close').on('click',function(e){
+					e.preventDefault();
+					$.magnificPopup.close();
+				});
 			}
 		}
 	});
@@ -118,27 +151,54 @@ function initMP() {
 function initIsotope(){
 	var $grid = $('.filtered-list').isotope({
 		itemSelector: '.filtered-item',
-		layoutMode: 'fitRows'
+		layoutMode: 'fitRows',
+		transitionDuration: 0
 	});
+
 	$('.filter-list').on('click', 'a', function(e){
 		e.preventDefault();
 		var filterValue = $(this).attr('data-filter');
 		$grid.isotope({
 			filter: filterValue
 		});
-		if ($(this).closest('.mfp-wrap')){
+		if (($(this).closest('.mfp-wrap')) && (jQuery(window).width() < 1024)){
 			$.magnificPopup.close();
 			jQuery('.fake-select .txt').html($(this).text());
 		}
 
 	});
+
 	$('.filter-list').each( function( i, buttonGroup ) {
-		var $buttonGroup = $( buttonGroup );
-		$buttonGroup.on( 'click', 'a', function() {
-			$buttonGroup.parent().find('.is-checked').removeClass('is-checked');
-			$( this ).parent().addClass('is-checked');
+		var $buttonGroup = $( buttonGroup ),
+			checkedClass = "is-checked",
+			isotopeActiveClass = 'filter-active';
+
+		$buttonGroup.on( 'click', 'a', function(e) {
+			e.preventDefault();
+			$buttonGroup.parent().find('.' + checkedClass).removeClass(checkedClass);
+			$(this).parent().addClass(checkedClass);
+
+			if (($(this).attr('data-filter') === "") || ($(this).attr('data-filter') === "*")) {
+				$grid.removeClass(isotopeActiveClass);
+				$grid.isotope('layout');
+			} else {
+				$grid.addClass(isotopeActiveClass);
+				$grid.isotope('layout');
+			}
 		});
 	});
+
+	var itemReveal = Isotope.Item.prototype.reveal;
+	Isotope.Item.prototype.reveal = function() {
+		itemReveal.apply( this, arguments );
+		$( this.element ).removeClass('isotope-hidden');
+	};
+
+	var itemHide = Isotope.Item.prototype.hide;
+	Isotope.Item.prototype.hide = function() {
+		itemHide.apply( this, arguments );
+		$( this.element ).addClass('isotope-hidden');
+	};
 };
 
 // init back-to-top button

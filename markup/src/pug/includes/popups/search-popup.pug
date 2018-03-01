@@ -1,66 +1,347 @@
-//- .popups-holder
-.main-search-popup#search-popup
-	.main-search-bar
-		form(action="#")
-			span.icon-search i
-			input(type="text", placeholder="Search NetEnt Casinos", id="d-autocomplete")
-			span.icon-close-o x
-		.default-results
-			.top
-				div
-					.hideme
-						h2 Top Searches
-						ul.ui-autocomplete
-							li
-								a(href="#")
-									img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-									span.title
-										| Betsson 
-										span.category (Casino)
-							li
-								a(href="#")
-									img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-									span.title
-										| Free Spins 
-										span.category (Bonus)
-							li
-								a(href="#")
-									img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-									span.title
-										| Bitcoin 
-										span.category (Payment)
-							li
-								a(href="#")
-									img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-									span.title
-										| New Casinos 
-										span.category (Casinos)
-							li
-								a(href="#")
-									img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-									span.title
-										| Betsson 
-										span.category (Casino)
-							li
-								a(href="#")
-									img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-									span.title
-										| Free Spins 
-										span.category (Bonus)
-							li
-								a(href="#")
-									img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-									span.title
-										| Bitcoin 
-										span.category (Payment)
-							li
-								a(href="#")
-									img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-									span.title
-										| New Casinos 
-										span.category (Casinos)
-			.bottom
-				a(href="#").btn.btn-secondary
-					| View all 
-					span.count 50
-					|  Results
+//- 
+.desktop-search-popup.default-popup.win-height#search-popup
+	.popup-top
+		form(action="#").search-bar
+			span.icon-search
+			input(type="text", placeholder="Search NetentCasinos")
+	.popup-content
+		.popup-frame
+			ul.results-list
+				li
+					h3 Top Searches
+					ul
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Betsson 
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Free Spins 
+									span.category (Bonus)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Bitcoin 
+									span.category (Payment)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| New Casinos 
+									span.category (Casinos)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Betsson 
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Free Spins 
+									span.category (Bonus)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Bitcoin 
+									span.category (Payment)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| New Casinos 
+									span.category (Casinos)
+	.popup-footer
+		.button-holder.text-center
+			a(href="#search-popup-large").btn.btn-secondary.lightbox-opener View all 50 Results
+	button(type="button").mfp-close.icon-close
+.desktop-search-popup.default-popup.win-height#search-popup-large
+	.popup-top
+		form(action="#").search-bar
+			span.icon-search
+			input(type="text", placeholder="Search NetentCasinos")
+		.anchor-links.filter-list
+			.holder
+				ul
+					li.is-checked
+						a(href="#", data-filter="*") All Results
+					li
+						a(href="#", data-filter=".casinos") Casinos
+					li
+						a(href="#", data-filter=".guides") Guides
+					li
+						a(href="#", data-filter=".category") Category
+					li
+						a(href="#", data-filter=".slot") Slot
+					li
+						a(href="#", data-filter=".bonus") Bonus
+					li
+						a(href="#", data-filter=".news") News
+	.popup-content
+		.popup-frame
+			ul.results-list.filtered-list
+				li.filtered-item.casinos
+					h3 Casinos
+					ul
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Betsson 
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Bet365 
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| LV Bet 
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Bet24 Casino 
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Bet Realm Casino 
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum.
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum.
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum.
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum.
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum.
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum.
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum.
+									span.category (Casino)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum.
+									span.category (Casino)
+				li.filtered-item.guides
+					h3 Guides
+					ul
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Blackjack Betting strategies 
+									span.category (Guide)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Slots Betting tips 
+									span.category (Guide)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum dolor. 
+									span.category (Guide)
+				li.filtered-item.category
+					h3 Category
+					ul
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum dolor. 
+									span.category (Category)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum dolor. 
+									span.category (Category)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum dolor. 
+									span.category (Category)
+				li.filtered-item.slot
+					h3 Slot
+					ul
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum dolor. 
+									span.category (Slot)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum dolor. 
+									span.category (Slot)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum dolor. 
+									span.category (Slot)
+				li.filtered-item.bonus
+					h3 Bonus
+					ul
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum dolor. 
+									span.category (Bonus)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum dolor. 
+									span.category (Bonus)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum dolor. 
+									span.category (Bonus)
+				li.filtered-item.news
+					h3 News
+					ul
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum dolor. 
+									span.category (News)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum dolor. 
+									span.category (News)
+						li
+							a(href="#")
+								span.logo-holder
+									span
+										img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+								span.title
+									| Lorem ipsum dolor. 
+									span.category (News)

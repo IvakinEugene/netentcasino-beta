@@ -479,11 +479,11 @@ dl{
 				margin:0 0 1px;
 			}
 		}
-		.stars{
-			margin:0 auto;
-			@include media(">=desktop") {
-				width:110px;
-			}
-		}
+		// .stars{
+		// 	margin:0 auto;
+		// 	@include media(">=desktop") {
+		// 		width:110px;
+		// 	}
+		// }
 	}
 }
