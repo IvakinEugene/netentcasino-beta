@@ -3,35 +3,30 @@ extends pug/extends/master
 block content
 	- var page_class = "hide-bonus"
 	include pug/includes/header
-	#main
+	#main.home
 		//- 
 		section.section-intro
 			.holder
-				.aside
-					img(src="http://via.placeholder.com/207x69")
 				.content
 					.search-box
 						div
-							form(action="#")
-								.form-content
-									input(type="text", placeholder="Search 200+ Casinos & Games")
-									span.icon-search s
+							a(href="#search-popup").btn.btn-search.lightbox-opener Search 200+ Casinos &amp; Games
 						div
 							- var count = "329"
 							- var title = "Casino Reviews"
 							- var content = "For Your Convenience"
-							include pug/extends/read-more-button
+							include pug/extends/button-counter
 						div
 							- var count = "204"
 							- var title = "Games"
 							- var content = "To Play for Free"
-							include pug/extends/read-more-button
+							include pug/extends/button-counter
 						div
 							- var count = "3049"
 						
 							- var title = "News Articles"
 							- var content = "Ready to be Read"
-							include pug/extends/read-more-button
+							include pug/extends/button-counter
 			- var image = "banner-concept-1"
 			include pug/extends/retina-images
 		//- 
@@ -60,7 +55,12 @@ block content
 										span.rate
 											strong 4
 											span /5
-										img(src="assets/images/stars.png", alt="Image description", width="148", height="23").stars
+										.stars
+											span.icon-star
+											span.icon-star
+											span.icon-star
+											span.icon-star-half-empty
+											span.icon-star-o
 								.content
 									.top
 										h3 £1000 + 20 Free Spins
@@ -87,7 +87,12 @@ block content
 										span.rate
 											strong 4
 											span /5
-										img(src="assets/images/stars.png", alt="Image description", width="148", height="23").stars
+										.stars
+											span.icon-star
+											span.icon-star
+											span.icon-star
+											span.icon-star-half-empty
+											span.icon-star-o
 								.content
 									.top
 										h3 £1500 + 50 Free Spins
@@ -114,7 +119,12 @@ block content
 										span.rate
 											strong 4
 											span /5
-										img(src="assets/images/stars.png", alt="Image description", width="148", height="23").stars
+										.stars
+											span.icon-star
+											span.icon-star
+											span.icon-star
+											span.icon-star-half-empty
+											span.icon-star-o
 								.content
 									.top
 										h3 £1000 + 20 Free Spins
@@ -141,7 +151,12 @@ block content
 										span.rate
 											strong 4
 											span /5
-										img(src="assets/images/stars.png", alt="Image description", width="148", height="23").stars
+										.stars
+											span.icon-star
+											span.icon-star
+											span.icon-star
+											span.icon-star-half-empty
+											span.icon-star-o
 								.content
 									.top
 										h3 £1000 + 20 Free Spins
@@ -156,43 +171,43 @@ block content
 					a(href="#").btn.btn-secondary View All New Casinos
 		//- 
 			section.section-top-offer
-			.holder
-				.frame
-					.location
-						span.icon-map i
-						| London, United Kingdom
-						a(href="#").hidden-sm
-							strong - Change Location
-					h1 Novembers’ Top Casino Offers
-					.offer-casino-box
-						.heading
-							div
-								.logo-holder
-									a(href="#")
-										img(src="http://via.placeholder.com/50x50/ff6600/ffffff")
-								.txt
-									h2
-										a(href="#") Betsson
-									em.time Launched 2 days ago!
-							div
-								span.rate
-									strong 5
-									span /5
-								img(src="assets/images/stars.png", alt="Image description", width="55", height="10").stars
-						.content
-							h3 £150 + 50 Free Spins
-							p 50% up to £100 + 50 Free Spins
-							a(href="#").btn.btn-primary Go to Betsson
-						.bottom.text-center
+				.holder
+					.frame
+						.location
+							span.icon-map i
+							| London, United Kingdom
+							a(href="#").hidden-sm
+								strong - Change Location
+						h1 Novembers’ Top Casino Offers
+						.offer-casino-box
+							.heading
+								div
+									.logo-holder
+										a(href="#")
+											img(src="http://via.placeholder.com/50x50/ff6600/ffffff")
+									.txt
+										h2
+											a(href="#") Betsson
+										em.time Launched 2 days ago!
+								div
+									span.rate
+										strong 5
+										span /5
+									img(src="assets/images/stars.png", alt="Image description", width="55", height="10").stars
 							.content
-								span.icon- i
-								p
-									| Expires in - 
-									strong 18 Days  21 Hours 18 Minutes
-							.btn-holder.hidden-sm
-								a(href="#").btn.btn-link View all top casino offers
-					.text-center
-						a(href="#").btn.btn-secondary.load-more View all top casino offers
+								h3 £150 + 50 Free Spins
+								p 50% up to £100 + 50 Free Spins
+								a(href="#").btn.btn-primary Go to Betsson
+							.bottom.text-center
+								.content
+									span.icon- i
+									p
+										| Expires in - 
+										strong 18 Days  21 Hours 18 Minutes
+								.btn-holder.hidden-sm
+									a(href="#").btn.btn-link View all top casino offers
+						.text-center
+							a(href="#").btn.btn-secondary.load-more View all top casino offers
 		//- 
 		section.section-games
 			.holder
@@ -222,7 +237,12 @@ block content
 											.txt
 												h2
 													a(href="#") Betsson
-												img(src="assets/images/stars.png", alt="Image description", width="55", height="10").stars
+												.stars
+													span.icon-star
+													span.icon-star
+													span.icon-star
+													span.icon-star-half-empty
+													span.icon-star-o
 										.content
 											a(href="#").btn.btn-primary Play Game
 								li
@@ -234,7 +254,12 @@ block content
 											.txt
 												h2
 													a(href="#") Thrills
-												img(src="assets/images/stars.png", alt="Image description", width="55", height="10").stars
+												.stars
+													span.icon-star
+													span.icon-star
+													span.icon-star
+													span.icon-star-half-empty
+													span.icon-star-o
 										.content
 											a(href="#").btn.btn-primary Play Game
 								li
@@ -246,7 +271,12 @@ block content
 											.txt
 												h2
 													a(href="#") LeoVegas
-												img(src="assets/images/stars.png", alt="Image description", width="55", height="10").stars
+												.stars
+													span.icon-star
+													span.icon-star
+													span.icon-star
+													span.icon-star-half-empty
+													span.icon-star-o
 										.content
 											a(href="#").btn.btn-primary Play Game
 							.footer
@@ -273,7 +303,12 @@ block content
 											.txt
 												h2
 													a(href="#") Betsson
-												img(src="assets/images/stars.png", alt="Image description", width="55", height="10").stars
+												.stars
+													span.icon-star
+													span.icon-star
+													span.icon-star
+													span.icon-star-half-empty
+													span.icon-star-o
 										.content
 											a(href="#").btn.btn-primary Play Game
 								li
@@ -285,7 +320,12 @@ block content
 											.txt
 												h2
 													a(href="#") Thrills
-												img(src="assets/images/stars.png", alt="Image description", width="55", height="10").stars
+												.stars
+													span.icon-star
+													span.icon-star
+													span.icon-star
+													span.icon-star-half-empty
+													span.icon-star-o
 										.content
 											a(href="#").btn.btn-primary Play Game
 								li
@@ -297,7 +337,12 @@ block content
 											.txt
 												h2
 													a(href="#") LeoVegas
-												img(src="assets/images/stars.png", alt="Image description", width="55", height="10").stars
+												.stars
+													span.icon-star
+													span.icon-star
+													span.icon-star
+													span.icon-star-half-empty
+													span.icon-star-o
 										.content
 											a(href="#").btn.btn-primary Play Game
 							.footer
@@ -324,7 +369,12 @@ block content
 											.txt
 												h2
 													a(href="#") Betsson
-												img(src="assets/images/stars.png", alt="Image description", width="55", height="10").stars
+												.stars
+													span.icon-star
+													span.icon-star
+													span.icon-star
+													span.icon-star-half-empty
+													span.icon-star-o
 										.content
 											a(href="#").btn.btn-primary Play Game
 								li
@@ -336,7 +386,12 @@ block content
 											.txt
 												h2
 													a(href="#") Thrills
-												img(src="assets/images/stars.png", alt="Image description", width="55", height="10").stars
+												.stars
+													span.icon-star
+													span.icon-star
+													span.icon-star
+													span.icon-star-half-empty
+													span.icon-star-o
 										.content
 											a(href="#").btn.btn-primary Play Game
 								li
@@ -348,7 +403,12 @@ block content
 											.txt
 												h2
 													a(href="#") LeoVegas
-												img(src="assets/images/stars.png", alt="Image description", width="55", height="10").stars
+												.stars
+													span.icon-star
+													span.icon-star
+													span.icon-star
+													span.icon-star-half-empty
+													span.icon-star-o
 										.content
 											a(href="#").btn.btn-primary Play Game
 							.footer
@@ -379,7 +439,12 @@ block content
 													.txt
 														h3
 															a(href="#") Betsson
-														img(src="assets/images/stars.png", alt="Image description", width="148", height="23").stars
+														.stars
+															span.icon-star
+															span.icon-star
+															span.icon-star
+															span.icon-star-half-empty
+															span.icon-star-o
 												.content
 													.frame
 														h4 £150 + 50 Free Spins
@@ -395,7 +460,12 @@ block content
 													.txt
 														h3
 															a(href="#") Unibet
-														img(src="assets/images/stars.png", alt="Image description", width="148", height="23").stars
+														.stars
+															span.icon-star
+															span.icon-star
+															span.icon-star
+															span.icon-star-half-empty
+															span.icon-star-o
 												.content
 													.frame
 														h4 £1500 + 50 Free Spins
@@ -411,7 +481,12 @@ block content
 													.txt
 														h3
 															a(href="#") LeoVegas
-														img(src="assets/images/stars.png", alt="Image description", width="148", height="23").stars
+														.stars
+															span.icon-star
+															span.icon-star
+															span.icon-star
+															span.icon-star-half-empty
+															span.icon-star-o
 												.content
 													.frame
 														h4 £1000 + 20 Free Spins
@@ -436,7 +511,12 @@ block content
 													.txt
 														h3
 															a(href="#") LadyLucks
-														img(src="assets/images/stars.png", alt="Image description", width="148", height="23").stars
+														.stars
+															span.icon-star
+															span.icon-star
+															span.icon-star
+															span.icon-star-half-empty
+															span.icon-star-o
 												.content
 													.frame
 														h4 £150 + 50 Free Spins
@@ -452,7 +532,12 @@ block content
 													.txt
 														h3
 															a(href="#") WildSlots
-														img(src="assets/images/stars.png", alt="Image description", width="148", height="23").stars
+														.stars
+															span.icon-star
+															span.icon-star
+															span.icon-star
+															span.icon-star-half-empty
+															span.icon-star-o
 												.content
 													.frame
 														h4 £1500 + 50 Free Spins
@@ -468,7 +553,12 @@ block content
 													.txt
 														h3
 															a(href="#") Cashiopeia
-														img(src="assets/images/stars.png", alt="Image description", width="148", height="23").stars
+														.stars
+															span.icon-star
+															span.icon-star
+															span.icon-star
+															span.icon-star-half-empty
+															span.icon-star-o
 												.content
 													.frame
 														h4 £1000 + 20 Free Spins
@@ -493,7 +583,12 @@ block content
 													.txt
 														h3
 															a(href="#") Betsson
-														img(src="assets/images/stars.png", alt="Image description", width="148", height="23").stars
+														.stars
+															span.icon-star
+															span.icon-star
+															span.icon-star
+															span.icon-star-half-empty
+															span.icon-star-o
 												.content
 													.frame
 														h4 £150 + 50 Free Spins
@@ -509,7 +604,12 @@ block content
 													.txt
 														h3
 															a(href="#") Unibet
-														img(src="assets/images/stars.png", alt="Image description", width="148", height="23").stars
+														.stars
+															span.icon-star
+															span.icon-star
+															span.icon-star
+															span.icon-star-half-empty
+															span.icon-star-o
 												.content
 													.frame
 														h4 £1500 + 50 Free Spins
@@ -525,7 +625,12 @@ block content
 													.txt
 														h3
 															a(href="#") LeoVegas
-														img(src="assets/images/stars.png", alt="Image description", width="148", height="23").stars
+														.stars
+															span.icon-star
+															span.icon-star
+															span.icon-star
+															span.icon-star-half-empty
+															span.icon-star-o
 												.content
 													.frame
 														h4 £1000 + 20 Free Spins
