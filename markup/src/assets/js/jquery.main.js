@@ -1,3 +1,5 @@
+var $ = jQuery.noConflict();
+
 (function(w) {
 	w.addEventListener('load', function() {
 		var loader = document.querySelector('html');
@@ -11,7 +13,7 @@
 }(window));
 
 jQuery(window).on('load', function(){
-	initIsotope();
+	// initIsotope();
 	initAccordion();
 	initMobileNav();
 	initRetinaCover();
@@ -21,14 +23,31 @@ jQuery(window).on('load', function(){
 	initCustomAnchor();
 	initOpenClose();
 	initCustomFixed();
-	initSameHeight();
+	// initSameHeight();
 	initMP();
 	initSlick();
 	initBackToTop();
 	initStickyScrollBlock();
 	initAnchors();
 	initMagicOpener();
+	initFilters();
 });
+
+// init filters
+function initFilters() {
+    $('a[data-filter]').click(function() {
+        $(this).closest('li').siblings().removeClass('is-checked');
+        $(this).closest('li').addClass('is-checked');
+        var filterValue = $(this).data('filter');
+        var filteredItems = $('.filtered-list');
+        filterItems(filteredItems, filterValue);
+        if (($(this).closest('.mfp-wrap')) && (jQuery(window).width() < 1024)){
+			$.magnificPopup.close();
+			jQuery('.fake-select .txt').html($(this).text());
+		}
+        return false;
+    });
+}
 
 // init button for open mobile nav and set focus to search input
 function initMagicOpener() {
@@ -125,19 +144,19 @@ function initMP() {
 		closeMarkup: "<button title=\"%title%\" type=\"button\" class=\"mfp-close icon-close\"></button>",
 		callbacks: {
 			open: function() {
-				setTimeout(function(){
-					initIsotope();
-				}, 200);
+				// setTimeout(function(){
+				// 	initIsotope();
+				// }, 200);
 				jQuery('html').addClass('mp-opened')
 			},
 			close: function() {
-				initIsotope();
+				// initIsotope();
 				jQuery('html').removeClass('mp-opened')
 			},
 			change: function() {
-				setTimeout(function(){
-					initIsotope();
-				}, 200);
+				// setTimeout(function(){
+				// 	initIsotope();
+				// }, 200);
 				this.content.find('.btn-close').on('click',function(e){
 					e.preventDefault();
 					$.magnificPopup.close();
@@ -165,7 +184,6 @@ function initIsotope(){
 			$.magnificPopup.close();
 			jQuery('.fake-select .txt').html($(this).text());
 		}
-
 	});
 
 	$('.filter-list').each( function( i, buttonGroup ) {
@@ -385,7 +403,7 @@ function initAnchors() {
 		wheelBehavior: 'none',
 		extraOffset: function() {
 			var totalHeight = 0;
-			jQuery('#header .header-content, .anchor-links').each(function() {
+			jQuery('.anchor-links').each(function() {
 				var $box = jQuery(this);
 				totalHeight += $box.outerHeight();
 
@@ -2074,6 +2092,14 @@ window.ResponsiveHelper = (function($){
 	createStyleTag();
 	jQuery(window).on('resize orientationchange', resizeHandler);
 }());
+
+function filterItems($target, value) {
+    $target.find('.filtered-item').hide();
+    if (value === "" || value == "*")
+        $target.find('.filtered-item').removeAttr('style');
+    else
+        $target.find('.filtered-item' + value).removeAttr('style');
+}
  
 /*!
 * FitVids 1.0.3

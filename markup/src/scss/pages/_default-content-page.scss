@@ -26,6 +26,9 @@
 				padding:14px 10px 20px;
 				// margin:0 384px 0 0;
 			}
+			@include media(">=desktop") {
+				padding-top: 25px;
+			}
 			&:first-child {
 				@include media("<desktop") {
 					margin-right: -10px;
@@ -126,7 +129,7 @@
 			box-shadow: 0 0 4px $shadow;
 			border-radius:3px 3px 0 0;
 			margin:0 279px 0 0;
-			padding:25px $gutter-width;
+			padding:0 $gutter-width 25px;
 		}
 		@include media(">=widescreen") {
 			margin-right: 384px;
@@ -558,18 +561,19 @@
 			margin:0 -22px 21px;
 		}
 		&:hover {
-			.icon-play{
+			a:before {
 				opacity:0.7;
 			}
 		}
 		&.post-video {
-			.icon-play{
+			a:before {
 				display:block;
 			}
 		}
-		.icon-play{
+		a:before{
 			background:$white;
 			border-radius: 100%;
+			content: '';
 			display:none;
 			height:55px;
 			left:50%;
@@ -586,9 +590,9 @@
 		line-height:1.125;
 		margin:0 0 4px;
 		text-transform:uppercase;
-		@include media(">=tablet") {
-			// margin:0 0 5px;
-		}
+		// @include media(">=tablet") {
+		// 	margin:0 0 5px;
+		// }
 	}
 	.by{
 		font-size: 12px;
@@ -608,7 +612,10 @@
 	}
 }
 
-img.stars{
-	display:block;
-	margin:0 auto;
+.buttons{
+	li{
+		display:inline-block;
+		vertical-align:top;
+		margin:0 20px 0 0;
+	}
 }

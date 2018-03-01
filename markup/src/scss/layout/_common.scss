@@ -313,6 +313,9 @@ section{
 	@include media(">=tablet") {
 		margin:0 0 -13px;
 	}
+	.home & {
+		background:none;
+	}
 	> .holder{
 		overflow:hidden;
 	    position:relative;
@@ -356,6 +359,7 @@ section{
 				padding:40px 0 0;
 			}
 			&:only-child {
+				max-width: none;
 				width:100%;
 			}
 		}
