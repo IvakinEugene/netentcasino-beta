@@ -63,7 +63,9 @@ button,
 	@include media(">=desktop") {
     	justify-content: flex-start;
     	height:auto !important;
-    	max-height: 100vh;
+    	margin:0 auto;
+    	max-height: 594px;
+    	width:615px;
 	}
 	.popup-content{
 		overflow:auto;
@@ -375,10 +377,22 @@ button,
 	margin:0 auto;
 	width:597px;
 	&[id*="large"] {
-		max-height: 464px;
+		max-height: 623px;
 		// margin:0 auto;
 		width:1033px;
 	}
+	&.changed {
+		.results-list{
+			display:none;
+		}
+		.ui-autocomplete{
+			display:block !important;
+		}
+		.popup-footer{
+			position:static;
+		}
+	}
+	// .ui-drop-active{}
 	.anchor-links{
 		display:block;
 		position:static !important;
@@ -443,5 +457,13 @@ button,
 				width:43px;
 			}
 		}
+	}
+	.ui-autocomplete{
+		margin-top: -14px;
+	}
+	.popup-footer{
+		left:-9999px;
+		position:absolute;
+		top:-9999px;
 	}
 }

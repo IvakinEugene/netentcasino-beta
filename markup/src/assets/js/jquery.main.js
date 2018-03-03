@@ -13,7 +13,6 @@ var $ = jQuery.noConflict();
 }(window));
 
 jQuery(window).on('load', function(){
-	// initIsotope();
 	initAccordion();
 	initMobileNav();
 	initRetinaCover();
@@ -23,7 +22,7 @@ jQuery(window).on('load', function(){
 	initCustomAnchor();
 	initOpenClose();
 	initCustomFixed();
-	// initSameHeight();
+	initSameHeight();
 	initMP();
 	initSlick();
 	initBackToTop();
@@ -55,23 +54,23 @@ function initMagicOpener() {
 		defaultNavOpener = jQuery('.mobile-nav .nav-opener');
 
 	button.on('click', function(e){
-		e.preventDefault();
+		if (jQuery(window).width() <= 1024) {
+			e.preventDefault();
 
-		$.magnificPopup.close();
+			$.magnificPopup.close();
 
-		setTimeout(function(){
-			defaultNavOpener.click();
 			setTimeout(function(){
-				jQuery('#m-autocomplete').focus();
-			}, 400);
-		}, 100);
-
+				defaultNavOpener.click();
+				setTimeout(function(){
+					jQuery('#m-autocomplete').focus();
+				}, 400);
+			}, 100);
+		}
 	});
 }
 
 // init slickCarousel
 function initSlick() {
-	// $('.slick-slider').slick({});
 	$('.games-slider:not([class*="col"])').slick({
 		slidesToShow: 2,
 		slidesToScroll: 2,
@@ -116,7 +115,6 @@ function initSlick() {
 	$('.images-slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		// infinite: false,
 		adaptiveHeight: true,
 		fade: true
 	});
@@ -144,19 +142,12 @@ function initMP() {
 		closeMarkup: "<button title=\"%title%\" type=\"button\" class=\"mfp-close icon-close\"></button>",
 		callbacks: {
 			open: function() {
-				// setTimeout(function(){
-				// 	initIsotope();
-				// }, 200);
 				jQuery('html').addClass('mp-opened')
 			},
 			close: function() {
-				// initIsotope();
 				jQuery('html').removeClass('mp-opened')
 			},
 			change: function() {
-				// setTimeout(function(){
-				// 	initIsotope();
-				// }, 200);
 				this.content.find('.btn-close').on('click',function(e){
 					e.preventDefault();
 					$.magnificPopup.close();
@@ -165,59 +156,6 @@ function initMP() {
 		}
 	});
 }
-
-// init Isotope
-function initIsotope(){
-	var $grid = $('.filtered-list').isotope({
-		itemSelector: '.filtered-item',
-		layoutMode: 'fitRows',
-		transitionDuration: 0
-	});
-
-	$('.filter-list').on('click', 'a', function(e){
-		e.preventDefault();
-		var filterValue = $(this).attr('data-filter');
-		$grid.isotope({
-			filter: filterValue
-		});
-		if (($(this).closest('.mfp-wrap')) && (jQuery(window).width() < 1024)){
-			$.magnificPopup.close();
-			jQuery('.fake-select .txt').html($(this).text());
-		}
-	});
-
-	$('.filter-list').each( function( i, buttonGroup ) {
-		var $buttonGroup = $( buttonGroup ),
-			checkedClass = "is-checked",
-			isotopeActiveClass = 'filter-active';
-
-		$buttonGroup.on( 'click', 'a', function(e) {
-			e.preventDefault();
-			$buttonGroup.parent().find('.' + checkedClass).removeClass(checkedClass);
-			$(this).parent().addClass(checkedClass);
-
-			if (($(this).attr('data-filter') === "") || ($(this).attr('data-filter') === "*")) {
-				$grid.removeClass(isotopeActiveClass);
-				$grid.isotope('layout');
-			} else {
-				$grid.addClass(isotopeActiveClass);
-				$grid.isotope('layout');
-			}
-		});
-	});
-
-	var itemReveal = Isotope.Item.prototype.reveal;
-	Isotope.Item.prototype.reveal = function() {
-		itemReveal.apply( this, arguments );
-		$( this.element ).removeClass('isotope-hidden');
-	};
-
-	var itemHide = Isotope.Item.prototype.hide;
-	Isotope.Item.prototype.hide = function() {
-		itemHide.apply( this, arguments );
-		$( this.element ).addClass('isotope-hidden');
-	};
-};
 
 // init back-to-top button
 function initBackToTop() {
@@ -245,12 +183,6 @@ function initBackToTop() {
 function initSameHeight() {
 	jQuery('.sh-holder').sameHeight({
 		elements: '.sh-column',
-		useMinHeight: true,
-		flexible: true,
-		multiLine: true
-	});
-	jQuery('.filtered-list').sameHeight({
-		elements: '.filtered-item:not([class*="section"])',
 		useMinHeight: true,
 		flexible: true,
 		multiLine: true

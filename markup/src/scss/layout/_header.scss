@@ -560,6 +560,9 @@
 	margin:0 -21px;
 	position:static !important;
 	width:auto !important;
+	@include media(">=desktop") {
+		font-size: 18px;
+	}
 	li{
 		&:hover {
 			a{

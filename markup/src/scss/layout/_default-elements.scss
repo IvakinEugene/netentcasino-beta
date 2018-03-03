@@ -200,20 +200,27 @@
 // }
 
 .section-heading{
-	padding:0 0 17px;
+	margin:0 0 -3px;
+	padding:27px 0 0;
 	@include media(">=desktop") {
-		padding:0 0 14px;
+		// margin:0 0 -14px;
+		padding:29px 0 0;
 	}
 	h1,
 	h2{
 		margin:0 0 8px !important;
 		@include media(">=desktop") {
-			margin:0 0 2px !important;
+			margin:0 0 -20px !important;
 		}
 	}
 	.subtitle{
 		@include media(">=desktop") {
-			margin:0 0 14px;
+			margin:20px 0 -20px;
+		}
+	}
+	p{
+		@include media(">=desktop") {
+			margin:24px 0 0;
 		}
 	}
 }
@@ -611,33 +618,11 @@
 	}
 }
 
-// // .boxes-holder{
-// // 	&.grid {
-// // 		@include media(">=tablet") {
-// // 			display: flex;
-// // 		    flex-direction: row;
-// // 		    flex-wrap: wrap;
-// // 		    justify-content: flex-start;
-// // 		    align-content: flex-start;
-// // 		    align-items: flex-start;
-// // 		}
-// // 		> div{
-// // 			@include media(">=tablet") {
-// // 				padding:5px;
-// // 			}
-// // 		}
-// // 	}
-// // 	> div{
-// // 		padding:0 0 10px;
-// // 	}
-// // }
-
 .back-to-top{
 	background:$white;
 	border-radius: 100%;
 	box-shadow: 0 0 5px $shadow;
 	bottom:10px;
-	// display:none;
 	height:50px;
 	opacity:0;
 	pointer-events:none;
@@ -650,31 +635,20 @@
 		display:none !important;
 	}
 	.show-btt-button & {
-		// display:block;
 		opacity:1;
 		pointer-events:auto;
 	}
 	span{
-			border: 0 solid $theme-color-base;
-			border-width: 1px 0 0 1px;
-			// bottom:10px;
-			display:block;
-			height:16px;
-			left:50%;
-			margin:-5px 0 0 -8px;
-			position:absolute;
-			top:50%;
-			transform:rotate(45deg);
-			width:16px;
-		// &:before {
-		// 	animation:2s arrow infinite;
-		// 	border-width: 1px 0 0 1px;
-		// 	content: '';
-		// 	height:10px;
-		// 	margin:-5px 0 0 -5px;
-		// 	transform:none;
-		// 	width:10px;
-		// }
+		border: 0 solid $theme-color-base;
+		border-width: 1px 0 0 1px;
+		display:block;
+		height:16px;
+		left:50%;
+		margin:-5px 0 0 -8px;
+		position:absolute;
+		top:50%;
+		transform:rotate(45deg);
+		width:16px;
 	}
 }
 
@@ -690,6 +664,10 @@
 	    align-content: stretch;
 	    align-items: stretch;
 		margin:-8px;
+		padding:29px 0;
+	}
+	.load-more + & {
+		padding-top: 0;
 	}
 	&.col-1 {
 		width:100%;
@@ -700,9 +678,6 @@
 		}
 	}
 	&.col-2 {
-		.load-more + & {
-			padding-top: 24px;
-		}
 		> li{
 			@include media(">=desktop") {
 				width:50%;
@@ -770,10 +745,10 @@ ol.grid{
 }
 
 .load-more{
-	// padding:29px 0 5px;
-	// @include media(">=tablet") { 
-	// 	padding:29px 0 30px;
-	// }
+	padding:0 0 21px;
+	@include media(">=desktop") {
+		padding:0 0 30px;
+	}
 	.btn{
 		@include media(">=tablet") {
 			padding-top: 9px;

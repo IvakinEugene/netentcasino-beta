@@ -3,7 +3,7 @@
 	.popup-top
 		form(action="#").search-bar
 			span.icon-search
-			input(type="text", placeholder="Search NetentCasinos")
+			input(type="text", placeholder="Search NetentCasinos")#d-autocomplete
 	.popup-content
 		.popup-frame
 			ul.results-list
@@ -77,12 +77,15 @@
 	.popup-footer
 		.button-holder.text-center
 			a(href="#search-popup-large").btn.btn-secondary.lightbox-opener View all 50 Results
-	button(type="button").mfp-close.icon-close
+	//- button(type="button").mfp-close.icon-close
 .desktop-search-popup.default-popup.win-height#search-popup-large
 	.popup-top
-		form(action="#").search-bar
+		a(href="#search-popup").btn.btn-search.lightbox-opener
 			span.icon-search
-			input(type="text", placeholder="Search NetentCasinos")
+			| Search NetentCasinos
+		//- form(action="#").search-bar
+		//- 	span.icon-search
+		//- 	input(type="text", placeholder="Search NetentCasinos")
 		.anchor-links.filter-list
 			.holder
 				ul

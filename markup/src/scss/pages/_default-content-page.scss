@@ -479,10 +479,10 @@
 	box-shadow:0 -1px 0 $border-color-base inset, 0 -1px 0 $border-color-base;
 	// border: 0 solid $border-color-base;
 	// border-width: 0 0 1px;
-	padding: 25px 0 37px;
+	// padding: 25px 0 37px;
 	position:relative;
 	@include media(">=desktop") {
-		padding:35px 0;
+		// padding:29px 0 30px;
 	}
 }
 
