@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 366 245" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>uk_flag</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.612852868 368 0.612852868 368 245.963192 0 245.963192"></polygon>
+    </defs>
+    <g id="uk_flag" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="shutterstock_424744765" transform="translate(-1.000000, -1.000000)">
+            <g id="Group-4">
+                <polygon id="Fill-1" fill="#FFFFFE" points="0 245.963192 368 245.963192 368 0.612852868 0 0.612852868"></polygon>
+                <polygon id="Fill-3" fill="#D8262C" points="161.510907 245.963192 206.48848 245.963192 206.48848 0.612852868 161.510907 0.612852868"></polygon>
+            </g>
+            <polygon id="Fill-5" fill="#D8262C" points="0 147 368 147 368 100 0 100"></polygon>
+            <polyline id="Fill-6" fill="#2A3077" points="148 75 148 1 45 1 148 75"></polyline>
+            <polyline id="Fill-7" fill="#2A3077" points="0 30 0 85 76 85 0 30"></polyline>
+            <g id="Group-16">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-9"></g>
+                <polyline id="Fill-8" fill="#D8262C" mask="url(#mask-2)" points="28.30472 0.612852868 0 0.612852868 0 0.655182045 114.717867 81.999591 143.08392 81.999591 28.30472 0.612852868"></polyline>
+                <polyline id="Fill-10" fill="#2A3077" mask="url(#mask-2)" points="148.343867 171.638065 148.343867 246 45.02664 246 148.343867 171.638065"></polyline>
+                <polyline id="Fill-11" fill="#2A3077" mask="url(#mask-2)" points="0 216.553002 0 161.341032 76.2581867 161.341032 0 216.553002"></polyline>
+                <polyline id="Fill-12" fill="#D8262C" mask="url(#mask-2)" points="114.778587 164.612648 143.08392 164.612648 143.08392 164.654978 28.36544 245.999387 0 245.999387 114.778587 164.612648"></polyline>
+                <polyline id="Fill-13" fill="#2A3077" mask="url(#mask-2)" points="219.369093 171.638065 219.369093 245.999387 322.686933 245.999387 219.369093 171.638065"></polyline>
+                <polyline id="Fill-14" fill="#2A3077" mask="url(#mask-2)" points="368 216.553002 368 161.341032 291.742427 161.341032 368 216.553002"></polyline>
+                <polyline id="Fill-15" fill="#D8262C" mask="url(#mask-2)" points="253.221413 164.613262 224.91608 164.613262 224.91608 164.654978 339.63456 245.999387 368 245.999387 253.221413 164.613262"></polyline>
+            </g>
+            <polyline id="Fill-17" fill="#2A3077" points="219 75 219 1 322 1 219 75"></polyline>
+            <polyline id="Fill-18" fill="#2A3077" points="368 30 368 85 292 85 368 30"></polyline>
+            <polyline id="Fill-19" fill="#D8262C" points="339.712373 1 368 1 368 1.04212803 253.349538 82 225 82 339.712373 1"></polyline>
+        </g>
+    </g>
+</svg>

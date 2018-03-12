@@ -246,10 +246,12 @@ section{
 		}
 	}
 	.icon-gift{
-		background:$base-gray;
+		// background:$base-gray;
+		color:$theme-color-base;
 		display:block;
-		height:65px;
-		width:68px;
+		font-size: 68px;
+		// height:65px;
+		// width:68px;
 		@include media(">=tablet") {
 			height:53px;
 			width:56px;

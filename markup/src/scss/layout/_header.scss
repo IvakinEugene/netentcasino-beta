@@ -12,16 +12,18 @@
 			display:none;
 		}
 		.icon-close{
-			background:$black;
+			// background:$black;
 			display:inline-block;
 			vertical-align:top;
-			height:6px;
+			font-size: 6px;
+			// height:6px;
 			margin:0 10px 0 0;
-			width:6px;
+			// width:6px;
 			@include media(">=tablet") {
-				height:17px;
+				font-size: 18px;
+				// height:17px;
 				margin-right: 45px;
-				width:17px;
+				// width:17px;
 			}
 		}
 		// bonus
@@ -347,14 +349,15 @@
 		}
 		&:before {
 			@include media(">=tablet") {
-				background:#ccc;
-				content: '';
-				height:20px;
+				// background:#ccc;
+				// content: '';
+				font-size: 20px;
+				// height:20px;
 				left:23px;
 				position:absolute;
 				top:50%;
 				transform:translateY(-50%);
-				width:20px;
+				// width:20px;
 			}
 		}
 	}
@@ -445,7 +448,10 @@
 	}
 	.icon-close-o,
 	.icon-search{
-		left:20px;
+		color:$theme-color-base;
+		font-size: 26px;
+		left:22px;
+		margin:2px 0 0;
 		position:absolute;
 		top:50%;
 		transform:translateY(-50%);

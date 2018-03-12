@@ -565,6 +565,7 @@
 		}
 	}
 	[class*="icon-"]{
+		font-size: 30px;
 		left:11px;
 		position:absolute;
 		text-align:center;
@@ -573,6 +574,7 @@
 		width:50px;
 		@include media(">=tablet") {
 			display:block;
+			font-size: 50px;
 			left: auto;
 			margin:0 0 10px;
 			position:relative;
@@ -638,17 +640,13 @@
 		opacity:1;
 		pointer-events:auto;
 	}
-	span{
-		border: 0 solid $theme-color-base;
-		border-width: 1px 0 0 1px;
-		display:block;
-		height:16px;
+	&:before {
+		color:$theme-color-base;
+		font-size: 26px;
 		left:50%;
-		margin:-5px 0 0 -8px;
 		position:absolute;
 		top:50%;
-		transform:rotate(45deg);
-		width:16px;
+		transform:translate(-50%, -50%);
 	}
 }
 
@@ -810,4 +808,15 @@ ol.grid{
 
 .search-box{
 	background:$white;
+}
+
+img{
+	&.alignleft {
+		float:left;
+		margin:0 7px 2px 0;
+	}
+	&.alignnone {
+		display:block;
+		margin:0 0 10px;
+	}
 }
