@@ -14,16 +14,16 @@ html.mp-opened{
 #wrapper{
 	background:#f5f7f6;
 	overflow:hidden;
-	// max-width: 320px;
-	// @include media(">=375px") {
-	// 	max-width: 375px;
-	// }
-	// @include media(">=tablet") {
-	// 	max-width: 992px;
-	// }
-	// @include media(">=widescreen") {
-	// 	max-width:1440px;
-	// }
+	max-width: 320px;
+	@include media(">=375px") {
+		max-width: 375px;
+	}
+	@include media(">=tablet") {
+		max-width: 992px;
+	}
+	@include media(">=widescreen") {
+		max-width:1440px;
+	}
 }
 
 #main{
@@ -34,6 +34,7 @@ html.mp-opened{
 .subsection,
 section{
 	> .holder{
+		overflow:hidden;
 		padding-right: $gutter-width;
 		padding-left: $gutter-width;
 		@include media(">=tablet") {
@@ -207,7 +208,7 @@ section{
 		background:$white;
 		border-radius: 2px;
 		box-shadow: 0 1px 2px $shadow;
-		padding:16px 18px 20px;
+		padding:19px 18px 20px;
 		@include media(">=tablet") {
 			display: flex;
 		    flex-direction: row;
@@ -249,7 +250,7 @@ section{
 		// background:$base-gray;
 		color:$theme-color-base;
 		display:block;
-		font-size: 68px;
+		font-size: 64px;
 		// height:65px;
 		// width:68px;
 		@include media(">=tablet") {
@@ -870,7 +871,7 @@ section{
 
 .section-games{
 	background:$white;
-	padding:20px 0 40px;
+	padding:0 0 10px;
 	.subsection{
 		> .holder{
 			padding-top: 50px;

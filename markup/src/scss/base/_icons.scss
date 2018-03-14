@@ -44,6 +44,45 @@ a{
 	}
 }
 
+.icon-check .path1:before {
+  content: "\e90c";
+  color: rgb(0, 0, 0);
+}
+.icon-check .path2:before {
+  content: "\e90d";
+  margin-left: -1.01953125em;
+  color: rgb(255, 255, 255);
+}
+.icon-check-o:before {
+  content: "\e90e";
+}
+.icon-chevron-up:before {
+  content: "\e90f";
+}
+.icon-close:before {
+  content: "\e910";
+}
+.icon-close-circle:before {
+  content: "\e911";
+}
+.icon-gift:before {
+  content: "\e912";
+}
+.icon-laptop:before {
+  content: "\e913";
+}
+.icon-mail:before {
+  content: "\e914";
+}
+.icon-mobile:before {
+  content: "\e915";
+}
+.icon-phone:before {
+  content: "\e916";
+}
+.icon-tablet:before {
+  content: "\e917";
+}
 .icon-calendar:before {
   content: "\e900";
 }

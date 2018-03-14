@@ -241,8 +241,11 @@
 			display:block;
 		}
 	// }
+	&.show-on-mobile {
+		display:block;
+	}
 	.holder{
-		overflow:auto;
+		// overflow:auto;
 		padding:0 23px;
 		@include media(">=tablet") {
 			margin:0 auto;
@@ -306,6 +309,10 @@
 	}
 	img{
 		max-width: none;
+		width:35px;
+		@include media(">=tablet") {
+			width:auto;
+		}
 	}
 }
 
@@ -642,7 +649,7 @@
 	}
 	&:before {
 		color:$theme-color-base;
-		font-size: 26px;
+		font-size: 12px;
 		left:50%;
 		position:absolute;
 		top:50%;
@@ -712,7 +719,7 @@
 
 ol.grid{
 	counter-reset: step;
-	@extend %listreset;
+	list-style: none;
 	> li{
 		counter-increment: step;
 		position:relative;
