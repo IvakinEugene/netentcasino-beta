@@ -671,32 +671,39 @@
 		margin:-8px;
 		padding:29px 0;
 	}
+	& + & {
+		padding-top: 0;
+	}
 	.load-more + & {
 		padding-top: 0;
 	}
 	&.col-1 {
 		width:100%;
-		> li{
+		> li,
+		.slick-slide{
 			@include media(">=tablet") {
 				width:100% !important;
 			}
 		}
 	}
 	&.col-2 {
-		> li{
+		> li,
+		.slick-slide{
 			@include media(">=desktop") {
 				width:50%;
 			}
 		}
 	}
 	&.col-4 {
-		> li{
+		> li,
+		.slick-slide{
 			@include media(">=desktop") {
 				width:25%;
 			}
 		}
 	}
-	> li{
+	> li,
+	.slick-slide{
 		padding:0 0 9px;
 		@include media(">=tablet") {
 			display: flex;
@@ -825,5 +832,50 @@ img{
 	&.alignnone {
 		display:block;
 		margin:0 0 10px;
+	}
+}
+
+.list-games{
+	padding:0 0 3px;
+	@include media(">=desktop") {
+		padding:19px 0 31px;
+	}
+	li{
+		overflow:hidden;
+		padding:0 0 16px;
+		@include media(">=desktop") {
+			padding:0 0 30px;
+		}
+	}
+	.post-image{
+		margin:0 0 11px;
+		@include media(">=desktop") {
+			float:left;
+			margin:0;
+			width:380px;
+		}
+	}
+	.content{
+		@include media(">=desktop") {
+			overflow:hidden;
+			padding:13px 0 0 29px;
+		}
+	}
+	h4{
+		font-size: 16px;
+		font-weight:500;
+		margin:0 0 5px;
+		text-transform:uppercase;
+		@include media(">=desktop") {
+			margin:0 0 9px;
+		}
+	}
+	.button-holder{
+		padding:0 0 10px;
+		text-align:center;
+		@include media(">=desktop") {
+			padding:0;
+			text-align:left;
+		}
 	}
 }
