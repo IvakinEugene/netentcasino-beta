@@ -101,30 +101,30 @@
 	@extend %listreset;
 	&.large {
 		display: flex;
-	    flex-direction: row;
-	    flex-wrap: wrap;
-	    justify-content: flex-start;
-	    align-content: flex-start;
-	    align-items: flex-start;
-	    font-size: 12px;
-	    margin:-4px 0 21px;
-	    @include media(">=tablet") {
-	    	font-size: 16px;
-	    	margin:-4px 0 16px;
-	    }
-	    li{
-	    	margin:0;
-	    	padding:4px;
-	    	width:33.3333%;
-	    }
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-content: flex-start;
+		align-items: flex-start;
+		font-size: 12px;
+		margin:19px 0 21px;
+		@include media(">=tablet") {
+			font-size: 16px;
+			margin:-14px -4px -4px;
+		}
+		li{
+			margin:0;
+			padding:4px;
+			width:33.3333%;
+		}
 		a{
-		    flex-direction: column;
-		    flex-wrap: wrap;
+			flex-direction: column;
+			flex-wrap: wrap;
 			background:$white;
 			border: 0;
 			box-shadow: 0 0 3px $shadow;
 			height:111px;
-			width:auto;
+			width:100%;
 			@include media(">=tablet") {
 				height:117px;
 			}
@@ -136,11 +136,11 @@
 		}
 		.logo-holder{
 			display: flex;
-		    flex-direction: column;
-		    flex-wrap: wrap;
-		    justify-content: center;
-		    align-content: center;
-		    align-items: center;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
 			height:50px;
 			margin-bottom:5px;
 		}
@@ -320,18 +320,19 @@
 	margin:0 0 -9px;
 	@include media(">=tablet") {
 		display: flex;
-	    flex-direction: row;
-	    flex-wrap: nowrap;
-	    justify-content: flex-start;
-	    align-content: stretch;
-	    align-items: stretch;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: stretch;
 		font-size:16px;
 		line-height:1.5556;
-		margin:0 -6px -11px;
+		margin:0 -6px -8px;
 		padding:16px 0 0;
 	}
 	@include media(">=desktop") {
 		font-size: 18px;
+		margin-bottom: 0;
 	}
 	&.large {
 		> div {
@@ -354,11 +355,11 @@
 	> div{
 		@include media(">=tablet") {
 			display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: flex-start;
-		    align-content: stretch;
-		    align-items: stretch;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: stretch;
+			align-items: stretch;
 			padding:0 6px;
 			width:50%;
 		}
@@ -370,15 +371,15 @@
 	}
 	.row{
 		display: flex;
-	    flex-direction: row;
-	    flex-wrap: nowrap;
-	    justify-content: flex-start;
-	    align-content: stretch;
-	    align-items: stretch;
-	    padding:0 0 9px;
-	    @include media(">=tablet") {
-	    	padding:0 0 11px;
-	    }
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: stretch;
+		padding:0 0 9px;
+		@include media(">=tablet") {
+			padding:0 0 11px;
+		}
 		+ .row{
 			&:last-child {
 				@include media(">=tablet") {
@@ -449,11 +450,11 @@
 		}
 		> a{
 			display: flex;
-		    flex-direction: row;
-		    flex-wrap: nowrap;
-		    justify-content: center;
-		    align-content: center;
-		    align-items: center;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
 			border: 1px solid $border-color-base;
 			height:32px;
 			width:71px;
@@ -472,66 +473,68 @@
 
 .devices-list{
 	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-end;
-    align-items: flex-end;
-    @include media(">=tablet") {
-    	display:block;
-    	font-size:18px;
-    	font-weight:500;
-    	line-height:1;
-    	padding:7px 0;
-    	text-transform:uppercase;
-    }
-    li{
-    	margin:0 21px 21px 0;
-    	@include media(">=tablet") {
-    		margin-right: 0;
-    	}
-	    > span{
-	    	@include media(">=tablet") {
-	    		border: 2px solid $btn-secondary-border;
-	    		display:block;
-	    		padding:16px 15px 17px 108px;
-	    		position:relative;
-	    	}
-	    }
-    }
-    img{
-    	@include media(">=tablet") {
-    		left:53px;
-    		position:absolute;
-    		top:50%;
-    		transform:translate(-50%, -50%);
-    	}
-    }
-    .txt{
-    	display:none;
-    	@include media(">=tablet") {
-    		display:block;
-    	}
-    }
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: flex-end;
+	align-items: flex-end;
+	padding:20px 0 0;
+	@include media(">=tablet") {
+		display:block;
+		font-size:18px;
+		font-weight:500;
+		line-height:1;
+		max-width: 316px;
+		padding:40px 0 7px;
+		text-transform:uppercase;
+	}
+	li{
+		margin:0 21px 21px 0;
+		@include media(">=tablet") {
+			margin-right: 0;
+		}
+		> span{
+			@include media(">=tablet") {
+				border: 2px solid $btn-secondary-border;
+				display:block;
+				padding:16px 15px 17px 108px;
+				position:relative;
+			}
+		}
+	}
+	img{
+		@include media(">=tablet") {
+			left:53px;
+			position:absolute;
+			top:50%;
+			transform:translate(-50%, -50%);
+		}
+	}
+	.txt{
+		display:none;
+		@include media(">=tablet") {
+			display:block;
+		}
+	}
 }
 
 .mobile-stores-list{
 	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
-    li{
-    	margin:0 9px 0 0;
-    	@include media(">=tablet") {
-    		margin-bottom: 12px;
-    	}
-    }
-    a{
-    	display:block;
-    	width:118px;
-    }
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
+	li{
+		margin:0 9px 0 0;
+		@include media(">=tablet") {
+			margin-bottom: 12px;
+		}
+	}
+	a{
+		display:block;
+		width:118px;
+	}
 }
 
 .support-list{
@@ -539,7 +542,7 @@
 	line-height:1.125;
 	padding:5px 0 9px;
 	@include media(">=tablet") {
-		padding-bottom: 7px;
+		padding:39px 0 7px;
 	}
 	li{
 		padding:0 0 9px;
@@ -557,14 +560,14 @@
 		text-decoration:none;
 		@include media(">=tablet") {
 			display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: center;
-		    align-content: center;
-		    align-items: center;
-		    box-shadow: 0 0 3px $shadow;
-		    padding:10px;
-		    height:120px;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			box-shadow: 0 0 3px $shadow;
+			padding:10px;
+			height:120px;
 			width:205px;
 			&:hover {
 				box-shadow: 0 0 10px $shadow;
@@ -663,11 +666,11 @@
 	position:relative;
 	@include media(">=tablet") {
 		display: flex;
-	    flex-direction: row;
-	    flex-wrap: wrap;
-	    justify-content: flex-start;
-	    align-content: stretch;
-	    align-items: stretch;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: stretch;
 		margin:-8px;
 		padding:29px 0;
 	}
@@ -702,16 +705,27 @@
 			}
 		}
 	}
+	&.col-n {
+		> li,
+		.slick-slide{
+			@include media(">=tablet") {
+				width:auto;
+			}
+			@include media(">=desktop") {
+				width:auto;
+			}
+		}
+	}
 	> li,
 	.slick-slide{
 		padding:0 0 9px;
 		@include media(">=tablet") {
 			display: flex;
-		    flex-direction: row;
-		    flex-wrap: nowrap;
-		    justify-content: flex-start;
-		    align-content: stretch;
-		    align-items: stretch;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: stretch;
+			align-items: stretch;
 			padding:8px;
 			width:50%;
 			> *{
@@ -808,12 +822,12 @@ ol.grid{
 
 .games-boxes-list{
 	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
-    margin:-10px -2px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
+	margin:-10px -2px;
 	> li{
 		padding:10px 2px;
 		width:50%;
@@ -877,5 +891,23 @@ img{
 			padding:0;
 			text-align:left;
 		}
+	}
+}
+
+.form-sorting{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: center;
+	align-items: center;
+	color:$base-gray;
+	font-size:16px;
+	line-height:1.125;
+	.title{
+		display:inline-block;
+		vertical-align:top;
+		font-weight:500;
+		margin:0 11px 0 0;
 	}
 }

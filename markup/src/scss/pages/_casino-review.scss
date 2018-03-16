@@ -1,73 +1,74 @@
 .section-casino{
-	// position:relative;
 	.subsection{
 		background:$white;
-		// border: 1px solid $border-color-base;
 		padding:0 0 20px;
-		// &#section1 {
-		// 	border-top-width: 0;
-		// }
 		&#section2,
 		&#section5 {
 			box-shadow:0 -1px 0 $border-color-base inset, 0 -1px 0 $border-color-base;
-		// 	.twocolumns{
-		// 		margin-bottom: -20px;
-		// 	}
 		}
 		&#section3,
 		&#section6 {
 			background:none;
 		}
+		&#section4 {
+			.twocolumns{
+				@include media(">=desktop") {
+					min-height: 445px;
+				}
+				div{
+					&:last-child {
+						height:0;
+						overflow:hidden;
+						@include media(">=desktop") {
+							align-self: flex-end;
+							height:auto;
+						}
+					}
+				}
+			}
+		}
 		&#section3 {
+			.twocolumns{
+				div{
+					&:last-child {
+						.section-heading{
+							display:none;
+							@include media(">=tablet") {
+								display:block;
+							}
+						}
+					}
+				}
+			}
 			.section-heading{
 				@include media(">=tablet") {
 					min-height: 78px;
 				}
 			}
 		}
-		// &#section4 {
-		// 	@include media(">=tablet") {
-		// 		padding:0;
-		// 		> .holder{
-		// 			padding-bottom: 0;
-		// 		}
-		// 	}
-		// 	.twocolumns{
-		// 		@include media(">=tablet") {
-		// 			justify-content: space-between;
-		// 			// align-content: flex-end;
-		// 			// align-items: flex-end;
-		// 		}
-		// 		@include media(">=widescreen") {
-		// 			padding:0 151px 0 0;
-		// 		}
-		// 		> div{
-		// 			@include media(">=tablet") {
-		// 				padding:0 35px $gutter-width 0;
-		// 				width:350px;
-		// 			}
-		// 			&:nth-child(2) {
-		// 				display:none;
-		// 				@include media(">=tablet") {
-		// 					display:block;
-		// 					align-self: flex-end;
-		// 					padding:0;
-		// 					max-width:450px;
-		// 					width:100%;
-		// 				}
-		// 				@include media(">=desktop") {
-		// 					max-width: 716px;
-		// 				}
-		// 			}
-		// 		}
-		// 	}
-		// }
-		> .holder{
-			// padding:30px 23px 20px;
+		&#section4,
+		&#section6 {
+			@include media(">=desktop") {
+				padding-bottom: 0;
+			}
+		}
+		&.subsection-content {
+			// padding:30px 0 20px;
 			padding-top: 30px;
-			padding-bottom: 20px;
 			@include media(">=tablet") {
 				padding-top: 34px;
+			}
+		}
+		&.subsection-games {
+			// padding:0 0 20px;
+			.section-heading{
+				padding-bottom: 14px;
+			}
+			.slick-dots{
+				li{
+					margin-top: 12px;
+					margin-bottom: 16px;
+				}
 			}
 		}
 	}
@@ -119,22 +120,16 @@
 				padding-right: 38px;
 				width:49.7%;
 			}
-			+ div{
-				padding:25px 0 0;
-				@include media(">=tablet") {
-					padding:0;
-				}
-			}
 		}
 	}
 	.games-slider{
 		margin:0 0 -2px;
 		@include media(">=tablet") {
-			margin:0 0 28px;
+			margin:0 0 -4px;
 		}
 		.slick-list{
 			@include media(">=tablet") {
-				margin-right: 0;
+				margin:-8px 0 0 -6px;
 				overflow:hidden;
 				padding:0;
 			}
@@ -150,6 +145,7 @@
 		}
 		.slick-slide{
 			@include media(">=tablet") {
+				display:block;
 				padding-right: 5px;
 				padding-left: 5px;
 			}
@@ -174,7 +170,7 @@
 		}
 	}
 	.casino-bonuses-list{
-		padding:3px 0 0;
+		// padding:3px 0 0;
 		@include media(">=tablet") {
 			display: flex;
 			flex-direction: row;
@@ -182,11 +178,13 @@
 			justify-content: flex-start;
 			align-content: stretch;
 			align-items: stretch;
-			margin:3px -5px -7px;
-			padding:0;
+			// margin:3px -5px -7px;
+			// padding:0;
+			// margin-right: -5px;
+			// margin-left: -5px;
 		}
 		li{
-			padding:0 0 9px;
+			// padding:0 0 9px;
 			@include media(">=tablet") {
 				display: flex;
 				flex-direction: row;
@@ -220,9 +218,6 @@
 			color:$base-gray;
 			font-size:12px;
 			line-height:1.25;
-			// @include media(">=widescreen") {
-			// 	max-width:380px;
-			// }
 			.heading{
 				display: flex;
 				flex-direction: column;
@@ -252,18 +247,6 @@
 					padding:24px 30px 18px;
 				}
 			}
-			// .txt{
-			// 	display: flex;
-			// 	flex-direction: column;
-			// 	flex-wrap: nowrap;
-			// 	justify-content: center;
-			// 	align-content: stretch;
-			// 	align-items: stretch;
-			// 	min-height: 54px;
-			// 	> *{
-			// 		width:100%;
-			// 	}
-			// }
 			h4{
 				font-size: 18px;
 				font-weight:normal;
@@ -285,7 +268,6 @@
 				width:100%;
 			}
 		}
-		// unique -->
 		.bonus-box{
 			.content{
 				@include media(">=tablet") {
@@ -313,7 +295,6 @@
 				}
 			}
 		}
-		// unique <--
 	}
 	.images-slider{
 		@include media(">=tablet") {
@@ -335,6 +316,7 @@
 	@include media(">=tablet") {
 		align-content: stretch;
 		align-items: stretch;
+		margin:22px 0 0;
 		padding:0;
 	}
 	.icon-holder{
@@ -406,7 +388,7 @@ dl{
 }
 
 .casinos-tiles-slider{
-	margin:0 0 -20px;
+	// margin:0 0 -20px;
 	@include media(">=tablet") {
 		display: flex;
 		flex-direction: row;
@@ -422,9 +404,7 @@ dl{
 		}
 	}
 	.slick-list{
-		margin:-4px 0 0 -5px;
-		overflow:hidden;
-		padding:0;
+		margin:-5px;
 	}
 	.slick-slide{
 		padding:5px;
@@ -440,7 +420,6 @@ dl{
 		height:120px;
 		padding:5px;
 		text-align:center;
-		// width:102px;
 		@include media(">=tablet") {
 			height:164px;
 			width:140px;
@@ -479,11 +458,8 @@ dl{
 				margin:0 0 1px;
 			}
 		}
-		// .stars{
-		// 	margin:0 auto;
-		// 	@include media(">=desktop") {
-		// 		width:110px;
-		// 	}
-		// }
+	}
+	.slick-dots{
+		padding:20px 0 0;
 	}
 }

@@ -1,0 +1,88 @@
+.jcf-select{
+	border: 2px solid $base-gray;
+	display: inline-block;
+	vertical-align: top;
+	height: 35px;
+	min-width: 236px;
+	position: relative;
+	select {
+		left: 0;
+		top: 0;
+		z-index: 1;
+	}
+	.jcf-select-text {
+	    cursor: default;
+	    display: block;
+	    font-size: 16px;
+	    font-weight:500;
+	    line-height: 31px;
+	    margin: 0 40px 0 18px;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    text-transform:uppercase;
+	    white-space: nowrap;
+	}
+	.jcf-select-opener {
+	    background: $base-gray;
+	    bottom: 0;
+	    height:9px;
+	    position: absolute;
+	    right: 19px;
+	    text-align: center;
+	    top: 50%;
+	    transform:translateY(-50%);
+	    width: 16px;
+	}
+}
+
+body > .jcf-select-drop {
+    // margin: -2px 0 0;
+    position: absolute;
+    z-index: 9999;
+ //    &.jcf-drop-flipped {
+	//     margin: 2px 0 0;
+	// }
+}
+
+// .jcf-select-drop .jcf-select-drop-content {
+//     border: 2px solid $base-gray;
+// }
+
+.jcf-list {
+    background:$white;
+    box-shadow: 0 0 2px 0 $border-color-base;
+    color:$base-gray;
+    display:block;
+    font-size: 14px;
+    font-weight:500;
+    line-height: 1.1429;
+    position: relative;
+    text-transform:uppercase;
+    .jcf-list-content{
+    	display:block;
+    	overflow:auto;
+    }
+    ul{
+    	padding:2px 0 4px;
+    	li{
+    		// overflow:hidden;
+    		padding:0;
+    		// vertical-align:top;
+    		&:before {
+    			display:none;
+    		}
+    	}
+    }
+}
+
+.jcf-option{
+	display:block;
+	padding:8px 21px 9px;
+	&.jcf-selected {
+		display:none;
+	}
+	&.jcf-hover {
+		background:$base-gray;
+		color:$white;
+	}
+}

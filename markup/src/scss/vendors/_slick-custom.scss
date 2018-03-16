@@ -32,20 +32,19 @@
 
 .games-slider{
 	margin-top: -8px;
-	// padding:23px 0;
-	// &.col-3{
-	// 	@include media(">=desktop") {
-	// 		padding:0 0 20px;
-	// 		.slick-list{
-	// 			margin:0 -8px;
-	// 			padding:0;
-	// 		}
-	// 	}
-	// }
+	@include media(">=tablet") {
+		display:block;
+	}
 	.slick-list{
 		margin:0 -23px 0 -8px;
-		// overflow:visible;
 		padding:0 53px 0 0;
+		@include media(">=tablet") {
+			margin-left: 0;
+		}
+		@include media(">=desktop") {
+			margin:0;
+			padding:0;
+		}
 	}
 	.slick-slide{
 		padding:8px;
