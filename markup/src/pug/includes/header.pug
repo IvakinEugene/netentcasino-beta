@@ -37,7 +37,7 @@ header#header(class= page_class)
 	.header-content.to-fixed
 		.holder
 			.go-back
-				a(href="index.html").btn-back
+				a(href="index.html").btn-back.icon-arrow-left
 				strong.title Page Title Here
 			div
 				strong.logo
@@ -135,38 +135,22 @@ header#header(class= page_class)
 											span.count 50
 											|  Results
 							ul.nav
-								li
-									a(href="#")
-										span.icon-casinos
-										| New Casinos
-								li
-									a(href="#")
-										span.icon-calendar
-										| Top Monthly Offers
+								li.icon-casinos
+									a(href="#") New Casinos
+								li.icon-calendar.current-menu-item
+									a(href="#") Top Monthly Offers
 								li.divider
-								li
-									a(href="#")
-										span.icon-watermelon
-										| NetEnt Casinos
-								li
-									a(href="#")
-										span.icon-money-bag
-										| NetEnt Bonuses
-								li
-									a(href="#")
-										span.icon-seven
-										| NetEnt Games &amp; Jackpots
-								li
-									a(href="#")
-										span.icon-news
-										| NetEnt News
+								li.icon-watermelon
+									a(href="#") NetEnt Casinos
+								li.icon-money-bag
+									a(href="#") NetEnt Bonuses
+								li.icon-seven
+									a(href="#") NetEnt Games &amp; Jackpots
+								li.icon-news
+									a(href="#") NetEnt News
 								li.divider
-								li
-									a(href="#")
-										span.icon-money
-										| Payments
-								li
-									a(href="#")
-										span.icon-info
-										| Guides
+								li.icon-money
+									a(href="#") Payments
+								li.icon-info
+									a(href="#") Guides
 					a(href="#").nav-opener.icon-menu-search

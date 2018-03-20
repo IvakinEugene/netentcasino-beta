@@ -30,7 +30,7 @@ jQuery(window).on('load', function(){
 	initAnchors();
 	initMagicOpener();
 	initFilters();
-	initCustomForms();
+	// initCustomForms();
 });
 
 // initialize custom form elements

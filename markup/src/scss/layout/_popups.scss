@@ -140,14 +140,21 @@ button,
 		position:relative;
 		.icon-search{
 			background:$base-gray;
-			border: 0;
 			height:30px;
+			width:30px;
+
+			border: 0;
 			left:18px;
 			padding:0;
 			position:absolute;
 			top:50%;
 			transform:translateY(-50%);
-			width:30px;
+			@include media(">=desktop") {
+				background:none;
+				color:$base-gray;
+				font-size: 28px;
+				left:22px;
+			}
 		}
 		input[type=text]{
 			background:none;
@@ -295,6 +302,9 @@ button,
 
 .refer-popup{
 	height:auto !important;
+	@include media(">=desktop") {
+		max-height: 100vh;
+	}
 	.icon-gift{
 		margin:0 0 13px;
 		text-align:center;

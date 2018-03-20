@@ -1,7 +1,6 @@
 html.mp-opened{
 	height:100%;
 	left:0;
-	// min-height:100%;
 	position:fixed;
 	top:0;
 	width:100%;
@@ -11,19 +10,31 @@ html.mp-opened{
 	}
 }
 
+.nav-active{
+	height:100%;
+	left:0;
+	position:fixed;
+	top:0;
+	width:100%;
+	#wrapper{
+		height:100%;
+		overflow:hidden;
+	}
+}
+
 #wrapper{
 	background:#f5f7f6;
 	overflow:hidden;
-	max-width: 320px;
-	@include media(">=375px") {
-		max-width: 375px;
-	}
-	@include media(">=tablet") {
-		max-width: 992px;
-	}
-	@include media(">=widescreen") {
-		max-width:1440px;
-	}
+	// max-width: 320px;
+	// @include media(">=375px") {
+	// 	max-width: 375px;
+	// }
+	// @include media(">=tablet") {
+	// 	max-width: 992px;
+	// }
+	// @include media(">=widescreen") {
+	// 	max-width:1440px;
+	// }
 }
 
 #main{
@@ -150,7 +161,7 @@ section{
 	.holder{
 		padding:42px 42px 22px;
 		@include media(">=tablet") {
-			padding:50px 42px 29px;
+			padding:35px 42px 29px;
 		}
 	}
 	[class*="icon-"]{
@@ -159,8 +170,8 @@ section{
 		font-size:42px;
 		margin:0 0 18px;
 		@include media(">=tablet") {
-			font-size: 64px;
-			margin:0 0 27px;
+			font-size: 94px;
+			margin:0 0 9px;
 		}
 	}
 	h1{
@@ -208,7 +219,7 @@ section{
 		background:$white;
 		border-radius: 2px;
 		box-shadow: 0 1px 2px $shadow;
-		padding:19px 18px 20px;
+		padding:16px 18px 20px;
 		@include media(">=tablet") {
 			display: flex;
 		    flex-direction: row;
@@ -220,7 +231,7 @@ section{
 			max-width: 1392px;
 			background:none;
 			box-shadow: none;
-			padding:28px 41px 13px;
+			padding:28px 41px 16px;
 		}
 	}
 	.left{
@@ -247,15 +258,11 @@ section{
 		}
 	}
 	.icon-gift{
-		// background:$base-gray;
 		color:$theme-color-base;
 		display:block;
-		font-size: 64px;
-		// height:65px;
-		// width:68px;
+		font-size: 68px;
 		@include media(">=tablet") {
-			height:53px;
-			width:56px;
+			font-size: 56px;
 		}
 	}
 	.content{
@@ -282,7 +289,7 @@ section{
 		}
 	}
 	p{
-		margin:0 0 14px;
+		margin:0 0 12px;
 	}
 	.btn{
 		font-size: 14px;

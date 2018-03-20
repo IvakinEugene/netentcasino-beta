@@ -44,44 +44,62 @@ a{
 	}
 }
 
-.icon-check .path1:before {
+.icon-arrow-left:before {
   content: "\e90c";
-  color: rgb(0, 0, 0);
 }
-.icon-check .path2:before {
+.icon-cards:before {
   content: "\e90d";
-  margin-left: -1.01953125em;
-  color: rgb(255, 255, 255);
 }
-.icon-check-o:before {
+.icon-check:before {
   content: "\e90e";
 }
-.icon-chevron-up:before {
+.icon-check-o:before {
   content: "\e90f";
 }
-.icon-close:before {
+.icon-chevron-down:before {
   content: "\e910";
 }
-.icon-close-circle:before {
+.icon-chevron-left-circle:before {
   content: "\e911";
 }
-.icon-gift:before {
+.icon-chevron-right-circle:before {
   content: "\e912";
 }
-.icon-laptop:before {
+.icon-chevron-up:before {
   content: "\e913";
 }
-.icon-mail:before {
+.icon-close:before {
   content: "\e914";
 }
-.icon-mobile:before {
+.icon-close-cirlce-o:before {
   content: "\e915";
 }
-.icon-phone:before {
+.icon-gift:before {
   content: "\e916";
 }
-.icon-tablet:before {
+.icon-laptop:before {
   content: "\e917";
+}
+.icon-mail:before {
+  content: "\e918";
+}
+.icon-message-bubbles:before {
+  content: "\e919";
+}
+.icon-mobile:before {
+  content: "\e91a";
+}
+.icon-payments:before {
+  content: "\e91b";
+}
+.icon-phone:before {
+  content: "\e91c";
+}
+.icon-play-circle:before {
+  content: "\e91d";
+}
+.icon-tablet:before {
+  content: "\e91e";
 }
 .icon-calendar:before {
   content: "\e900";

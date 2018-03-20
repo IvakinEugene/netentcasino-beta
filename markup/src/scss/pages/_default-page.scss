@@ -8,6 +8,9 @@
 		background:$white;
 		border-bottom: 1px solid $border-color-base;
 		padding: 25px 0 9px;
+		> .holder{
+			overflow:visible;
+		}
 		.logo-holder{
 			float:left;
 			margin:-1px 18px 12px -2px;

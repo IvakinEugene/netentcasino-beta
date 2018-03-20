@@ -929,8 +929,15 @@
 	.stars{
 		// width:53px;
 		@include media(">=desktop") {
-			margin:0 0 10px;
+			font-size: 24px;
+			margin:0 0 8px -5px;
+			text-align:left;
 			// width:145px;
+		}
+		[class*="icon"]{
+			@include media(">=desktop") {
+				margin:0 4px;
+			}
 		}
 	}
 	.content{

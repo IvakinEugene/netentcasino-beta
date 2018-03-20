@@ -212,9 +212,10 @@
 					background:$white;
 					border-bottom: 1px solid $border-color-base;
 					display:block;
-					font-size:14px;
-					line-height:1.2857;
-					padding:15px 50px 15px 20px;
+					color:$headings-color;
+					font-size:16px;
+					line-height:1.125;
+					padding:13px 65px 16px 20px;
 					position:relative;
 					text-decoration:none;
 					z-index:10;
@@ -228,13 +229,13 @@
 						font-weight: normal;
 						font-variant: normal;
 						text-transform: none;
-						color:$theme-color-base;
-						content: "\e90f";
-						font-size:12px;
+						color:inherit;
+						content: "\e910";
+						font-size:20px;
 						line-height:1;
-						padding:15px 15px 16px;
+						padding:14px 21px;
 						position:absolute;
-						right:5px;
+						right:0;
 						top:0;
 						transition:transform $animation-speed;
 					}
@@ -269,13 +270,16 @@
 					.opener{
 						background:none;
 						color:$theme-color-base;
-						font-size:10px;
+						font-size:20px;
 						line-height:1;
-						padding:0;
+						padding:14px 22px 13px;
 						position:absolute;
-						right:20px;
-						top:16px;
+						right:0;
+						top:0;
 						transition:transform $animation-speed;
+						&:hover {
+							color:$headings-color;
+						}
 						&:before {
 							font-family: 'icomoon' !important;
 							speak: none;
@@ -283,7 +287,7 @@
 							font-weight: normal;
 							font-variant: normal;
 							text-transform: none;
-							content: "\e90f";
+							content: "\e910";
 						}
 					}
 				}
@@ -307,7 +311,7 @@
 				span{
 					background:$white;
 					display:block;
-					padding:15px 50px 15px 20px;
+					padding:15px 65px 15px 20px;
 					position:relative;
 					text-decoration:none;
 					&:hover {
@@ -428,7 +432,9 @@
 					text-align:left;
 				}
 				[class*="icon"]{
-					margin:0 4px;
+					@include media(">=tablet") {
+						margin:0 4px;
+					}
 				}
 			}
 			.content{
@@ -514,7 +520,7 @@
 	border: 1px solid $border-color-base;
 	box-shadow: 0 2px 4px $shadow;
 	line-height:1.3571;
-	padding:0 18px 62px;
+	padding:0 18px 21px;
 	position:relative;
 	@include media(">=tablet") {
 		line-height:$line-height-base;
@@ -594,16 +600,24 @@
 			}
 		}
 		a:before{
-			background:$white;
-			border-radius: 100%;
-			content: '';
+			font-family: 'icomoon' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			content: "\e91d";
+			color:$white;
 			display:none;
-			height:55px;
+			font-size: 56px;
+			// height:55px;
 			left:50%;
 			position:absolute;
 			top:50%;
 			transform:translate(-50%, -50%);
-			width:55px;
+			// width:55px;
 			z-index:5;
 		}
 	}
@@ -622,10 +636,14 @@
 		margin:0 0 7px;
 	}
 	.button-holder{
-		bottom:21px;
-		left:18px;
-		position:absolute;
-		right:18px;
+		padding:5px 0 0;
+		@include media(">=tablet") {
+			bottom:21px;
+			left:18px;
+			padding:0;
+			position:absolute;
+			right:18px;
+		}
 	}
 	.btn{
 		@include media(">=tablet") {
