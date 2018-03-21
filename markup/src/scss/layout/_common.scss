@@ -257,7 +257,7 @@ section{
 			margin:-4px 0 0;
 		}
 	}
-	.icon-gift{
+	[class*="-gift"]{
 		color:$theme-color-base;
 		display:block;
 		font-size: 68px;

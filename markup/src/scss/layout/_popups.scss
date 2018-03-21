@@ -1,7 +1,7 @@
 #main,
 #header,
 #footer{
-	// display:none;
+	// display:none; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }
 
 // customize Magnific Popup
@@ -15,12 +15,14 @@ button,
 	&.mfp-close {
 		// background:$theme-color-base;
 		// background:$white;
+		color:$headings-color;
+		font-size: 28px;
 		height:auto;
 		opacity:1;
 		position:absolute;
 		right:15px;
-		text-shadow:0 0 10px $black;
-		box-shadow:0 0 10px $black;
+		// text-shadow:0 0 10px $black;
+		// box-shadow:0 0 10px $black;
 		top:15px !important;
 		width:auto;
 		// &:active {
@@ -28,11 +30,11 @@ button,
 		// }
 		&:before {
 			// background:#2a2c2c;
-			background:$white;
-			content: '';
-			display:block;
-			height:28px;
-			width:28px;
+			// background:$white;
+			// content: '';
+			// display:block;
+			// height:28px;
+			// width:28px;
 		}
 	}
 }
@@ -45,6 +47,12 @@ button,
 .popups-holder{
 	height:0;
 	overflow:hidden;
+	> div{
+		// height:auto !important;
+		// margin:0 !important;
+		// max-height: none !important;
+		// width:auto !important;
+	}
 }
 
 .default-popup{
@@ -60,7 +68,7 @@ button,
     min-width: $base-min-width;
 	// max-height:658px !important; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	position:relative;
-	@include media(">=desktop") {
+	@include media(">=tablet") {
     	justify-content: flex-start;
     	height:auto !important;
     	margin:0 auto;
@@ -75,19 +83,40 @@ button,
 			font-weight:bold;
 			line-height:1.1667;
 			margin:0 40px 11px 0;
+			@include media(">=tablet") {
+				font-size: 22px;
+				margin-bottom: 6px;
+				text-transform:uppercase;
+			}
 		}
 	}
 	.popup-frame{
 		background:$white;
 		padding:33px $gutter-width;
+		@include media(">=tablet") {
+			padding:34px 18px;
+		}
 	}
 	.popup-footer{
 		background:#f5f7f6;
 		border-top: 1px solid $border-color-base;
 		> .button-holder{
 			padding:21px 15px 20px;
+			@include media(">=tablet") {
+				padding:13px 15px 15px;
+			}
 		}
 		.btn{
+			font-size: 18px;
+			min-width: 288px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			@include media(">=tablet") {
+				font-size: 14px;
+				min-width: 0;
+				padding-right: $gutter-width;
+				padding-left: $gutter-width;
+			}
 			&[class*="mfp-"] {
 				background:none;
 				color:inherit;
@@ -105,55 +134,82 @@ button,
 	.section-refer{
 		background:none;
 		padding:17px 42px 21px;
+		@include media(">=tablet") {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-content: center;
+			align-items: center;
+			padding:36px 37px 20px;
+		}
+		.icon-holder{
+			@include media(">=tablet") {
+				margin:-7px 0 0;
+			}
+		}
+		[class*="-gift"]{
+			@include media(">=tablet") {
+				font-size: 66px;
+			}
+		}
+		h1{
+			@include media(">=tablet") {
+				font-size: 15px;
+				margin:0;
+			}
+		}
+		.right{
+			@include media(">=tablet") {
+				min-width: 204px;
+				padding-bottom: 16px;
+			}
+			.btn{
+				@include media(">=tablet") {
+					display:block;
+				}
+			}
+		}
 	}
 	.btn-search{
 		background:#f2f5f4;
 		border-bottom: 1px solid $border-color-base;
 		color:$placeholder-color;
 		display:block;
-		// margin:-33px -#{$gutter-width} 0;
 		font-size:16px;
 		font-weight:normal;
 		height:auto;
 		line-height:25px;
-		padding:18px 15px 18px 64px;
+		padding:16px 55px 18px 62px;
 		position:relative;
 		text-align:left;
 		text-transform:none;
 		.icon-search{
-			background:$base-gray;
-			border: 0;
-			height:30px;
+			font-size: 26px;
 			left:18px;
-			padding:0;
 			position:absolute;
 			top:50%;
 			transform:translateY(-50%);
-			width:30px;
 		}
 	}
 	.search-bar{
 		background:#f2f5f4;
 		border-bottom: 1px solid $border-color-base;
-		// margin:-33px -#{$gutter-width} 0;
 		padding:0 15px 0 64px;
 		position:relative;
+		@include media(">=tablet") {
+			padding:0 65px 0 74px;
+		}
 		.icon-search{
-			background:$base-gray;
-			height:30px;
-			width:30px;
-
-			border: 0;
+			color:$base-gray;
+			font-size: 26px;
 			left:18px;
-			padding:0;
 			position:absolute;
 			top:50%;
 			transform:translateY(-50%);
-			@include media(">=desktop") {
-				background:none;
-				color:$base-gray;
+			@include media(">=tablet") {
 				font-size: 28px;
-				left:22px;
+				left:28px;
 			}
 		}
 		input[type=text]{
@@ -173,7 +229,7 @@ button,
 	    justify-content: flex-start;
 	    align-content: flex-start;
 	    align-items: flex-start;
-	    margin:-5px;
+	    margin:-18px -2px;
 		li{
 			width:33.33%;
 			padding:5px;
@@ -181,12 +237,13 @@ button,
 				display: flex;
 			    flex-direction: column;
 			    flex-wrap: nowrap;
-			    justify-content: center;
+			    justify-content: flex-start;
 			    align-content: stretch;
-    			align-items: stretch;
+			    align-items: stretch;
 				box-shadow: 0 0 3px $shadow;
 				font-size: 12px;
-				height:102px;
+				height:111px;
+				padding:0 0 17px;
 				text-align:center;
 				text-decoration:none;
 				&:hover {
@@ -194,38 +251,68 @@ button,
 				}
 			}
 		}
-		.icon-img{
+		span{
 			display:block;
-			margin-bottom: 15px;
+		}
+		[class*="icon"]{
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: center;
+		    align-content: center;
+		    align-items: center;
+			flex:1 1 auto;
+			color:$theme-color-base;
+			font-size: 56px;
+		}
+		.icon-casino{
+			font-size: 42px;
 		}
 	}
 	.news-list{
 		font-size:16px;
 		line-height:1.125;
-		margin:-11px -#{$gutter-width};
+		margin:-24px -#{$gutter-width};
 		li{
 			overflow:hidden;
+			position:relative;
 			vertical-align:top;
+			&:before {
+				color:$theme-color-base;
+				font-size: 24px;
+				left:11px;
+				pointer-events:none;
+				position:absolute;
+				text-align:center;
+				top:50%;
+				transform:translateY(-50%);
+				width:40px;
+				z-index:5;
+			}
 		}
 		a{
 			display:block;
-			padding:15px 15px 15px 62px;
+			padding:16px 15px 16px 62px;
 			position:relative;
 			text-decoration:none;
+			z-index:1;
 			&:hover {
 				background:$bg-content;
 			}
-			&:before {
-				background:$base-gray;
-				content: '';
-				height:10px;
-				left:26px;
-				position:absolute;
-				top:50%;
-				transform:translateY(-50%);
-				width:10px;
-			}
+			// &:before {
+			// 	background:$base-gray;
+			// 	content: '';
+			// 	height:10px;
+			// 	left:26px;
+			// 	position:absolute;
+			// 	top:50%;
+			// 	transform:translateY(-50%);
+			// 	width:10px;
+			// }
 		}
+	}
+	.payments-list.large{
+		margin:-17px 0 0;
 	}
 }
 
@@ -233,6 +320,10 @@ button,
     color:#2a2c2c;
     font-size:16px;
     line-height:1.25;
+	@include media(">=tablet") {
+		min-height: 555px;
+		width:597px;
+	}
 	.popup-content{
 		display: flex;
 	    flex-direction: column;
@@ -243,15 +334,30 @@ button,
 	    align-items: stretch;
 		background:$theme-color-add;
 		flex:1 1 auto;
+		@include media(">=tablet") {
+			background:$white;
+		}
 		[class*="icon-"]{
-			font-size: 44px;
-			margin:0 0 30px;
+			font-size: 66px;
+			margin:0 0 16px;
+			@include media(">=tablet") {
+				color:$theme-color-base;
+				margin:0 0 9px;
+			}
 		}
 		h2{
 			margin-right: 0;
+			@include media(">=tablet") {
+				font-size:24px;
+				line-height:1.375;
+				margin:0 0 8px;
+			}
 		}
 		p{
 			margin:0 0 32px;
+			@include media(">=tablet") {
+				margin:0 30px 33px;
+			}
 		}
 	}
 	.popup-frame{
@@ -260,10 +366,17 @@ button,
 	}
 	form{
 		padding:0 21px;
+		@include media(">=tablet") {
+			margin:0 auto;
+			max-width: 380px;
+		}
 	}
 	.form-content{
 		margin:0 auto -14px;
 		max-width: 288px;
+		@include media(">=tablet") {
+			max-width: 300px;
+		}
 	}
 	.form-group{
 		margin:0 0 14px;
@@ -289,6 +402,9 @@ button,
 		min-width: 0;
 		padding:10px 10px 11px;
 		width:100%;
+		@include media(">=tablet") {
+			background:$btn-dark-background;
+		}
 		&:hover {
 			background:transparent;
 			color:$btn-dark-background;
@@ -297,29 +413,41 @@ button,
 	.popup-footer{
 		background:$white;
 		border-top: 0;
+		@include media(">=tablet") {
+			background:$bg-content;
+		}
+		.btn{
+			font-size: 14px;
+			min-width: 0;
+			padding-top: 4px;
+			padding-bottom: 6px;
+		}
 	}
 }
 
 .refer-popup{
 	height:auto !important;
-	@include media(">=desktop") {
-		max-height: 100vh;
+	@include media(">=tablet") {
+		width:597px;
 	}
-	.icon-gift{
-		margin:0 0 13px;
+	[class*="-gift"]{
+		color:$theme-color-base;
+		font-size: 44px;
+		margin:0 0 11px;
 		text-align:center;
-		&:before {
-			background:#ccc;
-			content: '';
-			display:inline-block;
-			vertical-align:top;
-			height:42px;
-			width:44px;
+		@include media(">=tablet") {
+			margin:0 0 24px;
 		}
 	}
-	h2{
-		margin:0 0 30px;
-		text-align:center;
+	.popup-content{
+		h2{
+			margin:0 0 30px;
+			text-align:center;
+			@include media(">=tablet") {
+				font-size: 24px;
+				margin:0 0 20px;
+			}
+		}
 	}
 	.title{
 		display:block;
@@ -327,17 +455,28 @@ button,
 		font-weight:500;
 		margin:0 0 29px;
 		text-align:center;
+		@include media(">=tablet") {
+			margin:0 0 23px;
+		}
 	}
 	ol{
 		counter-reset: count;
 		margin:0 0 8px;
 		padding:0 0 0 7px;
 		@extend %listreset;
+		@include media(">=tablet") {
+			margin:0 auto 9px;
+			max-width: 446px;
+			padding:0;
+		}
 		li{
 			overflow:hidden;
 			padding:0 0 30px 49px;
 			position:relative;
 			vertical-align:top;
+			@include media(">=tablet") {
+				padding:0 0 20px 50px;
+			}
 			&:before {
 				background:$theme-color-add;
 				border-radius: 100%;
@@ -362,6 +501,9 @@ button,
 	.form-content{
 		margin:0 auto -14px;
 		max-width: 288px;
+		@include media(">=tablet") {
+			max-width: 300px;
+		}
 		.form-group{
 			margin:0 0 14px;
 		}
@@ -406,6 +548,11 @@ button,
 	.anchor-links{
 		display:block;
 		position:static !important;
+		.holder{
+			@include media(">=tablet") {
+				padding:0 30px;
+			}
+		}
 	}
 	h3{
 		color:$base-gray;
@@ -416,6 +563,9 @@ button,
 		margin:0 -#{$gutter-width} -14px;
 		overflow:hidden;
 		transition:height $animation-speed;
+		@include media(">=tablet") {
+			margin:-10px -18px -14px;
+		}
 		&.filter-active {
 			ul{
 				li{
@@ -427,18 +577,37 @@ button,
 				}
 			}
 		}
+		&.filtered-list {
+			ul{
+				li{
+					&:nth-child(5) {
+						display: list-item;
+						~ li{
+							display:none;
+						}
+					}
+				}
+			}
+		}
 		> li{
 			padding:0 $gutter-width 14px;
 			width:100%;
+			@include media(">=tablet") {
+				padding-right: 30px;
+				padding-left: 30px;
+			}
 		}
 		ul{
 			font-size: 18px;
 			font-weight:normal;
 			line-height:1.1111;
 			margin:0 -#{$gutter-width};
+			@include media(">=tablet") {
+				margin:0 -30px;
+			}
 			li{
 				padding:0;
-				&:nth-child(5) {
+				&:nth-child(4) {
 					~ li{
 						display:none;
 					}
@@ -452,6 +621,9 @@ button,
 				padding:20px 15px 20px 82px;
 				position:relative;
 				text-decoration:none;
+				@include media(">=tablet") {
+					padding-left: 90px;
+				}
 				&:hover {
 					background:$bg-content;
 				}
@@ -465,6 +637,9 @@ button,
 				top:50%;
 				transform:translateY(-50%);
 				width:43px;
+				@include media(">=tablet") {
+					left:30px;
+				}
 			}
 		}
 	}

@@ -17,7 +17,7 @@
 			vertical-align:top;
 			font-size: 6px;
 			// height:6px;
-			margin:0 10px 0 0;
+			margin:0 9px 0 0;
 			// width:6px;
 			@include media(">=tablet") {
 				font-size: 18px;
@@ -168,9 +168,6 @@
 	font-size:12px;
 	letter-spacing: -0.025em;
 	line-height:1.25;//15
-	@include media(">=desktop") {
-		height:59px;
-	}
 	.hide-offer & {
 		display:none;
 	}
@@ -185,8 +182,12 @@
 		@include media(">=tablet") {
 			margin:0 auto;
 			max-width: 1396px;
-			padding-right: $gutter-width;
-			padding-left: $gutter-width;
+			padding:9px $gutter-width;
+			// padding-right: $gutter-width;
+			// padding-left: $gutter-width;
+		}
+		@include media(">=desktop") {
+			height:59px;
 		}
 	}
 	.left{
@@ -200,11 +201,11 @@
 	}
 	.icon-mail{
 		color:$base-text-color;
-		font-size:14px;
-		margin:0 1px 0 0;
+		font-size:24px;
+		// margin:0 1px 0 0;
 		@include media(">=tablet") {
-			font-size: 24px;
-			margin-right: 10px;
+			font-size: 40px;
+			margin-right: 9px;
 		}
 	}
 	.content{
@@ -286,6 +287,8 @@
 		padding:12px 21px;
 		@include media(">=tablet") {
 			max-width: 1390px;
+			padding-top: 13px;
+			padding-bottom: 13px;
 		}
 	}
 	// .hide-nav & {
@@ -366,7 +369,7 @@
 }
 
 .nav-opener{
-	color:$base-text-color;
+	color:$theme-color-base;
 	display:inline-block;
 	vertical-align:top;
 	font-size: 29px;
