@@ -1,0 +1,88 @@
+extends pug/extends/master
+
+block content
+	- var page_class = "hide-nav hide-offer hide-bonus"
+	include pug/includes/header
+	#main
+		section.template-default-page
+			.subsection.page-heading
+				.holder
+					h1 Free Spins & Bonus Calculator
+					p Enter your preferred deposit amount & view how much money & free spins you get from a bonus.
+					.deposit-block
+						span.title Your Deposit Amount
+						.deposit-block-frame
+							span.minus
+							input(type="text" value="100")#text
+							span.plus
+						.offer-sticker
+							| Bonus breakdown if you deposit
+							strong  £100
+			.subsection.boxes-spins
+				.holder
+					ul.list-free-spins
+						//- li
+						//- 	.box
+						//- 		.row.top
+						//- 			.heading
+						//- 				.logo-holder
+						//- 					a(href="#")
+						//- 						img(src="http://via.placeholder.com/50")
+						//- 				h3
+						//- 					a(href="#") SlotsMillion
+						//- 				img(src="assets/images/stars.png", alt="Image description", width="55", height="10").stars
+						//- 			.content
+						//- 				h4 £200 + 50 Free Spins
+						//- 				p 100% up to £100 + 50 Free Spins
+						//- 		.row
+						//- 			.col
+						//- 				h4 £100
+						//- 				p You deposit
+						//- 			.col
+						//- 				h4 £200
+						//- 				p You play with
+						//- 			.col
+						//- 				h4 50
+						//- 				p Free spins
+						//- 		.row.bottom
+						//- 			a(href="#").btn.btn-primary Go to Casino
+						li
+							.box
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="http://via.placeholder.com/140x140")
+									.txt-frame
+										h2
+											a(href="#") Slots Million
+										img(src="assets/images/stars.png", alt="Image description", width="145", height="10").stars
+										a(href="#").btn.btn-secondary Casino Review
+								.row.top
+									.top-holder
+										h3 £200 + 50 Free Spins
+										p 100% up to £100 + 50 Free Spins
+								.row.bottom
+									.col-frame
+										.col
+											h4 £100
+											p You deposit
+										.col
+											h4 £200
+											p You play with
+										.col
+											h4 50
+											p Free spins
+									.col-btn
+										a(href="#").btn.btn-primary Go to Casino
+
+			.subsection.page-content.block-money
+				.holder
+					h2 What is Bonus Money?
+					p Because the gambling industry is such a competitive field, casinos are always thinking of ways to attract customers to them. One of them is the Casino Bonus Money.
+					p There are various kinds of bonuses, but the first you will encounter is the Sign-Up Bonus or Welcome Bonus. You deposit money and the casino gives you, say, a 25% or 100% bonus to add to your bankroll.
+					p Now this sounds great, and it is meant to. But what does it all mean? How much do i actually 
+					p 
+						a(href="#") Read More
+					img(src="http://via.placeholder.com/330x200")
+	include pug/includes/popups/_main
+	include pug/includes/footer
