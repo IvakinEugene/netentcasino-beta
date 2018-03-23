@@ -1014,9 +1014,14 @@
 	.sticker{
 		display:none;
 		@include media(">=desktop") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: center;
+		    align-content: center;
+		    align-items: center;
 			background:$theme-color-add;
 			color:$headings-color;
-			display:block;
 			font-size:14px;
 			line-height:1.1429;
 			padding:6px 7px 8px;
@@ -1050,16 +1055,16 @@
 				margin-top: 18px;
 			}
 		}
-		> * {
+		> *{
 			@include media(">=desktop") {
-				display:inline;
-				margin:0 5px;
+				display:block;
+				margin:0 4px;
 			}
 		}
-		.icon{
+		[class*="icon-"]{
 			@include media(">=desktop") {
-				background:$base-gray;
-				// width:20px;
+				font-size: 20px;
+				margin:-5px 4px;
 			}
 		}
 	}

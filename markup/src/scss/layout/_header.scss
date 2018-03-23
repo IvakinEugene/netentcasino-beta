@@ -532,7 +532,7 @@
 	.search-bar-active & {
 		display:none;
 	}
-	li{
+	> li{
 		position:relative;
 		&[class*="icon-"] {
 			&:before {
@@ -542,16 +542,31 @@
 				pointer-events:none;
 				position:absolute;
 				text-align:center;
-				top:50%;
+				top:23px;
 				transform:translateY(-50%);
 				width:40px;
 				z-index:5;
 			}
 		}
+		> a{
+			color:inherit;
+			display:block;
+			padding:15px 15px 15px 63px;
+			position:relative;
+			text-decoration:none;
+			z-index:1;
+		}
+	}
+	li{
 		&.current-menu-item,
-		&:hover {
-			a{
-				background:$bg-content;
+		&.hover {
+			> a{
+				color:$theme-color-base;
+			}
+		}
+		&.hover {
+			> ul{
+				position:static;
 			}
 		}
 	}
@@ -564,16 +579,26 @@
 			display:none;
 		}
 	}
-	a{
-		color:inherit;
-		display:block;
-		padding:15px 15px 15px 63px;
-		position:relative;
-		text-decoration:none;
-		z-index:1;
-	}
-	.icon-payments{
-		font-size: 18px;
+	ul{
+		background:$bg-content;
+		border: 1px solid $border-color-base;
+		left:-9999px;
+		position:absolute;
+		top:-9999px;
+		li{
+			padding:0;
+			&:before {
+				display:none;
+			}
+			+ li{
+				margin:6px 0 0;
+			}
+		}
+		a{
+			display:block;
+			padding:13px 15px 13px 63px;
+			text-decoration:none;
+		}
 	}
 }
 
@@ -623,24 +648,17 @@
 }
 
 #nav{
-	margin:-10px 0;
+	margin:-13px 0;
 	text-align:right;
-	li{
+	> li{
 		@include media(">=tablet") {
 			display:inline-block;
 			vertical-align:top;
-			padding:3px 0 3px 23px;
-			&:hover,
-			&.current-menu-item {
-				> a{
-					color:$theme-color-base;
-				}
-			}
-			&.current-menu-item {
-				> a{
-					font-weight:500;
-				}
-			}
+			margin:0 0 0 23px;
+			overflow:visible;
+			padding:19px 0;
+			position:relative;
+			
 		}
 		&:before {
 			@include media(">=tablet") {
@@ -648,9 +666,52 @@
 			}
 		}
 	}
+	li{
+		&.hover,
+		&.current-menu-item {
+			> a{
+				color:$theme-color-base;
+			}
+		}
+		&.hover {
+			> ul{
+				left:-23px;
+				top:100%;
+			}
+		}
+		&.current-menu-item {
+			> a{
+				font-weight:500;
+			}
+		}
+	}
 	a{
 		@include media(">=tablet") {
 			text-decoration:none;
+		}
+	}
+	ul{
+		background:$white;
+		box-shadow: 0 0 2px #cbd6d2;
+		// font-size: 14px;
+		font-weight:500;
+		left:-9999px;
+		padding:2px 0 4px;
+		position:absolute;
+		text-align:left;
+		text-transform:uppercase;
+		top:-9999px;
+		width:236px;
+		li{
+			padding:0;
+			&:before {
+				display:none;
+			}
+		}
+		a{
+			color:$base-gray;
+			display:block;
+			padding:6px 21px;
 		}
 	}
 }

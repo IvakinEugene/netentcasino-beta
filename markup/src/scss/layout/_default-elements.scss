@@ -44,15 +44,15 @@
 }
 
 .offer-sticker{
-	background:$theme-color-add;
+	// background:$theme-color-add;
 	display:block;
 	font-size: 13px;
 	font-weight:200;
 	letter-spacing: -0.02em;
 	padding:6px 9px 5px 0;
 	position:relative;
+	z-index:1;
 	@include media(">=tablet") {
-		box-shadow: 0 1px 1px $shadow;
 		display:inline-block;
 		vertical-align:top;
 		font-size: 18px;
@@ -82,12 +82,13 @@
 		background:$theme-color-add;
 		bottom:0;
 		content: '';
-		right:100%;
+		right:0;
 		position:absolute;
 		top:0;
-		width:100%;
+		width:150%;
+		z-index:-1;
 		@include media(">=tablet") {
-			box-shadow: 0 1px 0 $shadow;
+			box-shadow: 0 1px 1px $shadow;
 			width:9999px;
 		}
 	}
