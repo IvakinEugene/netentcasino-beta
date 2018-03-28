@@ -6,8 +6,10 @@
 
 // customize Magnific Popup
 .mfp-container{
-	padding-right: 0;
-	padding-left: 0;
+	@include media("<900px") {
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
 
 button,

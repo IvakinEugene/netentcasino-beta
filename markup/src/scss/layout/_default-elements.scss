@@ -246,7 +246,7 @@
 		display:block;
 	}
 	.holder{
-		// overflow:auto;
+		overflow:auto;
 		padding:0 23px;
 		@include media(">=tablet") {
 			margin:0 auto;
@@ -479,6 +479,8 @@
 	justify-content: flex-start;
 	align-content: flex-end;
 	align-items: flex-end;
+	font-size: 30px;
+	line-height:1;
 	padding:20px 0 0;
 	@include media(">=tablet") {
 		display:block;
@@ -495,6 +497,7 @@
 			margin-right: 0;
 		}
 		> span{
+			display:block;
 			@include media(">=tablet") {
 				border: 2px solid $btn-secondary-border;
 				display:block;
@@ -503,14 +506,21 @@
 			}
 		}
 	}
-	img{
-		@include media(">=tablet") {
-			left:53px;
-			position:absolute;
-			top:50%;
-			transform:translate(-50%, -50%);
-		}
+	[class*="icon-"]{
+		display:block;
 	}
+	[class*="laptop"]{
+		font-size: 1.6667em;//50
+		margin:0 0 -0.2em;
+	}
+	// img{
+	// 	@include media(">=tablet") {
+	// 		left:53px;
+	// 		position:absolute;
+	// 		top:50%;
+	// 		transform:translate(-50%, -50%);
+	// 	}
+	// }
 	.txt{
 		display:none;
 		@include media(">=tablet") {
@@ -541,7 +551,7 @@
 .support-list{
 	font-size:16px;
 	line-height:1.125;
-	padding:5px 0 9px;
+	padding:24px 0 8px;
 	@include media(">=tablet") {
 		padding:39px 0 7px;
 	}
@@ -556,7 +566,7 @@
 	a{
 		box-shadow: 0 1px 2px $shadow;
 		display:block;
-		padding:18px 15px 16px 71px;
+		padding:16px 15px 18px 71px;
 		position:relative;
 		text-decoration:none;
 		@include media(">=tablet") {
@@ -576,6 +586,7 @@
 		}
 	}
 	[class*="icon-"]{
+		color:$theme-color-base;
 		font-size: 30px;
 		left:11px;
 		position:absolute;
@@ -593,26 +604,12 @@
 			transform:none;
 			width:auto;
 		}
-		&:after {
-			background:$theme-color-base;
-			border: 2px solid $white;
-			border-radius: 100%;
-			color:$white;
-			content: 'V';
-			font-size:10px;
-			line-height:20px;
-			position:absolute;
-			right:-5px;
-			top:-5px;
-			width:24px;
-		}
 	}
-	.icon-email{
-		font-size: 38px;
-		&:after {
-			right:-12px;
-			top:-6px;
-		}
+	[class*="phone"]{
+		font-size: 24px;
+	}
+	img.icon{
+		display:none;
 	}
 	.content{
 		display:block;

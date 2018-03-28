@@ -83,19 +83,19 @@
 	@include media(">=desktop") {
 		display:none;
 	}
-	&:hover {
-		&:before {
-			background:$white;
-		}
-	}
 	&:before {
-		background:$base-gray;
-		content: '';
-		height:11px;
+		font-family: 'icomoon' !important;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		content: "\e910";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 		position:absolute;
-		right:18px;
+		right:20px;
 		top:50%;
 		transform:translateY(-50%);
-		width:20px;
 	}
 }

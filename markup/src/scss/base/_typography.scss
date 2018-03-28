@@ -150,12 +150,8 @@ ul{
 	}
 }
 
-[class*="advant"]
-// .list-advantages,
-// .list-disadvantages
-{
+[class*="advant"]{
 	line-height:1.3571;
-	// @extend %listreset;
 	li{
 		overflow:visible;
 		padding:0 0 0 30px;
@@ -171,14 +167,20 @@ ul{
 			}
 		}
 		&:before {
-			background:$theme-color-base;
-			border-radius: 100%;
-			content: '';
-			height:15px;
+			font-family: 'icomoon' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			content: "\e90f";
+			color:$theme-color-base;
+			font-size: 16px;
 			left:0;
 			position:absolute;
-			top:3px;
-			width:15px;
+			top:0;
 		}
 	}
 }
@@ -186,7 +188,8 @@ ul{
 .list-disadvantages{
 	li{
 		&:before {
-			background:$theme-color-add;
+			content: "\e915";
+			color:$theme-color-add;
 		}
 	}
 }
