@@ -132,6 +132,7 @@
 		margin:0 0 -2px;
 		@include media(">=tablet") {
 			margin:0 0 -4px;
+			padding:40px 0 29px;
 		}
 		.slick-list{
 			@include media(">=tablet") {
@@ -328,7 +329,7 @@
 	@include media(">=tablet") {
 		align-content: stretch;
 		align-items: stretch;
-		margin:22px 0 0;
+		margin:28px 0 0;
 		padding:0;
 	}
 	.icon-holder{

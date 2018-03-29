@@ -108,10 +108,12 @@
 		align-content: flex-start;
 		align-items: flex-start;
 		font-size: 12px;
-		margin:19px 0 21px;
+		// margin:19px 0 21px;
 		@include media(">=tablet") {
 			font-size: 16px;
-			margin:-14px -4px -4px;
+			// margin:-14px -4px -4px;
+			margin-right: -4px;
+			margin-left: -4px;
 		}
 		li{
 			margin:0;
@@ -495,6 +497,7 @@
 		margin:0 21px 21px 0;
 		@include media(">=tablet") {
 			margin-right: 0;
+			position:relative;
 		}
 		> span{
 			display:block;
@@ -508,10 +511,22 @@
 	}
 	[class*="icon-"]{
 		display:block;
+		@include media(">=tablet") {
+			font-size: 30px;
+			left:18px;
+			position:absolute;
+			text-align:center;
+			top:50%;
+			transform:translateY(-50%);
+			width:70px;
+		}
 	}
 	[class*="laptop"]{
-		font-size: 1.6667em;//50
+		font-size: 50px;//50
 		margin:0 0 -0.2em;
+		// @include media(">=tablet") {
+		// 	font-size: 50px;
+		// }
 	}
 	// img{
 	// 	@include media(">=tablet") {
@@ -571,13 +586,13 @@
 		text-decoration:none;
 		@include media(">=tablet") {
 			display: flex;
-			flex-direction: column;
-			flex-wrap: nowrap;
-			justify-content: center;
-			align-content: center;
-			align-items: center;
+		    flex-direction: column;
+		    flex-wrap: nowrap;
+		    justify-content: flex-end;
+		    align-content: center;
+		    align-items: center;
 			box-shadow: 0 0 3px $shadow;
-			padding:10px;
+			padding:24px 10px;
 			height:120px;
 			width:205px;
 			&:hover {
@@ -595,14 +610,15 @@
 		transform:translateY(-50%);
 		width:50px;
 		@include media(">=tablet") {
-			display:block;
-			font-size: 50px;
-			left: auto;
-			margin:0 0 10px;
-			position:relative;
-			top: auto;
-			transform:none;
-			width:auto;
+			// display:block;
+			// font-size: 50px;
+			// left: auto;
+			// margin:0 0 10px;
+			// position:relative;
+			// top: auto;
+			// transform:none;
+			// width:auto;
+			display:none;
 		}
 	}
 	[class*="phone"]{
@@ -610,6 +626,11 @@
 	}
 	img.icon{
 		display:none;
+		@include media(">=tablet") {
+			display:block;
+			margin:0 -12px 10px 0;
+			// width:72px;
+		}
 	}
 	.content{
 		display:block;
