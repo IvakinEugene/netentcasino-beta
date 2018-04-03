@@ -15,7 +15,7 @@
 				@include media(">=desktop") {
 					min-height: 445px;
 				}
-				div{
+				> div{
 					&:last-child {
 						height:0;
 						overflow:hidden;
@@ -311,7 +311,7 @@
 	}
 	.images-slider{
 		@include media(">=tablet") {
-			margin-top: -14px;
+			margin:0 0 0 5px;
 		}
 	}
 }

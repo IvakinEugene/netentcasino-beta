@@ -256,7 +256,8 @@ button,
 		span{
 			display:block;
 		}
-		[class*="icon"]{
+		// [class*="icon"]{
+		.icon-holder{
 			display: flex;
 		    flex-direction: row;
 		    flex-wrap: nowrap;
@@ -264,12 +265,12 @@ button,
 		    align-content: center;
 		    align-items: center;
 			flex:1 1 auto;
-			color:$theme-color-base;
-			font-size: 56px;
+			// color:$theme-color-base;
+			// font-size: 56px;
 		}
-		.icon-casino{
-			font-size: 42px;
-		}
+		// .icon-casino{
+		// 	font-size: 42px;
+		// }
 	}
 	.news-list{
 		font-size:16px;
