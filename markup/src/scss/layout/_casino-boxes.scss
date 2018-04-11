@@ -656,6 +656,12 @@
 			> * {
 				@include media(">=tablet") {
 					display:inline;
+					vertical-align:middle;
+				}
+			}
+			[class*="icon-"]{
+				@include media(">=tablet") {
+					font-size: 18px;
 				}
 			}
 		}

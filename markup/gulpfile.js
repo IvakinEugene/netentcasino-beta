@@ -65,7 +65,6 @@ gulp.task('images', function() {
 	gulp.src([src + pathImages + '/**/*.*'])
 		.pipe(imagemin())
 		.pipe(gulp.dest(dist + pathImages))
-		// .pipe(browserSync.reload());
 });
 
 gulp.task('js', function() {
