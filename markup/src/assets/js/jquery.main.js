@@ -164,13 +164,13 @@ function initSlick() {
 // init Magnific Popup
 function initMP() {
 	$('.lightbox-opener').magnificPopup({
-		closeMarkup: "<button title=\"%title%\" type=\"button\" class=\"mfp-close icon-close\"></button>",
+		showCloseBtn: false,
 		callbacks: {
 			open: function() {
-				jQuery('html').addClass('mp-opened')
+				jQuery('html').addClass('mp-opened');
 			},
 			close: function() {
-				jQuery('html').removeClass('mp-opened')
+				jQuery('html').removeClass('mp-opened');
 			},
 			change: function() {
 				this.content.find('.btn-close').on('click',function(e){
@@ -321,7 +321,6 @@ function initStickyScrollBlock() {
 			return totalHeight;
 		}
 	});
-	// console.log(jQuery('.anchor-links').closest('section').attr('class'))
 }
 
 // add class when element is in focus

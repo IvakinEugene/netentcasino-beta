@@ -5,6 +5,16 @@
 }
 
 // customize Magnific Popup
+.mfp-wrap{
+	position:fixed !important;
+	top:50% !important;
+	transform:translateY(-50%);
+	@include media("<tablet") {
+		top:0 !important;
+		transform:none;
+	}
+}
+
 .mfp-container{
 	@include media("<900px") {
 		padding-right: 0;
@@ -15,28 +25,16 @@
 button,
 .btn{
 	&.mfp-close {
-		// background:$theme-color-base;
-		// background:$white;
 		color:$headings-color;
 		font-size: 28px;
 		height:auto;
 		opacity:1;
 		position:absolute;
 		right:15px;
-		// text-shadow:0 0 10px $black;
-		// box-shadow:0 0 10px $black;
 		top:15px !important;
 		width:auto;
-		// &:active {
-		// 	top:15px;
-		// }
-		&:before {
-			// background:#2a2c2c;
-			// background:$white;
-			// content: '';
-			// display:block;
-			// height:28px;
-			// width:28px;
+		&.invert {
+			color:$white;
 		}
 	}
 }
@@ -76,6 +74,9 @@ button,
     	margin:0 auto;
     	max-height: 594px;
     	width:615px;
+	}
+	.popup-top{
+		position:relative;
 	}
 	.popup-content{
 		overflow:auto;
@@ -429,8 +430,8 @@ button,
 }
 
 .refer-popup{
-	height:auto !important;
 	@include media(">=tablet") {
+		height:auto !important;
 		width:597px;
 	}
 	[class*="-gift"]{

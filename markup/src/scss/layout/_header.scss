@@ -242,7 +242,7 @@
 	text-align:center;
 	top:0;
 	width:100%;
-	@include media(">=nav") {
+	@include media(">=tablet") {
 		display:none !important;
 	}
 	.hide-nav & {
@@ -272,7 +272,6 @@
 	// height:60px;
 	position:relative;
 	z-index:1;
-	@include media(">=desktop") {}
 	.nav-active & {
 		z-index:10;
 	}
@@ -290,37 +289,31 @@
 			padding-top: 13px;
 			padding-bottom: 13px;
 		}
+		> div{
+			&:last-child {
+				@include media(">=tablet") {
+					display: flex;
+				    flex-direction: row;
+				    flex-wrap: nowrap;
+				    justify-content: flex-start;
+				    align-content: center;
+				    align-items: center;
+				}
+				.desktop-nav{
+					@include media(">=tablet") {
+						order:1;
+					}
+				}
+			}
+		}
 	}
-	// .hide-nav & {
-	// 	display:none;
-	// 	@include media(">=tablet") {
-	// 		display:flex;
-	// 	}
-	// }
-	// div{
-	// 	&:last-child {
-	// 		@include media(">=tablet") {
-	// 			display: flex;
-	// 		    flex-direction: row;
-	// 		    flex-wrap: nowrap;
-	// 		    justify-content: flex-start;
-	// 		    align-content: center;
-	// 		    align-items: center;
-	// 		}
-	// 		> div{
-	// 			@include media(">=tablet") {
-	// 				padding:0 0 0 30px;
-	// 			}
-	// 		}
-	// 	}
-	// }
 	.logo{
 		display:block;
 		width:162px;
 	}
 	.desktop-nav{
 		display:none;
-		@include media(">=nav") {
+		@include media(">=tablet") {
 			display: flex;
 		    flex-direction: row;
 		    flex-wrap: nowrap;
@@ -329,11 +322,18 @@
 		    align-items: center;
 		}
 		> div{
-			@include media(">=tablet") {
-				padding:0 0 0 30px;
+			+ div {
+				@include media(">=tablet") {
+					padding:0 0 0 30px;
+				}
 			}
 		}
-
+		#nav{
+			display:none;
+			@include media(">=nav") {
+				display:block;
+			}
+		}
 	}
 	.mobile-nav{
 		@include media(">=nav") {
@@ -374,6 +374,9 @@
 	vertical-align:top;
 	font-size: 29px;
 	margin:5px 0 0;
+	@include media(">=tablet") {
+		margin:0;
+	}
 }
 
 .mobile-nav-holder{
@@ -392,15 +395,9 @@
 			display:none;
 		}
 	}
-	// &.changed {
-	// 	.search-bar .icon-close-o{
-	// 		display:block;
-	// 	}
-	// }
 	.nav-active & {
 		transform:translateX(0);
 		transition:transform $animation-speed;
-		// transition:none;
 	}
 	&:before {
 		background-color:rgba(56,58,58,0.8);
@@ -411,12 +408,11 @@
 		position:absolute;
 		right:100%;
 		top:0;
-		width:200%;
+		width:310%;
 		.nav-active & {
 			opacity:1;
 			pointer-events:auto;
 			transition:opacity $animation-speed;
-			// transition:none;
 		}
 	}
 	.mobile-nav-frame{

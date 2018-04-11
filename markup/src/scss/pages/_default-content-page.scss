@@ -166,8 +166,8 @@
 		@include media("<desktop") {
 			left:0;
 			// margin:0 -#{$gutter-width};
-			position:fixed;
-			top:60px;
+			position:absolute;
+			top:0;
 			width:100% !important;
 			z-index:10;
 		}

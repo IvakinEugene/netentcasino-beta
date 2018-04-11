@@ -12,7 +12,10 @@ var gulp 		= require('gulp'),
 	csscomb 	= require('gulp-csscomb'),
 	gcmq 		= require('gulp-group-css-media-queries'),
 	src 		= './src',
-	dist 		= './dist';
+	dist 		= './dist',
+	pathImages	= '/assets/images',
+	pathJs		= '/assets/js',
+	pathFonts	= '/assets/fonts';
 
 gulp.task('sass', function(){
 	gulp.src(src + '/scss/**/*.scss')
@@ -59,26 +62,23 @@ gulp.task('pug', function(){
 });
 
 gulp.task('images', function() {
-	gulp.src([src + '/assets/images/**/*.*'])
-		.pipe(watch(src + '/assets/images/**/*.*'))
-		.pipe(gulp.dest(dist + '/assets/images'))
-		.pipe(browserSync.reload({
-			stream: true
-		}));
+	gulp.src([src + pathImages + '/**/*.*'])
+		.pipe(imagemin())
+		.pipe(gulp.dest(dist + pathImages))
+		// .pipe(browserSync.reload());
 });
 
 gulp.task('js', function() {
-	gulp.src(src + '/assets/js/*')
-		.pipe(gulp.dest(dist + '/assets/js'))
+	gulp.src(src + pathJs + '/*')
+		.pipe(gulp.dest(dist + pathJs))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
 });
 
 gulp.task('fonts', function() {
-	gulp.src([src + '/assets/fonts/*'])
-		.pipe(watch(src + '/assets/fonts/*'))
-		.pipe(gulp.dest(dist + '/assets/fonts'))
+	gulp.src([src + pathFonts + '/*'])
+		.pipe(gulp.dest(dist + pathFonts))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
@@ -92,9 +92,9 @@ gulp.task('clean', function(){
 gulp.task('build', function(){
 	run(
 		'clean',
+		'images',
 		'js',
 		'fonts',
-		'images',
 		'sass',
 		'pug');
 });
@@ -106,7 +106,7 @@ gulp.task('done', function(){
 
 gulp.task('default', ['browser-sync', 'build'], function() {
 	gulp.watch(src + '/scss/**/*.scss', ['sass']);
-	gulp.watch(src + '/*.html', browserSync.reload);
-	gulp.watch(src + '/assets/js/**/*.js', ['js']);
+	gulp.watch(src + pathJs + '/**/*.js', ['js']);
+	gulp.watch(src + pathImages + '/**/*', ['images']);
 	gulp.watch(src + '/**/*.pug', ['pug']);
 });
