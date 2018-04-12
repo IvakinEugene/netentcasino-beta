@@ -542,11 +542,13 @@
 			}
 		}
 		.button-holder{
+			text-align:center;
 			@include media(">=tablet") {
 				bottom:31px;
 				left:30px;
 				padding:0;
 				right:30px;
+				text-align:left;
 			}
 			.btn{
 				@include media(">=tablet") {
