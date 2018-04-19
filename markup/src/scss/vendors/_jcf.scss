@@ -23,15 +23,21 @@
 	    white-space: nowrap;
 	}
 	.jcf-select-opener {
-	    background: $base-gray;
-	    bottom: 0;
-	    height:9px;
 	    position: absolute;
 	    right: 19px;
-	    text-align: center;
 	    top: 50%;
 	    transform:translateY(-50%);
-	    width: 16px;
+	    &:before {
+	    	font-family: 'icomoon' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+	    	content: "\e910";
+	    }
 	}
 }
 

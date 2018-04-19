@@ -42,35 +42,9 @@ blockquote:before, blockquote:after, q:before, q:after {content: '';}
 	transition: none !important;
 }
 
-// lists
-// ul {
-// 	@extend %listreset;
-// }
-// 
-// ul ul,
-// ul ol,
-// ol ul,
-// ol ol {
-// 	padding-left:3em;
-// 	margin:0;
-// }
-// 
-// ul:not([class]) {
-// 	padding: 0 0 10px;
-// 
-// 	li {
-// 		position: relative;
-// 		padding: 0 0 10px 15px;
-// 
-// 		&:before {
-// 			content: '';
-// 			background: $base-text-color;
-// 			width: 9px;
-// 			height: 9px;
-// 			position: absolute;
-// 			left: 0;
-// 			top: 8px;
-// 			border-radius: 50%;
-// 		}
-// 	}
-// }
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    *:focus{
+    	outline:0;
+    }
+}

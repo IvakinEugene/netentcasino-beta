@@ -1,0 +1,246 @@
+extends pug/extends/master
+
+block content
+	- var page_class = "hide-offer hide-bonus"
+	include pug/includes/header
+	#main
+		//- 
+		section.section-breadcrumbs
+			.holder
+				div
+					ul.breadcrumbs
+						li
+							a(href="#") Home
+						li NetEnt Jackpots
+				div
+					p Last updated - 
+						strong 2 days ago!
+		section.template-default-page
+			//- 
+			.dropdown-nav
+				a(href="#").opener.icon-chevron-down NetEnt Jackpots
+				.slide
+					ul
+						li
+							a(href="#") Jackpots
+						li
+							a(href="#") Casino Games
+						li
+							a(href="#") Live Casino
+			.subsection.page-heading
+				.holder
+					h1 NetEnt Jackpots
+					strong.subtitle.green Highest progressive jackpots right now!
+					p Whether you’re aiming for those multi-million wins or are content with smaller prize pools, NetEnt’s selection of local and networked jackpot games are second-to-none. These titles are all progressive, meaning that the overall total keeps rising until one lucky player cracks it open.
+			.subsection
+				.holder
+					form(action="#").form-sorting
+						strong.title Sort by
+						select
+							option Highest Jackpot
+							option Lowest Jackpot
+							option Date: Old to New
+							option A-Z
+					ul.grid
+						li
+							.game-box
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/562x280/ff0000/ffffff"
+										include pug/extends/retina-single
+										span.hover-box
+											span
+												span.icon-play
+												| Play at Mega Fortune
+										span.sticker £2,061.762
+									strong.media-title Mega Fortune
+								ul.games-list
+									li
+										.game
+											.heading
+												.logo-holder
+													a(href="#")
+														img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+												.txt
+													h2
+														a(href="#") Betsson
+													.stars
+														span.icon-star
+														span.icon-star
+														span.icon-star
+														span.icon-star-half-empty
+														span.icon-star-o
+											.content
+												a(href="#").btn.btn-primary Play Game
+									li
+										.game
+											.heading
+												.logo-holder
+													a(href="#")
+														img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+												.txt
+													h2
+														a(href="#") Thrills
+													.stars
+														span.icon-star
+														span.icon-star
+														span.icon-star
+														span.icon-star-half-empty
+														span.icon-star-o
+											.content
+												a(href="#").btn.btn-primary Play Game
+									li
+										.game
+											.heading
+												.logo-holder
+													a(href="#")
+														img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+												.txt
+													h2
+														a(href="#") LeoVegas
+													.stars
+														span.icon-star
+														span.icon-star
+														span.icon-star
+														span.icon-star-half-empty
+														span.icon-star-o
+											.content
+												a(href="#").btn.btn-primary Play Game
+								.footer
+									a(href="#").btn.btn-link View all 314 Casinos
+						li
+							.game-box
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/562x280/ff0000/ffffff"
+										include pug/extends/retina-single
+										span.hover-box
+											span
+												span.icon-play
+												| Play at Mega Fortune
+										span.sticker £3,654,000
+									strong.media-title Mega Fortune Dreams
+								ul.games-list
+									li
+										.game
+											.heading
+												.logo-holder
+													a(href="#")
+														img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+												.txt
+													h2
+														a(href="#") Betsson
+													.stars
+														span.icon-star
+														span.icon-star
+														span.icon-star
+														span.icon-star-half-empty
+														span.icon-star-o
+											.content
+												a(href="#").btn.btn-primary Play Game
+									li
+										.game
+											.heading
+												.logo-holder
+													a(href="#")
+														img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+												.txt
+													h2
+														a(href="#") Thrills
+													.stars
+														span.icon-star
+														span.icon-star
+														span.icon-star
+														span.icon-star-half-empty
+														span.icon-star-o
+											.content
+												a(href="#").btn.btn-primary Play Game
+									li
+										.game
+											.heading
+												.logo-holder
+													a(href="#")
+														img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+												.txt
+													h2
+														a(href="#") LeoVegas
+													.stars
+														span.icon-star
+														span.icon-star
+														span.icon-star
+														span.icon-star-half-empty
+														span.icon-star-o
+											.content
+												a(href="#").btn.btn-primary Play Game
+								.footer
+									a(href="#").btn.btn-link View all 135 Casinos
+						li
+							.game-box
+								.media-holder
+									a(href="#").bg-stretch
+										- var image = "http://via.placeholder.com/562x280/ff0000/ffffff"
+										include pug/extends/retina-single
+										span.hover-box
+											span
+												span.icon-play
+												| Play at Mega Fortune
+										span.sticker £832,000
+									strong.media-title Cosmic Fortune
+								ul.games-list
+									li
+										.game
+											.heading
+												.logo-holder
+													a(href="#")
+														img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+												.txt
+													h2
+														a(href="#") Betsson
+													.stars
+														span.icon-star
+														span.icon-star
+														span.icon-star
+														span.icon-star-half-empty
+														span.icon-star-o
+											.content
+												a(href="#").btn.btn-primary Play Game
+									li
+										.game
+											.heading
+												.logo-holder
+													a(href="#")
+														img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+												.txt
+													h2
+														a(href="#") Thrills
+													.stars
+														span.icon-star
+														span.icon-star
+														span.icon-star
+														span.icon-star-half-empty
+														span.icon-star-o
+											.content
+												a(href="#").btn.btn-primary Play Game
+									li
+										.game
+											.heading
+												.logo-holder
+													a(href="#")
+														img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+												.txt
+													h2
+														a(href="#") LeoVegas
+													.stars
+														span.icon-star
+														span.icon-star
+														span.icon-star
+														span.icon-star-half-empty
+														span.icon-star-o
+											.content
+												a(href="#").btn.btn-primary Play Game
+								.footer
+									a(href="#").btn.btn-link View all 314 Casinos
+					.load-more.text-center
+						a(href="#").btn.btn-secondary View all 176 Jackpots
+			include pug/includes/sections/related-posts
+	include pug/includes/footer

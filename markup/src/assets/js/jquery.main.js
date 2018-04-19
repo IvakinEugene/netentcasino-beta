@@ -31,7 +31,7 @@ jQuery(window).on('load', function(){
 	initMagicOpener();
 	initFilters();
 	initTouchNav();
-	// initCustomForms();
+	initCustomForms();
 });
 
 // handle dropdowns on mobile devices
@@ -137,11 +137,28 @@ function initSlick() {
 			}
 		]
 	});
-	$('.images-slider').slick({
+	// $('.images-slider').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	adaptiveHeight: true,
+	// 	fade: true
+	// });
+	$('.slider-for').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		adaptiveHeight: true,
-		fade: true
+		arrows: true,
+		fade: true,
+		asNavFor: '.slider-nav',
+		autoplay: true,
+		autoplaySpeed: 5000
+	});
+	$('.slider-nav').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for',
+		variableWidth: true,
+		centerMode: true,
+		focusOnSelect: true
 	});
 	ResponsiveHelper.addRange({
 		'..767': {
@@ -248,7 +265,26 @@ function initOpenClose() {
 				});
 			},
 			off: function() {
-				jQuery('.open-close').openClose('destroy');
+				if (jQuery('.open-close').data('OpenClose')) {
+					jQuery('.open-close').openClose('destroy');
+				}
+			}
+		},
+		'..768': {
+			on: function() {
+				jQuery('.dropdown-nav').openClose({
+					activeClass: 'active',
+					opener: '> .opener',
+					slider: '> .slide',
+					animSpeed: 400,
+					hideOnClickOutside: true,
+					effect: 'slide'
+				});
+			},
+			off: function() {
+				if (jQuery('.dropdown-nav').data('OpenClose')) {
+					jQuery('.dropdown-nav').openClose('destroy');
+				}
 			}
 		}
 	});

@@ -205,6 +205,8 @@
 .section-heading{
 	margin:0 0 -3px;
 	padding:27px 0 0;
+	position:relative;
+	z-index:5;
 	@include media(">=desktop") {
 		// margin:0 0 -14px;
 		padding:29px 0 0;
@@ -484,7 +486,7 @@
 	font-size: 30px;
 	line-height:1;
 	padding:20px 0 0;
-	@include media(">=tablet") {
+	@include media(">=desktop") {
 		display:block;
 		font-size:18px;
 		font-weight:500;
@@ -493,15 +495,33 @@
 		padding:40px 0 7px;
 		text-transform:uppercase;
 	}
+	&.slick-slider {
+		.slick-list {
+			padding:0 !important;
+			width:100%;
+		}
+		.slick-track{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-content: flex-end;
+			align-items: flex-end;
+			transform:none !important;
+			width:100% !important;
+		}
+	}
+	.slick-slide,
 	li{
 		margin:0 21px 21px 0;
-		@include media(">=tablet") {
+		@include media(">=desktop") {
 			margin-right: 0;
 			position:relative;
+			width:100%;
 		}
 		> span{
 			display:block;
-			@include media(">=tablet") {
+			@include media(">=desktop") {
 				border: 2px solid $btn-secondary-border;
 				display:block;
 				padding:16px 15px 17px 108px;
@@ -509,36 +529,33 @@
 			}
 		}
 	}
+	.slick-current{
+		@include media(">=desktop") {
+			[class*="icon-"]{
+				color:$theme-color-base;
+			}
+		}
+	}
 	[class*="icon-"]{
 		display:block;
-		@include media(">=tablet") {
+		@include media(">=desktop") {
 			font-size: 30px;
 			left:18px;
 			position:absolute;
 			text-align:center;
 			top:50%;
 			transform:translateY(-50%);
+			transition:color $animation-speed;
 			width:70px;
 		}
 	}
 	[class*="laptop"]{
 		font-size: 50px;//50
 		margin:0 0 -0.2em;
-		// @include media(">=tablet") {
-		// 	font-size: 50px;
-		// }
 	}
-	// img{
-	// 	@include media(">=tablet") {
-	// 		left:53px;
-	// 		position:absolute;
-	// 		top:50%;
-	// 		transform:translate(-50%, -50%);
-	// 	}
-	// }
 	.txt{
 		display:none;
-		@include media(">=tablet") {
+		@include media(">=desktop") {
 			display:block;
 		}
 	}
@@ -867,6 +884,9 @@ img{
 		display:block;
 		margin:0 0 10px;
 	}
+	&.aligncenter {
+		margin:0 auto;
+	}
 }
 
 .list-games{
@@ -915,19 +935,101 @@ img{
 }
 
 .form-sorting{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-content: center;
-	align-items: center;
-	color:$base-gray;
-	font-size:16px;
-	line-height:1.125;
+	display:none;
+	@include media(">=tablet") {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-content: center;
+		align-items: center;
+		color:$base-gray;
+		font-size:16px;
+		line-height:1.125;
+		padding:29px 0 0;
+	}
 	.title{
-		display:inline-block;
-		vertical-align:top;
-		font-weight:500;
-		margin:0 11px 0 0;
+		@include media(">=tablet") {
+			display:inline-block;
+			vertical-align:top;
+			font-weight:500;
+			margin:0 11px 0 0;
+		}
+	}
+}
+
+.show-on-mobile{
+	// display:none;
+	@include media(">=tablet") {
+		display:none !important;
+	}
+}
+
+.dropdown-nav{
+	background:$white;
+	@include media(">=tablet") {
+		display:none;
+	}
+	&.active {
+		> .opener{
+			&:before {
+				transform:translateY(-50%) rotate(180deg);
+			}
+		}
+	}
+	> .opener{
+		border-bottom: 1px solid $border-color-base;
+		color:$headings-color;
+		display:block;
+		font-size: 16px;
+		font-weight:normal;
+		padding:14px 50px 18px 21px;
+		position:relative;
+		&:before {
+			font-size: 20px;
+			right:21px;
+			position:absolute;
+			top:50%;
+			transform:translateY(-50%);
+			transition:transform $animation-speed;
+		}
+	}
+	> .slide{
+		box-shadow: 0 1px 1px $shadow;
+	}
+	ul{
+		li{
+			border-bottom: 1px solid $border-color-base;
+			padding:0;
+			&:before {
+				display:none;
+			}
+		}
+		a{
+			display:block;
+			padding:13px 20px;
+			text-decoration:none;
+		}
+	}
+}
+
+.featured-game{
+	color:$white;
+	overflow:hidden;
+	position:relative;
+	text-align:center;
+	> .holder{
+		padding:10px $gutter-width 20px;
+		position:relative;
+		z-index:5;
+	}
+	h1{
+		color:inherit;
+	}
+	> .bg-stretch{
+		filter: blur(3px);
+		left: -#{$gutter-width};
+		right: -#{$gutter-width};
+		width:auto;
 	}
 }

@@ -58,7 +58,9 @@ gulp.task('pug', function(){
 			pretty: true
 		}))
 		.pipe(gulp.dest(dist))
-		.pipe(browserSync.reload({stream:true}))
+		.pipe(browserSync.reload({
+			stream: true
+		}));
 });
 
 gulp.task('images', function() {

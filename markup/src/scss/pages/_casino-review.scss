@@ -10,23 +10,6 @@
 		&#section6 {
 			background:none;
 		}
-		&#section4 {
-			.twocolumns{
-				@include media(">=desktop") {
-					min-height: 445px;
-				}
-				> div{
-					&:last-child {
-						height:0;
-						overflow:hidden;
-						@include media(">=desktop") {
-							align-self: flex-end;
-							height:auto;
-						}
-					}
-				}
-			}
-		}
 		&#section3 {
 			.twocolumns{
 				div{
@@ -46,7 +29,6 @@
 				}
 			}
 		}
-		&#section4,
 		&#section6 {
 			@include media(">=desktop") {
 				padding-bottom: 0;
@@ -309,9 +291,56 @@
 			}
 		}
 	}
+	// .images-slider{
+	// 	@include media(">=tablet") {
+	// 		margin:0 0 0 5px;
+	// 	}
+	// }
+}
+
+.devices.subsection{
+	@include media(">=desktop") {
+		padding:22px 0 0;
+	}
+	.holder{
+		@include media(">=desktop") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: flex-start;
+		    align-content: flex-start;
+		    align-items: flex-start;
+			// min-height: 445px;
+		}
+	}
+	.info{
+		@include media(">=desktop") {
+			min-width: 336px;
+			padding:0 20px 0 0;
+		}
+		.section-heading{
+			@include media(">=desktop") {
+				padding:11px 0 0;
+			}
+		}
+	}
+	.carousel-holder{
+		height:0;
+		overflow:hidden;
+		@include media(">=desktop") {
+			align-self: flex-end;
+			flex:1 1 auto;
+			height:auto;
+			overflow:visible;
+		}
+	}
 	.images-slider{
-		@include media(">=tablet") {
-			margin:0 0 0 5px;
+		@include media(">=desktop") {
+			margin:0 auto;
+			max-width: 556px;
+		}
+		@include media(">=widescreen") {
+			max-width: 716px;
 		}
 	}
 }
