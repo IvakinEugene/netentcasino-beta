@@ -1015,21 +1015,82 @@ img{
 
 .featured-game{
 	color:$white;
+	// font-size:;
+	font-weight:normal;
+	line-height:1.7143;
 	overflow:hidden;
 	position:relative;
-	text-align:center;
+	// text-align:center;
+	@include media(">=tablet") {
+		color:#cbd6d2;
+		font-size:20px;
+		line-height:1.1;
+	}
 	> .holder{
-		padding:10px $gutter-width 20px;
+		padding:37px $gutter-width 40px;
 		position:relative;
 		z-index:5;
+		@include media(">=tablet") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: space-between;
+		    align-content: center;
+		    align-items: center;
+			margin:0 auto;
+			max-width: 1400px;
+			padding-top: 33px;
+			padding-bottom: 33px;
+		}
 	}
-	h1{
-		color:inherit;
+	.content{
+		padding:0 0 40px;
+		text-align:center;
+		@include media(">=tablet") {
+			max-width: 55%;
+			padding:0 20px 0 0;
+			text-align:left;
+		}
+	}
+	h2{
+		color:$white;
+		font-size:21px;
+		font-weight:500;
+		line-height:1.2857;
+		margin:0 0 9px;
+		text-transform:uppercase;
+		@include media(">=tablet") {
+			font-size: 26px;
+			margin:0 0 10px;
+		}
+	}
+	p{
+		margin:0 0 27px;
+		@include media(">=tablet") {
+			margin:0 0 17px;
+		}
+	}
+	.btn{
+		@include media(">=tablet") {
+			min-width: 203px;
+		}
+	}
+	.game-box{
+		@include media(">=tablet") {
+			width:350px;
+		}
+		@include media(">=desktop") {
+			width:440px;
+		}
+		.media-holder{
+			height:180px;
+			@include media(">=tablet") {
+				height:225px;
+			}
+		}
 	}
 	> .bg-stretch{
 		filter: blur(3px);
-		left: -#{$gutter-width};
-		right: -#{$gutter-width};
-		width:auto;
+		transform:scale(1.1, 1.1);
 	}
 }
