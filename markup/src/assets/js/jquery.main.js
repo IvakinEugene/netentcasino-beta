@@ -137,12 +137,6 @@ function initSlick() {
 			}
 		]
 	});
-	// $('.images-slider').slick({
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	adaptiveHeight: true,
-	// 	fade: true
-	// });
 	$('.slider-for').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -202,14 +196,14 @@ function initMP() {
 // init back-to-top button
 function initBackToTop() {
 	var button = jQuery('a.back-to-top')
-		win = jQuery(window),
-		value = win.height(),
+		win = jQuery('body'),
+		value = win.height() / 2,
 		parent = jQuery('body'),
 		activeClass = 'show-btt-button';
 
-	win.on({
+	jQuery(window).on({
 		'scroll': function() {
-					if (win.scrollTop() > value) {
+					if (jQuery(window).scrollTop() > value) {
 						parent.addClass(activeClass)
 					} else {
 						parent.removeClass(activeClass)
@@ -338,7 +332,7 @@ function initStickyScrollBlock() {
 		positionType: 'fixed',
 		extraTop: function() {
 			var totalHeight = 0;
-			jQuery('0').each(function() {
+			jQuery('#wpadminbar').each(function() {
 				totalHeight += jQuery(this).outerHeight();
 			});
 			return totalHeight;

@@ -16,6 +16,12 @@
 	}
 }
 
+// .admin-bar{
+// 	@include media(">=600") {
+// 		;
+// 	}
+// }
+
 .resize-active *{
 	transition:none !important;
 }
@@ -233,7 +239,7 @@
 .anchor-links{
 	background:$white;
 	border-bottom: 1px solid $border-color-base;
-	color:$base-gray;
+	color:$base-text-color;
 	display:none;
 	font-size:18px;
 	letter-spacing: -0.025em;
@@ -462,6 +468,7 @@
 			align-items: center;
 			border: 1px solid $border-color-base;
 			height:32px;
+			overflow:hidden;
 			width:71px;
 			text-decoration:none;
 			@include media(">=tablet") {
@@ -486,14 +493,49 @@
 	font-size: 30px;
 	line-height:1;
 	padding:20px 0 0;
-	@include media(">=desktop") {
-		display:block;
-		font-size:18px;
-		font-weight:500;
-		line-height:1;
-		max-width: 316px;
-		padding:40px 0 7px;
-		text-transform:uppercase;
+	&.slider-nav {
+		@include media(">=desktop") {
+			display:block;
+			font-size:18px;
+			font-weight:500;
+			line-height:1;
+			max-width: 316px;
+			padding:40px 0 7px;
+			text-transform:uppercase;
+		}
+		.slick-slide,
+		li{
+			@include media(">=desktop") {
+				margin-right: 0;
+				position:relative;
+				width:100%;
+			}
+			> span{
+				@include media(">=desktop") {
+					border: 2px solid $btn-secondary-border;
+					display:block;
+					padding:16px 15px 17px 108px;
+					position:relative;
+				}
+			}
+		}
+		[class*="icon-"]{
+			@include media(">=desktop") {
+				font-size: 30px;
+				left:18px;
+				position:absolute;
+				text-align:center;
+				top:50%;
+				transform:translateY(-50%);
+				transition:color $animation-speed;
+				width:70px;
+			}
+		}
+		.txt{
+			@include media(">=desktop") {
+				display:block;
+			}
+		}
 	}
 	&.slick-slider {
 		.slick-list {
@@ -514,19 +556,8 @@
 	.slick-slide,
 	li{
 		margin:0 21px 21px 0;
-		@include media(">=desktop") {
-			margin-right: 0;
-			position:relative;
-			width:100%;
-		}
 		> span{
 			display:block;
-			@include media(">=desktop") {
-				border: 2px solid $btn-secondary-border;
-				display:block;
-				padding:16px 15px 17px 108px;
-				position:relative;
-			}
 		}
 	}
 	.slick-current{
@@ -538,16 +569,7 @@
 	}
 	[class*="icon-"]{
 		display:block;
-		@include media(">=desktop") {
-			font-size: 30px;
-			left:18px;
-			position:absolute;
-			text-align:center;
-			top:50%;
-			transform:translateY(-50%);
-			transition:color $animation-speed;
-			width:70px;
-		}
+		
 	}
 	[class*="laptop"]{
 		font-size: 50px;//50
@@ -555,9 +577,6 @@
 	}
 	.txt{
 		display:none;
-		@include media(">=desktop") {
-			display:block;
-		}
 	}
 }
 
@@ -585,19 +604,21 @@
 	line-height:1.125;
 	padding:24px 0 8px;
 	@include media(">=tablet") {
+		display:table;
 		padding:39px 0 7px;
 	}
 	li{
 		padding:0 0 9px;
 		@include media(">=tablet") {
-			display:inline-block;
+			display:table-cell;
 			vertical-align:top;
-			margin:0 2px 0 0;
+			width:33.3333%;
 		}
 	}
 	a{
 		box-shadow: 0 1px 2px $shadow;
 		display:block;
+		margin:0 6px 0 0;
 		padding:16px 15px 18px 71px;
 		position:relative;
 		text-decoration:none;
@@ -611,9 +632,17 @@
 			box-shadow: 0 0 3px $shadow;
 			padding:24px 10px;
 			height:120px;
-			width:205px;
+			text-align:center;
+			// min-width:205px;
 			&:hover {
 				box-shadow: 0 0 10px $shadow;
+			}
+		}
+		&[href^="mailto"],
+		&[href^="tel"] {
+			word-break:break-all;
+			@include media(">=tablet") {
+				word-break:normal;
 			}
 		}
 	}

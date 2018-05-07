@@ -47,17 +47,11 @@ button,
 .popups-holder{
 	height:0;
 	overflow:hidden;
-	> div{
-		// height:auto !important;
-		// margin:0 !important;
-		// max-height: none !important;
-		// width:auto !important;
-	}
 }
 
 .default-popup{
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-end;
     // justify-content: flex-start; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -257,7 +251,6 @@ button,
 		span{
 			display:block;
 		}
-		// [class*="icon"]{
 		.icon-holder{
 			display: flex;
 		    flex-direction: row;
@@ -266,12 +259,7 @@ button,
 		    align-content: center;
 		    align-items: center;
 			flex:1 1 auto;
-			// color:$theme-color-base;
-			// font-size: 56px;
 		}
-		// .icon-casino{
-		// 	font-size: 42px;
-		// }
 	}
 	.news-list{
 		font-size:16px;
@@ -281,18 +269,18 @@ button,
 			overflow:hidden;
 			position:relative;
 			vertical-align:top;
-			&:before {
-				color:$theme-color-base;
-				font-size: 24px;
-				left:11px;
-				pointer-events:none;
-				position:absolute;
-				text-align:center;
-				top:50%;
-				transform:translateY(-50%);
-				width:40px;
-				z-index:5;
-			}
+		}
+		.icon-holder{
+			color:$theme-color-base;
+			font-size: 24px;
+			left:11px;
+			pointer-events:none;
+			position:absolute;
+			text-align:center;
+			top:50%;
+			transform:translateY(-50%);
+			width:40px;
+			z-index:5;
 		}
 		a{
 			display:block;
@@ -303,20 +291,10 @@ button,
 			&:hover {
 				background:$bg-content;
 			}
-			// &:before {
-			// 	background:$base-gray;
-			// 	content: '';
-			// 	height:10px;
-			// 	left:26px;
-			// 	position:absolute;
-			// 	top:50%;
-			// 	transform:translateY(-50%);
-			// 	width:10px;
-			// }
 		}
 	}
 	.payments-list.large{
-		margin:-17px 0 0;
+		margin-top:-17px;
 	}
 }
 
@@ -333,7 +311,6 @@ button,
 	    flex-direction: column;
 	    flex-wrap: nowrap;
 	    justify-content: center;
-	    // justify-content: flex-start; ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	    align-content: stretch;
 	    align-items: stretch;
 		background:$theme-color-add;
@@ -528,13 +505,11 @@ button,
 }
 
 .desktop-search-popup{
-	// height:auto !important;
 	max-height: 466px;
 	margin:0 auto;
 	width:597px;
 	&[id*="large"] {
 		max-height: 623px;
-		// margin:0 auto;
 		width:1033px;
 	}
 	&.changed {
@@ -548,7 +523,6 @@ button,
 			position:static;
 		}
 	}
-	// .ui-drop-active{}
 	.anchor-links{
 		display:block;
 		position:static !important;
@@ -658,5 +632,248 @@ button,
 		left:-9999px;
 		position:absolute;
 		top:-9999px;
+	}
+}
+
+.caino-summary-popup{
+	display:none;
+	@include media(">=tablet") {
+		display:block;
+		font-size:14px;
+		line-height:1.5;
+		// margin:0; // !!!!!!!!!!
+		max-height: none !important;
+		width:666px !important;
+	}
+	.popup-frame{
+		@include media(">=tablet") {
+			padding:0;
+		}
+	}
+	.heading{
+		@include media(">=tablet") {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			// align-content: center;
+			align-content: flex-end;
+			// align-items: center;
+			align-items: flex-end;
+			padding:30px 30px 28px;
+		}
+		.left{
+			@include media(">=tablet") {
+				display: flex;
+			    flex-direction: row;
+			    flex-wrap: nowrap;
+			    justify-content: flex-start;
+			    align-content: flex-start;
+			    align-items: flex-start;
+			}
+		}
+		.right{
+			@include media(">=tablet") {
+				width:170px;
+			}
+		}
+		.logo-holder{
+			@include media(">=tablet") {
+				margin:0 31px 0 0;
+				width:83px;
+			}
+		}
+		h3{
+			@include media(">=tablet") {
+				font-size: 26px;
+				font-weight:500;
+				margin:0 0 8px;
+			}
+		}
+		.btn{
+			@include media(">=tablet") {
+				min-width: 189px;
+			}
+		}
+		.rate{
+			@include media(">=tablet") {
+				color:$base-gray;
+				font-size: 30px;
+				margin:0 0 10px;
+			}
+			strong{
+				@include media(">=tablet") {
+					color:$black;
+					font-size: 1.6667em;
+				}
+			}
+		}
+		.stars{
+			@include media(">=tablet") {
+				font-size: 16px;
+			}
+			[class*="icon"]{
+				@include media(">=tablet") {
+					margin:0 2px;
+				}
+			}
+		}
+	}
+	.content{
+		@include media(">=tablet") {
+			padding:0 0 16px;
+		}
+	}
+	.twocolumns{
+		@include media(">=tablet") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: space-between;
+		    align-content: flex-start;
+		    align-items: flex-start;
+			border-top: 1px solid $border-color-base;
+			padding:16px 28px 8px;
+		}
+		> div{
+			&:first-child {
+				@include media(">=tablet") {
+					padding:0 50px 0 0;
+				}
+			}
+			&:last-child {
+				@include media(">=tablet") {
+					max-width: 228px;
+					min-width: 228px;
+				}
+			}
+		}
+	}
+	h4{
+		@include media(">=tablet") {
+			font-size: 18px;
+			font-weight:normal;
+			margin:0 0 9px;
+		}
+	}
+	blockquote{
+		@include media(">=tablet") {
+			font-style:italic;
+			margin:0;
+		}
+	}
+	.devices-list{
+		@include media(">=tablet") {
+			margin:-3px 0 0;
+			padding:0;
+		}
+		> div{
+			@include media(">=tablet") {
+				margin:0 18px 0 2px;
+			}
+		}
+	}
+	.section-heading{
+		@include media(">=tablet") {
+			padding:0;
+		}
+		h4{
+			@include media(">=tablet") {
+				margin:0 0 3px;
+			}
+		}
+		.subtitle{
+			@include media(">=tablet") {
+				font-size: 14px;
+				font-weight:300;
+			}
+			@include media(">=desktop") {
+				margin:0;
+			}
+		}
+	}
+	.payments-list.large{
+		a{
+			@include media(">=tablet") {
+				flex-wrap:nowrap;
+				font-size: 12px;
+				height:73px;
+				width:84px;
+			}
+		}
+		.logo-holder{
+			@include media(">=tablet") {
+				height:30px;
+				width:30px;
+			}
+		}
+	}
+	.games-list{
+		@include media(">=tablet") {
+			font-size: 13px;
+		}
+		li{
+			@include media(">=tablet") {
+				margin-right: 7px;
+			}
+			> a{
+				@include media(">=tablet") {
+					height:28px;
+					width:63px;
+				}
+			}
+		}
+	}
+	.payment-overview-box{
+		@include media(">=tablet") {
+			margin:3px 0 0;
+		}
+		.content{
+			@include media(">=tablet") {
+				padding:16px 20px 9px 30px;
+			}
+		}
+		dl{
+			@include media(">=desktop") {
+				font-size: 14px;
+				line-height:1.7857;
+			}
+			dt{
+				@include media(">=tablet") {
+					font-size: inherit;
+					margin:0 0 -1px;
+				}
+			}
+			dd{
+				@include media(">=tablet") {
+					margin:0 0 9px;
+				}
+			}
+		}
+	}
+	.popup-footer{
+		@include media(">=tablet") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: space-between;
+		    align-content: center;
+		    align-items: center;
+		    color:$base-gray;
+		    font-size: 18px;
+		    padding:20px 29px 17px;
+		}
+		h4{
+			@include media(">=tablet") {
+				font-size: 24px;
+				margin:0 0 -5px;
+				text-transform:uppercase;
+			}
+		}
+		.btn{
+			@include media(">=tablet") {
+				font-size: 16px;
+			}
+		}
 	}
 }

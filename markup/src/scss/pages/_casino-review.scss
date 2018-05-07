@@ -1,4 +1,9 @@
 .section-casino{
+	.anchor-links{
+		@include media(">=tablet") {
+			display:block !important;
+		}
+	}
 	.subsection{
 		background:$white;
 		padding:0 0 20px;
