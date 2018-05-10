@@ -557,7 +557,37 @@
 			}
 		}
 	}
-	&.payments{
+	&.payments {
+		&.short {
+			padding:14px 15px 12px;
+			.post-image{
+				border-bottom: 0;
+				float:left;
+				height:auto !important;
+				margin:4px 14px 0 0;
+				width:80px;
+				.logo-holder{
+					height:70px;
+					width:70px;
+				}
+			}
+			h3{
+				font-size: 16px;
+				margin:0 0 2px;
+			}
+			h4{
+				color:$base-gray;
+				font-size: 14px;
+				font-weight:300;
+				margin:0 0 2px;
+				strong{
+					font-weight:normal;
+				}
+			}
+			.btn{
+				min-width: 189px;
+			}
+		}
 		.post-image{
 			display: flex;
 			flex-direction: row;

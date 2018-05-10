@@ -43,7 +43,12 @@ a{
 		text-decoration:none;
 	}
 }
-
+.icon-chevron-left:before {
+  content: "\e92e";
+}
+.icon-chevron-right:before {
+  content: "\e92f";
+}
 .icon-gift-o:before {
   content: "\e916";
 }
