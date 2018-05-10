@@ -2,9 +2,8 @@ extends pug/extends/master
 
 block content
 	#main
-		ul#navigation-links
-			li
-				| done
+		| done
+		ul.navigation-links
 			li
 				a(href="default-page.html").btn.btn-primary Default page
 			li
@@ -23,8 +22,8 @@ block content
 				a(href="new-casinos.html").btn.btn-primary new casinos
 			li
 				a(href="bonuses.html").btn.btn-primary netent bonuses
-			li
-				| ╘[◉﹃◉]╕ not confirmed ┌( ಠ‿ಠ)┘
+			//- li
+			//- 	| ╘[◉﹃◉]╕ not confirmed ┌( ಠ‿ಠ)┘
 			li
 				a(href="netent-jackpots.html").btn.btn-primary netent jackpots
 			li
@@ -32,23 +31,23 @@ block content
 			li
 				a(href="netent-live-casino.html").btn.btn-primary netent live casino
 			li
-				| in progress ¯\_(ツ)_/¯
+				a(href="monthly-offers.html").btn.btn-primary monthly-offers
+			li
+				a(href="payments.html").btn.btn-primary payments
+			li
+				a(href="index.html").btn.btn-primary index
+			li
+				a(href="bitcoin.html").btn.btn-primary bitcoin
+		| in progress ¯\_(ツ)_/¯
+		ul.navigation-links
 			li
 				a(href="blackjack-strategy.html").btn.btn-primary blackjack strategy
 			li
 				a(href="bonus-news.html").btn.btn-primary bonus news
 			li
-				a(href="bitcoin.html").btn.btn-primary bitcoin
-			li
-				a(href="monthly-offers.html").btn.btn-primary monthly-offers
-			li
 				a(href="mega-fortune.html").btn.btn-primary mega fortune
 			li
 				a(href="welcome-bonus.html").btn.btn-primary welcome bonus
 			li
-				a(href="payments.html").btn.btn-primary payments
-			li
 				a(href="games-jackposts.html").btn.btn-primary games and jackposts
 				| deleted
-			li
-				a(href="index.html").btn.btn-primary index

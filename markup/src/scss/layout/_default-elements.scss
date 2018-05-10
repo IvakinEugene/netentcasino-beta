@@ -1,5 +1,8 @@
-#navigation-links{
+.navigation-links{
 	padding:30px;
+	@include media(">=tablet") {
+		column-count:6;
+	}
 	#header & {
 		left:0;
 		padding:5px 5px 0;

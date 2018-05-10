@@ -98,16 +98,16 @@
 		.hover-box{
 			// display:none !important;
 			display:none;
-		    flex-direction: row;
-		    flex-wrap: nowrap;
-		    justify-content: center;
-		    align-content: center;
-		    align-items: center;
-		    background:rgba($black, 0.8);
-		    color:$white;
-		    font-size:18px;
-		    font-weight:500;
-		    line-height:1;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			background:rgba($black, 0.8);
+			color:$white;
+			font-size:18px;
+			font-weight:500;
+			line-height:1;
 			height:100%;
 			position:absolute;
 			text-align:center;
@@ -148,40 +148,40 @@
 	}
 	.game{
 		display: flex;
-	    flex-direction: row;
-	    flex-wrap: nowrap;
-	    justify-content: space-between;
-	    align-content: flex-start;
-	    align-items: flex-start;
-	    padding:20px 19px 16px;
-	    .heading{
-	    	display: flex;
-		    flex-direction: row;
-		    flex-wrap: nowrap;
-		    justify-content: flex-start;
-		    align-content: flex-start;
-		    align-items: flex-start;
-	    }
-	    .logo-holder{
-	    	margin:0 19px 0 0;
-	    	width:35px;
-	    }
-	    h2{
-	    	font-size: 15px;
-	    	margin:0 0 4px;
-	    	a{
-	    		text-decoration:underline;
-	    		@include media(">=desktop") {
-	    			text-decoration:none;
-	    		}
-	    	}
-	    }
-	    .btn{
-	    	font-size: 14px;
-	    	min-width: 110px;
-	    	padding-top: 5px;
-	    	padding-bottom: 6px;
-	    }
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-content: flex-start;
+		align-items: flex-start;
+		padding:20px 19px 16px;
+		.heading{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: flex-start;
+			align-items: flex-start;
+		}
+		.logo-holder{
+			margin:0 19px 0 0;
+			width:35px;
+		}
+		h2{
+			font-size: 15px;
+			margin:0 0 4px;
+			a{
+				text-decoration:underline;
+				@include media(">=desktop") {
+					text-decoration:none;
+				}
+			}
+		}
+		.btn{
+			font-size: 14px;
+			min-width: 110px;
+			padding-top: 5px;
+			padding-bottom: 6px;
+		}
 	}
 	.footer{
 		border-top: 1px solid $border-color-base;
@@ -536,14 +536,14 @@
 	text-align:center;
 	@include media(">=tablet") {
 		display: flex;
-	    flex-direction: row;
-	    flex-wrap: nowrap;
-	    justify-content: flex-start;
-	    align-content: stretch;
-	    align-items: stretch;
-	    font-size: 18px;
-	    // margin:0 auto;
-	    // max-width: 1252px;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: stretch;
+		font-size: 18px;
+		// margin:0 auto;
+		// max-width: 1252px;
 	}
 	@include media(">=desktop") {
 		font-size: 20px;
@@ -565,15 +565,15 @@
 		}
 		@include media(">=desktop") {
 			display: flex;
-		    flex-direction: row;
-		    flex-wrap: nowrap;
-		    justify-content: flex-start;
-		    align-content: center;
-		    align-items: center;
-		    // min-width: 457px;
-		    max-width: 36.5016%;
-		    min-width: 36.5016%;
-		    padding:32px 20px;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: center;
+			align-items: center;
+			// min-width: 457px;
+			max-width: 36.5016%;
+			min-width: 36.5016%;
+			padding:32px 20px;
 		}
 	}
 	.logo-holder{
@@ -590,9 +590,14 @@
 	}
 	.txt{
 		@include media(">=desktop") {
-			min-width: 210px;
+			max-width: 220px;
+			min-width: 220px;
 			padding:0 0 0 20px;
 			text-align:left;
+		}
+		@include media(">=widescreen") {
+			max-width: 260px;
+			min-width: 260px;
 		}
 		.btn{
 			display:none;
@@ -643,11 +648,11 @@
 	}
 	.content{
 		display: flex;
-	    flex-direction: column;
-	    flex-wrap: nowrap;
-	    justify-content: center;
-	    align-content: stretch;
-	    align-items: stretch;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: stretch;
+		align-items: stretch;
 		border-width: 0;
 		min-height: 62px;
 		@include media(">=tablet") {
@@ -660,43 +665,7 @@
 		.sticker{
 			display:none;
 			@include media(">=tablet") {
-				// position:absolute;
-		// 		background:$theme-color-add;
-		// 		color:$headings-color;
 				display:block;
-		// 		font-size: 14px;
-		// 		font-weight:500;
-		// 		padding:5px 15px;
-			}
-		// 	> * {
-		// 		@include media(">=tablet") {
-		// 			display:inline;
-		// 			vertical-align:middle;
-		// 			margin:0 3px;
-		// 		}
-		// 	}
-		// 	[class*="icon-"]{
-		// 		@include media(">=tablet") {
-		// 			font-size: 18px;
-		// 		}
-		// 	}
-		}
-		.content-frame{
-			@include media(">=tablet") {
-				display: flex;
-			    flex-direction: column;
-			    flex-wrap: nowrap;
-			    justify-content: center;
-			    // justify-content: flex-start;
-			    align-content: stretch;
-			    align-items: stretch;
-				flex:1 1 auto;
-				padding:10px 15px 20px;
-			}
-			p{
-				@include media(">=tablet") {
-					margin:0 0 18px;
-				}
 			}
 		}
 		.btn{
@@ -713,37 +682,59 @@
 			}
 		}
 	}
+	.content-frame{
+		@include media(">=tablet") {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: stretch;
+			align-items: stretch;
+			flex:1 1 auto;
+			padding:30px 15px 20px;
+		}
+		&:only-child {
+			@include media(">=tablet") {
+				padding:10px 15px 20px;
+			}
+		}
+		p{
+			@include media(">=tablet") {
+				margin:0 0 18px;
+			}
+		}
+	}
 	.desktop-middle{
 		@include media(">=tablet") {
 			display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: flex-start;
-		    align-content: stretch;
-		    align-items: stretch;
-		    font-size: 18px;
-		    letter-spacing: -0.035em;
-		    width: 33.3333%;
-		    // min-width: 412px;
-		    text-align:left;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: stretch;
+			align-items: stretch;
+			font-size: 18px;
+			letter-spacing: -0.035em;
+			width: 33.3333%;
+			// min-width: 412px;
+			text-align:left;
 		}
 		@include media(">=desktop") {
 			font-size: 20px;
-		    max-width: 32.9073%;
-		    min-width: 32.9073%;
-		    width:auto;
+			max-width: 32.9073%;
+			min-width: 32.9073%;
+			width:auto;
 		}
 		> div{
 			@include media(">=tablet") {
 				display: flex;
-			    flex-direction: column;
-			    flex-wrap: nowrap;
-			    justify-content: center;
-			    align-content: stretch;
-			    align-items: stretch;
-			    flex: 1 1 auto;
-			    // min-height: 50%;
-			    padding:19px 29px;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				justify-content: center;
+				align-content: stretch;
+				align-items: stretch;
+				flex: 1 1 auto;
+				// min-height: 50%;
+				padding:19px 29px;
 			}
 			&:first-child {
 				@include media(">=tablet") {
@@ -948,7 +939,7 @@
 		max-width: 91px;
 		min-width: 91px;
 		// padding:23px 15px 20px;
-		padding:15px 5px;
+		padding:15px 10px;
 		@include media(">=tablet") {
 			max-width: 150px;
 			min-width: 150px;
@@ -998,9 +989,14 @@
 	}
 	.txt{
 		@include media(">=desktop") {
-			min-width: 225px;
+			max-width: 220px;
+			min-width: 220px;
 			padding:0 0 12px 15px;
 			text-align:left;
+		}
+		@include media(">=widescreen") {
+			max-width: 260px;
+			min-width: 260px;
 		}
 	}
 	h2{
@@ -1032,11 +1028,11 @@
 	}
 	.content{
 		display: flex;
-	    flex-direction: column;
-	    flex-wrap: nowrap;
-	    justify-content: center;
-	    align-content: stretch;
-	    align-items: stretch;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: stretch;
+		align-items: stretch;
 		flex: 1 1 auto;
 		padding:24px 15px 25px;
 		position:relative;
@@ -1156,82 +1152,82 @@
 		margin:0 0 2px;
 		text-transform:uppercase;
 	}
-    ul{
-    	padding:0;
-    	li{
-    		padding:0;
-    		+ li{
-    			border-top: 1px solid $border-color-base;
-    		}
-    		&:before {
-    			display:none;
-    		}
-    	}
-    }
+	ul{
+		padding:0;
+		li{
+			padding:0;
+			+ li{
+				border-top: 1px solid $border-color-base;
+			}
+			&:before {
+				display:none;
+			}
+		}
+	}
 	.single{
 		display: flex;
-	    flex-direction: row;
-	    flex-wrap: nowrap;
-	    justify-content: flex-start;
-	    align-content: stretch;
-    	align-items: stretch;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: stretch;
 		text-align:center;
-	    .heading{
-	    	display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: flex-start;
-		    align-content: stretch;
-		    align-items: stretch;
+		.heading{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: stretch;
+			align-items: stretch;
 			border-right: 1px solid $border-color-base;
 			min-width: 92px;
 			padding:10px 5px 13px;
-	    }
-	    .logo-holder{
-	    	margin-bottom: 7px;
-	    }
-	    h3{
-	    	font-size: 12px;
-	    	margin:0 0 4px;
-	    }
-	    // .stars{
-	    // 	width:53px;
-	    // }
-	    .content{
-	    	display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: flex-start;
-		    align-content: stretch;
-		    align-items: stretch;
-	    	flex: 1 1 auto;
-	    }
-	    .frame{
-	    	display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: center;
-		    align-content: stretch;
-		    align-items: stretch;
-	    	flex:1 1 auto;
-	    }
-	    h4{
-	    	font-size: 18px;
-	    	font-weight:normal;
-	    	margin:0;
-	    	text-transform:uppercase;
-	    }
-	    p{
-	    	margin:2px 0 0;
-	    }
-	    .button-holder{
-	    	padding:0 5px 13px;
-	    }
-	    .btn{
-	    	font-size: 14px;
-	    	min-width: 189px;
-	    	padding-top: 4px;
-	    	padding-bottom: 6px;
-	    }
+		}
+		.logo-holder{
+			margin-bottom: 7px;
+		}
+		h3{
+			font-size: 12px;
+			margin:0 0 4px;
+		}
+		// .stars{
+		// 	width:53px;
+		// }
+		.content{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: stretch;
+			align-items: stretch;
+			flex: 1 1 auto;
+		}
+		.frame{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: stretch;
+			align-items: stretch;
+			flex:1 1 auto;
+		}
+		h4{
+			font-size: 18px;
+			font-weight:normal;
+			margin:0;
+			text-transform:uppercase;
+		}
+		p{
+			margin:2px 0 0;
+		}
+		.button-holder{
+			padding:0 5px 13px;
+		}
+		.btn{
+			font-size: 14px;
+			min-width: 189px;
+			padding-top: 4px;
+			padding-bottom: 6px;
+		}
 	}
 }
