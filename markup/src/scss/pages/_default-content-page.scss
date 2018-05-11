@@ -557,7 +557,59 @@
 			}
 		}
 	}
-	&.payments{
+	&.payments {
+		&.short {
+			padding:14px 15px 12px;
+			@include media(">=desktop") {
+				padding:27px 16px 22px;
+			}
+			.post-image{
+				border-bottom: 0;
+				float:left;
+				height:auto !important;
+				margin:4px 14px 0 0;
+				width:80px;
+				@include media(">=desktop") {
+					margin:-6px 16px 15px 0;
+				}
+				.logo-holder{
+					height:70px;
+					width:70px;
+				}
+			}
+			h3{
+				font-size: 16px;
+				margin:0 0 2px;
+				@include media(">=desktop") {
+					font-size: 18px;
+				}
+			}
+			h4{
+				color:$base-gray;
+				font-size: 14px;
+				font-weight:300;
+				margin:0 0 2px;
+				@include media(">=desktop") {
+					font-size: 16px;
+					margin:0 0 19px;
+				}
+				strong{
+					font-weight:normal;
+				}
+			}
+			.button-holder{
+				overflow:hidden;
+				@include media(">=tablet") {
+					position:static;
+				}
+			}
+			.btn{
+				min-width: 189px;
+				@include media(">=desktop") {
+					max-width: 250px;
+				}
+			}
+		}
 		.post-image{
 			display: flex;
 			flex-direction: row;

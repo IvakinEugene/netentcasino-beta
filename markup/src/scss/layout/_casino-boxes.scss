@@ -528,6 +528,266 @@
 	}
 }
 
+.casino-box-title,
+.casino-box-content{
+	.sticker{
+		font-size: 12px;
+		font-weight:300;
+		left:0;
+		// padding:10px 15px 20px;
+		position:absolute;
+		text-align:left;
+		top:0;
+		width:100%;
+		> *{
+			display:inline-block;
+			vertical-align:middle;
+		}
+		> strong{
+			background:$theme-color-add;
+			color:$headings-color;
+			display:inline-block;
+			vertical-align:top;
+			margin:0 9px 0 0;
+			font-size:14px;
+			line-height:1;
+			padding:3px 11px;
+			text-transform:uppercase;
+			&:only-child {
+				display:block;
+				margin:0;
+				padding-top: 4px;
+				padding-bottom: 4px;
+				text-align:center;
+				text-transform:none;
+				> * {
+					display:inline;
+					vertical-align:middle;
+					margin:0 3px;
+				}
+			}
+		}
+		[class*="icon-"]{
+			@include media(">=desktop") {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+.casino-box-title{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
+	background:$white;
+	box-shadow: 0 0 2px $shadow;
+	color:$base-gray;
+	font-size:12px;
+	line-height:1.25;
+	text-align:center;
+	@include media(">=desktop") {
+		font-size: 20px;
+		// margin:0 auto;
+		// max-width: 1252px; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	}
+	.heading{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: stretch;
+		align-items: stretch;
+		border: solid $border-color-base;
+		border-width: 0 1px 0 0;
+		max-width: 91px;
+		min-width: 91px;
+		// padding:23px 15px 20px;
+		padding:15px 10px;
+		@include media(">=tablet") {
+			max-width: 150px;
+			min-width: 150px;
+		}
+		@include media(">=desktop") {
+			// display: flex;
+			flex-direction: row;
+			// flex-wrap: nowrap;
+			// justify-content: center;
+			align-content: center;
+			align-items: center;
+			// min-width: 457px;
+			min-width: 36.5016%;
+		}
+		.btn{
+			display:none;
+			@include media(">=desktop") {
+				display:inline-block;
+				font-size: 14px;
+				min-width: 0;
+				padding:8px 13px 6px;
+			}
+		}
+		.note{
+			display:block;
+			font-size: 10px;
+			line-height:1.2;
+			padding:5px 0 0;
+			@include media(">=desktop") {
+				font-size: 14px;
+				margin:-3px 0 9px;
+				// padding:0;
+			}
+			br{
+				@include media(">=tablet") {
+					display:none;
+				}
+			}
+		}
+	}
+	.logo-holder{
+		margin-bottom: 7px;
+		@include media(">=desktop") {
+			margin-bottom: 0;
+			width:120px;
+		}
+	}
+	.txt{
+		@include media(">=desktop") {
+			max-width: 220px;
+			min-width: 220px;
+			padding:0 0 12px 15px;
+			text-align:left;
+		}
+		@include media(">=widescreen") {
+			max-width: 260px;
+			min-width: 260px;
+		}
+	}
+	h2{
+		font-size: 12px;
+		margin:0 0 4px;
+		@include media(">=desktop") {
+			font-size: 26px;
+			margin:0;
+		}
+		a{
+			@include media(">=desktop") {
+				text-decoration:none;
+			}
+		}
+	}
+	.stars{
+		// width:53px;
+		@include media(">=desktop") {
+			font-size: 24px;
+			margin:0 0 8px -5px;
+			text-align:left;
+			// width:145px;
+		}
+		[class*="icon"]{
+			@include media(">=desktop") {
+				margin:0 4px;
+			}
+		}
+	}
+	.content{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: stretch;
+		align-items: stretch;
+		flex: 1 1 auto;
+		padding:24px 15px 25px;
+		position:relative;
+		@include media(">=desktop") {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: stretch;
+			align-items: stretch;
+			padding:0;
+		}
+	}
+	.content-frame{
+		@include media(">=desktop") {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: stretch;
+			align-items: stretch;
+			padding:10px 15px 15px;
+			width:50%;
+		}
+	}
+	h3{
+		font-size: 18px;
+		margin:0;
+		text-transform:uppercase;
+		@include media(">=tablet") {
+			font-size: 30px;
+		}
+	}
+	p{
+		margin:0 0 14px;
+		@include media(">=desktop") {
+			margin:0;
+		}
+	}
+	.button-holder{
+		@include media(">=desktop") {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: stretch;
+			align-items: stretch;
+			border: 0 solid $border-color-base;
+			border-width: 0 0 0 1px;
+			position:relative;
+			width:50%;
+		}
+	}
+	.sticker{
+		strong{
+			&:only-child {
+				display:none;
+				@include media(">=desktop") {
+					display:block;
+				}
+			}
+		}
+	}
+	.button-frame{
+		@include media(">=desktop") {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			flex:1 1 auto;
+		}
+	}
+	.btn{
+		font-size: 14px;
+		max-width: 189px;
+		min-width: 0;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		width:100%;
+		@include media(">=desktop") {
+			font-size: 18px;
+			min-width: 280px;
+			width:auto;
+		}
+	}
+}
+
 .casino-box-content{
 	background:$white;
 	box-shadow: 0 0 2px $shadow;
@@ -863,240 +1123,114 @@
 	}
 }
 
-.casino-box-title,
-.casino-box-content{
-	.sticker{
-		font-size: 12px;
-		font-weight:300;
-		left:0;
-		// padding:10px 15px 20px;
-		position:absolute;
-		text-align:left;
-		top:0;
-		width:100%;
-		> *{
-			display:inline-block;
-			vertical-align:middle;
-		}
-		> strong{
-			background:$theme-color-add;
-			color:$headings-color;
-			display:inline-block;
-			vertical-align:top;
-			margin:0 9px 0 0;
-			font-size:14px;
-			line-height:1;
-			padding:3px 11px;
-			text-transform:uppercase;
-			&:only-child {
-				display:block;
-				margin:0;
-				padding-top: 4px;
-				padding-bottom: 4px;
-				text-align:center;
-				text-transform:none;
-				> * {
-					display:inline;
-					vertical-align:middle;
-					margin:0 3px;
-				}
-			}
-		}
-		[class*="icon-"]{
-			@include media(">=desktop") {
-				font-size: 20px;
-			}
-		}
-	}
-}
-
-.casino-box-title{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-content: stretch;
-	align-items: stretch;
-	background:$white;
-	box-shadow: 0 0 2px $shadow;
-	color:$base-gray;
-	font-size:12px;
-	line-height:1.25;
-	text-align:center;
+.casino-box-title.short{
 	@include media(">=desktop") {
-		font-size: 20px;
-		// margin:0 auto;
-		// max-width: 1252px; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		display:block;
+		font-size: 14px;
 	}
 	.heading{
-		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: center;
-		align-content: stretch;
-		align-items: stretch;
-		border-right: 1px solid $border-color-base;
-		max-width: 91px;
-		min-width: 91px;
-		// padding:23px 15px 20px;
-		padding:15px 10px;
 		@include media(">=tablet") {
-			max-width: 150px;
-			min-width: 150px;
+			max-width: none;
+			min-width: 0;
 		}
 		@include media(">=desktop") {
-			// display: flex;
+			display: flex;
 			flex-direction: row;
-			// flex-wrap: nowrap;
-			// justify-content: center;
+			flex-wrap: nowrap;
+			justify-content: space-between;
 			align-content: center;
 			align-items: center;
-			// min-width: 457px;
-			min-width: 36.5016%;
+			border-width: 0 0 1px;
+			padding:11px 21px 10px;
 		}
-		.btn{
+		.left{
+			@include media(">=desktop") {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: flex-start;
+				align-content: flex-start;
+				align-items: flex-start;
+			}
+		}
+		.right{
 			display:none;
 			@include media(">=desktop") {
-				display:inline-block;
-				font-size: 14px;
-				min-width: 0;
-				padding:8px 13px 6px;
+				display:block;
 			}
-		}
-		.note{
-			display:block;
-			font-size: 10px;
-			line-height:1.2;
-			padding:5px 0 0;
-			@include media(">=desktop") {
-				font-size: 14px;
-				margin:-3px 0 9px;
-				// padding:0;
-			}
-			br{
-				@include media(">=tablet") {
-					display:none;
+			.stars{
+				@include media(">=desktop") {
+					display:block;
+					font-size: 10px;
 				}
 			}
 		}
 	}
 	.logo-holder{
-		margin-bottom: 7px;
 		@include media(">=desktop") {
-			margin-bottom: 0;
-			width:120px;
+			width:50px;
 		}
 	}
 	.txt{
 		@include media(">=desktop") {
-			max-width: 220px;
-			min-width: 220px;
-			padding:0 0 12px 15px;
-			text-align:left;
+			padding:3px 0 0 18px;
 		}
 		@include media(">=widescreen") {
-			max-width: 260px;
-			min-width: 260px;
+			max-width: none;
+			min-width: 0;
 		}
 	}
 	h2{
-		font-size: 12px;
-		margin:0 0 4px;
 		@include media(">=desktop") {
-			font-size: 26px;
-			margin:0;
-		}
-		a{
-			@include media(">=desktop") {
-				text-decoration:none;
-			}
+			font-size: 18px;
+			margin:0 0 -4px;
 		}
 	}
 	.stars{
-		// width:53px;
 		@include media(">=desktop") {
-			font-size: 24px;
-			margin:0 0 8px -5px;
-			text-align:left;
-			// width:145px;
+			display:none;
+			margin:0;
 		}
 		[class*="icon"]{
 			@include media(">=desktop") {
-				margin:0 4px;
+				margin:0 2px;
+			}
+		}
+	}
+	.note{
+		@include media(">=desktop") {
+			font-size: 12px;
+			margin:0;
+			padding:0;
+		}
+	}
+	.rate{
+		@include media(">=desktop") {
+			margin:0 0 -1px;
+		}
+		strong{
+			@include media(">=desktop") {
+				color:$headings-color;
 			}
 		}
 	}
 	.content{
-		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: center;
-		align-content: stretch;
-		align-items: stretch;
-		flex: 1 1 auto;
-		padding:24px 15px 25px;
-		position:relative;
 		@include media(">=desktop") {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: flex-start;
-			align-content: stretch;
-			align-items: stretch;
-			padding:0;
+			display:block;
 		}
 	}
 	.content-frame{
 		@include media(">=desktop") {
-			display: flex;
-			flex-direction: column;
-			flex-wrap: nowrap;
-			justify-content: center;
-			align-content: stretch;
-			align-items: stretch;
-			padding:10px 15px 15px;
-			width:50%;
+			border: solid $border-color-base;
+			border-width: 0 0 1px;
+			padding:15px 15px 19px;
+			width:auto;
 		}
 	}
 	h3{
-		font-size: 18px;
-		margin:0;
-		text-transform:uppercase;
 		@include media(">=tablet") {
-			font-size: 30px;
+			font-size: 18px;
 		}
-	}
-	p{
-		margin:0 0 14px;
-		@include media(">=desktop") {
-			margin:0;
-		}
-	}
-	.button-holder{
-		@include media(">=desktop") {
-			display: flex;
-			flex-direction: column;
-			flex-wrap: nowrap;
-			justify-content: flex-start;
-			align-content: stretch;
-			align-items: stretch;
-			border: 0 solid $border-color-base;
-			border-width: 0 0 0 1px;
-			position:relative;
-			width:50%;
-		}
-	}
-	.sticker{
-		strong{
-			&:only-child {
-				display:none;
-				@include media(">=desktop") {
-					display:block;
-				}
-			}
-		}
-	}
-	.button-frame{
 		@include media(">=desktop") {
 			display: flex;
 			flex-direction: column;
@@ -1105,6 +1239,8 @@
 			align-content: center;
 			align-items: center;
 			flex:1 1 auto;
+			font-size: 22px;
+			margin:0 0 1px;
 		}
 		p{
 			font-size: 16px;
@@ -1114,17 +1250,16 @@
 			}
 		}
 	}
-	.btn{
-		font-size: 14px;
-		max-width: 189px;
-		min-width: 0;
-		padding-top: 5px;
-		padding-bottom: 5px;
-		width:100%;
+	.button-holder{
 		@include media(">=desktop") {
-			font-size: 18px;
-			min-width: 280px;
+			border-width: 0;
+			padding:21px 15px 19px;
 			width:auto;
+		}
+		.btn{
+			@include media(">=desktop") {
+				min-width: 250px;
+			}
 		}
 	}
 }
@@ -1235,6 +1370,169 @@
 			min-width: 189px;
 			padding-top: 4px;
 			padding-bottom: 6px;
+		}
+	}
+}
+
+.offer-casino-box{
+	background:$white;
+	box-shadow: 0 1px 2px 0 rgba($black,0.22);
+	color:$base-gray;
+	font-size: 16px;
+	@include media(">=tablet") {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: stretch;
+		font-size: 26px;
+		max-width: 680px;
+	}
+	.heading{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-content: flex-start;
+		align-items: flex-start;
+		border-bottom: 1px solid $border-color-base;
+		padding:10px 21px;
+		@include media(">=tablet") {
+			// display: flex;
+		    flex-direction: column;
+		    // flex-wrap: nowrap;
+		    justify-content: center;
+		    align-content: stretch;
+		    align-items: stretch;
+			border: solid $border-color-base;
+			border-width: 0 1px 0 0;
+			max-width: 132px;
+			min-height: 223px;
+			min-width: 132px;
+			padding:10px;
+			text-align:center;
+		}
+		.left{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: center;
+			align-items: center;
+			@include media(">=tablet") {
+				display:block;
+			}
+		}
+		.logo-holder{
+			@include media(">=tablet") {
+				height:81px;
+				margin-bottom: 8px;
+				width:81px;
+			}
+		}
+		.txt{
+			padding:0 0 0 20px;
+			@include media(">=tablet") {
+				padding:0;
+			}
+		}
+		h2{
+			font-size: 18px;
+			margin:0;
+			@include media(">=tablet") {
+				margin:0 0 5px;
+			}
+			a{
+				text-decoration:underline;
+			}
+		}
+		.time{
+			// color:$base-gray;
+			display:block;
+			font-size: 12px;
+			font-style:normal;
+			font-weight:300;
+			@include media(">=tablet") {
+				display:none;
+			}
+		}
+		.rate{
+			margin:0 0 -4px;
+			@include media(">=tablet") {
+				display:none;
+			}
+		}
+		.stars{
+			@include media(">=tablet") {
+				font-size: 14px;
+			}
+			[class*="icon"]{
+				@include media(">=tablet") {
+					margin:0 3px;
+				}
+			}
+		}
+	}
+	> .content{
+		padding:7px 15px 20px;
+		text-align:center;
+		@include media(">=tablet") {
+			flex:1 1 auto;
+			padding:21px 41px 20px;
+			text-align:left;
+		}
+	}
+	h3{
+		font-size: 22px;
+		margin:0 0 -4px;
+		@include media(">=tablet") {
+			font-size: 40px;
+			font-weight:500;
+			margin:0 0 -2px;
+			text-transform:uppercase;
+		}
+	}
+	p{
+		margin:0 0 12px;
+		@include media(">=tablet") {
+			margin:0 0 25px;
+		}
+	}
+	.btn{
+		@include media(">=tablet") {
+			min-width: 206px;
+			margin:0 10px 0 0;
+		}
+	}
+	.btn-secondary{
+		display:none;
+		@include media(">=tablet") {
+			display:inline-block;
+			// vertical-align:top;
+		}
+	}
+	.bottom{
+		background:$theme-color-add;
+		color:$headings-color;
+		font-size: 14px;
+		padding:8px 15px 6px;
+		@include media(">=tablet") {
+			width:100%;
+		}
+		.content{
+			> *{
+				display:inline;
+				margin:0 4px;
+			}
+		}
+		p{
+			strong{
+				font-weight:normal;
+			}
+		}
+		.btn-holder{
+			display:none;
 		}
 	}
 }

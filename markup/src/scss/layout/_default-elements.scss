@@ -2,6 +2,7 @@
 	padding:30px;
 	@include media(">=tablet") {
 		column-count:6;
+		column-gap:10px;
 	}
 	#header & {
 		left:0;
@@ -13,8 +14,15 @@
 	li{
 		margin:0 0 15px;
 		overflow:visible;
+		// padding:10px;
 		&:before {
 			display:none;
+		}
+	}
+	.btn{
+		@include media(">=tablet") {
+			min-width: 0;
+			width:100%;
 		}
 	}
 }
