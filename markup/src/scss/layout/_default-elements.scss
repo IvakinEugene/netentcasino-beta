@@ -75,20 +75,6 @@
 		font-size: 18px;
 		padding:6px 29px 8px 0;
 	}
-	&[class*="icon-"] {
-		padding-left: 21px;
-		@include media(">=tablet") {
-			padding-left: 33px;
-		}
-		&:before {
-			left:0;
-			position:absolute;
-			top:4px;
-			@include media(">=tablet") {
-				top:7px;
-			}
-		}
-	}
 	&:after {
 		background:$theme-color-add;
 		bottom:0;
@@ -102,6 +88,11 @@
 			box-shadow: 0 1px 1px $shadow;
 			width:9999px;
 		}
+	}
+	[class*="icon-"] {
+		display:inline-block;
+		vertical-align:baseline;
+		margin:0 11px 0 0;
 	}
 	strong{
 		font-weight:normal;

@@ -700,7 +700,7 @@
 		align-content: stretch;
 		align-items: stretch;
 		flex: 1 1 auto;
-		padding:24px 15px 25px;
+		padding:12px 15px 10px;
 		position:relative;
 		@include media(">=desktop") {
 			display: flex;
@@ -765,12 +765,26 @@
 	.button-frame{
 		@include media(">=desktop") {
 			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: center;
-			align-content: center;
-			align-items: center;
+		    flex-direction: column;
+		    flex-wrap: nowrap;
+		    justify-content: center;
+		    align-content: center;
+		    align-items: center;
 			flex:1 1 auto;
+			&:not(:only-child) {
+				padding-top: 30px;
+			}
+		}
+		p{
+			font-size: 11px;
+			margin:11px 0 0;
+			@include media(">=desktop") {
+				font-size: 16px;
+				margin:9px 0 0;
+			}
+			span{
+				color:$headings-color;
+			}
 		}
 	}
 	.btn{
