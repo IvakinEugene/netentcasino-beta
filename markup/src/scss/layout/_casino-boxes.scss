@@ -1106,6 +1106,13 @@
 			align-items: center;
 			flex:1 1 auto;
 		}
+		p{
+			font-size: 16px;
+			margin: 5px 0 0 0;
+			span{
+				color: #515151;
+			}
+		}
 	}
 	.btn{
 		font-size: 14px;
