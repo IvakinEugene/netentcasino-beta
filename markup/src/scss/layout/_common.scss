@@ -22,19 +22,30 @@
 	}
 } */
 
+.home{
+	.section-bonus-calc + .template-default-page{
+		background:$white;
+		box-shadow:0 -1px 0 #cbd6d2 inset, 0 -1px 0 #cbd6d2;
+	}
+	.section-related-posts{
+		background:none;
+		box-shadow:none;
+	}
+}
+
 #wrapper{
 	background:#f5f7f6;
 	overflow:hidden;
-	max-width: 320px;
-	@include media(">=375px") {
-		max-width: 375px;
-	}
-	@include media(">=tablet") {
-		max-width: 992px;
-	}
-	@include media(">=widescreen") {
-		max-width:1440px;
-	}
+	// max-width: 320px;
+	// @include media(">=375px") {
+	// 	max-width: 375px;
+	// }
+	// @include media(">=tablet") {
+	// 	max-width: 992px;
+	// }
+	// @include media(">=widescreen") {
+	// 	max-width:1440px;
+	// }
 }
 
 #main{
@@ -918,11 +929,17 @@ section{
 .section-top-offer{
 	background: linear-gradient(180deg, rgba(255,102,0,0.6) 0%, #FF6600 100%);
 	padding:27px 0 11px;
+	@include media(">=tablet") {
+		padding:37px 0 10px;
+	}
 	> .holder{}
 	.location{
 		margin:0 0 -3px;
 		padding:0 0 0 20px;
 		position:relative;
+		@include media(">=tablet") {
+			margin:0 0 -1px;
+		}
 		&:before {
 			background:#ccc;
 			content: '';
@@ -939,11 +956,19 @@ section{
 	h1{
 		margin:0 0 20px;
 		text-transform:none;
+		@include media(">=tablet") {
+			font-size: 26px;
+			margin:0 0 15px;
+			text-transform:uppercase;
+		}
 	}
 	.offer-casino-box{
 		margin:0 0 20px;
 	}
 	.load-more{
+		@include media(">=tablet") {
+			display:none;
+		}
 		.btn{
 			border-color: $white;
 			color:$white;

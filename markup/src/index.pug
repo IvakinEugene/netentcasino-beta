@@ -1,34 +1,34 @@
 extends pug/extends/master
 
 block content
-	// - var page_class = "hide-bonus"
-	//- include pug/includes/header
+	- var page_class = "hide-bonus"
+	include pug/includes/header
 	#main.home
 		//- 
-			section.section-intro
-				.holder
-					.content
-						.search-box
-							div
-								a(href="#search-popup").btn.btn-search.lightbox-opener.icon-search Search 200+ Casinos &amp; Games
-							div
-								- var count = "329"
-								- var title = "Casino Reviews"
-								- var content = "For Your Convenience"
-								include pug/extends/button-counter
-							div
-								- var count = "204"
-								- var title = "Games"
-								- var content = "To Play for Free"
-								include pug/extends/button-counter
-							div
-								- var count = "3049"
-							
-								- var title = "News Articles"
-								- var content = "Ready to be Read"
-								include pug/extends/button-counter
-				- var image = "banner-concept-1"
-				include pug/extends/retina-images
+		section.section-intro
+			.holder
+				.content
+					.search-box
+						div
+							a(href="#search-popup").btn.btn-search.lightbox-opener.icon-search Search 200+ Casinos &amp; Games
+						div
+							- var count = "329"
+							- var title = "Casino Reviews"
+							- var content = "For Your Convenience"
+							include pug/extends/button-counter
+						div
+							- var count = "204"
+							- var title = "Games"
+							- var content = "To Play for Free"
+							include pug/extends/button-counter
+						div
+							- var count = "3049"
+						
+							- var title = "News Articles"
+							- var content = "Ready to be Read"
+							include pug/extends/button-counter
+			- var image = "banner-concept-1"
+			include pug/extends/retina-images
 		//- 
 		section.section-top-casinos
 			.holder
@@ -76,22 +76,107 @@ block content
 					li
 						.casino-box-title.short
 							.heading
-								.logo-holder
-									a(href="#")
-										img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-								.txt
-									h2
-										a(href="#") LadyLucks
+								.left
+									.logo-holder
+										a(href="#")
+											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") LadyLucks
+										.stars
+											span.icon-star
+											span.icon-star
+											span.icon-star
+											span.icon-star-half-empty
+											span.icon-star-o
+										span.note
+											| Launched 
+											br
+											| 2 days ago!
+								.right
+									span.rate
+										strong 4
+										span /5
 									.stars
 										span.icon-star
 										span.icon-star
 										span.icon-star
 										span.icon-star-half-empty
 										span.icon-star-o
-									span.note
-										| Launched 
-										br
-										| 2 days ago!
+							.content
+								.content-frame
+									h3 £150 + 50 Free Spins
+									p 50% up to £100 + 50 Free Spins
+								.button-holder
+									.button-frame
+										a(href="#").btn.btn-primary Go to Casino
+					li
+						.casino-box-title.short
+							.heading
+								.left
+									.logo-holder
+										a(href="#")
+											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") HighRoller
+										.stars
+											span.icon-star
+											span.icon-star
+											span.icon-star
+											span.icon-star-half-empty
+											span.icon-star-o
+										span.note
+											| Launched 
+											br
+											| 2 days ago!
+								.right
+									span.rate
+										strong 4
+										span /5
+									.stars
+										span.icon-star
+										span.icon-star
+										span.icon-star
+										span.icon-star-half-empty
+										span.icon-star-o
+							.content
+								.content-frame
+									h3 £1000 + 20 Free Spins
+									p 100% up to £500 + 20 Free Spins
+								.button-holder
+									.button-frame
+										a(href="#").btn.btn-primary Go to Casino
+					li
+						.casino-box-title.short
+							.heading
+								.left
+									.logo-holder
+										a(href="#")
+											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") Casimba
+										.stars
+											span.icon-star
+											span.icon-star
+											span.icon-star
+											span.icon-star-half-empty
+											span.icon-star-o
+										span.note
+											| Launched 
+											br
+											| 2 days ago!
+								.right
+									span.rate
+										strong 4
+										span /5
+									.stars
+										span.icon-star
+										span.icon-star
+										span.icon-star
+										span.icon-star-half-empty
+										span.icon-star-o
 							.content
 								.content-frame
 									h3 £150 + 50 Free Spins
@@ -133,7 +218,8 @@ block content
 						.content
 							h3 £150 + 50 Free Spins
 							p 50% up to £100 + 50 Free Spins
-							a(href="#").btn.btn-primary Go to Betsson
+							a(href="#").btn.btn-secondary Casino Review
+							a(href="#").btn.btn-primary Get Bonus
 						.bottom.text-center
 							.content
 								span.icon-timer
@@ -350,7 +436,7 @@ block content
 							.footer
 								a(href="#").btn.btn-link View all 314 Casinos
 				.load-more.text-center
-					a(href="#").btn.btn-secondary View more jackpots
+					a(href="#").btn.btn-secondary View All New Casinos
 		//- 
 		section.template-default-page
 			.subsection.boxes-holder
@@ -370,11 +456,11 @@ block content
 											.single
 												.heading
 													.logo-holder
-														a(href="#")
+														a(href="#casino-summary-popup").ligntbox-opener
 															img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
 													.txt
 														h3
-															a(href="#") Betsson
+															a(href="#casino-summary-popup").lightbox-opener Betsson
 														.stars
 															span.icon-star
 															span.icon-star
@@ -391,11 +477,11 @@ block content
 											.single
 												.heading
 													.logo-holder
-														a(href="#")
+														a(href="#casino-summary-popup").ligntbox-opener
 															img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
 													.txt
 														h3
-															a(href="#") Unibet
+															a(href="#casino-summary-popup").lightbox-opener Unibet
 														.stars
 															span.icon-star
 															span.icon-star
@@ -412,11 +498,11 @@ block content
 											.single
 												.heading
 													.logo-holder
-														a(href="#")
+														a(href="#casino-summary-popup").ligntbox-opener
 															img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
 													.txt
 														h3
-															a(href="#") LeoVegas
+															a(href="#casino-summary-popup").lightbox-opener LeoVegas
 														.stars
 															span.icon-star
 															span.icon-star
@@ -442,11 +528,11 @@ block content
 											.single
 												.heading
 													.logo-holder
-														a(href="#")
+														a(href="#casino-summary-popup").ligntbox-opener
 															img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
 													.txt
 														h3
-															a(href="#") LadyLucks
+															a(href="#casino-summary-popup").lightbox-opener LadyLucks
 														.stars
 															span.icon-star
 															span.icon-star
@@ -463,11 +549,11 @@ block content
 											.single
 												.heading
 													.logo-holder
-														a(href="#")
+														a(href="#casino-summary-popup").ligntbox-opener
 															img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
 													.txt
 														h3
-															a(href="#") WildSlots
+															a(href="#casino-summary-popup").lightbox-opener WildSlots
 														.stars
 															span.icon-star
 															span.icon-star
@@ -484,11 +570,11 @@ block content
 											.single
 												.heading
 													.logo-holder
-														a(href="#")
+														a(href="#casino-summary-popup").ligntbox-opener
 															img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
 													.txt
 														h3
-															a(href="#") Cashiopeia
+															a(href="#casino-summary-popup").lightbox-opener Cashiopeia
 														.stars
 															span.icon-star
 															span.icon-star
@@ -632,6 +718,45 @@ block content
 									a(href="#") Trustly
 								h4
 									strong 310
+									|  Casinos Offering Visa.
+								.button-holder
+									a(href="#").btn.btn-primary View all Casinos
+						li
+							.post-preview.payments.short
+								.post-image
+									.logo-holder
+										a(href="#")
+											img(src="http://via.placeholder.com/48x48")
+								h3
+									a(href="#") MasterCard
+								h4
+									strong 300
+									|  Casinos Offering PayPal.
+								.button-holder
+									a(href="#").btn.btn-primary View all Casinos
+						li
+							.post-preview.payments.short
+								.post-image
+									.logo-holder
+										a(href="#")
+											img(src="http://via.placeholder.com/53x27")
+								h3
+									a(href="#") Neteller
+								h4
+									strong 236
+									|  Casinos Offering bitcoin.
+								.button-holder
+									a(href="#").btn.btn-primary View all Casinos
+						li
+							.post-preview.payments.short
+								.post-image
+									.logo-holder
+										a(href="#")
+											img(src="http://via.placeholder.com/50x16")
+								h3
+									a(href="#") Zimpler
+								h4
+									strong 94
 									|  Casinos Offering Visa.
 								.button-holder
 									a(href="#").btn.btn-primary View all Casinos
