@@ -73,17 +73,11 @@
 			padding-left: 33px;
 		}
 		&:before {
-			background:$base-gray;
-			content: '';
-			height:15px;
 			left:0;
 			position:absolute;
 			top:4px;
-			width:14px;
 			@include media(">=tablet") {
-				height:19px;
-				top:5px;
-				width:18px;
+				top:7px;
 			}
 		}
 	}
