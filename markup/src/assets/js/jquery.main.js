@@ -323,6 +323,11 @@ function initStickyScrollBlock() {
 			jQuery('.header-content').each(function() {
 				totalHeight += jQuery(this).outerHeight();
 			});
+			if (jQuery('#wpadminbar').length) {
+				jQuery('#wpadminbar').each(function() {
+					totalHeight += jQuery(this).outerHeight();
+				});
+			}
 			return totalHeight;
 		}
 	});

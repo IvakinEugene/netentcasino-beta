@@ -235,9 +235,14 @@
 .go-back{
 	background:$white;
 	display:none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: stretch;
 	height:59px;
 	left:0;
-	padding:21px 50px 16px;
+	padding:5px 55px;
 	position:absolute;
 	text-align:center;
 	top:0;
@@ -246,7 +251,7 @@
 		display:none !important;
 	}
 	.hide-nav & {
-		display:block;
+		display: flex;
 	}
 	.btn-back{
 		color:$theme-color-base;

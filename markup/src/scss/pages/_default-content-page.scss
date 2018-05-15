@@ -117,7 +117,7 @@
 			}
 			.content-holder{
 				@include media(">=desktop") {
-					max-resolution:0 !important;
+					margin-right:0 !important;
 				}
 			}
 		}
@@ -517,6 +517,7 @@
 	border: 1px solid $border-color-base;
 	box-shadow: 0 2px 4px $shadow;
 	line-height:1.3571;
+	overflow:hidden;
 	padding:0 18px 21px;
 	position:relative;
 	@include media(">=tablet") {

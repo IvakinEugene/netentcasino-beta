@@ -1,14 +1,12 @@
 .template-default-page{
-	// + .template-default-page{
-	// 	.page-heading{
-	// 		background:none;
-	// 	}
-	// }
 	.page-heading{
 		background:$white;
 		border-bottom: 1px solid $border-color-base;
-		padding: 25px 0 9px;
+		padding: 23px 0 19px;
 		overflow:hidden;
+		@include media(">=desktop") {
+			padding:31px 0 36px;
+		}
 		> .holder{
 			overflow:visible;
 		}
@@ -25,10 +23,16 @@
 		}
 	}
 	h1{
-		margin:0 0 5px;
+		margin:0 0 3px;
+		@include media(">=desktop") {
+			margin:0 0 5px;
+		}
+	}
+	p{
+		margin:0;
 	}
 	.offer-sticker{
-		margin:18px 0 11px;
+		margin:29px 0 0;
 	}
 	.page-content{
 		background:$white;
@@ -38,20 +42,10 @@
 			padding:34px 0 13px;
 		}
 	}
-	// .boxes-holder{
-	// 	padding:0 0 21px;
-	// 	@include media(">=desktop") {
-	// 		padding:30px 0 21px;
-	// 	}
-	// }
 }
 
 .filtered-list{
 	.section-related-posts{
-		// width:100%;
-		// &:first-child {
-		// 	border-width: 0;
-		// }
 		&:nth-child(2n-1) {
 			background:transparent;
 			box-shadow: none;
