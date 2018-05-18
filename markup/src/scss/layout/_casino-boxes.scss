@@ -1332,7 +1332,7 @@
 			display: flex;
 			flex-direction: column;
 			flex-wrap: nowrap;
-			justify-content: flex-start;
+			justify-content: center;
 			align-content: stretch;
 			align-items: stretch;
 			border-right: 1px solid $border-color-base;
@@ -1344,19 +1344,17 @@
 		}
 		h3{
 			font-size: 12px;
-			margin:0 0 4px;
+			margin:0;
 		}
-		// .stars{
-		// 	width:53px;
-		// }
 		.content{
 			display: flex;
 			flex-direction: column;
 			flex-wrap: nowrap;
-			justify-content: flex-start;
+			justify-content: center;
 			align-content: stretch;
 			align-items: stretch;
 			flex: 1 1 auto;
+			padding: 13px 5px
 		}
 		.frame{
 			display: flex;
@@ -1365,7 +1363,7 @@
 			justify-content: center;
 			align-content: stretch;
 			align-items: stretch;
-			flex:1 1 auto;
+			// flex:1 1 auto;
 		}
 		h4{
 			font-size: 18px;
@@ -1376,14 +1374,20 @@
 		p{
 			margin:2px 0 0;
 		}
-		.button-holder{
-			padding:0 5px 13px;
+		// .button-holder{
+		// 	padding:0 5px 13px;
+		// }
+		.button-holder:not(:only-child){
+			padding: 10px 0 0;
 		}
 		.btn{
 			font-size: 14px;
 			min-width: 189px;
 			padding-top: 4px;
 			padding-bottom: 6px;
+		}
+		.txt h3 + *{
+			margin-top: 4px;
 		}
 	}
 }
