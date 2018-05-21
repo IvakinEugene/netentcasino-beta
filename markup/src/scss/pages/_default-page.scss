@@ -15,8 +15,12 @@
 			margin:-1px 18px 12px -2px;
 			@include media(">=desktop") {
 				margin:-1px 46px 12px 31px;
-				width:120px;
+				width:140px;
+				height:140px;
 			}
+		}
+		.frame{
+			overflow:hidden;
 		}
 		.fake-select{
 			margin:31px 0 11px;
