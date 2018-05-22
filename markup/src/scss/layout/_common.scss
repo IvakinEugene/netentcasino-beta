@@ -688,9 +688,11 @@ section{
 			}
 		}
 		.logo-holder{
+			height:40px;
 			margin-bottom: 8px;
 			width:40px;
 			@include media(">=tablet") {
+				height:50px;
 				margin:0 19px 0 0;
 				width:50px;
 			}

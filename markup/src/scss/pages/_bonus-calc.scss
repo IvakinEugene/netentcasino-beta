@@ -110,11 +110,14 @@
 						padding: 0 40px;
 					}
 					.logo-holder{
+						height:40px;
 						width: 40px;
 						@include media(">=tablet") {
+							height:110px;
 							width: 110px;
 						}
 						@include media(">=desktop") {
+							height:140px;
 							width: 140px;
 						}
 					}

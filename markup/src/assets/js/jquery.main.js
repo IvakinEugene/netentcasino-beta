@@ -323,7 +323,7 @@ function initStickyScrollBlock() {
 			jQuery('.header-content').each(function() {
 				totalHeight += jQuery(this).outerHeight();
 			});
-			if (jQuery('#wpadminbar').length) {
+			if ((jQuery('#wpadminbar').length) && (jQuery(window).width() > 600)) {
 				jQuery('#wpadminbar').each(function() {
 					totalHeight += jQuery(this).outerHeight();
 				});
@@ -353,6 +353,11 @@ function initStickyScrollBlock() {
 			jQuery('.header-content').each(function() {
 				totalHeight += jQuery(this).outerHeight();
 			});
+			if ((jQuery('#wpadminbar').length) && (jQuery(window).width() > 600)) {
+				jQuery('#wpadminbar').each(function() {
+					totalHeight += jQuery(this).outerHeight();
+				});
+			}
 			return totalHeight;
 		}
 	});

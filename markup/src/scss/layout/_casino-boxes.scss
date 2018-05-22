@@ -163,6 +163,7 @@
 			align-items: flex-start;
 		}
 		.logo-holder{
+			height:35px;
 			margin:0 19px 0 0;
 			width:35px;
 		}
@@ -272,6 +273,7 @@
 	.logo-holder{
 		margin:0 19px 0 0;
 		@include media(">=tablet") {
+			height:140px;
 			margin:0 auto 10px;
 			width:140px;
 		}
@@ -649,6 +651,7 @@
 	.logo-holder{
 		margin-bottom: 7px;
 		@include media(">=desktop") {
+			height:120px;
 			margin-bottom: 0;
 			width:120px;
 		}
@@ -852,12 +855,15 @@
 	}
 	.logo-holder{
 		border-width: 1px;
+		height:40px;
 		margin-bottom: 8px;
 		width:40px;
 		@include media(">=tablet") {
+			height:100px;
 			width:100px;
 		}
 		@include media(">=desktop") {
+			height:140px;
 			margin-bottom: 0;
 			width:140px;
 		}
@@ -1182,6 +1188,7 @@
 	}
 	.logo-holder{
 		@include media(">=desktop") {
+			height:50px;
 			width:50px;
 		}
 	}

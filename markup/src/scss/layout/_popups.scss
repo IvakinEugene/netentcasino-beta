@@ -610,6 +610,7 @@ button,
 				color:$base-gray;
 			}
 			.logo-holder{
+				height:43px;
 				left:$gutter-width;
 				position:absolute;
 				top:50%;
@@ -679,6 +680,7 @@ button,
 		}
 		.logo-holder{
 			@include media(">=tablet") {
+				height:83px;
 				margin:0 31px 0 0;
 				width:83px;
 			}

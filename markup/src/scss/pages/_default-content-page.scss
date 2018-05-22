@@ -397,6 +397,7 @@
 			.logo-holder{
 				margin-bottom: 7px;
 				@include media(">=tablet") {
+					height:120px;
 					margin:0 auto;
 					width:120px;
 				}
@@ -624,8 +625,8 @@
 				width: auto;
 			}
 			.logo-holder{
-				width: 120px;
 				height:120px;
+				width: 120px;
 			}
 		}
 		h3{
