@@ -267,16 +267,22 @@
 							transform:rotate(180deg);
 						}
 					}
+					.opener-holder{
+						position:relative;
+					}
 					.opener{
 						background:none;
 						color:$theme-color-base;
 						font-size:20px;
+						height:100%;
 						line-height:1;
-						padding:14px 22px 13px;
+						// padding:14px 22px 13px;
+						padding:0;
 						position:absolute;
 						right:0;
 						top:0;
 						transition:transform $animation-speed;
+						width:62px;
 						&:hover {
 							color:$headings-color;
 						}
@@ -288,6 +294,10 @@
 							font-variant: normal;
 							text-transform: none;
 							content: "\e910";
+							left:50%;
+							position:absolute;
+							top:50%;
+							transform:translate(-50%, -50%);
 						}
 					}
 				}

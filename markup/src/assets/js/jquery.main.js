@@ -405,8 +405,16 @@ function initAnchors() {
 			jQuery('.anchor-links').each(function() {
 				var $box = jQuery(this);
 				totalHeight += $box.outerHeight();
-
 			});
+
+			if ((jQuery(window).width() < 768) && (jQuery('.fixed-aside').length)) {
+				var totalHeight = 0;
+				jQuery('.fixed-aside').each(function() {
+					var $box = jQuery(this);
+					totalHeight += $box.outerHeight();
+				});
+				totalHeight += jQuery('#header').outerHeight();
+			}
 			return totalHeight;
 		}
 	});
