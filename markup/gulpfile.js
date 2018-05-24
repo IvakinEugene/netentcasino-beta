@@ -31,7 +31,7 @@ gulp.task('sassPretty', function(){
 	gulp.src(src + '/scss/**/*.scss')
 		.pipe(plumber())
 		.pipe(sass().on('error', sass.logError))
-		.pipe(gcmq())
+		.pipe(gcmq('.csscomb.json'))
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: true

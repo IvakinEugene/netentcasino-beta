@@ -389,7 +389,6 @@
 .mobile-nav-holder{
 	background:$white;
 	height:100vh;
-	// left:65px;
 	max-width: 310px;
 	position:fixed;
 	right:0;
@@ -405,6 +404,14 @@
 	.nav-active & {
 		transform:translateX(0);
 		transition:transform $animation-speed;
+	}
+	.admin-bar & {
+		height:calc(100vh - 46px);
+		top:46px;
+		@include media(">=782px") {
+			height:calc(100vh - 32px);
+			top:32px;
+		}
 	}
 	&:before {
 		background-color:rgba(56,58,58,0.8);

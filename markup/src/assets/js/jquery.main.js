@@ -144,7 +144,8 @@ function initSlick() {
 		fade: true,
 		asNavFor: '.slider-nav',
 		autoplay: true,
-		autoplaySpeed: 5000
+		autoplaySpeed: 5000,
+		adaptiveHeight: true
 	});
 	$('.slider-nav').slick({
 		slidesToShow: 3,
@@ -338,7 +339,9 @@ function initStickyScrollBlock() {
 		extraTop: function() {
 			var totalHeight = 0;
 			jQuery('#wpadminbar').each(function() {
-				totalHeight += jQuery(this).outerHeight();
+				if (jQuery(window).width() > 600) {
+					totalHeight += jQuery(this).outerHeight();
+				}
 			});
 			return totalHeight;
 		}

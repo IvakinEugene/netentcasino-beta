@@ -19,6 +19,9 @@
 				height:140px;
 			}
 		}
+		p{
+			margin:0;
+		}
 		.frame{
 			overflow:hidden;
 		}
@@ -32,9 +35,6 @@
 			margin:0 0 5px;
 		}
 	}
-	p{
-		margin:0;
-	}
 	.offer-sticker{
 		margin:29px 0 0;
 	}
@@ -43,7 +43,7 @@
 		box-shadow:0 -1px 0 $border-color-base inset, 0 -1px 0 $border-color-base;
 		padding: 16px 0 9px;
 		@include media(">=desktop") {
-			padding:34px 0 13px;
+			padding:34px 0 24px;
 		}
 	}
 }
