@@ -343,6 +343,7 @@
 		@include media(">=desktop") {
 			margin:0 auto 1px;
 			max-width: 556px;
+			min-height: 80px;
 		}
 		@include media(">=widescreen") {
 			max-width: 716px;
