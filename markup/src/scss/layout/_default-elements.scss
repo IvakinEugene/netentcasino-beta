@@ -1104,6 +1104,9 @@ img{
 		@include media(">=tablet") {
 			margin:0 0 17px;
 		}
+		a{
+			color:inherit;
+		}
 	}
 	.btn{
 		@include media(">=tablet") {
