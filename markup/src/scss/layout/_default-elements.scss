@@ -232,7 +232,7 @@
 		display:block;
 	}
 	.holder{
-		overflow:auto;
+		// overflow:auto;
 		padding:0 23px;
 		@include media(">=tablet") {
 			margin:0 auto;
@@ -1120,6 +1120,9 @@ img{
 		@include media(">=desktop") {
 			width:440px;
 		}
+		&.large {
+			width:562px;
+		}
 		.media-holder{
 			height:180px;
 			@include media(">=tablet") {
@@ -1130,5 +1133,30 @@ img{
 	> .bg-stretch{
 		filter: blur(3px);
 		transform:scale(1.1, 1.1);
+	}
+}
+
+.game-demo{
+	margin:0 0 13px;
+	position:relative;
+	.note{
+		color:$white;
+		font-size: 18px;
+		font-weight:normal;
+		left:5px;
+		position:absolute;
+		right:5px;
+		top:5px;
+		.text{
+			background-color: rgba($theme-color-base,0.95);
+			box-shadow: 0 2px 4px 0 rgba($black,0.5);
+			display:inline-block;
+			vertical-align:top;
+			padding:15px 20px 17px;
+		}
+	}
+	> img{
+		max-width: none;
+		width:100%;
 	}
 }

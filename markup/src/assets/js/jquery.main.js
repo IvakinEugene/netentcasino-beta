@@ -402,10 +402,8 @@ function initAnchors() {
 		wheelBehavior: 'none',
 		extraOffset: function() {
 			var totalHeight = 0;
-			jQuery('.anchor-links').each(function() {
-				var $box = jQuery(this);
-				totalHeight += $box.outerHeight();
-			});
+
+			totalHeight += jQuery('.anchor-links').outerHeight();
 
 			if ((jQuery(window).width() < 768) && (jQuery('.fixed-aside').length)) {
 				var totalHeight = 0;
@@ -413,8 +411,9 @@ function initAnchors() {
 					var $box = jQuery(this);
 					totalHeight += $box.outerHeight();
 				});
-				totalHeight += jQuery('#header').outerHeight();
 			}
+
+			totalHeight += jQuery('#header').outerHeight() - 1;
 			return totalHeight;
 		}
 	});

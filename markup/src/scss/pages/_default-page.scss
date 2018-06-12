@@ -45,6 +45,13 @@
 		@include media(">=desktop") {
 			padding:34px 0 24px;
 		}
+		.holder{
+			> *{
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
 	}
 }
 
