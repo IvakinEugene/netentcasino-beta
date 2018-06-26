@@ -151,8 +151,8 @@
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: space-between;
-		align-content: flex-start;
-		align-items: flex-start;
+		align-content: center;
+    	align-items: center;
 		padding:20px 19px 16px;
 		.heading{
 			display: flex;
@@ -166,10 +166,17 @@
 			height:35px;
 			margin:0 19px 0 0;
 			width:35px;
+			@include media(">=desktop") {
+				height:50px;
+				width:50px;
+			}
 		}
 		h2{
 			font-size: 15px;
 			margin:0 0 4px;
+			@include media(">=desktop") {
+				font-size: 18px;
+			}
 			a{
 				text-decoration:underline;
 				@include media(">=desktop") {
@@ -177,9 +184,27 @@
 				}
 			}
 		}
+		.stars{
+			@include media(">=desktop") {
+				font-size: 13px;
+				margin-left: -4px;
+			}
+			[class*="icon"] {
+				@include media(">=desktop") {
+					margin:0 4px;
+				}
+			}
+		}
+		.note{
+			color:$base-gray;
+			display:block;
+			font-size: 12px;
+			font-style:normal;
+			font-weight:normal;
+		}
 		.btn{
 			font-size: 14px;
-			min-width: 110px;
+			min-width: 160px;
 			padding-top: 5px;
 			padding-bottom: 6px;
 		}
@@ -825,6 +850,35 @@
 	@include media(">=desktop") {
 		font-size: 20px;
 	}
+	&.col-2 {
+		.heading{
+			@include media(">=desktop") {
+				display:block;
+				width:210px;
+			}
+			@include media(">=widescreen") {
+				display:flex;
+				max-width: none;
+				min-width: 0;
+				width:50%;
+			}
+		}
+		.content{
+			border-width: 0;
+			@include media(">=widescreen") {
+				flex:0 1 auto;
+				width:50%;
+			}
+		}
+		.txt{
+			@include media(">=desktop", "<widescreen") {
+				max-width: none;
+				min-width: 0;
+				padding:0;
+				text-align:center;
+			}
+		}
+	}
 	div{
 		border: 0 solid $border-color-base;
 	}
@@ -865,7 +919,8 @@
 		@include media(">=desktop") {
 			height:140px;
 			margin-bottom: 0;
-			width:140px;
+			max-width:140px;
+			min-width:140px;
 		}
 	}
 	.txt{
@@ -1415,6 +1470,70 @@
 		font-size: 26px;
 		max-width: 680px;
 	}
+	&.bottom {
+		background:$theme-color-add;
+		color:$headings-color;
+		font-size: 14px;
+		padding:8px 15px 6px;
+		@include media(">=tablet") {
+			display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: space-between;
+		    align-content: flex-start;
+		    align-items: flex-start;
+			font-size: 14px;
+			padding:13px 17px 11px;
+			width:100%;
+		}
+		> .content{
+			flex:0 1 auto;
+			padding:0;
+			> *{
+				display:inline;
+				margin:0 3px;
+			}
+		}
+		p{
+			strong{
+				font-weight:normal;
+			}
+		}
+		.btn-holder{
+			display:none;
+			@include media(">=tablet") {
+				display:block;
+			}
+		}
+		.btn-link{
+			border: 0;
+			@include media(">=tablet") {
+				font-size: 15px;
+				font-weight:500;
+				margin:0;
+				padding:0;
+				text-decoration:underline;
+			}
+			&:hover {
+				@include media(">=tablet") {
+					text-decoration:none;
+				}
+			}
+		}
+	}
+	.license-toplist{
+		width:100%;
+	}
+	.casino{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: stretch;
+		font-size: 26px;
+		max-width: 680px;
+	}
 	.heading{
 		display: flex;
 		flex-direction: row;
@@ -1500,7 +1619,7 @@
 			}
 		}
 	}
-	> .content{
+	.content{
 		padding:7px 15px 20px;
 		text-align:center;
 		@include media(">=tablet") {
@@ -1536,29 +1655,6 @@
 		@include media(">=tablet") {
 			display:inline-block;
 			// vertical-align:top;
-		}
-	}
-	.bottom{
-		background:$theme-color-add;
-		color:$headings-color;
-		font-size: 14px;
-		padding:8px 15px 6px;
-		@include media(">=tablet") {
-			width:100%;
-		}
-		.content{
-			> *{
-				display:inline;
-				margin:0 4px;
-			}
-		}
-		p{
-			strong{
-				font-weight:normal;
-			}
-		}
-		.btn-holder{
-			display:none;
 		}
 	}
 }

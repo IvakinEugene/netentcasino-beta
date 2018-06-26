@@ -1147,6 +1147,7 @@ img{
 		position:absolute;
 		right:5px;
 		top:5px;
+		z-index:10;
 		.text{
 			background-color: rgba($theme-color-base,0.95);
 			box-shadow: 0 2px 4px 0 rgba($black,0.5);
