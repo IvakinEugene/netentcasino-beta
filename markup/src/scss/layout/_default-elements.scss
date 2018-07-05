@@ -169,6 +169,10 @@
 			color:$theme-color-base;
 		}
 	}
+	img{
+		max-height: 100%;
+		width:auto;
+	}
 }
 
 .bg-stretch,
