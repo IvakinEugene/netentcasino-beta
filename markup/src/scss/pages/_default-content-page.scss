@@ -256,6 +256,11 @@
 					}
 				}
 			}
+			+ .widget {
+				@include media(">=desktop") {
+					margin:20px 0 0;
+				}
+			}
 			ul{
 				border:0 solid #cbd6d2;
 				border-width:0 0 1px;

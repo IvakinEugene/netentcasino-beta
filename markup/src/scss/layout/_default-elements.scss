@@ -172,6 +172,7 @@
 }
 
 .bg-stretch{
+	background: linear-gradient(180deg, #B4EC51 0%, #429321 100%);
 	background-position:50% 50%;
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -871,6 +872,10 @@
 			margin-bottom: 33px;
 		}
 	}
+	&.no-media {
+		background: linear-gradient(180deg, #B4EC51 0%, #429321 100%);
+		min-height: 198px;
+	}
 	img{
 		width: 100%;
 	}
@@ -1057,9 +1062,30 @@ img{
 	position:relative;
 	// text-align:center;
 	@include media(">=tablet") {
+		background:$white;
 		color:#cbd6d2;
 		font-size:20px;
 		line-height:1.1;
+		min-height: 291px;
+		overflow:visible;
+	}
+	&.single {
+		@include media(">=tablet") {
+			margin:0 0 -9px;
+		}
+		> .holder{
+			@include media(">=tablet") {
+				padding-bottom: 0;
+			}
+		}
+		> .bg-stretch{
+			filter: none;
+			transform:none;
+			@include media(">=tablet") {
+				bottom:42px;
+				height:auto;
+			}
+		}
 	}
 	> .holder{
 		padding:37px $gutter-width 40px;

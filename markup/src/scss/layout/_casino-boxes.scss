@@ -347,7 +347,22 @@
 			}
 		}
 		blockquote{
-			margin:0;
+			@include media(">=desktop") {
+				font-size: inherit;
+				font-style:normal;
+				font-weight:inherit;
+				line-height:inherit;
+				margin:0 0 10px;
+				max-width: none;
+				padding:0;
+				text-align:left;
+			}
+			&:before,
+			&:after {
+				@include media(">=desktop") {
+					display:none;
+				}
+			}
 		}
 	}
 	.description-list{

@@ -36,16 +36,16 @@
 #wrapper{
 	background:#f5f7f6;
 	overflow:hidden;
-	// max-width: 320px;
-	// @include media(">=375px") {
-	// 	max-width: 375px;
-	// }
-	// @include media(">=tablet") {
-	// 	max-width: 992px;
-	// }
-	// @include media(">=widescreen") {
-	// 	max-width:1440px;
-	// }
+	max-width: 320px;
+	@include media(">=375px") {
+		max-width: 375px;
+	}
+	@include media(">=tablet") {
+		max-width: 992px;
+	}
+	@include media(">=widescreen") {
+		max-width:1440px;
+	}
 }
 
 #main{
@@ -95,8 +95,12 @@ section{
 			@include media(">=desktop") {
 				display:inline-block;
 				vertical-align:top;
+				max-width: 350px;
+				overflow:hidden;
 				padding:0 4px 0 18px;
 				position:relative;
+				text-overflow:ellipsis;
+				white-space: nowrap;
 			}
 			&:first-child {
 				@include media(">=desktop") {
@@ -959,6 +963,20 @@ section{
 			position:absolute;
 			top:0;
 		// 	width:10px;
+		}
+		a{
+			display:inline-block;
+			vertical-align:top;
+			margin:0 0 0 10px;
+			position:relative;
+			&:before {
+				content: '-';
+				margin:0 4px 0 0;
+				pointer-events:none;
+				position:absolute;
+				right:100%;
+				top:0;
+			}
 		}
 	}
 	h1{

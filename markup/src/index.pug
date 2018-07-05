@@ -1,191 +1,191 @@
 extends pug/extends/master
 
 block content
-	//- - var page_class = "hide-bonus"
-	//- include pug/includes/header
+	- var page_class = "hide-bonus"
+	include pug/includes/header
 	#main.home
 		//- 
-			section.section-intro
-				.holder
-					.content
-						.search-box
-							div
-								a(href="#search-popup").btn.btn-search.lightbox-opener.icon-search Search 200+ Casinos &amp; Games
-							div
-								- var count = "329"
-								- var title = "Casino Reviews"
-								- var content = "For Your Convenience"
-								include pug/extends/button-counter
-							div
-								- var count = "204"
-								- var title = "Games"
-								- var content = "To Play for Free"
-								include pug/extends/button-counter
-							div
-								- var count = "3049"
-							
-								- var title = "News Articles"
-								- var content = "Ready to be Read"
-								include pug/extends/button-counter
-				- var image = "banner-concept-1"
-				include pug/extends/retina-images
+		section.section-intro
+			.holder
+				.content
+					.search-box
+						div
+							a(href="#search-popup").btn.btn-search.lightbox-opener.icon-search Search 200+ Casinos &amp; Games
+						div
+							- var count = "329"
+							- var title = "Casino Reviews"
+							- var content = "For Your Convenience"
+							include pug/extends/button-counter
+						div
+							- var count = "204"
+							- var title = "Games"
+							- var content = "To Play for Free"
+							include pug/extends/button-counter
+						div
+							- var count = "3049"
+						
+							- var title = "News Articles"
+							- var content = "Ready to be Read"
+							include pug/extends/button-counter
+			- var image = "banner-concept-1"
+			include pug/extends/retina-images
 		//- 
-			section.section-top-casinos
-				.holder
-					.section-heading
-						h1 New Casinos
-						strong.subtitle Discover November’s latest Casinos
-					ul.grid.col-4
-						li
-							.casino-box-title.short
-								.heading
-									.left
-										.logo-holder
-											a(href="#")
-												img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-										.txt
-											h2
-												a(href="#") LadyLucks
-											.stars
-												span.icon-star
-												span.icon-star
-												span.icon-star
-												span.icon-star-half-empty
-												span.icon-star-o
-											span.note
-												| Launched 
-												br
-												| 2 days ago!
-									.right
-										span.rate
-											strong 4
-											span /5
+		section.section-top-casinos
+			.holder
+				.section-heading
+					h1 New Casinos
+					strong.subtitle Discover November’s latest Casinos
+				ul.grid.col-4
+					li
+						.casino-box-title.short
+							.heading
+								.left
+									.logo-holder
+										a(href="#")
+											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") LadyLucks
 										.stars
 											span.icon-star
 											span.icon-star
 											span.icon-star
 											span.icon-star-half-empty
 											span.icon-star-o
-								.content
-									.content-frame
-										h3 £1000 + 20 Free Spins
-										p 100% up to £500 + 20 Free Spins
-									.button-holder
-										.button-frame
-											a(href="#").btn.btn-primary Go to Casino
-						li
-							.casino-box-title.short
-								.heading
-									.left
-										.logo-holder
-											a(href="#")
-												img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-										.txt
-											h2
-												a(href="#") LadyLucks
-											.stars
-												span.icon-star
-												span.icon-star
-												span.icon-star
-												span.icon-star-half-empty
-												span.icon-star-o
-											span.note
-												| Launched 
-												br
-												| 2 days ago!
-									.right
-										span.rate
-											strong 4
-											span /5
+										span.note
+											| Launched 
+											br
+											| 2 days ago!
+								.right
+									span.rate
+										strong 4
+										span /5
+									.stars
+										span.icon-star
+										span.icon-star
+										span.icon-star
+										span.icon-star-half-empty
+										span.icon-star-o
+							.content
+								.content-frame
+									h3 £1000 + 20 Free Spins
+									p 100% up to £500 + 20 Free Spins
+								.button-holder
+									.button-frame
+										a(href="#").btn.btn-primary Go to Casino
+					li
+						.casino-box-title.short
+							.heading
+								.left
+									.logo-holder
+										a(href="#")
+											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") LadyLucks
 										.stars
 											span.icon-star
 											span.icon-star
 											span.icon-star
 											span.icon-star-half-empty
 											span.icon-star-o
-								.content
-									.content-frame
-										h3 £150 + 50 Free Spins
-										p 50% up to £100 + 50 Free Spins
-									.button-holder
-										.button-frame
-											a(href="#").btn.btn-primary Go to Casino
-						li
-							.casino-box-title.short
-								.heading
-									.left
-										.logo-holder
-											a(href="#")
-												img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-										.txt
-											h2
-												a(href="#") HighRoller
-											.stars
-												span.icon-star
-												span.icon-star
-												span.icon-star
-												span.icon-star-half-empty
-												span.icon-star-o
-											span.note
-												| Launched 
-												br
-												| 2 days ago!
-									.right
-										span.rate
-											strong 4
-											span /5
+										span.note
+											| Launched 
+											br
+											| 2 days ago!
+								.right
+									span.rate
+										strong 4
+										span /5
+									.stars
+										span.icon-star
+										span.icon-star
+										span.icon-star
+										span.icon-star-half-empty
+										span.icon-star-o
+							.content
+								.content-frame
+									h3 £150 + 50 Free Spins
+									p 50% up to £100 + 50 Free Spins
+								.button-holder
+									.button-frame
+										a(href="#").btn.btn-primary Go to Casino
+					li
+						.casino-box-title.short
+							.heading
+								.left
+									.logo-holder
+										a(href="#")
+											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") HighRoller
 										.stars
 											span.icon-star
 											span.icon-star
 											span.icon-star
 											span.icon-star-half-empty
 											span.icon-star-o
-								.content
-									.content-frame
-										h3 £1000 + 20 Free Spins
-										p 100% up to £500 + 20 Free Spins
-									.button-holder
-										.button-frame
-											a(href="#").btn.btn-primary Go to Casino
-						li
-							.casino-box-title.short
-								.heading
-									.left
-										.logo-holder
-											a(href="#")
-												img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-										.txt
-											h2
-												a(href="#") Casimba
-											.stars
-												span.icon-star
-												span.icon-star
-												span.icon-star
-												span.icon-star-half-empty
-												span.icon-star-o
-											span.note
-												| Launched 
-												br
-												| 2 days ago!
-									.right
-										span.rate
-											strong 4
-											span /5
+										span.note
+											| Launched 
+											br
+											| 2 days ago!
+								.right
+									span.rate
+										strong 4
+										span /5
+									.stars
+										span.icon-star
+										span.icon-star
+										span.icon-star
+										span.icon-star-half-empty
+										span.icon-star-o
+							.content
+								.content-frame
+									h3 £1000 + 20 Free Spins
+									p 100% up to £500 + 20 Free Spins
+								.button-holder
+									.button-frame
+										a(href="#").btn.btn-primary Go to Casino
+					li
+						.casino-box-title.short
+							.heading
+								.left
+									.logo-holder
+										a(href="#")
+											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") Casimba
 										.stars
 											span.icon-star
 											span.icon-star
 											span.icon-star
 											span.icon-star-half-empty
 											span.icon-star-o
-								.content
-									.content-frame
-										h3 £150 + 50 Free Spins
-										p 50% up to £100 + 50 Free Spins
-									.button-holder
-										.button-frame
-											a(href="#").btn.btn-primary Go to Casino
-					.load-more.text-center
-						a(href="#").btn.btn-secondary View More New Casinos
+										span.note
+											| Launched 
+											br
+											| 2 days ago!
+								.right
+									span.rate
+										strong 4
+										span /5
+									.stars
+										span.icon-star
+										span.icon-star
+										span.icon-star
+										span.icon-star-half-empty
+										span.icon-star-o
+							.content
+								.content-frame
+									h3 £150 + 50 Free Spins
+									p 50% up to £100 + 50 Free Spins
+								.button-holder
+									.button-frame
+										a(href="#").btn.btn-primary Go to Casino
+				.load-more.text-center
+					a(href="#").btn.btn-secondary View More New Casinos
 		//- 
 		section.section-top-offer
 			.holder
@@ -193,7 +193,7 @@ block content
 					.location.icon-map-marker
 						| London, United Kingdom 
 						a(href="#")
-							strong - Change Location
+							strong Change Location
 					h1 Novembers’ Top Casino Offers
 					.offer-casino-box
 						.heading
