@@ -95,9 +95,10 @@ section{
 			@include media(">=desktop") {
 				display:inline-block;
 				vertical-align:top;
+				margin:-4px 0;
 				max-width: 350px;
 				overflow:hidden;
-				padding:0 4px 0 18px;
+				padding:4px 4px 4px 18px;
 				position:relative;
 				text-overflow:ellipsis;
 				white-space: nowrap;
@@ -116,7 +117,8 @@ section{
 					content: '>';
 					left:0;
 					position:absolute;
-					top:0;
+					top:50%;
+					transform:translateY(-50%);
 				}
 			}
 		}

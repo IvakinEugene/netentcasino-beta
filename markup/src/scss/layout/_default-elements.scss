@@ -171,7 +171,8 @@
 	}
 }
 
-.bg-stretch{
+.bg-stretch,
+.bg-cover{
 	background: linear-gradient(180deg, #B4EC51 0%, #429321 100%);
 	background-position:50% 50%;
 	background-repeat:no-repeat;
@@ -1067,7 +1068,6 @@ img{
 		font-size:20px;
 		line-height:1.1;
 		min-height: 291px;
-		overflow:visible;
 	}
 	&.single {
 		@include media(">=tablet") {
