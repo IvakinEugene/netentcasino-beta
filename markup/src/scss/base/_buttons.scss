@@ -4,7 +4,7 @@
 	vertical-align:top;
 	font-size: $btn-font-size;
 	font-weight:600;
-	line-height:1.1429;
+	line-height:1.125;
 	min-width: 245px;
 	padding:$btn-padding;
 	position:relative;
@@ -14,6 +14,22 @@
 	&:hover {
 		*{
 			color:inherit !important;
+		}
+	}
+	&.is-loading {
+		color:transparent !important;
+		&:before {
+			$size:24px;
+			animation: spin 1s linear infinite;
+			border: 2px solid transparent;
+			border-radius: 50%;
+			content: '';
+			height:$size;
+			left:50%;
+			margin:-#{$size/2} 0 0 -#{$size/2};
+			position:absolute;
+			top:50%;
+			width:$size;
 		}
 	}
 	.number{
@@ -30,6 +46,16 @@
 	&:hover {
 		background:none;
 		color:$btn-primary-background;
+	}
+	&.is-loading {
+		&:hover {
+			&:before {
+				border-top-color: $btn-primary-background;
+			}
+		}
+		&:before {
+			border-top-color: $btn-primary-color;
+		}
 	}
 }
 
@@ -49,6 +75,26 @@
 			background:$btn-secondary-background;
 			color:$btn-secondary-color;
 		}
+		&.is-loading {
+			&:hover {
+				&:before {
+					border-top-color: $btn-secondary-color;
+				}
+			}
+			&:before {
+				border-top-color: $white;
+			}
+		}
+	}
+	&.is-loading {
+		&:hover {
+			&:before {
+				border-top-color: $white;
+			}
+		}
+		&:before {
+			border-top-color: $btn-secondary-color;
+		}
 	}
 }
 
@@ -60,6 +106,16 @@
 		border-color: $btn-link-color;
 		color:$btn-link-color;
 	}
+	&.is-loading {
+		&:hover {
+			&:before {
+				border-top-color: $btn-link-color;
+			}
+		}
+		&:before {
+			border-top-color: $btn-link-color;
+		}
+	}
 }
 
 .btn-dark{
@@ -69,6 +125,35 @@
 	&:hover {
 		background:transparent;
 		color:$btn-dark-background;
+	}
+	&.is-loading {
+		&:hover {
+			&:before {
+				border-top-color: $btn-dark-background;
+			}
+		}
+		&:before {
+			border-top-color: $btn-dark-color;
+		}
+	}
+}
+
+.btn-tc{
+	border:0;
+	color:$base-gray;
+	font-size: 12px !important;
+	font-weight:500;
+	margin:7px;
+	min-width: 0 !important;
+	opacity:0.8;
+	padding:0 !important;
+	text-decoration:underline;
+	@include media(">=desktop") {
+		font-size: 14px !important;
+		margin:6px;
+	}
+	&:last-child {
+		margin-bottom: 0;
 	}
 }
 

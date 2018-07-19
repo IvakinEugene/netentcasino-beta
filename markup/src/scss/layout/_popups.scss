@@ -408,7 +408,8 @@ button,
 
 .refer-popup{
 	@include media(">=tablet") {
-		height:auto !important;
+		// height:auto !important;
+		max-height: none;
 		width:597px;
 	}
 	[class*="-gift"]{
@@ -628,6 +629,12 @@ button,
 			padding-right: 31px;
 			padding-left: 31px;
 		}
+		img{
+			border: 0;
+			border-radius: 0;
+			height:auto;
+			width:auto;
+		}
 	}
 	.popup-footer{
 		left:-9999px;
@@ -637,7 +644,7 @@ button,
 }
 
 .caino-summary-popup{
-	display:none;
+	// display:none;
 	@include media(">=tablet") {
 		display:block;
 		font-size:14px;

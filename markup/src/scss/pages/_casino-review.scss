@@ -223,11 +223,17 @@
 				flex-direction: column;
 				flex-wrap: nowrap;
 				justify-content: center;
-				align-content: center;
-				align-items: center;
+				align-content: stretch;
+				align-items: stretch;
 				border-right: 1px solid $border-color-base;
+				max-width:91px;
 				min-width:91px;
 				padding:5px;
+				text-align:center;
+				@include media(">=phone") {
+					max-width:120px;
+					min-width:120px;
+				}
 			}
 			.logo-holder{
 				margin-bottom: 7px;
@@ -237,6 +243,12 @@
 				font-size: 12px;
 				font-weight:500;
 				margin:0 0 2px;
+				// overflow:hidden;
+				// text-overflow:ellipsis;
+				// white-space: nowrap;
+				// @include media(">=phone") {
+				// 	white-space: normal;
+				// }
 			}
 			.content{
 				border-width: 0;
@@ -481,6 +493,7 @@ dl{
 		}
 		> span{
 			display:block;
+			width:100%;
 		}
 		.logo-holder{
 			display: flex;

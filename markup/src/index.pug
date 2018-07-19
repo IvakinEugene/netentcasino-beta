@@ -1,6 +1,7 @@
 extends pug/extends/master
 
 block content
+	//- 
 	- var page_class = "hide-bonus"
 	include pug/includes/header
 	#main.home
@@ -8,6 +9,30 @@ block content
 		section.section-intro
 			.holder
 				.content
+					.offer-casino-box
+						.heading
+							.left
+								.logo-holder
+									a(href="#")
+										img(src="http://via.placeholder.com/50x50/ff6600/ffffff")
+								.txt
+									h2
+										a(href="#") PokerStars
+							.right
+								.stars
+									span.icon-star
+									span.icon-star
+									span.icon-star
+									span.icon-star-half-empty
+									span.icon-star-o
+						.content
+							h3 £150 + 50 Free Spins
+							p 50% up to £100 + 50 Free Spins
+							.btn-holder
+								a(href="#").btn.btn-secondary Casino Review
+								a(href="#").btn.btn-primary Get Bonus
+								a(href="#").btn.btn-tc T&amp;C’s Apply
+					//- 
 					.search-box
 						div
 							a(href="#search-popup").btn.btn-search.lightbox-opener.icon-search Search 200+ Casinos &amp; Games
@@ -27,6 +52,7 @@ block content
 							- var title = "News Articles"
 							- var content = "Ready to be Read"
 							include pug/extends/button-counter
+			//- 
 			- var image = "banner-concept-1"
 			include pug/extends/retina-images
 		//- 
@@ -68,11 +94,12 @@ block content
 										span.icon-star-o
 							.content
 								.content-frame
-									h3 £1000 + 20 Free Spins
-									p 100% up to £500 + 20 Free Spins
+									h3 &pound;1000 + 20 Free Spins
+									p 100% up to &pound;500 + 20 Free Spins
 								.button-holder
 									.button-frame
 										a(href="#").btn.btn-primary Go to Casino
+										a(href="#").btn.btn-tc T&amp;C’s Apply
 					li
 						.casino-box-title.short
 							.heading
@@ -105,11 +132,12 @@ block content
 										span.icon-star-o
 							.content
 								.content-frame
-									h3 £150 + 50 Free Spins
-									p 50% up to £100 + 50 Free Spins
+									h3 &pound;150 + 50 Free Spins
+									p 50% up to &pound;100 + 50 Free Spins
 								.button-holder
 									.button-frame
 										a(href="#").btn.btn-primary Go to Casino
+										a(href="#").btn.btn-tc T&amp;C’s Apply
 					li
 						.casino-box-title.short
 							.heading
@@ -142,11 +170,12 @@ block content
 										span.icon-star-o
 							.content
 								.content-frame
-									h3 £1000 + 20 Free Spins
-									p 100% up to £500 + 20 Free Spins
+									h3 &pound;1000 + 20 Free Spins
+									p 100% up to &pound;500 + 20 Free Spins
 								.button-holder
 									.button-frame
 										a(href="#").btn.btn-primary Go to Casino
+										a(href="#").btn.btn-tc T&amp;C’s Apply
 					li
 						.casino-box-title.short
 							.heading
@@ -179,11 +208,12 @@ block content
 										span.icon-star-o
 							.content
 								.content-frame
-									h3 £150 + 50 Free Spins
-									p 50% up to £100 + 50 Free Spins
+									h3 &pound;150 + 50 Free Spins
+									p 50% up to &pound;100 + 50 Free Spins
 								.button-holder
 									.button-frame
 										a(href="#").btn.btn-primary Go to Casino
+										a(href="#").btn.btn-tc T&amp;C’s Apply
 				.load-more.text-center
 					a(href="#").btn.btn-secondary View More New Casinos
 		//- 
@@ -216,10 +246,12 @@ block content
 									span.icon-star-half-empty
 									span.icon-star-o
 						.content
-							h3 £150 + 50 Free Spins
-							p 50% up to £100 + 50 Free Spins
-							a(href="#").btn.btn-secondary Casino Review
-							a(href="#").btn.btn-primary Get Bonus
+							h3 &pound;150 + 50 Free Spins
+							p 50% up to &pound;100 + 50 Free Spins
+							.btn-holder
+								a(href="#").btn.btn-secondary Casino Review
+								a(href="#").btn.btn-primary Get Bonus
+								a(href="#").btn.btn-tc T&amp;C’s Apply
 					.offer-casino-box.bottom.text-center
 						.content
 							span.icon-timer
@@ -236,8 +268,8 @@ block content
 				.section-heading
 					h1 NetEnt Games &amp; Jackpots
 					strong.subtitle Most played Games &amp; Jackpots right now!
-				ul.grid
-					li
+				.games-slider.grid.col-3
+					div
 						.game-box
 							.media-holder
 								a(href="#", style="background-image:url('http://via.placeholder.com/562x280/ff0000/ffffff')").bg-cover
@@ -265,6 +297,7 @@ block content
 													span.icon-star-o
 										.content
 											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-tc T&amp;C’s Apply
 								li
 									.game
 										.heading
@@ -277,6 +310,8 @@ block content
 												em.note Released 2 Days ago
 										.content
 											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-tc T&amp;C’s Apply
+								//- 
 								li
 									.game
 										.heading
@@ -294,9 +329,11 @@ block content
 													span.icon-star-o
 										.content
 											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-tc T&amp;C’s Apply
+							//- 
 							.footer
 								a(href="#").btn.btn-link View all 314 Casinos
-					li
+					div
 						.game-box
 							.media-holder
 								a(href="#", style="background-image:url('http://via.placeholder.com/562x280/ff0000/ffffff')").bg-cover
@@ -304,7 +341,70 @@ block content
 										span
 											span.icon-play
 											| Play at Mega Fortune
-									span.sticker £3,654,000
+									span.sticker &pound;2,061.762
+								strong.media-title Mega Fortune
+							ul.games-list
+								li
+									.game
+										.heading
+											.logo-holder
+												a(href="#")
+													img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+											.txt
+												h2
+													a(href="#") Betsson
+												.stars
+													span.icon-star
+													span.icon-star
+													span.icon-star
+													span.icon-star-half-empty
+													span.icon-star-o
+										.content
+											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-tc T&amp;C’s Apply
+								li
+									.game
+										.heading
+											.logo-holder
+												a(href="#")
+													img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+											.txt
+												h2
+													a(href="#") Thrills
+												em.note Released 2 Days ago
+										.content
+											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-tc T&amp;C’s Apply
+								li
+									.game
+										.heading
+											.logo-holder
+												a(href="#")
+													img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+											.txt
+												h2
+													a(href="#") LeoVegas
+												.stars
+													span.icon-star
+													span.icon-star
+													span.icon-star
+													span.icon-star-half-empty
+													span.icon-star-o
+										.content
+											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-tc T&amp;C’s Apply
+							//- 
+								.footer
+									a(href="#").btn.btn-link View all 314 Casinos
+					div
+						.game-box
+							.media-holder
+								a(href="#", style="background-image:url('http://via.placeholder.com/562x280/ff0000/ffffff')").bg-cover
+									span.hover-box
+										span
+											span.icon-play
+											| Play at Mega Fortune
+									span.sticker &pound;3,654,000
 								strong.media-title Mega Fortune Dreams
 							ul.games-list
 								li
@@ -358,9 +458,10 @@ block content
 													span.icon-star-o
 										.content
 											a(href="#").btn.btn-primary Play Game
-							.footer
-								a(href="#").btn.btn-link View all 135 Casinos
-					li
+							//- 
+								.footer
+									a(href="#").btn.btn-link View all 135 Casinos
+					div
 						.game-box
 							.media-holder
 								a(href="#", style="background-image:url('http://via.placeholder.com/562x280/ff0000/ffffff')").bg-cover
@@ -368,7 +469,7 @@ block content
 										span
 											span.icon-play
 											| Play at Mega Fortune
-									span.sticker £832,000
+									span.sticker &pound;832,000
 								strong.media-title Cosmic Fortune
 							ul.games-list
 								li
@@ -422,8 +523,9 @@ block content
 													span.icon-star-o
 										.content
 											a(href="#").btn.btn-primary Play Game
-							.footer
-								a(href="#").btn.btn-link View all 314 Casinos
+							//- 
+								.footer
+									a(href="#").btn.btn-link View all 314 Casinos
 				.load-more.text-center
 					a(href="#").btn.btn-secondary View All New Casinos
 		//- 
@@ -458,10 +560,11 @@ block content
 															span.icon-star-o
 												.content
 													.frame
-														h4 £150 + 50 Free Spins
-														p 50% up to £100 + 50 Free Spins
-													.button-holder
+														h4 &pound;150 + 50 Free Spins
+														p 50% up to &pound;100 + 50 Free Spins
+													.btn-holder
 														a(href="#").btn.btn-primary Go to Betsson
+														//- a(href="#").btn.btn-tc T&amp;C’s Apply
 										li
 											.single
 												.heading
@@ -479,9 +582,9 @@ block content
 															span.icon-star-o
 												.content
 													.frame
-														h4 £1500 + 50 Free Spins
-														p 200% up to £500 + 50 Free Spins
-													.button-holder
+														h4 &pound;1500 + 50 Free Spins
+														p 200% up to &pound;500 + 50 Free Spins
+													.btn-holder
 														a(href="#").btn.btn-primary Go to Unibet
 										li
 											.single
@@ -500,9 +603,9 @@ block content
 															span.icon-star-o
 												.content
 													.frame
-														h4 £1000 + 20 Free Spins
-														p 100% up to £500 + 20 Free Spins
-													.button-holder
+														h4 &pound;1000 + 20 Free Spins
+														p 100% up to &pound;500 + 20 Free Spins
+													.btn-holder
 														a(href="#").btn.btn-primary Go to LeoVegas
 								.footer
 									a(href="#").btn.btn-secondary View all 314 Casinos
@@ -530,9 +633,9 @@ block content
 															span.icon-star-o
 												.content
 													.frame
-														h4 £150 + 50 Free Spins
-														p 50% up to £100 + 50 Free Spins
-													.button-holder
+														h4 &pound;150 + 50 Free Spins
+														p 50% up to &pound;100 + 50 Free Spins
+													.btn-holder
 														a(href="#").btn.btn-primary Go to LadyLucks
 										li
 											.single
@@ -551,9 +654,9 @@ block content
 															span.icon-star-o
 												.content
 													.frame
-														h4 £1500 + 50 Free Spins
-														p 200% up to £500 + 50 Free Spins
-													.button-holder
+														h4 &pound;1500 + 50 Free Spins
+														p 200% up to &pound;500 + 50 Free Spins
+													.btn-holder
 														a(href="#").btn.btn-primary Go to WildSlots
 										li
 											.single
@@ -572,9 +675,9 @@ block content
 															span.icon-star-o
 												.content
 													.frame
-														h4 £1000 + 20 Free Spins
-														p 100% up to £500 + 20 Free Spins
-													.button-holder
+														h4 &pound;1000 + 20 Free Spins
+														p 100% up to &pound;500 + 20 Free Spins
+													.btn-holder
 														a(href="#").btn.btn-primary Go to Cashiopeia
 								.footer
 									a(href="#").btn.btn-secondary View all 9 Casinos
@@ -602,9 +705,9 @@ block content
 															span.icon-star-o
 												.content
 													.frame
-														h4 £150 + 50 Free Spins
-														p 50% up to £100 + 50 Free Spins
-													.button-holder
+														h4 &pound;150 + 50 Free Spins
+														p 50% up to &pound;100 + 50 Free Spins
+													.btn-holder
 														a(href="#").btn.btn-primary Go to Betsson
 										li
 											.single
@@ -623,9 +726,9 @@ block content
 															span.icon-star-o
 												.content
 													.frame
-														h4 £1500 + 50 Free Spins
-														p 200% up to £500 + 50 Free Spins
-													.button-holder
+														h4 &pound;1500 + 50 Free Spins
+														p 200% up to &pound;500 + 50 Free Spins
+													.btn-holder
 														a(href="#").btn.btn-primary Go to Unibet
 										li
 											.single
@@ -644,9 +747,9 @@ block content
 															span.icon-star-o
 												.content
 													.frame
-														h4 £1000 + 20 Free Spins
-														p 100% up to £500 + 20 Free Spins
-													.button-holder
+														h4 &pound;1000 + 20 Free Spins
+														p 100% up to &pound;500 + 20 Free Spins
+													.btn-holder
 														a(href="#").btn.btn-primary Go to LeoVegas
 								.footer
 									a(href="#").btn.btn-secondary View all 82 Casinos

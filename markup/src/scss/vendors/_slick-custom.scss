@@ -36,7 +36,11 @@
 	}
 	.slick-list{
 		margin:0 -23px 0 -8px;
-		padding:0 53px 0 0;
+		padding:0 23px 0 0;
+		@include media(">=xs-phone") {
+			// margin:0 -23px 0 -8px;
+			padding:0 53px 0 0;
+		}
 		@include media(">=tablet") {
 			margin-left: 0;
 		}
@@ -47,6 +51,9 @@
 	}
 	.slick-slide{
 		padding:8px;
+	}
+	.slick-dots{
+		padding:13px 0 7px;
 	}
 }
 

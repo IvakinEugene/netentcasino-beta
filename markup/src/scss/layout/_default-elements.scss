@@ -206,7 +206,7 @@
 	h2{
 		margin:0 0 8px !important;
 		@include media(">=desktop") {
-			margin:0 0 -20px !important;
+			margin:0 0 -18px !important;
 		}
 	}
 	.subtitle{
@@ -238,7 +238,7 @@
 		display:block;
 	}
 	.holder{
-		// overflow:auto;
+		overflow:auto;
 		padding:0 23px;
 		@include media(">=tablet") {
 			margin:0 auto;
@@ -383,9 +383,13 @@
 	}
 	.heading{
 		background:#f2f5f4;
-		max-width: 144px;
-		min-width: 144px;
+		max-width: 114px;
+		min-width: 114px;
 		padding:13px;
+		@include media(">=phone") {
+			max-width: 144px;
+			min-width: 144px;
+		}
 		@include media(">=tablet") {
 			max-width: 165px;
 			min-width: 165px;
@@ -415,8 +419,11 @@
 	ul:not([class]){
 		font-weight:normal;
 		li{
-			padding-left: 24px;
+			padding-left: 14px;
 			position:relative;
+			@include media(">=phone") {
+				padding-left: 24px;
+			}
 			&:before {
 				background:$base-text-color;
 				border-radius: 100%;
@@ -678,6 +685,7 @@
 	font-size:10px;
 	line-height:1;
 	text-align:center;
+	white-space: nowrap;
 	[class*="icon"]{
 		display:inline-block;
 		vertical-align:top;
@@ -757,6 +765,9 @@
 		> li,
 		.slick-slide{
 			@include media(">=desktop") {
+				width:50%;
+			}
+			@include media(">=widescreen") {
 				width:25%;
 			}
 		}
@@ -879,7 +890,10 @@
 	}
 	&.no-media {
 		background: linear-gradient(180deg, #B4EC51 0%, #429321 100%);
-		min-height: 198px;
+		a{
+			display:block;
+			min-height: 198px;
+		}
 	}
 	img{
 		width: 100%;
@@ -908,12 +922,21 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	align-content: flex-start;
-	align-items: flex-start;
+	align-content: stretch;
+    align-items: stretch;
 	margin:-10px -2px;
 	> li{
+		display: flex;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    justify-content: flex-start;
+	    align-content: stretch;
+	    align-items: stretch;
 		padding:10px 2px;
 		width:50%;
+	}
+	.game-box{
+		width:100%;
 	}
 }
 
@@ -1151,7 +1174,9 @@ img{
 			width:440px;
 		}
 		&.large {
-			width:562px;
+			@include media(">=tablet") {
+				width:562px;
+			}
 		}
 		.media-holder{
 			height:180px;
@@ -1187,7 +1212,7 @@ img{
 		}
 	}
 	> img{
-		max-width: none;
-		width:100%;
+		// max-width: none;
+		// width:100%;
 	}
 }

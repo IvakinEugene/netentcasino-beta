@@ -40,6 +40,9 @@ textarea {
 	@include placeholder {
 		color: $placeholder-color;
 	}
+	&.has-errors {
+		border-color: $red !important;
+	}
 }
 
 select {
@@ -70,4 +73,15 @@ input[type='submit'] {
 .form-group{
 	margin:0 0 10px;
 	overflow:hidden;
+}
+
+form{
+	.errors{
+		color:$red;
+		font-size:14px;
+		font-weight:normal;
+		line-height:1.1429;
+		padding:1px 0 13px;
+		text-align:left;
+	}
 }

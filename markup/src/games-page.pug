@@ -1,6 +1,7 @@
 extends pug/extends/master
 
 block content
+	//- 
 	- var page_class = "hide-offer hide-bonus"
 	include pug/includes/header
 	#main
@@ -40,9 +41,11 @@ block content
 			.subsection.page-content
 				.holder
 					.game-demo
+						//- 
 						.note
 							.text If Demo is available then we show demo! If demo not available we add a screenshot or video review of the game.
 						iframe(width='560', height='315', src='https://www.youtube.com/embed/xGRjCa49C6U', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+						//- img(src="http://via.placeholder.com/320x280/ff0000/ffffff", alt="Image description", width="", height="")
 					.casino-description
 						div
 							.row

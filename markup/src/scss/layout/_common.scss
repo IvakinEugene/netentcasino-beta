@@ -40,6 +40,9 @@
 	// @include media(">=375px") {
 	// 	max-width: 375px;
 	// }
+	// @include media(">=phone") {
+	// 	max-width: 480px;
+	// }
 	// @include media(">=tablet") {
 	// 	max-width: 992px;
 	// }
@@ -426,7 +429,8 @@ section{
 		}
 	}
 	.search-box{
-		box-shadow: 0 1px 2px $shadow;
+		box-shadow: 0 0 2px $shadow;
+		// box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
 		margin:127px 0 7px;
 		@include media(">=desktop") {
 			display: flex;
@@ -441,6 +445,9 @@ section{
 			&:first-child {
 				@include media(">=desktop") {
 					flex:1 1 auto;
+					padding:10px 20px;
+				}
+				@include media(">=widescreen") {
 					padding:10px 42px;
 				}
 			}
@@ -454,9 +461,11 @@ section{
 		}
 		.btn-search{
 			background:$bg-content;
+			// background-color: rgba(203,214,210,0.1);
 			color:$headings-color;
 			display:block;
 			font-weight:normal;
+			min-width: 0 !important;
 			padding:14px 15px 13px 47px;
 			text-align:left;
 			text-transform:none;
@@ -465,23 +474,23 @@ section{
 				box-shadow: 0 0 4px $shadow;
 				font-size: 20px;
 				line-height:1;
-				padding:21px 15px 23px 82px;
+				padding:21px 25px 23px 42px;
+			}
+			@include media(">=widescreen") {
+				// padding:21px 15px 23px 82px;
+				padding-left: 82px;
 			}
 			&:before {
-				// background:$base-gray;
-				// border-radius: 100%;
-				// content: '';
-				// height:20px;
 				font-size: 20px;
 				left:18px;
 				position:absolute;
 				top:50%;
 				transform:translateY(-50%);
-				// width:20px;
 				@include media(">=desktop") {
-					// height:26px;
+					left:13px;
+				}
+				@include media(">=widescreen") {
 					left:43px;
-					// width:26px;
 				}
 			}
 		}
@@ -558,6 +567,128 @@ section{
 				@include media(">=desktop") {
 					display:none;
 				}
+			}
+		}
+	}
+	.offer-casino-box{
+		margin-top: 128px;
+		@include media(">=tablet") {
+			font-size: 30px;
+			margin-top: 151px;
+			max-width: 667px;
+		}
+		+ .search-box{
+			margin-top: 26px;
+			@include media(">=tablet") {
+				margin-top: 30px;
+			}
+		}
+		.heading{
+			@include media("<tablet") {
+				// display: flex;
+			    flex-direction: column;
+			    // flex-wrap: nowrap;
+			    justify-content: center;
+			    align-content: stretch;
+			    align-items: stretch;
+				border-width: 0;
+				float:left;
+			    padding:10px;
+				width:105px;
+			}
+			.left{
+				@include media("<tablet") {
+					flex-direction: column;
+				    // flex-wrap: nowrap;
+				    justify-content: center;
+				    align-content: stretch;
+				    align-items: stretch;
+				}
+			}
+			.txt{
+				@include media("<tablet") {
+					padding:3px 0 0;
+					text-align:center;
+				}
+			}
+			h2{
+				@include media("<tablet") {
+					font-size: 12px;
+					margin:0 0 3px;
+				}
+			}
+		}
+		.stars{
+			color:$base-gray;
+			.icon-star,
+			.icon-star-half-empty{
+				color:$theme-color-add;
+			}
+		}
+		.content{
+			padding:29px 5px 20px;
+			@include media(">=tablet") {
+				padding:43px 20px 31px;
+			}
+		}
+		h3{
+			@include media("<tablet") {
+				font-size: 24px;
+				line-height:1;
+				margin:0 0 29px;
+				min-height: 48px;
+				text-transform:uppercase;
+			}
+			@include media(">=tablet") {
+				line-height:1;
+				margin:0;
+			}
+		}
+		p{
+			@include media("<tablet") {
+				display:none;
+			}
+			@include media(">=tablet") {
+				margin:0 0 14px;
+			}
+		}
+		.btn-holder{
+			display: flex;
+		    flex-direction: column;
+		    flex-wrap: wrap;
+		    justify-content: center;
+		    align-content: center;
+		    align-items: center;
+		    @include media(">=xs-phone") {
+		    	flex-direction: row;
+		    	align-content: flex-start;
+		    	align-items: flex-start;
+		    }
+		}
+		.btn{
+			font-size: 14px;
+			min-width: 145px;
+			margin:0 5px 5px;
+			@include media(">=tablet") {
+				font-size: 20px;
+				font-weight:500;
+				line-height:1.1;
+				margin:5px 4px 0;
+				min-width: 206px;
+				padding:9px 10px 10px;
+			}
+		}
+		.btn-secondary{
+			@include media("<tablet") {
+				display:inline-block;
+			}
+		}
+		.btn-tc{
+			// font-size: 14px;
+			margin-top: 8px;
+			@include media(">=tablet") {
+				font-size: 18px !important;
+				margin-top: 16px;
 			}
 		}
 	}
@@ -642,10 +773,11 @@ section{
 		box-shadow: 0 0 2px $shadow;
 		color:$base-gray;
 		font-size: 12px;
+		overflow:hidden;
 		text-align:center;
 		@include media(">=tablet") {
 			font-size: 14px;
-			width:327px;
+			// width:327px;
 		}
 		> .top{
 			display: flex;
@@ -669,8 +801,9 @@ section{
 		    align-items: stretch;
 			border: 0 solid $border-color-base;
 			border-width: 0 1px 0 0;
+			max-width: 91px;
 			min-width: 91px;
-			padding:11px 0;
+			padding:11px 5px;
 			@include media(">=tablet") {
 				display: flex;
 			    flex-direction: row;
@@ -679,6 +812,8 @@ section{
 			    align-content: center;
 			    align-items: center;
 				border-width: 0 0 1px;
+				max-width: none;
+				min-width: 0;
 				padding:10px 21px 8px;
 			}
 			.left{
@@ -689,6 +824,7 @@ section{
 				    justify-content: flex-start;
 				    align-content: center;
     				align-items: center;
+    				// max-width: 75%;
 				}
 			}
 			.right{
@@ -700,15 +836,18 @@ section{
 		.logo-holder{
 			height:40px;
 			margin-bottom: 8px;
-			width:40px;
+			max-width:40px;
+			min-width:40px;
 			@include media(">=tablet") {
 				height:50px;
 				margin:0 19px 0 0;
-				width:50px;
+				max-width:50px;
+				min-width:50px;
 			}
 		}
 		.txt{
 			@include media(">=tablet") {
+				// max-width: 50%;
 				padding:4px 0 0;
 				text-align:left;
 			}
@@ -946,24 +1085,24 @@ section{
 
 .section-top-offer{
 	background: linear-gradient(180deg, rgba(255,102,0,0.6) 0%, #FF6600 100%);
-	padding:27px 0 11px;
+	padding:26px 0 11px;
 	@include media(">=tablet") {
 		padding:37px 0 20px;
 	}
 	.location{
-		margin:0 0 -3px;
-		padding:0 0 0 23px;
+		margin:0 0 1px;
+		padding:0 0 0 19px;
 		position:relative;
 		@include media(">=tablet") {
-			margin:0 0 3px;
+			margin:0 0 2px;
 		}
 		&:before {
 		// 	background:#ccc;
 		// 	content: '';
 		// 	height:10px;
-			left:6px;
+			left:3px;
 			position:absolute;
-			top:0;
+			top:-1px;
 		// 	width:10px;
 		}
 		a{
