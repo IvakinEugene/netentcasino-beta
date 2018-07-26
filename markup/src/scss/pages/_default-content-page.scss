@@ -613,12 +613,15 @@
 					margin:-6px 16px 15px 0;
 				}
 				.logo-holder{
-					height:50px;
-					width:50px;
-					@include media(">=phone") {
-						height:70px;
-						width:70px;
-					}
+					height:70px;
+					max-width:70px;
+					min-width:70px;
+					// padding:5px;
+					// height:50px;
+					// max-width:50px;
+					// min-width:50px;
+					// @include media(">=phone") {
+					// }
 				}
 			}
 			h3{
@@ -644,12 +647,15 @@
 			.button-holder{
 				overflow:hidden;
 				width:100%;
+				@include media(">=xs-phone") {
+					width:auto;
+				}
 				@include media(">=tablet") {
 					position:static;
 				}
 			}
 			.btn{
-				overflow:hidden;
+				// overflow:hidden;
 				min-width: 189px;
 				@include media(">=desktop") {
 					max-width: 250px;
@@ -670,7 +676,9 @@
 			}
 			.logo-holder{
 				height:120px;
-				width: 120px;
+				max-width: 120px;
+				min-width: 120px;
+				padding: 15px;
 			}
 		}
 		h3{

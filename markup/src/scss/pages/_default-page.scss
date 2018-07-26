@@ -13,10 +13,13 @@
 		.logo-holder{
 			float:left;
 			margin:-1px 18px 12px -2px;
+			padding:5px;
 			@include media(">=desktop") {
-				margin:-1px 46px 12px 31px;
-				width:140px;
 				height:140px;
+				margin:-1px 46px 12px 31px;
+				max-width:140px;
+				min-width:140px;
+				padding:10px;
 			}
 		}
 		p{

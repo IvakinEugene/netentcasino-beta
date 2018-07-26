@@ -13,6 +13,10 @@ var $ = jQuery.noConflict();
 	});
 }(window));
 
+$('body').on('ct-toplist-updated', function() {
+	$('.lightbox-opener').magnificPopup();
+});
+
 jQuery(window).on('load', function(){
 	initAccordion();
 	initMobileNav();

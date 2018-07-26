@@ -37,7 +37,8 @@
 	height:50px;
 	margin:0 auto;
 	overflow:hidden;
-	width:50px;
+	max-width:50px;
+	min-width:50px;
 	&:hover {
 		border-color: $theme-color-base;
 	}
@@ -144,6 +145,7 @@
 			align-items: center;
 			height:50px;
 			margin-bottom:5px;
+			padding:5px;
 		}
 	}
 	li{
@@ -207,6 +209,9 @@
 		margin:0 0 8px !important;
 		@include media(">=desktop") {
 			margin:0 0 -18px !important;
+		}
+		&:only-child {
+			margin:0 !important;
 		}
 	}
 	.subtitle{

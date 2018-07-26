@@ -111,14 +111,17 @@
 					}
 					.logo-holder{
 						height:40px;
-						width: 40px;
+						max-width: 40px;
+						min-width: 40px;
 						@include media(">=tablet") {
 							height:110px;
-							width: 110px;
+							max-width: 110px;
+							min-width: 110px;
 						}
 						@include media(">=desktop") {
 							height:140px;
-							width: 140px;
+							max-width: 140px;
+							min-width: 140px;
 						}
 					}
 					.txt-frame{
