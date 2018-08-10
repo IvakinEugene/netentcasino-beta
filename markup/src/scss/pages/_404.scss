@@ -1,0 +1,102 @@
+.error404{
+	.header-content{
+		.holder{
+			justify-content: center;
+			> div{
+				&:last-child {
+					display:none;
+				}
+			}
+		}
+	}
+	.template-default-page{
+		@include media(">=desktop") {
+			font-size:16px;
+			// line-height:;
+		}
+		.page-content{
+			padding:72px 0 57px;
+			text-align:center;
+			@include media(">=desktop") {
+				padding-bottom: 145px;
+				text-align:left;
+			}
+			> .holder{
+				@include media(">=tablet") {
+					max-width: 1168px;
+				}
+			}
+		}
+		.twocolumns{
+			@include media(">=desktop") {
+				display: flex;
+			    flex-direction: row;
+			    flex-wrap: nowrap;
+			    justify-content: space-between;
+			    align-content: center;
+			    align-items: center;
+			}
+		}
+		.content{
+			@include media(">=desktop") {
+				flex:1 1 auto;
+				padding:18px 90px 0 0;
+			}
+		}
+		h1{
+			font-size:24px;
+			font-weight:bold;
+			line-height:1.25;
+			margin:0 0 20px;
+			// text-align:center;
+			text-transform:none;
+			@include media(">=nav") {
+				font-size:40px;
+				line-height:1.175;
+				margin:0 0 16px;
+			}
+			mark{
+				display:block;
+				font-size: 1.4167em;//34/24
+				margin:0 0 3px;
+				@include media(">=desktop") {
+					font-size: 1.1em;
+					margin:0 0 -2px;
+				}
+			}
+		}
+		p{
+			margin:0 0 28px;
+			@include media(">=desktop") {
+				margin:0 0 24px;
+				max-width: 85%;
+			}
+		}
+		.btn{
+			font-size: 18px;
+			min-width: 288px;
+			padding-top: 10px;
+			padding-bottom: 11px;
+			@include media(">=desktop") {
+				font-size: 16px;
+				min-width: 300px;
+				padding-top: 11px;
+				padding-bottom: 12px;
+			}
+		}
+		.media-holder{
+			padding:52px 0 0;
+			@include media(">=desktop") {
+				min-width: 445px;
+				padding:0 7px;
+				text-align:right;
+			}
+			img{
+				max-width: 150px;
+				@include media(">=desktop") {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}

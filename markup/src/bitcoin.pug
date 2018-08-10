@@ -1,8 +1,9 @@
 extends pug/extends/master
 
 block content
-	- var page_class = "hide-nav hide-offer hide-bonus"
-	include pug/includes/header
+	//- 
+		- var page_class = "hide-nav hide-offer hide-bonus"
+		include pug/includes/header
 	#main
 		//- 
 		section.section-breadcrumbs
@@ -33,40 +34,49 @@ block content
 					ul.grid.col-1
 						li
 							.casino-box-content
-								.heading
-									.logo-holder
-										a(href="#")
-											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") SlotsMillion
-										.stars
-											span.icon-star
-											span.icon-star
-											span.icon-star
-											span.icon-star-half-empty
-											span.icon-star-o
-										a(href="#").btn.btn-secondary Casino review
-								.cell.content
-									.sticker
-										strong
-											span.icon-check
-											p Recommended by Casino Experts
-									.content-frame
-										h3 £150 + 50 Free Spins
-										p 50% up to £100 + 50 Free Spins
-										a(href="#").btn.btn-primary Go to Casino
-								.desktop-middle
-									.cell
+								.top
+									.heading
+										.logo-holder
+											a(href="#")
+												img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+										.txt
+											h2
+												a(href="#") SlotsMillion
+											.stars
+												span.icon-star
+												span.icon-star
+												span.icon-star
+												span.icon-star-half-empty
+												span.icon-star-o
+											a(href="#").btn.btn-secondary Casino review
+									.content-holder
+										.title-holder
+											h3 £150 + 50 Free Spins
+											p 50% up to £100 + 50 Free Spins
+										.bottom
+											h4
+												strong £10
+												|  Min. Deposit
+								.middle
+									.top
 										h4
 											strong £10
 											|  Min. Deposit
-									.middle
-										p
+									.content
+										p.time
 											strong 30 mins - 4 hours (avg)
 											|  Withdrawal Time
 								.bottom
-									a(href="#").btn.btn-primary Go to Casino
+									.sticker
+										strong
+											.icon-check
+											span Recommended by Casino Experts
+									.content-holder
+										.title-holder
+											h3 £150 + 50 Free Spins
+											p 50% up to £100 + 50 Free Spins
+										a(href="#").btn.btn-primary Go to Casino
+					//- 
 						li
 							.casino-box-content
 								.heading

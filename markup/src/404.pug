@@ -1,0 +1,46 @@
+extends pug/extends/master
+
+block content
+	//- 
+	- var page_class = "hide-bonus hide-offer error404"
+	include pug/includes/header
+	#main.error404
+		//- 
+			section.section-breadcrumbs
+				.holder
+					div
+						ul.breadcrumbs
+							li
+								a(href="#") Home
+							li 404: Page not found
+					div
+						p Last updated - 
+							strong 2 days ago!
+		//- 
+		section.template-default-page
+			//- 
+				.subsection.page-heading
+					.holder
+						.logo-holder
+							a(href="#")
+								img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+						h1 Heading 1
+						strong.subtitle.green Heading 2
+						p You may have seen or heard something about Bitcoin Casinos before, probably even right here on our site. There are many advantages to having a Bitcoin Casino over a regular one, as many casino players can surely appreciate, there is a simply an unrivalled sense of anonymity and (if you know what you are doing) security.
+						p
+							a(href="#default-popup").lightbox-opener t&amp;c apply
+						strong.offer-sticker
+							strong 624 Bonuses Available
+							|  - Last updated 2 days ago
+			.subsection.page-content
+				.holder
+					.twocolumns
+						.content
+							h1
+								mark 404
+								| We can’t seem to find the page you’re looking for.
+							p The page you were looking for appears to have been moved, deleted or does not exist!
+							a(href="#").btn.btn-primary Go to Homepage
+						.media-holder
+							img(src="assets/images/img-404.jpg", alt="Image description", width="432", height="498")
+	include pug/includes/footer

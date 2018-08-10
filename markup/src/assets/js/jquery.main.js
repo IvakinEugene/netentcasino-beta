@@ -13,8 +13,14 @@ var $ = jQuery.noConflict();
 	});
 }(window));
 
-$('body').on('ct-toplist-updated', function() {
-	$('.lightbox-opener').magnificPopup();
+$('body').on({
+	'ct-toplist-updated': function() {
+		$('.lightbox-opener').magnificPopup();
+	},
+	'popup-is-closed': function (){
+		// jQuery(this).addClass();
+		initStickyScrollBlock();
+	}
 });
 
 jQuery(window).on('load', function(){
@@ -23,7 +29,7 @@ jQuery(window).on('load', function(){
 	initRetinaCover();
 	initAddClasses();
 	initFitVids();
-	initFocusClass();
+	// initFocusClass();
 	initCustomAnchor();
 	initOpenClose();
 	initCustomFixed();
@@ -37,7 +43,42 @@ jQuery(window).on('load', function(){
 	initTouchNav();
 	initCustomForms();
 	initCheckBoxesStructure();
+	initShowMoreList();
 });
+
+// show more for UL
+function initShowMoreList() {
+	var target = jQuery('.show-more'),
+		activeClass = 'expanded',
+		quantity = 4,
+		maxQuantity = 6;
+
+	target.each(function(){
+		var current = jQuery(this),
+			childrens = current.find('li'),
+			toggleButton = '<a href="#" class="toggle"></a>';
+
+		if (childrens.length >= maxQuantity) {
+			jQuery('<li>' + toggleButton + '</li>').appendTo(target);
+			toggleButton = parent.find('.toggle');
+			jQuery(toggleButton).text('+ ' + (childrens.length - quantity));
+			jQuery(childrens).slice(quantity).css('display', 'none');
+		}
+
+		toggleButton.on('click touchstart', function(e){
+			e.preventDefault();
+			if (!target.hasClass(activeClass)) {
+				jQuery(childrens).slice(quantity).removeAttr('style');
+				target.addClass(activeClass);
+				toggleButton.text('-');
+			} else {
+				target.removeClass(activeClass);
+				jQuery(childrens).slice(quantity).css('display', 'none');
+				jQuery(toggleButton).text('+ ' + (childrens.length - quantity));
+			}
+		});
+	});
+}
 
 function filterItems($target, value) {
     $target.find('.filtered-item').hide();
@@ -57,13 +98,13 @@ function initAccordion() {
 
 // add class if box doesn't have some div
 function initCheckBoxesStructure() {
-	var missingElement = jQuery('.desktop-middle'),
+	var missingElement = jQuery('.middle'),
 		colClass = 'col-2';
 
 	jQuery('.casino-box-content').each(function(){
 		var box = jQuery(this);
 
-		if (!jQuery(box).find(missingElement).length) {
+		if (!jQuery(box).find(jQuery(missingElement)).length) {
 			box.addClass(colClass)
 		}
 	});
@@ -1003,7 +1044,12 @@ jQuery.fn.clickClass = function(opt) {
 		jQuery(this).bind(options.event, function(e) {
 			classItem.toggleClass(options.classAdd);
 			e.preventDefault();
+
+			if (jQuery(this).closest('[class*="header-bonus"]').length != 0) {
+				jQuery('body').addClass('bonus-box-is-closed')
+			}
 		});
+		// jQuery('body').trigger('popup-is-closed');
 	});
 };
 

@@ -64,6 +64,15 @@
 				margin-top: 30px;
 			}
 		}
+		.title{
+			display:block;
+			font-weight:normal;
+			margin:0 0 14px;
+			@include media(">=tablet") {
+				font-size: 16px;
+				margin:0 0 12px;
+			}
+		}
 	}
 	h1{
 		font-weight:normal;
@@ -103,6 +112,14 @@
 		padding:0 0 21px;
 		@include media(">=tablet") {
 			padding:15px 0 19px;
+		}
+		.row{
+			&:last-child {
+				@include media(">=tablet") {
+					// flex:1 1 auto;
+					width:100%;
+				}
+			}
 		}
 	}
 	.twocolumns{
@@ -155,15 +172,6 @@
 				margin-top: 11px;
 				margin-bottom: 16px;
 			}
-		}
-	}
-	.title{
-		display:block;
-		font-weight:normal;
-		margin:0 0 14px;
-		@include media(">=tablet") {
-			font-size: 16px;
-			margin:0 0 12px;
 		}
 	}
 	.note{

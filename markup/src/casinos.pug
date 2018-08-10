@@ -1,20 +1,21 @@
 extends pug/extends/master
 
 block content
-	- var page_class = "hide-nav hide-offer hide-bonus"
-	include pug/includes/header
+	//- 
+		- var page_class = "hide-nav hide-offer hide-bonus"
+		include pug/includes/header
 	#main
 		//- 
-		section.section-breadcrumbs
-			.holder
-				div
-					ul.breadcrumbs
-						li
-							a(href="#") Home
-						li NetEnt Casinos
-				div
-					p Last updated - 
-						strong 2 days ago!
+			section.section-breadcrumbs
+				.holder
+					div
+						ul.breadcrumbs
+							li
+								a(href="#") Home
+							li NetEnt Casinos
+					div
+						p Last updated - 
+							strong 2 days ago!
 		//- 
 		section.template-default-page
 			.subsection.page-heading
@@ -30,35 +31,35 @@ block content
 					ul.grid.col-1
 						li
 							.casino-box-content
-								.heading
-									.logo-holder
-										a(href="#")
-											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") Betsson
-										.stars
-											span.icon-star
-											span.icon-star
-											span.icon-star
-											span.icon-star-half-empty
-											span.icon-star-o
-										a(href="#").btn.btn-secondary Casino review
-								.cell.content
-									.sticker
-										strong
-											span.icon-check
-											p Recommended by Casino Experts
-									.content-frame
-										h3 &pound;1000 + 20 Free Spins
-										p 100% up to &pound;500 + 20 Free Spins
-										a(href="#").btn.btn-primary Go to Casino
-								.desktop-middle
-									.cell
+								.top
+									.heading
+										.logo-holder
+											a(href="#")
+												img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+										.txt
+											h2
+												a(href="#") Betsson
+											.stars
+												span.icon-star
+												span.icon-star
+												span.icon-star
+												span.icon-star-half-empty
+												span.icon-star-o
+											a(href="#").btn.btn-secondary Casino review
+									.content-holder
+										.title-holder
+											h3 &pound;1000 + 20 Free Spins
+											p 100% up to &pound;500 + 20 Free Spins
+										.bottom
+											h4
+												strong £10
+												|  Min. Deposit
+								.middle
+									.top
 										h4
-											strong +180
-											|  NetEnt Games
-									.middle
+											strong £10
+											|  Min. Deposit
+									.content
 										ul.list-advantages
 											li NetEnt Pooled Jackpots.
 											li Almost all Netent Games.
@@ -66,7 +67,16 @@ block content
 										ul.list-disadvantages
 											li No Netent Live Casino.
 								.bottom
-									a(href="#").btn.btn-primary Go to Casino
+									.sticker
+										strong
+											span.icon-check
+											p Recommended by Casino Experts
+									.content-holder
+										.title-holder
+											h3 &pound;1000 + 20 Free Spins
+											p 100% up to &pound;500 + 20 Free Spins
+										a(href="#").btn.btn-primary Go to Casino
+					//- 
 						li
 							.casino-box-content
 								.heading

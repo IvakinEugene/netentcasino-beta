@@ -122,49 +122,49 @@
 				}
 			}
 		}
-	}
-	.content-holder{
-		padding:0 0 10px;
-		@include media(">=desktop") {
-			background:$white;
-			box-shadow: 0 0 4px $shadow;
-			border-radius:3px 3px 0 0;
-			margin:0 279px 0 0;
-			padding:0 $gutter-width 25px;
-		}
-		@include media(">=widescreen") {
-			margin-right: 384px;
-		}
-		+ .content-holder{
-			margin-top:20px;
-		}
-		h1{
-			&:not(:first-of-type) {
-				@extend .h2;
-				text-transform:none;
+		> .content-holder{
+			padding:0 0 10px;
+			@include media(">=desktop") {
+				background:$white;
+				box-shadow: 0 0 4px $shadow;
+				border-radius:3px 3px 0 0;
+				margin:0 279px 0 0;
+				padding:0 $gutter-width 25px;
 			}
-		}
-		.button-holder{
-			padding:5px 0 0;
-			@include media(">=tablet") {
-				padding:18px 0 9px;
-				text-align:left;
+			@include media(">=widescreen") {
+				margin-right: 384px;
 			}
-			.btn{
-				font-size: 14px;
-				letter-spacing:0.03em;
-				min-width: 290px;
-				padding-top: 8px;
-				padding-bottom: 7px;
-				max-width: 290px;
-				min-width: 0;
-				width:100%;
+			+ .content-holder{
+				margin-top:20px;
+			}
+			h1{
+				&:not(:first-of-type) {
+					@extend .h2;
+					text-transform:none;
+				}
+			}
+			.button-holder{
+				padding:5px 0 0;
 				@include media(">=tablet") {
-					font-size: 16px;
-					max-width: none;
-					min-width: 400px;
-					padding-bottom: 10px;
-					width:auto;
+					padding:18px 0 9px;
+					text-align:left;
+				}
+				.btn{
+					font-size: 14px;
+					letter-spacing:0.03em;
+					min-width: 290px;
+					padding-top: 8px;
+					padding-bottom: 7px;
+					max-width: 290px;
+					min-width: 0;
+					width:100%;
+					@include media(">=tablet") {
+						font-size: 16px;
+						max-width: none;
+						min-width: 400px;
+						padding-bottom: 10px;
+						width:auto;
+					}
 				}
 			}
 		}
@@ -281,7 +281,8 @@
 				box-shadow: 0 0 2px $shadow;
 				font-size:14px;
 				line-height:1.2857;
-				position:relative;
+				margin:0;
+				// position:relative;
 				z-index:10;
 				@include media(">=desktop") {
 					border-width: 1px;
@@ -616,12 +617,7 @@
 					height:70px;
 					max-width:70px;
 					min-width:70px;
-					// padding:5px;
-					// height:50px;
-					// max-width:50px;
-					// min-width:50px;
-					// @include media(">=phone") {
-					// }
+					padding:7px;
 				}
 			}
 			h3{

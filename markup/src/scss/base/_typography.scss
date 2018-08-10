@@ -141,21 +141,73 @@ hr{
 	}
 }
 
-ul{
+ul,
+ol{
 	@extend %listreset;
 	&:not([class]) {
 		> li{
 			overflow:hidden;
-			padding:0 0 10px;
-			// position:relative;
+			padding:0 0 13px 31px;
+			position:relative;
 			vertical-align:top;
 			&:before {
-				content: '-';
-				margin:0 7px 0 0;
-				// left:0;
-				// position:absolute;
-				// top:0;
+				font-family: 'icomoon' !important;
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				content: "\e930";
+				color:$theme-color-base;
+				font-size: 18px;
+				line-height:1;
+				left:2px;
+				position:absolute;
+				top:2px;
 			}
+		}
+	}
+	p{
+		margin:0;
+		+ p{
+			margin:10px 0 0;
+		}
+	}
+}
+
+ol{
+	&:not([class]) {
+		counter-reset: step;
+		> li{
+			counter-increment: step;
+			&:before {
+				color:$theme-color-base;
+				content: counter(step)'.';
+				font: inherit !important;
+				left:8px;
+				// min-width: 23px;
+				position:absolute;
+				text-align:center;
+				top:0;
+			}
+		}
+	}
+}
+
+.list-dashed{
+	@include media(">=tablet") {
+		margin:10px 0 0 28px;
+	}
+	li{
+		padding:0 0 10px 13px;
+		position:relative;
+		&:before {
+			content: '-';
+			left:0;
+			position:absolute;
+			top:0;
 		}
 	}
 }
@@ -242,4 +294,9 @@ blockquote{
 	p{
 		margin:0;
 	}
+}
+
+mark{
+	background:none;
+	color:$theme-color-base;
 }

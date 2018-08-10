@@ -99,22 +99,44 @@ block content
 			include pug/extends/retina-images
 		//- 
 		section.section-casino
+			.header-bonus-box.popup-holder
+				.holder.popup
+					.left
+						a.icon-close(href="#")
+						.title-holder
+							.logo-holder
+								a(href="#")
+									img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+							div
+								h2 Betsson
+								.stars
+									span.icon-star
+									span.icon-star
+									span.icon-star
+									span.icon-star-half-empty
+									span.icon-star-o
+					.content
+						strong.title £150 + 50 Free Spins
+						p 50% up to £100 + 50 Free Spins
+					.button-holder
+						a(href="#").btn.btn-primary Get Bonus
 			//- 
 			.anchor-links.show-on-mobile
-				.holder
-					ul
-						li
-							a(href="#section1") General Information
-						li
-							a(href="#section2") Games
-						li
-							a(href="#section3") Payments
-						li
-							a(href="#section4") Devices
-						li
-							a(href="#section5") Support
-						li
-							a(href="#section6") Bonuses
+					.holder
+						ul
+							li
+								a(href="#section1") General Information
+							li
+								a(href="#section2") Games
+							li
+								a(href="#section3") Payments
+							li
+								a(href="#section4") Devices
+							li
+								a(href="#section5") Support
+							li
+								a(href="#section6") Bonuses
+			//- 
 			.subsection#section1
 				.holder
 					h1 About Betsson
@@ -139,51 +161,60 @@ block content
 								li Welcome Bonus only valid for certain countries.
 					hr
 					.casino-description
-						div
-							.row
-								.heading
-									strong Welcome Bonus
-								.content
-									p
-										a(href="#") 50% up to &pound;100 + 50 Free Spins
-							.row
-								.heading
-									strong Bonus Code
-								.content
-									p NETENT30
-							.row
-								.heading
-									strong Bonus Terms
-								.content
-									ul
-										li Bonus Wagering Requirements: 35
-										li Minimum deposit to receive the welcome bonus is €10,00
-						div
-							.row
-								.heading
-									strong License(s)
-								.content
-									p Malta (MGA/CL3/183/2004)
-							.row
-								.heading
-									strong Products
-								.content
-									p Casino, Live Casino, Sportsbook &amp; Bingo
-							.row
-								.heading
-									strong Languages
-								.content
-									ul.languages-list
-										li
-											img(src="assets/images/flag-en.png", alt="Image description", width="69", height="35")
-										li
-											img(src="assets/images/flag-de.png", alt="Image description", width="59", height="35")
-										li
-											img(src="assets/images/flag-sv.png", alt="Image description", width="56", height="35")
-										li
-											img(src="assets/images/flag-es.png", alt="Image description", width="53", height="35")
-										li
-											img(src="assets/images/flag-it.png", alt="Image description", width="53", height="35")
+						.row
+							.heading
+								strong Welcome Bonus
+							.content
+								p
+									a(href="#") 50% up to &pound;100 + 50 Free Spins
+						.row
+							.heading
+								strong License(s)
+							.content
+								p Malta (MGA/CL3/183/2004)
+						.row
+							.heading
+								strong Bonus Code
+							.content
+								p NETENT30
+						.row
+							.heading
+								strong Products
+							.content
+								p Casino, Live Casino, Sportsbook &amp; Bingo
+						.row
+							.heading
+								strong Languages
+							.content
+								ul.languages-list.show-more
+									li
+										img(src="assets/images/flag-en.png", alt="Image description", width="69", height="35")
+									li
+										img(src="assets/images/flag-de.png", alt="Image description", width="59", height="35")
+									li
+										img(src="assets/images/flag-sv.png", alt="Image description", width="56", height="35")
+									li
+										img(src="assets/images/flag-es.png", alt="Image description", width="53", height="35")
+									li
+										img(src="assets/images/flag-it.png", alt="Image description", width="53", height="35")
+									li
+										img(src="assets/images/flag-en.png", alt="Image description", width="69", height="35")
+									li
+										img(src="assets/images/flag-de.png", alt="Image description", width="59", height="35")
+									li
+										img(src="assets/images/flag-sv.png", alt="Image description", width="56", height="35")
+									li
+										img(src="assets/images/flag-es.png", alt="Image description", width="53", height="35")
+									li
+										img(src="assets/images/flag-it.png", alt="Image description", width="53", height="35")
+						.row
+							.heading
+								strong Bonus Terms
+							.content
+								ul
+									li Bonus Wagering Requirements: 35
+									li Minimum deposit to receive the welcome bonus is €10,00
+			//- 
 			.subsection#section2
 				.holder
 					.twocolumns
@@ -270,6 +301,7 @@ block content
 										p The Arabian Nights Jackpot is a local jackpot or a network jackpot.
 										p
 											strong Min Bet  &pound;5.00 per spin
+			//- 
 			.subsection#section3
 				.holder
 					.twocolumns
@@ -324,6 +356,7 @@ block content
 										dd 30 mins - 4 hours (avg)
 										dt Currencies
 										dd EUR, USD, GBP, NOK, SEK, BRL, CZK, PLN
+			//- 
 			.subsection.devices#section4
 				.holder
 					//- .twocolumns
@@ -359,6 +392,7 @@ block content
 								img(src="http://via.placeholder.com/396x423/00ff00/ffffff?text=tablet")
 							div
 								img(src="http://via.placeholder.com/396x423/0000ff/ffffff?text=mobile")
+			//- 
 			.subsection#section5
 				.holder
 					.section-heading
@@ -388,6 +422,7 @@ block content
 					p The MGA is one of the most trusted governing bodies around and you can be sure that every cent you spend or win here is completely safe. You can further rest at ease as all Betsson payouts are completely guaranteed with all deposited funds being held with a third party banking group – meaning that your funds are always in safe hands. Betsson also use the most up to date SSL encryption so the process of moving your funds about is very safe.
 					p
 						a(href="#") Read More
+			//- 
 			.subsection#section6
 				.holder
 					.section-heading
@@ -451,6 +486,7 @@ block content
 									p 200% up to €200 on first deposit, 50% up to €500 on the following 3 deposits including 25 free spins on each.
 									.button-holder
 										a(href="#").btn.btn-primary Get Bonus
+			//- 
 			.subsection
 				.holder
 					.section-heading
