@@ -1,19 +1,20 @@
 extends pug/extends/master
 
 block content
+	//- 
 	- var page_class = "hide-nav hide-offer hide-bonus"
 	include pug/includes/header
 	#main
 		//- 
 		section.section-breadcrumbs
 			.holder
-				div
-					ul.breadcrumbs
-						li
-							a(href="#") Home
-						li
-							a(href="#") NetEnt Game &amp; Jackpots
-						li Mega Fortune Jackpot
+				.breadcrumbs
+					span
+						span
+							a(href='#') Home
+							span
+								a(href='#') NetEnt Game &amp; Jackpots
+								span.breadcrumb_last Mega Fortune Jackpot
 				div
 					p Last updated - 
 						strong 2 days ago!
@@ -33,8 +34,9 @@ block content
 										| Play at Betsson
 								span.sticker &pound;2,061.762
 							strong.media-title Mega Fortune
-			- var image = "banner-concept-4"
-			include pug/extends/retina-images
+			.bg-image
+				- var image = "banner-concept-4"
+				include pug/extends/retina-single
 		section.template-default-page
 			.subsection.page-heading
 				.holder

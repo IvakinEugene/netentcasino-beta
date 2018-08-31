@@ -183,6 +183,9 @@
 		}
 		img{
 			max-height: 38px;
+			&[src*="dmca"] {
+				max-height: 30px;
+			}
 		}
 	}
 	.copyright{

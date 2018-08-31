@@ -8,13 +8,13 @@ block content
 		//- 
 		section.section-breadcrumbs
 			.holder
-				div
-					ul.breadcrumbs
-						li
-							a(href="#") Home
-						li
-							a(href="#") NetEnt Game
-						li Planet of the Apes
+				.breadcrumbs
+					span
+						span
+							a(href='#') Home
+							span
+								a(href='#') NetEnt Game
+								span.breadcrumb_last Planet of the Apes
 				div
 					p Last updated - 
 						strong 2 days ago!
@@ -32,8 +32,9 @@ block content
 											| Play at Jumanji
 									span.sticker new
 								strong.media-title Planet of the apes
-				- var image = "banner-concept-6"
-				include pug/extends/retina-images
+				.bg-image
+					- var image = "banner-concept-6"
+					include pug/extends/retina-single
 			.subsection.page-heading
 				.holder
 					h1 Planet of the Apes

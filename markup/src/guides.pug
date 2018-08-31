@@ -1,22 +1,22 @@
 extends pug/extends/master
 
 block content
+	//- 
 	- var page_class = "hide-na hide-offer hide-bonus"
 	include pug/includes/header
 	#main
 		section.section-breadcrumbs
 			.holder
-				div
-					ul.breadcrumbs
-						li
-							a(href="#") Home
-						li
-							| Guides
+				.breadcrumbs
+					span
+						span
+							a(href='#') Home
+							span.breadcrumb_last Guides
 				div
 					p Last updated - 
 						strong 2 days ago!
 		section.template-default-page
-			.anchor-links
+			.content-navigation.anchor-links
 				.holder
 					ul
 						li

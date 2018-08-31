@@ -2,38 +2,39 @@ extends pug/extends/master
 
 block content
 	//- 
-		- var page_class = "hide-nav hide-offer hide-bonus"
-		include pug/includes/header
+	- var page_class = "hide-nav hide-offer hide-bonus"
+	include pug/includes/header
 	#main
 		//- 
-			section.section-breadcrumbs
-				.holder
-					div
-						ul.breadcrumbs
-							li
-								a(href="#") Home
-							li
-								a(href="#") Guides
-							li Advanced blackjack strategy: Tips and tricks
-					div
-						p Last updated - 
-							strong 2 days ago!
+		section.section-breadcrumbs
+			.holder
+				.breadcrumbs
+					span
+						span
+							a(href='#') Home
+							span
+								a(href='#') Guides
+								span.breadcrumb_last Advanced blackjack strategy: Tips and tricks
+				div
+					p Last updated - 
+						strong 2 days ago!
 		//- 
 		section.section-content
 			.holder
 				.aside.fixed-aside
+					
 					//- 
-						.widget.open-close
-							a(href="#").opener Advanced blackjack strategy 
-							.slide
-								#menu
+					.widget.open-close
+						a(href="#").opener
+						.widget-content.slide
+							#menu.auto-generate-menu
 				.content
 					.content-holder
 						//- 
-							.post-image.fullwidth
-								img(src="http://via.placeholder.com/1010x280/6daf0e/ffffff")
+						.post-image.fullwidth
+							img(src="http://via.placeholder.com/1010x280/6daf0e/ffffff")
 						//- 
-							h1 Advanced blackjack strategy: Tips and tricks
+						h1 Advanced blackjack strategy: Tips and tricks
 						//-  
 							p.by
 								| Published on 

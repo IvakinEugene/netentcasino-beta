@@ -1,5 +1,6 @@
 .section-casino{
-	.anchor-links{
+	.content-navigation{
+		// transform:translateY(-1px);
 		@include media(">=tablet") {
 			display:block !important;
 		}
@@ -15,9 +16,31 @@
 		&#section6 {
 			background:none;
 		}
+		&#section2 {
+			.twocolumns{
+				> div{
+					&:only-child {
+						padding:0;
+						width:100%;
+					}
+					&:not(:only-child) {
+						.game-box{
+							.media-holder{
+								@include media(">=phone") {
+									height:226px;
+								}
+								@include media(">=desktop") {
+									height:159px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 		&#section3 {
 			.twocolumns{
-				div{
+				> div{
 					&:last-child {
 						.section-heading{
 							display:none;
@@ -60,6 +83,7 @@
 		}
 		> .holder{
 			h1:first-child,
+			h2:first-child,
 			p:first-child {
 				margin-top: 30px;
 			}
@@ -74,10 +98,29 @@
 			}
 		}
 	}
-	h1{
+	h1,
+	h2{
 		font-weight:normal;
 		margin:0 0 10px;
 		text-transform:none;
+	}
+	h2{
+		font-size: $h1-font-size;
+		letter-spacing: -0.025em;
+		line-height:1.1667;
+	}
+	h3{
+		font-size: 22px;
+		font-weight:500;
+		line-height:1.2727;
+		margin:16px 0 10px;
+		text-transform:uppercase;
+		@include media(">=tablet") {
+			font-size: 24px;
+			font-weight:normal;
+			margin:24px 0 9px;
+			text-transform:none;
+		}
 	}
 	p{
 		margin:0 0 6px;
@@ -272,6 +315,17 @@
 				@include media(">=tablet") {
 					padding:24px 30px 18px;
 				}
+				> p{
+					margin:0 0 11px !important;
+				}
+			}
+			.exclusive-sticker{
+				+ h4{
+					margin-top: 10px;
+					@include media(">=desktop") {
+						margin-top: 21px;
+					}
+				}
 			}
 			h4{
 				font-size: 18px;
@@ -281,9 +335,6 @@
 				@include media(">=tablet") {
 					margin:0 0 4px;
 				}
-			}
-			p{
-				margin:0 0 11px !important;
 			}
 			.btn{
 				font-size: 16px;

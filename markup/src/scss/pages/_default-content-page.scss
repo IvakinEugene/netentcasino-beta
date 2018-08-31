@@ -12,6 +12,8 @@
 	}
 	&.posts-list {
 		background:none;
+		position:relative;
+		z-index:15;
 		> .holder{
 			@include media("<desktop") {
 				padding-top: 0;
@@ -41,7 +43,7 @@
 					&.fullwidth {
 						margin:-14px -#{$gutter-width} 24px;
 						@include media(">=desktop") {
-							margin-top: -25px;
+							margin-top: 0;
 							margin-bottom: 34px;
 						}
 					}
@@ -50,11 +52,11 @@
 				.h1{
 					font-size: $h1-font-size;
 					line-height:1;
-					margin:0 0 9px;
+					margin:34px 0 9px;
 					@include media(">=tablet") {
 						font-size: 24px;
 						font-weight:500;
-						margin:0 0 2px;
+						margin:34px 0 2px;
 						text-transform:uppercase;
 					}
 				}
@@ -70,9 +72,9 @@
 		}
 		.post-image{
 			&.fullwidth {
-				margin:-14px -10px 14px;
+				margin:0 -10px 14px;
 				@include media(">=desktop") {
-					margin:-25px -#{$gutter-width} 25px;
+					margin:0 -#{$gutter-width} 25px;
 				}
 			}
 		}
@@ -140,6 +142,7 @@
 			h1{
 				&:not(:first-of-type) {
 					@extend .h2;
+					margin-top: 34px;
 					text-transform:none;
 				}
 			}
@@ -191,7 +194,11 @@
 			width:375px;
 		}
 		.widget{
+			background:$white;
+			box-shadow: 0 1px 2px $shadow;
 			display:none;
+			font-size:14px;
+			line-height:1.2857;
 			@include media(">=desktop") {
 				display:block;
 			}
@@ -229,6 +236,13 @@
 					@include media(">=desktop") {
 						display:none;
 					}
+					&:empty {
+						display:none;
+						// padding:0;
+						// &:before {
+						// 	display:none;
+						// }
+					}
 					&:before {
 						font-family: 'icomoon' !important;
 						speak: none;
@@ -248,23 +262,37 @@
 					}
 				}
 				> .slide{
+					height:auto !important;
 					left:0;
 					position:absolute;
 					top:0;
 					width:100%;
+					z-index:10;
 					@include media(">=desktop") {
 						position:static !important;
 					}
 				}
 			}
 			+ .widget {
-				@include media(">=desktop") {
-					margin:20px 0 0;
+				margin:14px 0 0;
+			}
+			.widget-heading{
+				border-bottom: 1px solid #cbd6d2;
+				padding:16px 20px 15px;
+				h3{
+					color:$base-text-color;
+					font-size: 14px;
+					font-weight:500;
+					margin:0;
+					text-transform:uppercase;
 				}
+			}
+			.widget-content{
+				padding:19px $gutter-width;
 			}
 			#menu ul{
 				.opener-holder{
-					&[class*="active"] {
+					&.ui-state-active {
 						.opener{
 							transform:rotate(180deg);
 						}
@@ -273,29 +301,97 @@
 						transform:rotate(0);
 					}
 				}
-				
 			}
 			ul{
-				border:0 solid #cbd6d2;
-				border-width:0 0 1px;
-				box-shadow: 0 0 2px $shadow;
-				font-size:14px;
-				line-height:1.2857;
-				margin:0;
+				// border:0 solid #cbd6d2;
+				// border-width:0 0 1px;
+				// box-shadow: 0 0 2px $shadow;
+				margin:-19px -#{$gutter-width};
 				// position:relative;
 				z-index:10;
-				@include media(">=desktop") {
-					border-width: 1px;
+				// @include media(">=desktop") {
+				// 	border-width: 1px;
+				// }
+				&.contacts-list {
+					li{
+						&:before {
+							color:$theme-color-base;
+							display:block;
+							font-size: 20px;
+							left:0;
+							position:absolute;
+							text-align:center;
+							top:50%;
+							transform:translateY(-50%);
+							width:70px;
+							z-index:5;
+						}
+						a{
+							padding-left: 58px;
+						}
+						&[class*="mail"] {
+							&:before {
+								font-size: 28px;
+							}
+						}
+					}
+				}
+				&.social-networks {
+					font-size: 16px;
+					font-weight:500;
+					margin:0;
+					max-width: 251px;
+					text-align:center;
+					li{
+						border-width: 0;
+						&:before {
+							color:$white;
+							display:block;
+							font-size: 22px;
+							left:0;
+							position:absolute;
+							top:50%;
+							transform:translateY(-50%);
+							width:70px;
+							z-index:5;
+						}
+						&[class*="facebook"] {
+							a{
+								background: #3b579d;
+							}
+						}
+						&[class*="twitter"] {
+							a{
+								background:#1ca1f2;
+							}
+						}
+						&[class*="youtube"] {
+							a{
+								background:#e13535;
+							}
+						}
+						+ li {
+							margin-top: 10px;
+						}
+						a{
+							background:$theme-color-base;
+							border-radius: 2px;
+							color:$white;
+							padding:11px 65px 13px;
+							&:hover {
+								opacity:0.8;
+							}
+						}
+					}
+				}
+				.anchor-active {
+					> a{
+						color:$theme-color-base;
+					}
 				}
 				li{
 					padding:0;
 					position:relative;
-					&.anchor-active,
-					&.child-active {
-						> a{
-							color:$theme-color-base;
-						}
-					}
 					&:before {
 						display:none;
 					}
@@ -306,6 +402,11 @@
 				.opener-holder{
 					// overflow:hidden;
 					position:relative;
+					// &.ui-state-active {
+					// 	> a{
+					// 		color:$theme-color-base;
+					// 	}
+					// }
 				}
 				.opener{
 					background:none;
@@ -353,14 +454,24 @@
 				ul{
 					border-width:1px 0 0;
 					box-shadow: none;
+					margin:0;
+					// height:auto !important;
 					li{
 						border: 0;
 					}
 					a{
 						background:#edf0ee;
+						&:hover {
+							color:$theme-color-base;
+						}
 					}
 				}
 			}
+		}
+	}
+	.fluid-width-video-holder{
+		@include media(">=desktop") {
+			max-width: 75%;
 		}
 	}
 	// .content-casino-boxes{
@@ -520,6 +631,7 @@
 		text-transform:uppercase;
 	}
 	ul{
+		margin:0;
 		li{
 			display:inline-block;
 			vertical-align:top;

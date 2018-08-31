@@ -1,19 +1,19 @@
 extends pug/extends/master
 
 block content
+	//- 
 	- var page_class = "hide-offer hide-bonus"
 	include pug/includes/header
 	#main
 		section.section-breadcrumbs
 			.holder
-				div
-					ul.breadcrumbs
-						li
-							a(href="#") Home
-						li
-							a(href="#") Guides
-						li
-							| Blackjack guides
+				.breadcrumbs
+					span
+						span
+							a(href='#') Home
+							span
+								a(href='#') Guides
+								span.breadcrumb_last Blackjack guides
 				div
 					p Last updated - 
 						strong 2 days ago!

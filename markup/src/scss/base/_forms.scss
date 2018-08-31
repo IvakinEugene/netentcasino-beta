@@ -22,7 +22,7 @@ textarea {
 	border: 1px solid $form-element-border-color;
 	box-shadow: none;
 	// box-sizing: border-box;
-	color:darken($placeholder-color, 30%);
+	// color:darken($placeholder-color, 30%);
 	display: block;
 	font-size: 14px;
 	height: 35px;
@@ -32,11 +32,15 @@ textarea {
 	padding: $form-element-padding;
 	width: 100%;
 	@include media(">=tablet") {
-		font-size: 18px;
-		height:auto;
-		line-height:normal;
-		padding:7px 12px 8px;
+		padding-right: 13px;
+		padding-left: 13px;
 	}
+	// @include media(">=tablet") {
+	// 	font-size: 18px;
+	// 	height:auto;
+	// 	line-height:normal;
+	// 	padding:7px 12px 8px;
+	// }
 	@include placeholder {
 		color: $placeholder-color;
 	}
@@ -47,7 +51,6 @@ textarea {
 
 select {
 	-webkit-border-radius: 0;
-	
 	.hideme {
 		display: none;
 	}
@@ -56,8 +59,8 @@ select {
 textarea {
 	resize: vertical;
 	vertical-align: top;
-	height: 150px;
-	min-height: 120px;
+	height: 70px;
+	min-height: 70px;
 }
 
 button,
@@ -83,5 +86,8 @@ form{
 		line-height:1.1429;
 		padding:1px 0 13px;
 		text-align:left;
+		&:empty{
+			padding:0;
+		}
 	}
 }

@@ -42,5 +42,10 @@ block content
 							p The page you were looking for appears to have been moved, deleted or does not exist!
 							a(href="#").btn.btn-primary Go to Homepage
 						.media-holder
-							img(src="assets/images/img-404.jpg", alt="Image description", width="432", height="498")
+							img(src="assets/images/404.gif", alt="Image description", width="314", height="314")
+						//-
+							video(autoplay="autoplay", loop)
+								//- source(src="assets/media/404-image.mov")
+								source(src='assets/images/media/404-image.mp4', type='video/mp4')
+								// source(src='assets/media/404-image.webm', type='video/webm')
 	include pug/includes/footer

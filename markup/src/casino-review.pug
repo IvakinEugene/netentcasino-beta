@@ -8,14 +8,13 @@ block content
 		//- 
 		section.section-breadcrumbs
 			.holder
-				div
-					ul.breadcrumbs
-						li
-							a(href="#") Home
-						li
-							a(href="#") Casinos
-						li
-							| Betsson
+				.breadcrumbs
+					span
+						span
+							a(href='#') Home
+							span
+								a(href='#') Casinos
+								span.breadcrumb_last Betsson
 				div
 					p Last updated - 
 						strong 2 days ago!
@@ -46,6 +45,9 @@ block content
 										span.icon-star
 										span.icon-star-half-empty
 										span.icon-star-o
+								.exclusive-sticker
+									span.icon-star
+									p Exclusively at NetentCasino
 							.content
 								div
 									h4 Did You Know?
@@ -99,63 +101,65 @@ block content
 			include pug/extends/retina-images
 		//- 
 		section.section-casino
-			.header-bonus-box.popup-holder
-				.holder.popup
-					.left
-						a.icon-close(href="#")
-						.title-holder
-							.logo-holder
-								a(href="#")
-									img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-							div
-								h2 Betsson
-								.stars
-									span.icon-star
-									span.icon-star
-									span.icon-star
-									span.icon-star-half-empty
-									span.icon-star-o
-					.content
-						strong.title £150 + 50 Free Spins
-						p 50% up to £100 + 50 Free Spins
-					.button-holder
-						a(href="#").btn.btn-primary Get Bonus
 			//- 
-			.anchor-links.show-on-mobile
-					.holder
-						ul
-							li
-								a(href="#section1") General Information
-							li
-								a(href="#section2") Games
-							li
-								a(href="#section3") Payments
-							li
-								a(href="#section4") Devices
-							li
-								a(href="#section5") Support
-							li
-								a(href="#section6") Bonuses
+				.header-bonus-box.popup-holder
+					.holder.popup
+						.left
+							a.icon-close(href="#")
+							.title-holder
+								.logo-holder
+									a(href="#")
+										img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+								div
+									h2 Betsson
+									.stars
+										span.icon-star
+										span.icon-star
+										span.icon-star
+										span.icon-star-half-empty
+										span.icon-star-o
+						.content
+							strong.title £150 + 50 Free Spins
+							p 50% up to £100 + 50 Free Spins
+						.button-holder
+							a(href="#").btn.btn-primary Get Bonus
+			//- 
+			.content-navigation.anchor-links.show-on-mobile
+				.holder
+					ul
+						li
+							a(href="#section1") General Information
+						li
+							a(href="#section2") Games
+						li
+							a(href="#section3") Payments
+						li
+							a(href="#section4") Devices
+						li
+							a(href="#section5") Support
+						li
+							a(href="#section6") Bonuses
 			//- 
 			.subsection#section1
 				.holder
+					//- 
 					h1 About Betsson
 					p Just like online Netent Casino Euro, Betsson was previously owned by Net Entertainment, Betsson was created by Net Entertainment in 2001 however, just like Euro Casino this online casino is no longer part of the Netent iGaming software company.
 					p
 						a(href="#") Read More
 					hr.show-on-mobile
-					h1.show-on-mobile Did You Know?
+					h2.show-on-mobile Did You Know?
 					p.show-on-mobile “Betsson is one of the largest online Gaming companies owning several Netent Casinos.”
 					hr
 					.option-columns
 						div
-							h1 Pros
+							h2 Pros
 							ul.list-advantages
 								li Mega Fortune Dreams, Hall of Gods and Arabian Nights Pooled Jackpots.
 								li Almost all Netent Games.
 								li Mobile Casino featuring Netent Touch.
 						div
-							h1 Cons
+							h2 Cons
 							ul.list-disadvantages
 								li No Netent Live Casino.
 								li Welcome Bonus only valid for certain countries.
@@ -167,6 +171,7 @@ block content
 							.content
 								p
 									a(href="#") 50% up to &pound;100 + 50 Free Spins
+						//- 
 						.row
 							.heading
 								strong License(s)
@@ -213,16 +218,110 @@ block content
 							.content
 								ul
 									li Bonus Wagering Requirements: 35
-									li Minimum deposit to receive the welcome bonus is €10,00
+									li Minimum deposit to receive the welcome bonus is &euro;10,00
+					table
+						tbody
+							tr
+								th.tg-hgcj Right
+								th.tg-hgcj What this means
+							tr
+								td.tg-031e Access
+								td.tg-031e
+									| You can ask us to:- confirm whether we are processing your personal data;
+									br
+									| – give you a copy of that data;
+									br
+									| – provide you with other information about your personal data, for example what data we have, what we use it for, who we disclose it to, whether we transfer it outside the EU and how we protect it, how long we keep it for, what rights you have, how you can make a complaint, where we got your data from and whether we have carried out any Automated Decision Making or Profiling, to the extent that information has not already been provided to you in this Policy.
 			//- 
 			.subsection#section2
 				.holder
-					.twocolumns
+					.twocolumns.games-slider-holder
 						div
 							.section-heading
-								h1 400+ NetEnt Games
+								h2 400+ NetEnt Games
 								strong.subtitle Newest games available right now on Betsson!
 							.games-slider
+								div
+									.game-box
+										.media-holder
+											a(href="#", style="background-image:url('http://via.placeholder.com/293x149/ff0000/ffffff')").bg-cover
+												//- 
+													- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+													include pug/extends/retina-single
+												span.hover-box
+													span
+														span.icon-play
+														| Play at Betsson
+												span.sticker &pound;8,000,00
+											strong.media-title Planet of the Apes 2
+								div
+									.game-box
+										.media-holder
+											a(href="#", style="background-image:url('http://via.placeholder.com/293x149/ff0000/ffffff')").bg-cover
+												//- 
+													- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+													include pug/extends/retina-single
+												//- img(src="")
+												span.hover-box
+													span
+														span.icon-play
+														| Play at Betsson
+												span.sticker &pound;1,348,00
+											strong.media-title Blood Suckers 2
+								div
+									.game-box
+										.media-holder
+											a(href="#", style="background-image:url('http://via.placeholder.com/293x149/ff0000/ffffff')").bg-cover
+												//- 
+													- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+													include pug/extends/retina-single
+												span.hover-box
+													span
+														span.icon-play
+														| Play at Betsson
+												span.sticker &pound;8,000,00
+											strong.media-title Planet of the Apes 2
+								div
+									.game-box
+										.media-holder
+											a(href="#", style="background-image:url('http://via.placeholder.com/293x149/ff0000/ffffff')").bg-cover
+												//- 
+													- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+													include pug/extends/retina-single
+												//- img(src="")
+												span.hover-box
+													span
+														span.icon-play
+														| Play at Betsson
+												span.sticker &pound;1,348,00
+											strong.media-title Blood Suckers 2
+								div
+									.game-box
+										.media-holder
+											a(href="#", style="background-image:url('http://via.placeholder.com/293x149/ff0000/ffffff')").bg-cover
+												//- 
+													- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+													include pug/extends/retina-single
+												span.hover-box
+													span
+														span.icon-play
+														| Play at Betsson
+												span.sticker &pound;8,000,00
+											strong.media-title Planet of the Apes 2
+								div
+									.game-box
+										.media-holder
+											a(href="#", style="background-image:url('http://via.placeholder.com/293x149/ff0000/ffffff')").bg-cover
+												//- 
+													- var image = "http://via.placeholder.com/293x149/ff0000/ffffff"
+													include pug/extends/retina-single
+												//- img(src="")
+												span.hover-box
+													span
+														span.icon-play
+														| Play at Betsson
+												span.sticker &pound;1,348,00
+											strong.media-title Blood Suckers 2
 								div
 									.game-box
 										.media-holder
@@ -264,10 +363,12 @@ block content
 								li
 									a(href="#")
 										span +12
+						//- 
 						div
 							.section-heading
-								h1 57 Progressive Jackpots
+								h2 57 Progressive Jackpots
 								strong.subtitle Highest progressive jackpots available right now on Betsson!
+							//- 
 							.games-slider
 								div
 									.game-box
@@ -285,6 +386,7 @@ block content
 										p The Mega Fortune Jackpot is a network jackpot.
 										p
 											strong Min Bet  &pound;0.20 per spin
+								//- 
 								div
 									.game-box
 										.media-holder
@@ -307,7 +409,7 @@ block content
 					.twocolumns
 						div
 							.section-heading
-								h1 Payment
+								h2 Payment
 								strong.subtitle 17 deposit options
 							ul.payments-list.large.grid.col-3
 								li
@@ -344,14 +446,14 @@ block content
 								a(href="#").btn.btn-secondary SHow More Payments
 						div
 							.section-heading
-								h1 Payments Overview
+								h2 Payments Overview
 							.payment-overview-box
 								.icon-holder
 									span.icon-payments
 								.content
 									dl
 										dt Minumum Deposit
-										dd €10
+										dd &euro;10
 										dt Withdrawal Time
 										dd 30 mins - 4 hours (avg)
 										dt Currencies
@@ -362,7 +464,7 @@ block content
 					//- .twocolumns
 					.info
 						.section-heading
-							h1 Devices
+							h2 Devices
 							strong.subtitle Available on desktop, tablet &amp; mobile
 						.slider-nav.devices-list
 							div
@@ -396,7 +498,7 @@ block content
 			.subsection#section5
 				.holder
 					.section-heading
-						h1 Support Options
+						h2 Support Options
 						strong.subtitle Support available 24/7
 					ul.support-list
 						li
@@ -416,9 +518,9 @@ block content
 								span.content +35622603000
 					em.note * VIP Manager support is available for loyal Betsson players.
 					hr
-					h2 Responsible Gaming
+					h3 Responsible Gaming
 					p Although gaming can be an entertaining and profitable pastime, you may not win every time. Losing is a part of the game and you need to be prepared for this to happen from time to time. Because of this, you should always play responsibly and not risk money that you cannot afford to lose. If you play responsibly, you won’t have to worry about getting addicted and by consequence losing perspective of time and money. Here at Betsson we aim to ensure your gaming experiences stay as positive as possible – even when you’re not lucky. Therefore, we work hard to help you maintain control of your own gaming.
-					h2 Trustworthiness of Betsson
+					h3 Trustworthiness of Betsson
 					p The MGA is one of the most trusted governing bodies around and you can be sure that every cent you spend or win here is completely safe. You can further rest at ease as all Betsson payouts are completely guaranteed with all deposited funds being held with a third party banking group – meaning that your funds are always in safe hands. Betsson also use the most up to date SSL encryption so the process of moving your funds about is very safe.
 					p
 						a(href="#") Read More
@@ -426,7 +528,7 @@ block content
 			.subsection#section6
 				.holder
 					.section-heading
-						h1 All Betsson Bonuses
+						h2 All Betsson Bonuses
 						strong.subtitle The different types of bonuses offered by Betsson
 					ul.casino-bonuses-list.grid.col-n
 						li
@@ -444,6 +546,9 @@ block content
 										span.icon-star-half-empty
 										span.icon-star-o
 								.content
+									.exclusive-sticker.compact
+										span.icon-star
+										p Exclusively to NetEnt Casino!
 									h4 20 Free Spins
 									p No Deposit Free Spins are for Starburst, Gonzo’s Quest and Mega Fortune Dreams.
 									.button-holder
@@ -463,7 +568,10 @@ block content
 										span.icon-star-half-empty
 										span.icon-star-o
 								.content
-									h4 €200 Welcome Bonus + Free Spins
+									.exclusive-sticker.compact
+										span.icon-star
+										p Exclusively to NetEnt Casino!
+									h4 &euro;200 Welcome Bonus + Free Spins
 									p 200% up to 200 + 25 Free Spins on first deposit.
 									.button-holder
 										a(href="#").btn.btn-primary Get Bonus
@@ -482,15 +590,15 @@ block content
 										span.icon-star-half-empty
 										span.icon-star-o
 								.content
-									h4 €1600 Reload Bonus
-									p 200% up to €200 on first deposit, 50% up to €500 on the following 3 deposits including 25 free spins on each.
+									h4 &euro;1600 Reload Bonus
+									p 200% up to &euro;200 on first deposit, 50% up to &euro;500 on the following 3 deposits including 25 free spins on each.
 									.button-holder
 										a(href="#").btn.btn-primary Get Bonus
 			//- 
 			.subsection
 				.holder
 					.section-heading
-						h1 Similar Casinos
+						h2 Similar Casinos
 						strong.subtitle Users who viewed this casino also liked
 					.casinos-tiles-slider.grid.col-n
 						div

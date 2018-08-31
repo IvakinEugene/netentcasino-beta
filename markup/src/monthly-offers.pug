@@ -1,24 +1,27 @@
 extends pug/extends/master
 
 block content
-	- var page_class = "hide-nav hide-offer hide-bonus"
-	include pug/includes/header
+	//- 
+		- var page_class = "hide-nav hide-offer hide-bonus"
+		include pug/includes/header
 	#main
 		//- 
 		section.section-breadcrumbs
 			.holder
-				div
-					ul.breadcrumbs
-						li
-							a(href="#") Home
-						li Monthly Offers
+				.breadcrumbs
+					span
+						span
+							a(href='#') Home
+							span.breadcrumb_last Monthly Offers
 				div
 					p Last updated - 
 						strong 2 days ago!
 		//- 
-		section.section-intro
-			- var image = "banner-concept-4"
-			include pug/extends/retina-images
+			section.section-banner
+				//- 
+				.bg-image
+					- var image = "banner-concept-5"
+					include pug/extends/retina-single
 		section.template-default-page
 			//- 
 			.subsection.page-heading
@@ -55,17 +58,17 @@ block content
 											span.icon-star-o
 										a(href="#").btn.btn-secondary casino review
 								.content
+									.sticker
+										strong
+											span.icon-check
+											p Recommended by Casino Experts
 									.content-frame
 										h3 £150 + 50 Free Spins
 										p 50% up to £100 + 50 Free Spins
 									.button-holder
-										.sticker
-											strong
-												span.icon-check
-												p Recommended by Casino Experts
 										.button-frame
 											a(href="#").btn.btn-primary Go to Betsson
-											p Bonus code - 
+											p.bonus-code Bonus code - 
 												span NETENTCASINO
 						li
 							.casino-box-title
@@ -90,7 +93,7 @@ block content
 									.button-holder
 										.button-frame
 											a(href="#").btn.btn-primary Go to Unibet
-											p Bonus code - 
+											p.bonus-code Bonus code - 
 												span Netent20
 						li
 							.casino-box-title
@@ -109,14 +112,14 @@ block content
 											span.icon-star-o
 										a(href="#").btn.btn-secondary casino review
 								.content
+									.sticker
+										strong
+											span.icon-gift-o
+											p Free Spins Before Depsoit
 									.content-frame
 										h3 £1500 + 50 Free Spins
 										p 200% up to £500 + 50 Free Spins
 									.button-holder
-										.sticker
-											strong
-												span.icon-gift-o
-												p Free Spins Before Depsoit
 										.button-frame
 											a(href="#").btn.btn-primary Go to LeoVegas
 						li
@@ -159,14 +162,14 @@ block content
 											span.icon-star-o
 										a(href="#").btn.btn-secondary casino review
 								.content
+									.sticker
+										strong
+											span.icon-cards
+											p Lowest Deposit Amount Required
 									.content-frame
 										h3 £1000 + 20 Free Spins
 										p 100% up to £500 + 20 Free Spins
 									.button-holder
-										.sticker
-											strong
-												span.icon-cards
-												p Lowest Deposit Amount Required
 										.button-frame
 											a(href="#").btn.btn-primary Go to VideoSlots
 	include pug/includes/footer

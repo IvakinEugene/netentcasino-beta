@@ -1,17 +1,18 @@
 extends pug/extends/master
 
 block content
+	//- 
 	- var page_class = "hide-offer hide-bonus"
 	include pug/includes/header
 	#main
 		//- 
 		section.section-breadcrumbs
 			.holder
-				div
-					ul.breadcrumbs
-						li
-							a(href="#") Home
-						li NetEnt Live Casino
+				.breadcrumbs
+					span
+						span
+							a(href='#') Home
+							span.breadcrumb_last NetEnt Live Casino
 				div
 					p Last updated - 
 						strong 2 days ago!

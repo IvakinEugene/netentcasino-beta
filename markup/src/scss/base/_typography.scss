@@ -144,6 +144,7 @@ hr{
 ul,
 ol{
 	@extend %listreset;
+	margin:0 0 0 20px;
 	&:not([class]) {
 		> li{
 			overflow:hidden;
@@ -214,6 +215,7 @@ ol{
 
 [class*="advant"]{
 	line-height:1.3571;
+	margin:0;
 	li{
 		overflow:visible;
 		padding:0 0 0 30px;

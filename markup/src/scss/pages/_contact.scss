@@ -1,0 +1,64 @@
+.section-content.contact{
+	> .holder{
+		display: flex;
+	    flex-direction: column;
+	    flex-wrap: wrap;
+	    justify-content: flex-start;
+	    align-content: stretch;
+	    align-items: stretch;
+		padding-top: 22px;
+		@include media(">=desktop") {
+			display:block;
+		}
+	}
+	.aside{
+		background:$bg-content;
+		@include media("<desktop") {
+			box-shadow:0 -1px 0 #cbd6d2;
+			margin:0 -#{$gutter-width};
+			order: 1;
+			padding:20px $gutter-width;
+			position:static;
+			width:auto !important;
+		}
+		// @include media(">=desktop") {
+		// 	box-shadow:none;
+		// 	order: 0;
+		// }
+		.widget{
+			display:block;
+		}
+	}
+	.content{
+		> .content-holder{
+			padding-top: 27px;
+		}
+	}
+	h1{
+		margin:0 0 11px;
+		text-transform:none;
+	}
+	.wpcf7{
+		padding:19px 21px;
+		@include media(">=desktop") {
+			padding:18px 0;
+		}
+	}
+	.wpcf7-form{
+		max-width: 400px;
+		.wpcf7-form-control-wrap{
+			display:block;
+		}
+		p{
+			margin:0 0 14px;
+		}
+		.wpcf7-submit{
+			@extend .btn;
+			@extend .btn-primary;
+			// font-size: 14px;
+			max-width: 300px;
+			min-width: 0;
+			width:100%;
+		}
+	}
+}

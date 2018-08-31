@@ -1,0 +1,79 @@
+extends pug/extends/master
+
+block content
+	//- 
+	- var page_class = "hide-nav hide-offer hide-bonus"
+	include pug/includes/header
+	#main
+		//- 
+		section.section-breadcrumbs
+			.holder
+				.breadcrumbs
+					span
+						span
+							a(href="#") Home
+							span.breadcrumb_last Contact
+				div
+					p Last updated - 
+						strong 2 days ago!
+		//- 
+		section.section-content.contact
+			.holder
+				.aside
+					//- 
+					.widget
+						.widget-heading
+							h3 Get in Touch
+						.widget-content
+							ul.contacts-list
+								li.icon-phone
+									a(href="tel:+35621310325") + 356 21 310 325
+								li.icon-mail
+									a(href="mailto:support@netentcasino.com") support@netentcasino.com
+					.widget
+						.widget-heading
+							h3 Follow NetEntCasino.com
+						.widget-content
+							ul.social-networks
+								li.icon-facebook
+									a(href="#") Facebook
+								li.icon-twitter
+									a(href="#") Twitter
+								li.icon-youtube-play
+									a(href="#") YouTube
+				.content
+					.content-holder
+						//- 
+						h1 Contact NetEntCasino.com
+						p Get in touch with Netentcasino.com, the leading independent Netent fan-site.
+						p We love the interaction with our visitors and are happy to hear your thoughts, suggestions or player experiences.
+						#wpcf7-f23764-p23445-o1.wpcf7(role='form', dir='ltr', lang='en-US')
+							.screen-reader-response
+							form.wpcf7-form(action='/contact/#wpcf7-f23764-p23445-o1', method='post', novalidate='novalidate')
+								div(style='display: none;')
+									input(name='_wpcf7', value='23764', type='hidden')
+									input(name='_wpcf7_version', value='5.0.1', type='hidden')
+									input(name='_wpcf7_locale', value='en_US', type='hidden')
+									input(name='_wpcf7_unit_tag', value='wpcf7-f23764-p23445-o1', type='hidden')
+									input(name='_wpcf7_container_post', value='23445', type='hidden')
+								p
+									span.wpcf7-form-control-wrap.your-name
+										input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required(name='your-name', value='Your name*', size='40', aria-required='true', aria-invalid='false', type='text')
+								p
+									span.wpcf7-form-control-wrap.your-email
+										input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email(name='your-email', value='Your email*', size='40', aria-required='true', aria-invalid='false', type='email')
+										//- span.wpcf7-not-valid-tip(role='alert') The e-mail address entered is invalid.
+								p
+									span.wpcf7-form-control-wrap.your-subject
+										input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required(name='your-subject', value='Subject*', size='40', aria-required='true', aria-invalid='false', type='text')
+								p
+									span.wpcf7-form-control-wrap.your-message
+										textarea.wpcf7-form-control.wpcf7-textarea(name='your-message', cols='40', rows='10', aria-invalid='false') Your Message*
+								p captcha
+								p
+									input.wpcf7-form-control.wpcf7-submit(value='Send message', type='submit')
+									span.ajax-loader
+								.wpcf7-response-output.wpcf7-display-none
+						p Please note: We don’t sell links or add online casinos without Netent software.
+	//- 
+	include pug/includes/footer

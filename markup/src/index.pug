@@ -10,28 +10,30 @@ block content
 			.holder
 				.content
 					.offer-casino-box
-						.heading
-							.left
-								.logo-holder
-									a(href="#")
-										img(src="http://via.placeholder.com/50x50/ff6600/ffffff")
-								.txt
-									h2
-										a(href="#") PokerStars
-							.right
-								.stars
-									span.icon-star
-									span.icon-star
-									span.icon-star
-									span.icon-star-half-empty
-									span.icon-star-o
-						.content
-							h3 £150 + 50 Free Spins
-							p 50% up to £100 + 50 Free Spins
-							.btn-holder
-								a(href="#").btn.btn-secondary Casino Review
-								a(href="#").btn.btn-primary Get Bonus
-								a(href="#").btn.btn-tc T&amp;C’s Apply
+						.template-promo
+							.casino
+								.heading
+									.left
+										.logo-holder
+											a(href="#")
+												img(src="http://via.placeholder.com/50x50/ff6600/ffffff")
+										.txt
+											h2
+												a(href="#") PokerStars
+									.right
+										.stars
+											span.icon-star
+											span.icon-star
+											span.icon-star
+											span.icon-star-half-empty
+											span.icon-star-o
+								.content
+									h3 £150 + 50 Free Spins
+									p 50% up to £100 + 50 Free Spins
+									.btn-holder
+										a(href="#").btn.btn-secondary Casino Review
+										a(href="#").btn.btn-primary Get Bonus
+										a(href="#").btn.btn-tc T&amp;C’s Apply
 					//- 
 					.search-box
 						div
@@ -52,9 +54,10 @@ block content
 							- var title = "News Articles"
 							- var content = "Ready to be Read"
 							include pug/extends/button-counter
-			//- 
-			- var image = "banner-concept-1"
-			include pug/extends/retina-images
+			// .bg-stretch(style="background-image:url('assets/images/banner-concept-1.jpg')")
+			.bg-image
+				- var image = "banner-concept-1"
+				include pug/extends/retina-single
 		//- 
 		section.section-top-casinos
 			.holder
@@ -226,32 +229,35 @@ block content
 							strong Change Location
 					h1 Novembers’ Top Casino Offers
 					.offer-casino-box
-						.heading
-							.left
-								.logo-holder
-									a(href="#")
-										img(src="http://via.placeholder.com/50x50/ff6600/ffffff")
-								.txt
-									h2
-										a(href="#") Betsson
-									em.time Launched 2 days ago!
-							.right
-								span.rate
-									strong 5
-									span /5
-								.stars
-									span.icon-star
-									span.icon-star
-									span.icon-star
-									span.icon-star-half-empty
-									span.icon-star-o
-						.content
-							h3 &pound;150 + 50 Free Spins
-							p 50% up to &pound;100 + 50 Free Spins
-							.btn-holder
-								a(href="#").btn.btn-secondary Casino Review
-								a(href="#").btn.btn-primary Get Bonus
-								a(href="#").btn.btn-tc T&amp;C’s Apply
+						.license-toplist
+							.toplist.template-promo
+								.casino
+									.heading
+										.left
+											.logo-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/50x50/ff6600/ffffff")
+											.txt
+												h2
+													a(href="#") Betsson
+												em.time Launched 2 days ago!
+										.right
+											span.rate
+												strong 5
+												span /5
+											.stars
+												span.icon-star
+												span.icon-star
+												span.icon-star
+												span.icon-star-half-empty
+												span.icon-star-o
+									.content
+										h3 &pound;150 + 50 Free Spins
+										p 50% up to &pound;100 + 50 Free Spins
+										.btn-holder
+											a(href="#").btn.btn-secondary Casino Review
+											a(href="#").btn.btn-primary Get Bonus
+											a(href="#").btn.btn-tc T&amp;C’s Apply
 					.offer-casino-box.bottom.text-center
 						.content
 							span.icon-timer
@@ -279,7 +285,7 @@ block content
 											| Play at Mega Fortune
 									span.sticker &pound;2,061.762
 								strong.media-title Mega Fortune
-							ul.games-list
+							ul.games-list.toplist.template-jackpot-short
 								li
 									.game
 										.heading
@@ -343,7 +349,7 @@ block content
 											| Play at Mega Fortune
 									span.sticker &pound;2,061.762
 								strong.media-title Mega Fortune
-							ul.games-list
+							ul.games-list.toplist.template-jackpot-short
 								li
 									.game
 										.heading
@@ -406,7 +412,7 @@ block content
 											| Play at Mega Fortune
 									span.sticker &pound;3,654,000
 								strong.media-title Mega Fortune Dreams
-							ul.games-list
+							ul.games-list.toplist.template-jackpot-short
 								li
 									.game
 										.heading
@@ -461,71 +467,6 @@ block content
 							//- 
 								.footer
 									a(href="#").btn.btn-link View all 135 Casinos
-					div
-						.game-box
-							.media-holder
-								a(href="#", style="background-image:url('http://via.placeholder.com/562x280/ff0000/ffffff')").bg-cover
-									span.hover-box
-										span
-											span.icon-play
-											| Play at Mega Fortune
-									span.sticker &pound;832,000
-								strong.media-title Cosmic Fortune
-							ul.games-list
-								li
-									.game
-										.heading
-											.logo-holder
-												a(href="#")
-													img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-											.txt
-												h2
-													a(href="#") Betsson
-												.stars
-													span.icon-star
-													span.icon-star
-													span.icon-star
-													span.icon-star-half-empty
-													span.icon-star-o
-										.content
-											a(href="#").btn.btn-primary Play Game
-								li
-									.game
-										.heading
-											.logo-holder
-												a(href="#")
-													img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-											.txt
-												h2
-													a(href="#") Thrills
-												.stars
-													span.icon-star
-													span.icon-star
-													span.icon-star
-													span.icon-star-half-empty
-													span.icon-star-o
-										.content
-											a(href="#").btn.btn-primary Play Game
-								li
-									.game
-										.heading
-											.logo-holder
-												a(href="#")
-													img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-											.txt
-												h2
-													a(href="#") LeoVegas
-												.stars
-													span.icon-star
-													span.icon-star
-													span.icon-star
-													span.icon-star-half-empty
-													span.icon-star-o
-										.content
-											a(href="#").btn.btn-primary Play Game
-							//- 
-								.footer
-									a(href="#").btn.btn-link View all 314 Casinos
 				.load-more.text-center
 					a(href="#").btn.btn-secondary View All New Casinos
 		//- 
@@ -542,7 +483,7 @@ block content
 									h2 Welcome Bonus
 									p Virtually all Netent Casinos offer new players an attractive welcome bonus so they can explore the casino in an advantageous manner.
 								.content
-									ul
+									ul.toplist.template-bonuses-short
 										li
 											.single
 												.heading
@@ -564,7 +505,7 @@ block content
 														p 50% up to &pound;100 + 50 Free Spins
 													.button-holder
 														a(href="#").btn.btn-primary Go to Betsson
-														//- a(href="#").btn.btn-tc T&amp;C’s Apply
+														a(href="#").btn.btn-tc T&amp;C’s Apply
 										li
 											.single
 												.heading
@@ -615,7 +556,7 @@ block content
 									h2 No Deposit Bonus
 									p Check out all Netent Casinos that grant their players a bonus or Free Spins without a deposit has to be made first.  
 								.content
-									ul
+									ul.toplist.template-bonuses-short 
 										li
 											.single
 												.heading
@@ -633,6 +574,7 @@ block content
 															span.icon-star-o
 												.content
 													.frame
+														h4 &pound;150 + 50 Free Spins
 														h4 &pound;150 + 50 Free Spins
 														p 50% up to &pound;100 + 50 Free Spins
 													.button-holder
@@ -674,9 +616,10 @@ block content
 															span.icon-star-half-empty
 															span.icon-star-o
 												.content
-													.frame
-														h4 &pound;1000 + 20 Free Spins
-														p 100% up to &pound;500 + 20 Free Spins
+													//- 
+														.frame
+															h4 &pound;1000 + 20 Free Spins
+															p 100% up to &pound;500 + 20 Free Spins
 													.button-holder
 														a(href="#").btn.btn-primary Go to Cashiopeia
 								.footer
@@ -687,7 +630,7 @@ block content
 									h2 Free Spins Bonus
 									p Free Spins are popular casino bonuses and many Netent Casinos treat their players on profitable Netent Free Spin promotions. 
 								.content
-									ul
+									ul.toplist.template-bonuses-short 
 										li
 											.single
 												.heading
@@ -696,7 +639,7 @@ block content
 															img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
 													.txt
 														h3
-															a(href="#") Betsson
+															a(href="#") Betsson Betsson Betsson Betsson
 														.stars
 															span.icon-star
 															span.icon-star
@@ -730,33 +673,34 @@ block content
 														p 200% up to &pound;500 + 50 Free Spins
 													.button-holder
 														a(href="#").btn.btn-primary Go to Unibet
-										li
-											.single
-												.heading
-													.logo-holder
-														a(href="#")
-															img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-													.txt
-														h3
-															a(href="#") LeoVegas
-														.stars
-															span.icon-star
-															span.icon-star
-															span.icon-star
-															span.icon-star-half-empty
-															span.icon-star-o
-												.content
-													.frame
-														h4 &pound;1000 + 20 Free Spins
-														p 100% up to &pound;500 + 20 Free Spins
-													.button-holder
-														a(href="#").btn.btn-primary Go to LeoVegas
+										//- 
+											li
+												.single
+													.heading
+														.logo-holder
+															a(href="#")
+																img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+														.txt
+															h3
+																a(href="#") LeoVegas
+															.stars
+																span.icon-star
+																span.icon-star
+																span.icon-star
+																span.icon-star-half-empty
+																span.icon-star-o
+													.content
+														.frame
+															h4 &pound;1000 + 20 Free Spins
+															p 100% up to &pound;500 + 20 Free Spins
+														.button-holder
+															a(href="#").btn.btn-primary Go to LeoVegas
 								.footer
 									a(href="#").btn.btn-secondary View all 82 Casinos
 					.load-more.text-center
 						a(href="#").btn.btn-secondary.invert View All Bonuses
 		//- 
-		section.section-bonus-calc
+			section.section-bonus-calc
 			.holder
 				h1 Bonus Calculator
 				p Enter your preferred deposit amount &amp; view how much money &amp; free spins you get from a bonus.

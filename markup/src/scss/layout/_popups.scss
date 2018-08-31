@@ -353,6 +353,13 @@ button,
 		@include media(">=tablet") {
 			background:$white;
 		}
+		.fca_eoi_form_text_element{
+			color:inherit;
+			font-family: $base-font-family;
+			font-size: inherit;
+			font-weight:normal;
+			line-height:inherit;
+		}
 		[class*="icon-"]{
 			font-size: 66px;
 			margin:0 0 16px;
@@ -377,25 +384,80 @@ button,
 		}
 	}
 	.popup-frame{
+		display: flex;
+	    flex-direction: column;
+	    flex-wrap: nowrap;
+	    justify-content: center;
+	    // justify-content: flex-start;
+	    align-content: stretch;
+	    align-items: stretch;
 		background:none;
 		text-align:center;
-	}
-	form{
-		padding:0 21px;
-		@include media(">=tablet") {
-			margin:0 auto;
-			max-width: 380px;
+		.mfp-close{
+			display:none;
+		}
+		form{
+			padding:0 21px;
+			@include media(">=tablet") {
+				margin:0 auto;
+				max-width: 380px;
+			}
+			.fca_eoi_layout_content_wrapper{
+				margin:0;
+			}
+			.fca_eoi_layout_email_field_wrapper{
+				border-color: $base-gray;
+				border-radius: 0;
+			}
+			input.fca_eoi_form_input_element{
+				&,
+				&:focus {
+					background: $form-element-background !important;
+					color:darken(#898989, 30%);
+					font-size:16px;
+					height:45px;
+					padding: 9px;
+					line-height:normal;
+				}
+				& {
+					@include placeholder {
+						color:#898989;
+						opacity:1 !important;
+					}
+				}
+			}
+			.fca_eoi_layout_submit_button_wrapper{
+				input{
+					background: $btn-dark-background;
+					border:2px solid $btn-dark-background !important;
+					color:$btn-dark-color;
+					font-size: 18px;
+					font-weight: 600;
+					line-height: 1.125;
+					min-width: 0;
+					padding: 10px 10px 11px;
+					transition: none;
+					width: 100%;
+					&:hover {
+						background:transparent;
+						color:$btn-dark-background;
+					}
+				}
+			}
 		}
 	}
-	.form-content{
+	.form-content,
+	.fca_eoi_layout_inputs_wrapper{
 		margin:0 auto -14px;
 		max-width: 288px;
+		overflow:hidden;
 		@include media(">=tablet") {
 			max-width: 300px;
 		}
-	}
-	.form-group{
-		margin:0 0 14px;
+		.form-group,
+		> [class*="fca_eoi_layout_"]{
+			margin:0 0 14px;
+		}
 	}
 	input[type=text],
 	input[type=email]{
@@ -437,6 +499,47 @@ button,
 			min-width: 0;
 			padding-top: 4px;
 			padding-bottom: 6px;
+		}
+	}
+	.privacy{
+		border-top: 1px solid $base-text-color;
+		color:$base-text-color;
+		font-size:12px;
+		line-height:1.0833;
+		margin:40px -29px 0;
+		padding:29px 0 7px;
+		text-align:left;
+		@include media(">=tablet") {
+			border-color: $form-element-border-color;
+			color:$base-gray;
+			margin:39px -18px 0;
+			// max-width: 598px;
+			// margin-right: auto;
+			// margin-left: auto;
+		}
+		> ul{
+			line-height:inherit;
+			// margin:0 auto;
+			// max-width: 504px;
+			@include media(">=tablet") {
+				padding:0 37px;
+			}
+			li{
+				padding:0 0 0 25px;
+				&:before {
+					// color:inherit;
+				}
+			}
+			a{
+				color:inherit;
+				text-decoration:none;
+				&:hover {
+					text-decoration:underline;
+				}
+			}
+			p{
+				margin:0;
+			}
 		}
 	}
 }
@@ -543,13 +646,17 @@ button,
 .desktop-search-popup{
 	// margin:0 auto;
 	// aaaaamax-height: 464px;
-	width:597px;
 	// &[id*="large"] {
 	// 	max-height: 623px;
 	// 	width:1033px;
 	// }
+	@include media(">=desktop") {
+		width:597px;
+	}
 	&[class*="default"] {
-		height:464px !important;
+		@include media(">=desktop") {
+			height:464px !important;
+		}
 	}
 	&.changed {
 		// .results-list{
@@ -575,7 +682,7 @@ button,
 		margin:-8px 0 0;
 		padding:0 0 0 12px;
 		> ul{
-			margin:0 -30px;
+			margin:0 -23px 0 -35px;
 		}
 		a{
 			@include media(">=tablet") {
@@ -793,13 +900,14 @@ button,
 			@include media(">=tablet") {
 				flex-wrap:nowrap;
 				font-size: 12px;
-				height:73px;
+				min-height:73px;
 				width:84px;
 			}
 		}
 		.logo-holder{
 			@include media(">=tablet") {
-				height:30px;
+				max-height:30px;
+				min-height:30px;
 				max-width:30px;
 				min-width:30px;
 			}
@@ -816,6 +924,7 @@ button,
 			> a{
 				@include media(">=tablet") {
 					height:28px;
+					padding:5px;
 					width:63px;
 				}
 			}

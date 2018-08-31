@@ -150,11 +150,13 @@
 		font-weight:500;
 		left:0;
 		padding:14px 9px 4px;
+		pointer-events:none;
 		position:absolute;
 		right:0;
 		text-transform:uppercase;
 		z-index:5;
 	}
+	.template-jackpot-short,
 	.games-list{
 		margin:0 0 -1px;
 		@include media(">=tablet") {
@@ -167,6 +169,23 @@
 			+ li{}
 		}
 	}
+	.footer{
+		border-top: 1px solid $border-color-base;
+		.btn{
+			display:block;
+			min-width: 0;
+			padding-top: 14px;
+			padding-bottom: 16px;
+			&:hover {
+				background:$btn-secondary-border;
+				color:$white;
+			}
+		}
+	}
+}
+
+.template-jackpot-short,
+.games-list{
 	.game{
 		display: flex;
 		flex-direction: row;
@@ -174,6 +193,7 @@
 		justify-content: space-between;
 		align-content: center;
     	align-items: center;
+    	min-height: 84px;
 		// padding:14px 15px 17px;
 		padding:14px 10px 17px;
 		@include media(">=phone") {
@@ -253,19 +273,6 @@
 			padding-bottom: 6px;
 		}
 	}
-	.footer{
-		border-top: 1px solid $border-color-base;
-		.btn{
-			display:block;
-			min-width: 0;
-			padding-top: 14px;
-			padding-bottom: 16px;
-			&:hover {
-				background:$btn-secondary-border;
-				color:$white;
-			}
-		}
-	}
 }
 
 .casino-review-box{
@@ -292,18 +299,18 @@
 		border-width: 0 0 1px;
 		display: flex;
 		flex-direction: row;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		align-content: center;
 		align-items: center;
 		float:none;
 		font-size: 12px;
-		padding:10px 21px;
+		padding:10px 0;
 		width:auto;
 		@include media(">=tablet") {
 			// display: flex;
 			flex-direction: column;
-			// flex-wrap: nowrap;
+			flex-wrap: nowrap;
 			justify-content: center;
 			align-content: stretch;
 			align-items: stretch;
@@ -312,12 +319,19 @@
 			font-size: 16px;
 			text-align:center;
 			min-width:182px;
+			padding:10px 21px 62px;
+			position:relative;
 		}
 		@include media(">=desktop") {
 			font-size: 18px;
 			min-width:242px;
+			padding-bottom: 40px;
 		}
-		> div{
+		> div:not([class]){
+			padding:0 21px;
+			@include media(">=tablet") {
+				padding:0;
+			}
 			&:first-child {
 				display: flex;
 				flex-direction: row;
@@ -336,6 +350,20 @@
 			margin:0;
 			@include media(">=tablet") {
 				margin:0 0 8px;
+			}
+		}
+		.exclusive-sticker{
+			border-top: 1px solid $border-color-base;
+			// line-height:;
+			margin:10px 0 -10px;
+			width:100%;
+			@include media(">=tablet") {
+				border-width: 0;
+				bottom:0;
+				left:0;
+				margin:0;
+				position:absolute;
+				width:100%;
 			}
 		}
 	}
@@ -448,6 +476,7 @@
 			}
 		}
 		.icons-list{
+			margin:0;
 			@include media(">=tablet") {
 				font-size:30px;
 				line-height:1;
@@ -508,6 +537,7 @@
 	.stars{
 		[class*="icon"]{
 			@include media(">=desktop") {
+				font-size: 14px;
 				margin:0 3px;
 			}
 		}
@@ -637,6 +667,7 @@
 			vertical-align:top;
 			margin:0 9px 0 0;
 			font-size:14px;
+			font-weight:500;
 			line-height:1;
 			padding:3px 11px;
 			text-transform:uppercase;
@@ -803,6 +834,9 @@
 		flex: 1 1 auto;
 		padding:12px 15px 10px;
 		position:relative;
+		// @include media(">=500px") {
+		// 	padding-top: 36px;
+		// }
 		@include media(">=desktop") {
 			display: flex;
 			flex-direction: row;
@@ -811,6 +845,18 @@
 			align-content: stretch;
 			align-items: stretch;
 			padding:0;
+		}
+	}
+	.sticker{
+		@include media("<desktop") {
+			margin:-12px -15px 12px;
+			position:static;
+			width:auto;
+		}
+		@include media(">=desktop") {
+			left:auto !important;
+			right:0;
+			width:50%;
 		}
 	}
 	.content-frame{
@@ -853,16 +899,16 @@
 			width:50%;
 		}
 	}
-	.sticker{
-		strong{
-			&:only-child {
-				display:none;
-				@include media(">=desktop") {
-					display:block;
-				}
-			}
-		}
-	}
+	// .sticker{
+	// 	strong{
+	// 		&:only-child {
+	// 			display:none;
+	// 			@include media(">=desktop") {
+	// 				display:block;
+	// 			}
+	// 		}
+	// 	}
+	// }
 	.button-frame{
 		display: flex;
 	    flex-direction: column;
@@ -872,9 +918,10 @@
 	    align-items: center;
 		@include media(">=desktop") {
 			flex:1 1 auto;
-			&:not(:only-child) {
-				padding-top: 30px;
-			}
+			padding:40px 15px;
+			// &:not(:only-child) {
+			// 	padding-top: 30px;
+			// }
 		}
 		.bonus-code{
 			font-size: 11px;
@@ -925,9 +972,10 @@
 		> .top,
 		> .bottom {
 			@include media(">=desktop") {
-				flex:1 1 auto;
-				max-width: none;
-				min-width: 0;
+				// flex:1 1 auto;
+				max-width: 50%;
+				min-width: 50%;
+				// width:50%;
 			}
 		}
 		> .bottom {
@@ -1578,7 +1626,13 @@
 
 .casino-box-title.short{
 	@include media(">=desktop") {
-		display:block;
+		// display:block;
+		// display: flex;
+	    flex-direction: column;
+	    // flex-wrap: nowrap;
+	    // justify-content: flex-start;
+	    // align-content: stretch;
+	    // align-items: stretch;
 		font-size: 14px;
 	}
 	.heading{
@@ -1671,13 +1725,15 @@
 	}
 	.content{
 		@include media(">=desktop") {
-			display:block;
+			// display:block;
+			flex-direction: column;
 		}
 	}
 	.content-frame{
 		@include media(">=desktop") {
 			border: solid $border-color-base;
 			border-width: 0 0 1px;
+			flex:1 1 auto;
 			padding:15px 15px 19px;
 			width:auto;
 		}
@@ -1687,13 +1743,13 @@
 			font-size: 18px;
 		}
 		@include media(">=desktop") {
-			display: flex;
-			flex-direction: column;
-			flex-wrap: nowrap;
-			justify-content: center;
-			align-content: center;
-			align-items: center;
-			flex:1 1 auto;
+			// display: flex;
+			// flex-direction: column;
+			// flex-wrap: nowrap;
+			// justify-content: center;
+			// align-content: center;
+			// align-items: center;
+			// flex:1 1 auto;
 			font-size: 22px;
 			margin:0 0 1px;
 		}
@@ -1710,6 +1766,11 @@
 			border-width: 0;
 			padding:21px 15px 19px;
 			width:auto;
+		}
+		.button-frame{
+			@include media(">=desktop") {
+				padding:0;
+			}
 		}
 		.btn{
 			@include media(">=desktop") {
@@ -1774,6 +1835,9 @@
 			}
 		}
 	}
+}
+
+.template-bonuses-short{
 	.single{
 		display: flex;
 		flex-direction: row;
@@ -1871,7 +1935,6 @@
 }
 
 .offer-casino-box{
-	background:$white;
 	box-shadow: 0 1px 2px 0 rgba($black,0.22);
 	color:$base-gray;
 	font-size: 16px;
@@ -1938,19 +2001,27 @@
 			}
 		}
 	}
+	.template-promo{
+		width:100%;
+	}
 	.license-toplist{
 		width:100%;
 	}
+}
+
+.template-promo{
 	.casino{
+		background:$white;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		align-content: stretch;
 		align-items: stretch;
-		font-size: 26px;
+		font-size: 16px;
 		max-width: 680px;
 		@include media(">=tablet") {
+			font-size: 26px;
 			flex-wrap: nowrap;
 		}
 	}
@@ -2048,12 +2119,13 @@
 		@include media(">=tablet") {
 			flex:1 1 auto;
 			padding:24px 41px 16px;
+			text-align:left;
 			// text-align:left;
 		}
 	}
 	h3{
 		font-size: 22px;
-		margin:0 0 -4px;
+		margin:0 0 -3px;
 		@include media(">=tablet") {
 			font-size: 40px;
 			font-weight:500;
@@ -2062,7 +2134,7 @@
 		}
 	}
 	p{
-		margin:0 0 12px;
+		margin:0 0 8px;
 		@include media(">=tablet") {
 			margin:0 0 19px;
 		}
@@ -2074,6 +2146,9 @@
 	    justify-content: center;
 	    align-content: center;
 	    align-items: center;
+	    @include media(">=tablet") {
+	    	justify-content: flex-start;
+	    }
 	}
 	.btn{
 		margin:3px 7px;

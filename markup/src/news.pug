@@ -1,24 +1,24 @@
 extends pug/extends/master
 
 block content
+	//- 
 	- var page_class = "hide-bonus hide-offer"
 	include pug/includes/header
 	#main
 		section.section-breadcrumbs
 			.holder
-				div
-					ul.breadcrumbs
-						li
-							a(href="#") Home
-						li
-							a(href="#") News
-						li
-							| NetEnt New Casinos December 2017
+				.breadcrumbs
+					span
+						span
+							a(href='#') Home
+							span
+								a(href='#') News
+								span.breadcrumb_last NetEnt New Casinos December 2017
 				div
 					p Last updated - 
 						strong 2 days ago!
 		section.template-default-page
-			.anchor-links
+			.content-navigation.anchor-links
 				.holder
 					ul
 						li

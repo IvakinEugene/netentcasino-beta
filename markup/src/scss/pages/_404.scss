@@ -87,7 +87,8 @@
 		.media-holder{
 			padding:52px 0 0;
 			@include media(">=desktop") {
-				min-width: 445px;
+				max-width: 314px;
+				min-width: 314px;
 				padding:0 7px;
 				text-align:right;
 			}
@@ -96,6 +97,10 @@
 				@include media(">=desktop") {
 					max-width: 100%;
 				}
+			}
+			video{
+				// border: 5px solid $theme-color-base;
+				margin:0 auto;
 			}
 		}
 	}

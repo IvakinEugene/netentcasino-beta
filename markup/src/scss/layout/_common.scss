@@ -21,7 +21,6 @@
 		overflow:hidden;
 	}
 } */
-
 .home{
 	.section-bonus-calc + .template-default-page{
 		background:$white;
@@ -38,18 +37,17 @@
 		#header{
 			z-index:10;
 		}
-
 	}
 	#header{
 		z-index:1;
 	}
 	.header-bonus-box{
-		z-index:10;
+		z-index:20;
 	}
 }
 
 #wrapper{
-	background:#f5f7f6;
+	background:$bg-content;
 	overflow:hidden;
 	// max-width: 320px;
 	// @include media(">=375px") {
@@ -92,7 +90,7 @@ section{
 		color:$base-gray;
 		display:block;
 		font-size:16px;
-		line-height:1.125;
+		line-height:1.375;
 		position:relative;
 		z-index:10;
 	}
@@ -109,72 +107,139 @@ section{
 		}
 	}
 	.breadcrumbs{
-		li{
+		margin:0;
+		padding:0 10px 0 0;
+		span{
 			@include media(">=desktop") {
-				display:inline-block;
-				vertical-align:top;
-				margin:-4px 0;
-				max-width: 350px;
-				overflow:hidden;
-				padding:4px 4px 4px 18px;
-				position:relative;
-				text-overflow:ellipsis;
-				white-space: nowrap;
+				display: flex;
+			    flex-direction: row;
+			    flex-wrap: nowrap;
+			    justify-content: flex-start;
+			    align-content: flex-start;
+			    align-items: flex-start;
+			    margin:0 0 0 8px;
+			    padding:0 0 0 18px;
+			    position:relative;
 			}
 			&:first-child {
 				@include media(">=desktop") {
+					margin:0;
 					padding-left: 0;
-					&:before {
+				}
+				&:before {
+					@include media(">=desktop") {
 						display:none;
 					}
 				}
 			}
 			&:before {
 				@include media(">=desktop") {
+					font-family: 'icomoon' !important;
+					speak: none;
+					font-style: normal;
+					font-weight: normal;
+					font-variant: normal;
+					text-transform: none;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
 					color:$theme-color-base;
-					content: '>';
+					content: "\e92f";
+					font-size: 12px;
 					left:0;
 					position:absolute;
-					top:50%;
-					transform:translateY(-50%);
+					top:4px;
 				}
 			}
+		}
+		a,
+		.breadcrumb_last{
+			display:block;
+			font-weight:500;
+			max-width: 550px;
+			overflow:hidden;
+			text-decoration:none;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+			// width:100%;
 		}
 		a{
-			@include media(">=desktop") {
-				color:$base-text-color;
-				font-weight:500;
-				text-decoration:none;
-			}
 			&:hover {
-				@include media(">=desktop") {
-					color:$theme-color-base;
-				}
+				color:$theme-color-base;
 			}
 		}
-		span[rel*="child"],
 		.breadcrumb_last{
-			@include media(">=desktop") {
-				display:inline-block;
-				vertical-align:top;
-				margin:0 0 0 4px;
-				padding:0 4px 0 18px;
-				position:relative;
-			}
-			&:before {
-				@include media(">=desktop") {
-					color:$theme-color-base;
-					content: '>';
-					left:0;
-					position:absolute;
-					top:0;
-				}
-			}
-		}
-		strong{
-			font-weight: inherit;
+			color:inherit;
+			font-weight:normal;
 		}
 	}
+	// .breadcrumbs{
+	// 	li{
+	// 		@include media(">=desktop") {
+	// 			display:inline-block;
+	// 			vertical-align:top;
+	// 			margin:-4px 0;
+	// 			max-width: 350px;
+	// 			overflow:hidden;
+	// 			padding:4px 4px 4px 18px;
+	// 			position:relative;
+	// 			text-overflow:ellipsis;
+	// 			white-space: nowrap;
+	// 			width:100%;
+	// 		}
+	// 		&:first-child {
+	// 			@include media(">=desktop") {
+	// 				padding-left: 0;
+	// 				&:before {
+	// 					display:none;
+	// 				}
+	// 			}
+	// 		}
+	// 		&:before {
+	// 			@include media(">=desktop") {
+	// 				color:$theme-color-base;
+	// 				content: '>';
+	// 				left:0;
+	// 				position:absolute;
+	// 				top:50%;
+	// 				transform:translateY(-50%);
+	// 			}
+	// 		}
+	// 	}
+	// 	a{
+	// 		@include media(">=desktop") {
+	// 			color:$base-text-color;
+	// 			font-weight:500;
+	// 			text-decoration:none;
+	// 		}
+	// 		&:hover {
+	// 			@include media(">=desktop") {
+	// 				color:$theme-color-base;
+	// 			}
+	// 		}
+	// 	}
+	// 	span[rel*="child"],
+	// 	.breadcrumb_last{
+	// 		@include media(">=desktop") {
+	// 			display:inline-block;
+	// 			vertical-align:top;
+	// 			margin:0 0 0 4px;
+	// 			padding:0 4px 0 18px;
+	// 			position:relative;
+	// 		}
+	// 		&:before {
+	// 			@include media(">=desktop") {
+	// 				color:$theme-color-base;
+	// 				content: '>';
+	// 				left:0;
+	// 				position:absolute;
+	// 				top:0;
+	// 			}
+	// 		}
+	// 	}
+	// 	strong{
+	// 		font-weight: inherit;
+	// 	}
+	// }
 	p{
 		@include media(">=desktop") {
 			margin:0;
@@ -212,8 +277,9 @@ section{
 			margin:0 0 9px;
 		}
 	}
-	h1{
+	h2{
 		font-size: 20px;
+		font-weight:500;
 		line-height:1.3;
 		margin:0 0 5px;
 		@include media(">=tablet") {
@@ -241,6 +307,34 @@ section{
 				font-size: 18px;
 				padding-top: 10px;
 				padding-bottom: 10px;
+			}
+		}
+	}
+	.privacy{
+		border-top: 1px solid $border-color-base;
+		color:$base-gray;
+		font-size:12px;
+		line-height:1.0833;
+		margin:30px -20px 0;
+		padding:29px 0 7px;
+		text-align:left;
+		@include media(">=tablet") {
+			max-width: 598px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		> ul{
+			line-height:inherit;
+			margin:0 auto;
+			max-width: 504px;
+			li{
+				padding:0 0 0 25px;
+			}
+			a{
+				text-decoration:none;
+				&:hover {
+					text-decoration:underline;
+				}
 			}
 		}
 	}
@@ -398,8 +492,13 @@ section{
 				padding:0 0 0 24px;
 			}
 			img{
-				max-height: 100%;
-				width:auto;
+				@include media(">tablet") {
+					max-width: 200px;
+				}
+				@include media("<=tablet") {
+					max-height: 100%;
+					width:auto;
+				}
 			}
 		}
 		> .content{
@@ -407,17 +506,20 @@ section{
 			// height:400px;
 			// padding:19px 0 0;
 			// width:620px;
+			width:100%;
 			@include media(">=tablet") {
 				max-width: 65.7%;
 				padding:40px 0 0;
 			}
 			&:only-child {
-				max-width: none;
-				width:100%;
+				@include media(">=tablet") {
+					max-width: none;
+				}
 			}
 		}
 	}
-	> .bg-stretch{
+	> .bg-stretch,
+	> .bg-image{
 		height:210px;
 		@include media(">=tablet") {
 			height:278px;
@@ -588,14 +690,24 @@ section{
 	.offer-casino-box{
 		margin-top: 128px;
 		@include media(">=tablet") {
-			font-size: 30px;
-			margin-top: 151px;
+			margin-top: 35px;
 			max-width: 667px;
 		}
 		+ .search-box{
 			margin-top: 26px;
 			@include media(">=tablet") {
 				margin-top: 30px;
+			}
+		}
+	}
+	.template-promo{
+		.casino{
+			@include media("<tablet") {
+				display:block;
+			}
+			@include media(">=tablet") {
+				font-size: 30px;
+				font-weight:normal;
 			}
 		}
 		.heading{
@@ -710,8 +822,28 @@ section{
 }
 
 .section-banner{
-	height:280px;
+	// height:175px;
+	overflow:hidden;
 	position:relative;
+	// @include media(">=1440px") {
+	// 	height:280px;
+	// }
+	// .bg-stretch{
+	// 	transform:translate(-100%, -100%);
+	// 	@include media(">=1440px") {
+	// 		transform:none;
+	// 	}
+	// }
+	// img{
+	// 	@include media(">=1440px") {
+	// 		position:absolute;
+	// 		transform:translate(-100%, -100%);
+	// 	}
+	// }
+	img{
+		max-width: none;
+		width:100%;
+	}
 }
 
 .section-bonus-calc{
@@ -1099,7 +1231,8 @@ section{
 }
 
 .section-top-offer{
-	background: linear-gradient(180deg, rgba(255,102,0,0.6) 0%, #FF6600 100%);
+	// background: linear-gradient(180deg, rgba(255,102,0,0.6) 0%, #FF6600 100%);
+	background: #f60;
 	padding:26px 0 11px;
 	@include media(">=tablet") {
 		padding:37px 0 20px;

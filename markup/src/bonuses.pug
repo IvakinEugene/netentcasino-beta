@@ -1,19 +1,20 @@
 extends pug/extends/master
 
 block content
+	//- 
 	- var page_class = "hide-offer hide-bonus"
 	include pug/includes/header
 	#main
 		//- 
 		section.section-breadcrumbs
 			.holder
-				div
-					ul.breadcrumbs
-						li
-							a(href="#") Home
-						li
-							a(href="#") NetEnt Game &amp; Jackpots
-						li Mega Fortune Jackpot
+				.breadcrumbs
+					span
+						span
+							a(href='#') Home
+							span
+								a(href='#') NetEnt Game &amp; Jackpots
+								span.breadcrumb_last Mega Fortune Jackpot
 				div
 					p Last updated - 
 						strong 2 days ago!
@@ -35,7 +36,7 @@ block content
 									h2 Welcome Bonus
 									p Virtually all Netent Casinos offer new players an attractive welcome bonus so they can explore the casino in an advantageous manner.
 								.content
-									ul
+									ul.toplist.template-bonuses-short
 										li
 											.single
 												.heading
@@ -107,7 +108,7 @@ block content
 									h2 No Deposit Bonus
 									p Check out all Netent Casinos that grant their players a bonus or Free Spins without a deposit has to be made first.  
 								.content
-									ul
+									ul.toplist.template-bonuses-short
 										li
 											.single
 												.heading
@@ -179,7 +180,7 @@ block content
 									h2 Free Spins Bonus
 									p Free Spins are popular casino bonuses and many Netent Casinos treat their players on profitable Netent Free Spin promotions. 
 								.content
-									ul
+									ul.toplist.template-bonuses-short
 										li
 											.single
 												.heading
@@ -251,7 +252,7 @@ block content
 									h2 Reload Bonus
 									p Virtually all Netent Casinos offer new players an attractive welcome bonus so they can explore the casino in an advantageous manner.
 								.content
-									ul
+									ul.toplist.template-bonuses-short
 										li
 											.single
 												.heading
@@ -323,7 +324,7 @@ block content
 									h2 NetEnt Tournaments
 									p Check out all Netent Casinos that grant their players a bonus or Free Spins without a deposit has to be made first.  
 								.content
-									ul
+									ul.toplist.template-bonuses-short
 										li
 											.single
 												.heading
@@ -395,7 +396,7 @@ block content
 									h2 Bonus Codes
 									p Free Spins are popular casino bonuses and many Netent Casinos treat their players on profitable Netent Free Spin promotions. 
 								.content
-									ul
+									ul.toplist.template-bonuses-short
 										li
 											.single
 												.heading

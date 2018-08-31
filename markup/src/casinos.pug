@@ -2,20 +2,20 @@ extends pug/extends/master
 
 block content
 	//- 
-		- var page_class = "hide-nav hide-offer hide-bonus"
-		include pug/includes/header
+	- var page_class = "hide-nav hide-offer hide-bonus"
+	include pug/includes/header
 	#main
 		//- 
-			section.section-breadcrumbs
-				.holder
-					div
-						ul.breadcrumbs
-							li
-								a(href="#") Home
-							li NetEnt Casinos
-					div
-						p Last updated - 
-							strong 2 days ago!
+		section.section-breadcrumbs
+			.holder
+				.breadcrumbs
+					span
+						span
+							a(href='#') Home
+							span.breadcrumb_last NetEnt Casinos
+				div
+					p Last updated - 
+						strong 2 days ago!
 		//- 
 		section.template-default-page
 			.subsection.page-heading
