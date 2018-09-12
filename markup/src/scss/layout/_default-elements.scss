@@ -1322,20 +1322,21 @@ img{
 		    &:hover {
 		    	background:$bg-content;
 		    }
+			> .logo-holder,
+			> img{
+				height:43px;
+				margin:0 17px 0 0;
+				max-width: 43px;
+				min-width: 43px;
+				@include media(">=tablet") {
+					height:56px;
+					max-width: 56px;
+					min-width: 56px;
+				}
+			}
 		}
 		ul{
 			margin:0 -#{$gutter-width} $gutter-width;
-		}
-	}
-	.logo-holder{
-		height:43px;
-		margin:0 17px 0 0;
-		max-width: 43px;
-		min-width: 43px;
-		@include media(">=tablet") {
-			height:56px;
-			max-width: 56px;
-			min-width: 56px;
 		}
 	}
 	// > ul,

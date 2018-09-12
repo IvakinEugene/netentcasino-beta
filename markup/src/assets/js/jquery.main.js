@@ -191,7 +191,7 @@ function initFilters() {
 // init button for open mobile nav and set focus to search input
 function initMagicOpener() {
 	var button = jQuery('[class*="popup"] .btn-search'),
-		defaultNavOpener = jQuery('.mobile-nav .nav-opener');
+		defaultSearchOpener = jQuery('.mobile-search-opener');
 
 	button.on('click', function(e){
 		if (jQuery(window).width() <= 1024) {
@@ -200,10 +200,10 @@ function initMagicOpener() {
 			$.magnificPopup.close();
 
 			setTimeout(function(){
-				defaultNavOpener.click();
-				setTimeout(function(){
-					jQuery('#m-autocomplete').focus();
-				}, 400);
+				defaultSearchOpener.click();
+				// setTimeout(function(){
+				// 	jQuery('#m-autocomplete').focus();
+				// }, 400);
 			}, 100);
 		}
 	});
@@ -531,7 +531,7 @@ function initMobileNav() {
 		menuActiveClass: 'search-active',
 		menuOpener: '.mobile-search-opener',
 		hideOnClickOutside: true,
-		menuDrop: '.mobile-nav-frame'
+		menuDrop: '.results-holder > div'
 	});
 }
 
