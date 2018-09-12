@@ -118,17 +118,17 @@ button,
 			padding:34px 18px;
 		}
 	}
-	.results-list{
-		> ul{
-			@include media(">=tablet") {
-				margin:0 -18px;
-			}
-			> li{
-				padding-right: 0;
-				padding-left: 0;
-			}
-		}
-	}
+	// .results-list{
+	// 	> ul{
+	// 		@include media(">=tablet") {
+	// 			margin:0 -18px;
+	// 		}
+	// 		> li{
+	// 			padding-right: 0;
+	// 			padding-left: 0;
+	// 		}
+	// 	}
+	// }
 	.popup-footer{
 		background:#f5f7f6;
 		border-top: 1px solid $border-color-base;
@@ -245,8 +245,8 @@ button,
 			}
 		}
 		input[type=text]{
-			background:none;
-			border:0;
+			background:none !important;
+			border:0 !important;
 			font-size:16px;
 			font-weight:normal;
 			height:auto;
@@ -333,6 +333,45 @@ button,
 	}
 }
 
+.bonus-popup .popup-content,
+.opt-in-bar .opt-in-form{
+	.fca_eoi_layout_privacy_copy_wrapper.fca_eoi_form_text_element{
+		border-top: 1px solid $base-text-color;
+		color:$base-text-color;
+		font-size:12px;
+		line-height:1.0833;
+		margin:40px 0 0;
+		padding:29px 0 7px;
+		text-align:left;
+		@include media(">=tablet") {
+			border-color: $form-element-border-color;
+			color:$base-gray;
+			margin:39px -18px 0;
+			max-width: none;
+		}
+		ul{
+			line-height:inherit;
+			@extend %listreset;
+			@include media(">=tablet") {
+				padding:0 37px !important;
+			}
+			li{
+				padding:0 0 0 25px;
+			}
+			a{
+				color:inherit;
+				text-decoration:none;
+				&:hover {
+					text-decoration:underline;
+				}
+			}
+			p{
+				margin:0;
+			}
+		}
+	}
+}
+
 .bonus-popup{
     color:#2a2c2c;
     font-size:16px;
@@ -341,6 +380,16 @@ button,
 		min-height: 555px;
 		width:597px;
 	}
+	// reset form styles
+	div.fca_eoi_layout_0,
+	form.fca_eoi_layout_0{
+		 div.fca_eoi_form_text_element{
+		 	ul{
+		 		@extend %listreset;
+		 	}
+		 }
+	}
+	// end
 	.popup-content{
 		display: flex;
 	    flex-direction: column;
@@ -359,6 +408,10 @@ button,
 			font-size: inherit;
 			font-weight:normal;
 			line-height:inherit;
+			@include media(">=tablet") {
+				margin:0 auto;
+				max-width: 380px;
+			}
 		}
 		[class*="icon-"]{
 			font-size: 66px;
@@ -399,8 +452,9 @@ button,
 		form{
 			padding:0 21px;
 			@include media(">=tablet") {
-				margin:0 auto;
-				max-width: 380px;
+				// margin:0 auto;
+				// max-width: 380px;
+				padding:0;
 			}
 			.fca_eoi_layout_content_wrapper{
 				margin:0;
@@ -408,6 +462,9 @@ button,
 			.fca_eoi_layout_email_field_wrapper{
 				border-color: $base-gray;
 				border-radius: 0;
+				&.has-errors {
+					border-color: $red;
+				}
 			}
 			input.fca_eoi_form_input_element{
 				&,
@@ -438,9 +495,17 @@ button,
 					padding: 10px 10px 11px;
 					transition: none;
 					width: 100%;
+					@include media(">=tablet") {
+						background:$btn-primary-background;
+						border-color: $btn-primary-background !important;
+						color:$btn-primary-color;
+					}
 					&:hover {
 						background:transparent;
 						color:$btn-dark-background;
+						@include media(">=tablet") {
+							color:$btn-primary-background;
+						}
 					}
 				}
 			}
@@ -473,6 +538,18 @@ button,
 			color:#898989;
 		}
 	}
+	.fca_eoi_layout_privacy_copy_wrapper.fca_eoi_form_text_element{
+		margin-right: -29px;
+		margin-left: -29px;
+		// @include media(">=tablet") {
+		// 	margin-right: -18px;
+		// 	margin-left: -18px;
+		// }
+	}
+	.errors{
+		margin:-6px 0 10px;
+    	padding:0;
+	}
 	.btn-primary{
 		background:$btn-dark-background;
 		border-color: $btn-dark-border;
@@ -499,47 +576,6 @@ button,
 			min-width: 0;
 			padding-top: 4px;
 			padding-bottom: 6px;
-		}
-	}
-	.privacy{
-		border-top: 1px solid $base-text-color;
-		color:$base-text-color;
-		font-size:12px;
-		line-height:1.0833;
-		margin:40px -29px 0;
-		padding:29px 0 7px;
-		text-align:left;
-		@include media(">=tablet") {
-			border-color: $form-element-border-color;
-			color:$base-gray;
-			margin:39px -18px 0;
-			// max-width: 598px;
-			// margin-right: auto;
-			// margin-left: auto;
-		}
-		> ul{
-			line-height:inherit;
-			// margin:0 auto;
-			// max-width: 504px;
-			@include media(">=tablet") {
-				padding:0 37px;
-			}
-			li{
-				padding:0 0 0 25px;
-				&:before {
-					// color:inherit;
-				}
-			}
-			a{
-				color:inherit;
-				text-decoration:none;
-				&:hover {
-					text-decoration:underline;
-				}
-			}
-			p{
-				margin:0;
-			}
 		}
 	}
 }
@@ -644,12 +680,6 @@ button,
 }
 
 .desktop-search-popup{
-	// margin:0 auto;
-	// aaaaamax-height: 464px;
-	// &[id*="large"] {
-	// 	max-height: 623px;
-	// 	width:1033px;
-	// }
 	@include media(">=desktop") {
 		width:597px;
 	}
@@ -659,12 +689,6 @@ button,
 		}
 	}
 	&.changed {
-		// .results-list{
-		// 	display:none;
-		// }
-		// .ui-autocomplete{
-		// 	display:block !important;
-		// }
 		.popup-footer{
 			position:static;
 		}
@@ -679,40 +703,32 @@ button,
 		}
 	}
 	.results-list{
-		margin:-8px 0 0;
-		padding:0 0 0 12px;
-		> ul{
-			margin:0 -23px 0 -35px;
-		}
-		a{
-			@include media(">=tablet") {
-				padding-left: 90px;
+		// margin:-8px 0 0;
+		padding:0 12px;
+		ul{
+			a{
+				padding-right: 31px;
+				padding-left: 31px;
 			}
-		}
-		.logo-holder{
-			@include media(">=tablet") {
-				left:30px;
+			ul{
+				margin-right: -30px;
+				margin-left: -30px;
 			}
 		}
 	}
-	// h3{
-	// 	color:$base-gray;
-	// 	margin:0 0 5px;
-	// 	text-transform:uppercase;
+	// .ui-autocomplete{
+	// 	margin: -14px -18px 0;
+	// 	a{
+	// 		padding-right: 31px;
+	// 		padding-left: 31px;
+	// 	}
+	// 	// img{
+	// 	// 	border: 0;
+	// 	// 	border-radius: 0;
+	// 	// 	height:auto;
+	// 	// 	width:auto;
+	// 	// }
 	// }
-	.ui-autocomplete{
-		margin: -14px -18px 0;
-		a{
-			padding-right: 31px;
-			padding-left: 31px;
-		}
-		// img{
-		// 	border: 0;
-		// 	border-radius: 0;
-		// 	height:auto;
-		// 	width:auto;
-		// }
-	}
 	.popup-footer{
 		left:-9999px;
 		position:absolute;
@@ -720,6 +736,12 @@ button,
 	}
 }
 
+#casino-summary-popup{
+	max-height: none;
+	// margin:0 auto;
+	// width:auto;
+	width:666px !important;
+}
 .casino-summary-popup{
 	// display:none;
 	@include media(">=tablet") {
@@ -728,7 +750,19 @@ button,
 		line-height:1.5;
 		// margin:0; // !!!!!!!!!!
 		max-height: none !important;
-		width:666px !important;
+	}
+	.switch & {
+		display:none;
+		+ .default-popup{
+			display:flex;
+		}
+	}
+	+ .default-popup{
+		display:none;
+		width:auto;
+		.popup-top{
+			display:none;
+		}
 	}
 	.popup-frame{
 		@include media(">=tablet") {
@@ -974,6 +1008,16 @@ button,
 				font-size: 24px;
 				margin:0 0 -5px;
 				text-transform:uppercase;
+			}
+		}
+		.right{
+			@include media(">=tablet") {
+				display: flex;
+			    flex-direction: column;
+			    flex-wrap: nowrap;
+			    justify-content: center;
+			    align-content: center;
+			    align-items: center;
 			}
 		}
 		.btn{

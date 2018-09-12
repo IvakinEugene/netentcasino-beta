@@ -16,10 +16,10 @@ input[type='password'],
 // input[type='date'],
 textarea {
 	color: $placeholder-color;
-	-webkit-appearance: none;
+	-webkit-appearance: none !important;
 	-webkit-border-radius: 0;
-	background: $form-element-background;
-	border: 1px solid $form-element-border-color;
+	background: $form-element-background !important;
+	border: 1px solid $form-element-border-color !important;
 	box-shadow: none;
 	// box-sizing: border-box;
 	// color:darken($placeholder-color, 30%);
@@ -35,12 +35,6 @@ textarea {
 		padding-right: 13px;
 		padding-left: 13px;
 	}
-	// @include media(">=tablet") {
-	// 	font-size: 18px;
-	// 	height:auto;
-	// 	line-height:normal;
-	// 	padding:7px 12px 8px;
-	// }
 	@include placeholder {
 		color: $placeholder-color;
 	}
@@ -83,11 +77,18 @@ form{
 		color:$red;
 		font-size:14px;
 		font-weight:normal;
-		line-height:1.1429;
-		padding:1px 0 13px;
+		line-height:1.4286;
+		margin:0 0 -2px;
+		padding:6px 0 0;
 		text-align:left;
+		@include media(">=tablet") {
+			line-height:1.1429;
+		}
 		&:empty{
 			padding:0;
 		}
+	}
+	.wpcf7-response-output{
+		display:none !important;
 	}
 }

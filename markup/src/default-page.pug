@@ -6,29 +6,29 @@ block content
 	include pug/includes/header
 	#main
 		//- 
-		section.section-breadcrumbs
-			.holder
-				.breadcrumbs
-					span
+			section.section-breadcrumbs
+				.holder
+					.breadcrumbs
 						span
-							a(href='#') Home
 							span
-								a(href='#') New page for testing long name New page for testing long name New page for testing long name New page for testing long name
+								a(href='#') Home
 								span
-									a(href='#') NetEnt News
-									span.breadcrumb_last New page for testing long name New page for testing long name New page for testing long name New page for testing long name
+									a(href='#') New page for testing long name New page for testing long name New page for testing long name New page for testing long name
+									span
+										a(href='#') NetEnt News
+										span.breadcrumb_last New page for testing long name New page for testing long name New page for testing long name New page for testing long name
 
-				//- 
+					//- 
+						div
+							ul.breadcrumbs
+								li
+									a(href="#") Home
+								li
+									a(href="#") NetEnt Game &amp; Jackpots
+								li Mega Fortune Jackpot
 					div
-						ul.breadcrumbs
-							li
-								a(href="#") Home
-							li
-								a(href="#") NetEnt Game &amp; Jackpots
-							li Mega Fortune Jackpot
-				div
-					p Last updated - 
-						strong 2 days ago!
+						p Last updated - 
+							strong 2 days ago!
 		//- 
 		section.template-default-page
 			//- 
@@ -78,10 +78,10 @@ block content
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, exercitationem nulla debitis repudiandae suscipit id qui alias ipsum voluptatem unde.
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, exercitationem nulla debitis repudiandae suscipit id qui alias ipsum voluptatem unde.
 					p
-						a(href="#").btn.btn-primary primary
+						a(href="#casino-summary-popup").btn.btn-primary.lightbox-opener primary
 						a(href="#").btn.btn-primary.is-loading primary
 					p
-						a(href="#").btn.btn-secondary secondary
+						a(href="#default-popup").btn.btn-secondary.lightbox-opener secondary
 						a(href="#").btn.btn-secondary.is-loading secondary
 					p
 						a(href="#").btn.btn-secondary.invert secondary invert

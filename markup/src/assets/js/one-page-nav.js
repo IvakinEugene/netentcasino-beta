@@ -32,10 +32,12 @@ jQuery(function($) {
           collapsible: true,
           icons: false,
           heightStyle: 'content'
+
         });
     }
 
     initAnchors();
+
 });
 
 

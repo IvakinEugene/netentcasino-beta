@@ -3,24 +3,67 @@
 		button(type="button").mfp-close.icon-close
 	.popup-content
 		.popup-frame
-			form(action="#")
-				.icon-mail
-				h2 Don’t miss out on 600 Secret No Deposit Spins
-				p Subscribe to our newsletter to unlock 600 secret No Deposit Spins.
-				.form-content
-					.form-group
-						input(type="email", placeholder="Enter your email address")
-					.form-group
-						input(type="submit", value="Unlock Spins Now").btn.btn-primary
-			.privacy
-				ul.list-advantages
-					li
-						p All emails include an unsubscribe link. Please see our 
-							a(href="#") Privacy and Cookies Policy.
-					li
-						p By subscribing you are certifying that you are over 18 years of age.
-					li
-						p Due to regulations this offer is not valid for customers residing in Great Britain.'
+			.form-wrapper.custom-aweber-form
+				.form-holder
+					.fca_eoi_form_wrapper.fca_eoi_layout_postbox_wrapper.fca_eoi_layout_0_wrapper
+						#fca_eoi_form_23257.fca_eoi_form_content
+							form.fca_eoi_form.fca_eoi_layout_0.fca_eoi_layout_postbox(method='post', action='#', data-fca_eoi_list_id='3034192', data-fca_eoi_push_page='', data-fca_eoi_success_cookie_duration='365', data-fca_eoi_thank_you_page='Thank you! Please check your inbox for your confirmation email.', data-fca_eoi_thank_you_mode='ajax', data-fca_eoi_sub_msg='Subscribing...', novalidate='')
+								input#fca_eoi_form_id(name='fca_eoi_form_id', value='23257', type='hidden')
+								.fca_eoi_layout_content_wrapper
+									.fca_eoi_layout_headline_copy_wrapper.fca_eoi_form_text_element
+										div
+									.fca_eoi_layout_description_copy_wrapper.fca_eoi_form_text_element
+										div
+											.icon-mail
+											h2(style='text-align: center;') Don't miss out on 600 Secret No Deposit Spins
+											p(style='text-align: center;') Subscribe to our newsletter to unlock 600 secret No Deposit Spins.
+									.fca_eoi_layout_inputs_wrapper.fca_eoi_layout_inputs_wrapper
+										.fca_eoi_layout_email_field_wrapper.fca_eoi_layout_field_wrapper(data-fca-eoi-fieldset-id='email_field')
+											.fca_eoi_layout_email_field_inner.fca_eoi_layout_field_inner
+												input.fca_eoi_form_input_element(name='email', placeholder='Enter your email address', type='email')
+										.fca_eoi_layout_submit_button_wrapper
+											input.fca_eoi_form_button_element(value='UNLOCK SPINS NOW', type='submit')
+									.fca_eoi_layout_privacy_copy_wrapper.fca_eoi_form_text_element(data-fca-eoi-fieldset-id='privacy')
+										div
+											ul
+												li
+													| All emails include an unsubscribe link. Please see our 
+													a(href='#') Privacy and Cookies Policy.
+												li By subscribing you are certifying that you are over 18 years of age.
+												li
+													| Due to regulations this offer is not valid for customers residing in Great Britain.
+								input(name='fca_eoi', value='1', type='hidden')
+								input.fca_eoi_error_texts_email(name='fca_eoi_error_texts_email', value='Please enter a valid email address. For example "example@example.com".', type='hidden')
+								input.fca_eoi_error_texts_required(name='fca_eoi_error_texts_required', value='Please fill out this field to continue', type='hidden')
+				.thank-you-message(style='display: none;')
+					.holder
+						.icon-mail
+						h2 You Successfully Subscribed to Our Newsletter
+						p
+							| You can expect to hear from us regularly with the very best exclusive bonuses and NetEnt release updates & new game offers.
+						p
+							a.btn.btn-close.btn-dark.invert(href='#') Take me to mailbox
+
+			//- 
+				form(action="#")
+					.icon-mail
+					h2 Don’t miss out on 600 Secret No Deposit Spins
+					p Subscribe to our newsletter to unlock 600 secret No Deposit Spins.
+					.form-content
+						.form-group
+							input(type="email", placeholder="Enter your email address")
+						.form-group
+							input(type="submit", value="Unlock Spins Now").btn.btn-primary
+				.fca_eoi_layout_privacy_copy_wrapper.fca_eoi_form_text_element
+					div
+						ul
+							li
+								p All emails include an unsubscribe link. Please see our 
+									a(href="#") Privacy and Cookies Policy.
+							li
+								p By subscribing you are certifying that you are over 18 years of age.
+							li
+								p Due to regulations this offer is not valid for customers residing in Great Britain.'
 
 	//- 
 		.popup-footer

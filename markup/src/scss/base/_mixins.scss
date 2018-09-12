@@ -241,7 +241,7 @@ $animation-speed: .3s !default;
 
 @mixin placeholder {
   &::-webkit-input-placeholder {@content}
-  &::-moz-placeholder {opacity: 1; @content}
+  &::-moz-placeholder {opacity: 1 !important; @content}
   &:-moz-placeholder {@content}
   &:-ms-input-placeholder {@content}
   &.placeholder {@content}

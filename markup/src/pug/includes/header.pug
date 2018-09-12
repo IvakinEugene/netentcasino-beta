@@ -62,70 +62,76 @@ header#header(class= page_class)
 				.mobile-nav
 					.mobile-nav-holder
 						.mobile-nav-frame
-							.main-search-bar
-								form(action="#")
+							.mobile-search-menu
+								//- 
+									
+										span.icon-close-o x
+									.default-results
+										.top
+											div
+												.hideme
+													h2 Top Searches
+													ul.ui-autocomplete
+														li
+															a(href="#")
+																img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+																span.title
+																	| Betsson 
+																	span.category (Casino)
+														li
+															a(href="#")
+																img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+																span.title
+																	| Free Spins 
+																	span.category (Bonus)
+														li
+															a(href="#")
+																img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+																span.title
+																	| Bitcoin 
+																	span.category (Payment)
+														li
+															a(href="#")
+																img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+																span.title
+																	| New Casinos 
+																	span.category (Casinos)
+														li
+															a(href="#")
+																img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+																span.title
+																	| Betsson 
+																	span.category (Casino)
+														li
+															a(href="#")
+																img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+																span.title
+																	| Free Spins 
+																	span.category (Bonus)
+														li
+															a(href="#")
+																img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+																span.title
+																	| Bitcoin 
+																	span.category (Payment)
+														li
+															a(href="#")
+																img(src="http://via.placeholder.com/43/6daf0e/ffffff")
+																span.title
+																	| New Casinos 
+																	span.category (Casinos)
+										.bottom
+											a(href="#").btn.btn-secondary
+												| View all 
+												span.count 50
+												|  Results
+								a(href="#").btn.btn-search.mobile-search-opener
 									span.icon-search
-									input(type="text", placeholder="Search NetentCasinos", id="m-autocomplete")
-									span.icon-close-o x
-								.default-results
-									.top
-										div
-											.hideme
-												h2 Top Searches
-												ul.ui-autocomplete
-													li
-														a(href="#")
-															img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-															span.title
-																| Betsson 
-																span.category (Casino)
-													li
-														a(href="#")
-															img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-															span.title
-																| Free Spins 
-																span.category (Bonus)
-													li
-														a(href="#")
-															img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-															span.title
-																| Bitcoin 
-																span.category (Payment)
-													li
-														a(href="#")
-															img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-															span.title
-																| New Casinos 
-																span.category (Casinos)
-													li
-														a(href="#")
-															img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-															span.title
-																| Betsson 
-																span.category (Casino)
-													li
-														a(href="#")
-															img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-															span.title
-																| Free Spins 
-																span.category (Bonus)
-													li
-														a(href="#")
-															img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-															span.title
-																| Bitcoin 
-																span.category (Payment)
-													li
-														a(href="#")
-															img(src="http://via.placeholder.com/43/6daf0e/ffffff")
-															span.title
-																| New Casinos 
-																span.category (Casinos)
-									.bottom
-										a(href="#").btn.btn-secondary
-											| View all 
-											span.count 50
-											|  Results
+									| Search NetentCasinos
+								.results-holder
+									form(action="#")
+										span.icon-search
+										input(type="text", placeholder="Search NetentCasinos", id="m-autocomplete")
 							ul.nav
 								li.icon-casinos
 									a(href="#") New Casinos
@@ -136,7 +142,7 @@ header#header(class= page_class)
 									a(href="#") NetEnt Casinos
 								li.icon-money-bag
 									a(href="#") NetEnt Bonuses
-								li.icon-seven.current-menu-item
+								li.icon-seven.current-menu-item.hover
 									a(href="#") NetEnt Games
 									ul
 										li

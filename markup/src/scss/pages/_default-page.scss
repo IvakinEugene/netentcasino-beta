@@ -1,4 +1,8 @@
 .template-default-page{
+	.home .template-default-page + & {
+		background:$white;
+		box-shadow:0 -1px 0 $border-color-base inset, 0 -1px 0 $border-color-base;
+	}
 	.page-heading{
 		background:$white;
 		border-bottom: 1px solid $border-color-base;
@@ -58,6 +62,7 @@
 		.fluid-width-video-holder{
 			@include media(">=desktop") {
 				max-width: 75%;
+				margin:20px auto;
 			}
 		}
 	}

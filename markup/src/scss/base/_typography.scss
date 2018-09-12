@@ -77,6 +77,9 @@ h6, .h6 {
 
 p {
 	margin: 0 0 10px;
+	&:empty {
+		display:none;
+	}
 	strong{
 		font-weight:500;
 	}
@@ -213,6 +216,7 @@ ol{
 	}
 }
 
+.fca_eoi_layout_privacy_copy_wrapper ul,
 [class*="advant"]{
 	line-height:1.3571;
 	margin:0;
@@ -227,7 +231,7 @@ ol{
 		+ li{
 			margin-top: 10px;
 			@include media(">=tablet") {
-				margin-top: 12px;
+				margin-top: 14px;
 			}
 		}
 		&:before {

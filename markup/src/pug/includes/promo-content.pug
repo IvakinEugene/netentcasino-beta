@@ -1,26 +1,36 @@
-form(action="#")
-	.icon-mail
-	h2 Don’t miss out on 600 Secret No Deposit Spins
-	p Subscribe to our newsletter to unlock 600 secret No Deposit Spins.
-	.form-content
-		.form-group
-			input(type="email", placeholder="Enter your email address")
-		.form-group
-			input(type="submit", value="Unlock Spins Now").btn.btn-primary
-	.privacy
-		ul.list-advantages
-			li
-				p All emails include an unsubscribe link. Please see our 
-					a(href="#") Privacy and Cookies Policy.
-			li
-				p By subscribing you are certifying that you are over 18 years of age.
-			li
-				p Due to regulations this offer is not valid for customers residing in Great Britain.'
-//- 
-	.thank-you-message
-	p
-		img.alignnone.size-full.wp-image-344.aligncenter(src='http://netentcasnew-dev.catena.media/wp-content/uploads/2018/02/fa44494b58.jpg', alt='', width='95', height='67')
-	h3(style='text-align: center;') You successfully subscribed to our newsletter
-	p(style='text-align: center;') You can expect to hear from us regularly with the best exclusive bonuses and NetEnt release updates &amp; new game offers.
-	.close-btn-holder
-		a.btn.btn-close.btn-primary(href='#') Close
+.custom-aweber-form
+	.form-holder
+		.icon-mail
+		.fca_eoi_layout_content_wrapper
+			.fca_eoi_layout_headline_copy_wrapper.fca_eoi_form_text_element
+				div
+			.fca_eoi_layout_description_copy_wrapper.fca_eoi_form_text_element
+				div
+					h2 DON'T miss OUT ON 600 SECRET NO DEPOSIT SPINS
+					| Subscribe to our newsletter to unlock 600 secret No Deposit Spins.
+			.fca_eoi_layout_inputs_wrapper
+				.fca_eoi_layout_email_field_wrapper.fca_eoi_layout_field_wrapper(data-fca-eoi-fieldset-id='email_field')
+					.fca_eoi_layout_email_field_inner.fca_eoi_layout_field_inner
+						input.fca_eoi_form_input_element(name='email', placeholder='Enter your email address', type='email')
+				.fca_eoi_layout_submit_button_wrapper
+					input.fca_eoi_form_button_element(value='UNLOCK SPINS NOW', type='submit')
+				.fca_eoi_layout_privacy_copy_wrapper.fca_eoi_form_text_element(data-fca-eoi-fieldset-id='privacy')
+					div
+						ul
+							li All emails include an unsubscribe link. Please see our 
+								a(href='#') Privacy and Cookies Policy.
+							li By subscribing you are certifying that you are over 18 years of age.
+							li Due to regulations this offer is not valid for customers residing in Great Britain.
+		input(name='fca_eoi', value='1', type='hidden')
+		input.fca_eoi_error_texts_email(name='fca_eoi_error_texts_email', value='<strong>Invalid Email!</strong> Please enter a valid email address. For example "example@example.com".', type='hidden')
+		input.fca_eoi_error_texts_required(name='fca_eoi_error_texts_required', value='Please fill out this field to continue', type='hidden')
+	.thank-you-message(style='display: none;')
+		p
+			img.wp-image-506.aligncenter(src='http://netentcasnew-dev.catena.media/wp-content/uploads/2018/02/successful_newsletter_sub-300x219.png', alt='', width='108', height='79')
+		p
+			img.alignnone.wp-image-25599.aligncenter(src='http://netentcasnew-dev.catena.media/wp-content/uploads/2018/02/support-icon.png', alt='', width='93', height='59')
+		h3(style='text-align: center;') You Successfully Subscribed to Our Newsletter
+		p(style='text-align: center;')
+			| You can expect to hear from us regularly with the very best exclusive bonuses and NetEnt release updates & new game offers.
+		.button-holder
+			a.btn.btn-primary.btn-close(href='#') Close
