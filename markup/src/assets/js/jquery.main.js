@@ -18,7 +18,7 @@ jQuery(window).on('load', function(){
 	initRetinaCover();
 	initAddClasses();
 	initFitVids();
-	// initFocusClass();
+	initFocusClass();
 	initCustomAnchor();
 	initOpenClose();
 	initCustomFixed();
@@ -526,12 +526,6 @@ function initMobileNav() {
 		menuOpener: '.nav-opener',
 		hideOnClickOutside: true,
 		menuDrop: '.mobile-nav-frame'
-	});
-	jQuery('body').mobileNav({
-		menuActiveClass: 'search-active',
-		menuOpener: '.mobile-search-opener',
-		hideOnClickOutside: true,
-		menuDrop: '.results-holder > div'
 	});
 }
 
@@ -1154,9 +1148,9 @@ jQuery.fn.clickClass = function(opt) {
 				if (self.options.stayFocusOnFilled) {
 					self.container.toggleClass(self.options.focusClass, !!self.element.val().trim().length);
 				} else {
-					setTimeout(function(){
+					self.container.find('.icon-search').on('click', function(){
 						self.container.removeClass(self.options.focusClass);
-					}, 500)
+					});
 				}
 			};
 			this.blurHandler();
