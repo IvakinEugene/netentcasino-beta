@@ -84,6 +84,18 @@ button,
 				position:absolute;
 				top:50%;
 				width:$size;
+				z-index:10;
+			}
+			&:after {
+				background:$white;
+				bottom:0;
+				content: '';
+				left:0;
+				position:absolute;
+				right:0;
+				top:0;
+				width:100%;
+				z-index:5;
 			}
 		}
 	}
@@ -1021,11 +1033,13 @@ button,
 			    justify-content: center;
 			    align-content: center;
 			    align-items: center;
+			    padding:0 0 0 15px;
 			}
 		}
 		.btn{
 			@include media(">=tablet") {
 				font-size: 16px;
+				max-width: 220px;
 			}
 		}
 	}

@@ -2,8 +2,8 @@ extends pug/extends/master
 
 block content
 	//- 
-	- var page_class = "hide-bonus"
-	include pug/includes/header
+		- var page_class = "hide-bonus"
+		include pug/includes/header
 	#main.home
 		//- 
 		section.section-intro
@@ -36,24 +36,28 @@ block content
 										a(href="#").btn.btn-tc T&amp;C’s Apply
 					//- 
 					.search-box
-						div
-							a(href="#search-popup").btn.btn-search.lightbox-opener.icon-search Search 200+ Casinos &amp; Games
-						div
-							- var count = "329"
-							- var title = "Casino Reviews"
-							- var content = "For Your Convenience"
-							include pug/extends/button-counter
-						div
-							- var count = "204"
-							- var title = "Games"
-							- var content = "To Play for Free"
-							include pug/extends/button-counter
-						div
-							- var count = "3049"
-						
-							- var title = "News Articles"
-							- var content = "Ready to be Read"
-							include pug/extends/button-counter
+						.slogan
+							h1 Netent Casino
+							p At NetEnt Casino, we strive to be the number one fansite for all things NetEnt. You'll find the latest news and NetEnt slot demos here, plus information about new and trustworthy casinos who offer their games. Handpick a casino bonus from us, and enjoy the work of a multi-award-winning provider.
+						.content
+							div
+								a(href="#search-popup").btn.btn-search.lightbox-opener.icon-search Search 200+ Casinos &amp; Games
+							div
+								- var count = "329"
+								- var title = "Casino Reviews"
+								- var content = "For Your Convenience"
+								include pug/extends/button-counter
+							div
+								- var count = "204"
+								- var title = "Games"
+								- var content = "To Play for Free"
+								include pug/extends/button-counter
+							div
+								- var count = "3049"
+							
+								- var title = "News Articles"
+								- var content = "Ready to be Read"
+								include pug/extends/button-counter
 			// .bg-stretch(style="background-image:url('assets/images/banner-concept-1.jpg')")
 			.bg-image
 				- var image = "banner-concept-1"
@@ -62,7 +66,7 @@ block content
 		section.section-top-casinos
 			.holder
 				.section-heading
-					h1 New Casinos
+					h2 New Casinos
 					strong.subtitle Discover November’s latest Casinos
 				ul.grid.col-4
 					li
@@ -227,7 +231,7 @@ block content
 						| London, United Kingdom 
 						a(href="#")
 							strong Change Location
-					h1 Novembers’ Top Casino Offers
+					h2 Novembers’ Top Casino Offers
 					.offer-casino-box
 						.license-toplist
 							.toplist.template-promo
@@ -272,7 +276,7 @@ block content
 		section.section-games
 			.holder
 				.section-heading
-					h1 NetEnt Games &amp; Jackpots
+					h2 NetEnt Games &amp; Jackpots
 					strong.subtitle Most played Games &amp; Jackpots right now!
 				.games-slider.grid.col-3
 					div
@@ -474,13 +478,13 @@ block content
 			.subsection.boxes-holder
 				.holder
 					.section-heading
-						h1 NetEnt Bonuses
+						h2 NetEnt Bonuses
 						strong.subtitle Start playing with more today!
 					ul.grid.sh-holder
 						li
 							.bonus-box
 								.heading.sh-column
-									h2 Welcome Bonus
+									h3 Welcome Bonus
 									p Virtually all Netent Casinos offer new players an attractive welcome bonus so they can explore the casino in an advantageous manner.
 								.content
 									ul.toplist.template-bonuses-short
@@ -553,7 +557,7 @@ block content
 						li
 							.bonus-box
 								.heading.sh-column
-									h2 No Deposit Bonus
+									h3 No Deposit Bonus
 									p Check out all Netent Casinos that grant their players a bonus or Free Spins without a deposit has to be made first.  
 								.content
 									ul.toplist.template-bonuses-short 
@@ -627,7 +631,7 @@ block content
 						li
 							.bonus-box
 								.heading.sh-column
-									h2 Free Spins Bonus
+									h3 Free Spins Bonus
 									p Free Spins are popular casino bonuses and many Netent Casinos treat their players on profitable Netent Free Spin promotions. 
 								.content
 									ul.toplist.template-bonuses-short 
@@ -702,7 +706,7 @@ block content
 		//- 
 			section.section-bonus-calc
 			.holder
-				h1 Bonus Calculator
+				h2 Bonus Calculator
 				p Enter your preferred deposit amount &amp; view how much money &amp; free spins you get from a bonus.
 				form(action="#")
 					.form-group
@@ -715,7 +719,7 @@ block content
 			.subsection.boxes-holder
 				.holder
 					.section-heading
-						h1 Payments
+						h2 Payments
 						strong.subtitle Payment methods available on Casinos!
 					ul.grid.col-3
 						li

@@ -1520,6 +1520,9 @@
 	line-height:1.25;
 	> .heading{
 		padding:33px $gutter-width;
+		@include media("<tablet") {
+			min-height: 0 !important;
+		}
 		p{
 			margin:0;
 		}
@@ -1563,6 +1566,11 @@
 			padding:0;
 			&:before {
 				display:none;
+			}
+			.single{
+				@include media("<tablet") {
+					min-height: 0 !important;
+				}
 			}
 		}
 	}
