@@ -3,6 +3,43 @@
 		background:$white;
 		box-shadow:0 -1px 0 $border-color-base inset, 0 -1px 0 $border-color-base;
 	}
+	&.lost-results {
+		color:$add-text-color;
+		line-height:1.5;
+		.frame{
+			max-width: 550px;
+		}
+		h1{
+			@include media(">=tablet") {
+				font-size:36px;
+				font-weight:bold;
+				line-height:1.2222;
+				margin:8px 0 14px;
+				text-transform:none;
+			}
+		}
+		h2{
+			@include media(">=tablet") {
+				color:$base-gray;
+				font-size: 18px;
+				font-weight:500;
+				margin:0 0 10px;
+				text-transform:uppercase;
+			}
+		}
+		p{
+			margin:0 0 18px;
+			max-width: 450px;
+		}
+		.btn{
+			@include media(">=desktop") {
+				margin:0 0 27px;
+				min-width: 300px;
+				padding-top: 11px;
+				padding-bottom: 12px;
+			}
+		}
+	}
 	.page-heading{
 		background:$white;
 		border-bottom: 1px solid $border-color-base;
