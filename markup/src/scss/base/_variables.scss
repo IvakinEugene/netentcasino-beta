@@ -23,10 +23,12 @@ $base-font-sans-serif:			'brother-1816', 'Arial', 'Helvetica Neue', 'Helvetica',
 $base-font-serif:				'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Body
-$base-text-color:				#8c8e96;
+$base-text-color:				$add-text-color;
 $base-background-color:			#383a3a;
-$font-size-base:				16px;
-$line-height-base:				1.75;
+// $font-size-base:				16px;
+$font-size-base:				14px;
+// $line-height-base:				1.75;
+$line-height-base:				1.5;
 $base-font-family:				$base-font-sans-serif !default;
 
 $vertical-rhythm:				($line-height-base * 1em);
@@ -41,13 +43,13 @@ $btn-primary-background:		$theme-color-base;
 $btn-primary-border:			$theme-color-base;
 $btn-primary-color:				$white;
 $btn-secondary-background:		transparent;
-$btn-secondary-border:			$base-text-color;
-$btn-secondary-color:			$base-text-color;
+$btn-secondary-border:			$add-text-color;
+$btn-secondary-color:			$add-text-color;
 $btn-link-background:			transparent;
 $btn-link-border:				transparent;
-$btn-link-color:				$base-text-color;
-$btn-dark-background:			$base-text-color;
-$btn-dark-border:				$base-text-color;
+$btn-link-color:				$add-text-color;
+$btn-dark-background:			$add-text-color;
+$btn-dark-border:				$add-text-color;
 $btn-dark-color:				$white;
 $btn-font-size:					16px;
 $btn-padding:					6px 10px 7px;

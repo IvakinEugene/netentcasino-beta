@@ -6,21 +6,93 @@ block content
 		include pug/includes/header
 	#main.home
 		//- 
-		section.section-intro
-			.holder
-				.content
-					.offer-casino-box
-						.template-promo
-							.casino
+			section.section-intro
+				.holder
+					.content
+						.offer-casino-box
+							.template-promo
+								.casino
+									.heading
+										.left
+											.logo-holder
+												a(href="#")
+													img(src="http://via.placeholder.com/50x50/ff6600/ffffff")
+											.txt
+												h2
+													a(href="#") PokerStars
+										.right
+											.stars
+												span.icon-star
+												span.icon-star
+												span.icon-star
+												span.icon-star-half-empty
+												span.icon-star-o
+									.content
+										h3 £150 + 50 Free Spins
+										p 50% up to £100 + 50 Free Spins
+										.btn-holder
+											a(href="#").btn.btn-secondary Casino Review
+											a(href="#").btn.btn-primary Get Bonus
+											a(href="#").btn.btn-tc T&amp;C’s Apply
+						//- 
+						.search-box
+							.slogan
+								h1 Netent Casino
+								p At NetEnt Casino, we strive to be the number one fansite for all things NetEnt. You'll find the latest news and NetEnt slot demos here, plus information about new and trustworthy casinos who offer their games. Handpick a casino bonus from us, and enjoy the work of a multi-award-winning provider.
+							.content
+								div
+									a(href="#search-popup").btn.btn-search.lightbox-opener.icon-search Search 200+ Casinos &amp; Games
+								div
+									- var count = "329"
+									- var title = "Casino Reviews"
+									- var content = "For Your Convenience"
+									include pug/extends/button-counter
+								div
+									- var count = "204"
+									- var title = "Games"
+									- var content = "To Play for Free"
+									include pug/extends/button-counter
+								div
+									- var count = "3049"
+								
+									- var title = "News Articles"
+									- var content = "Ready to be Read"
+									include pug/extends/button-counter
+				// .bg-stretch(style="background-image:url('assets/images/banner-concept-1.jpg')")
+				.bg-image
+					- var image = "banner-concept-1"
+					include pug/extends/retina-single
+		//- 
+			section.section-top-casinos
+				.holder
+					.section-heading
+						h2 New Casinos
+						strong.subtitle Discover November’s latest Casinos
+					ul.grid.col-4
+						li
+							.casino-box-title.short
 								.heading
 									.left
 										.logo-holder
 											a(href="#")
-												img(src="http://via.placeholder.com/50x50/ff6600/ffffff")
+												img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
 										.txt
 											h2
-												a(href="#") PokerStars
+												a(href="#") LadyLucks
+											.stars
+												span.icon-star
+												span.icon-star
+												span.icon-star
+												span.icon-star-half-empty
+												span.icon-star-o
+											span.note
+												| Launched 
+												br
+												| 2 days ago!
 									.right
+										span.rate
+											strong 4
+											span /5
 										.stars
 											span.icon-star
 											span.icon-star
@@ -28,201 +100,129 @@ block content
 											span.icon-star-half-empty
 											span.icon-star-o
 								.content
-									h3 £150 + 50 Free Spins
-									p 50% up to £100 + 50 Free Spins
-									.btn-holder
-										a(href="#").btn.btn-secondary Casino Review
-										a(href="#").btn.btn-primary Get Bonus
-										a(href="#").btn.btn-tc T&amp;C’s Apply
-					//- 
-					.search-box
-						.slogan
-							h1 Netent Casino
-							p At NetEnt Casino, we strive to be the number one fansite for all things NetEnt. You'll find the latest news and NetEnt slot demos here, plus information about new and trustworthy casinos who offer their games. Handpick a casino bonus from us, and enjoy the work of a multi-award-winning provider.
-						.content
-							div
-								a(href="#search-popup").btn.btn-search.lightbox-opener.icon-search Search 200+ Casinos &amp; Games
-							div
-								- var count = "329"
-								- var title = "Casino Reviews"
-								- var content = "For Your Convenience"
-								include pug/extends/button-counter
-							div
-								- var count = "204"
-								- var title = "Games"
-								- var content = "To Play for Free"
-								include pug/extends/button-counter
-							div
-								- var count = "3049"
-							
-								- var title = "News Articles"
-								- var content = "Ready to be Read"
-								include pug/extends/button-counter
-			// .bg-stretch(style="background-image:url('assets/images/banner-concept-1.jpg')")
-			.bg-image
-				- var image = "banner-concept-1"
-				include pug/extends/retina-single
-		//- 
-		section.section-top-casinos
-			.holder
-				.section-heading
-					h2 New Casinos
-					strong.subtitle Discover November’s latest Casinos
-				ul.grid.col-4
-					li
-						.casino-box-title.short
-							.heading
-								.left
-									.logo-holder
-										a(href="#")
-											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") LadyLucks
+									.content-frame
+										h3 &pound;1000 + 20 Free Spins
+										p 100% up to &pound;500 + 20 Free Spins
+									.button-holder
+										.button-frame
+											a(href="#").btn.btn-primary Go to Casino
+											a(href="#").btn.btn-tc T&amp;C’s Apply
+						li
+							.casino-box-title.short
+								.heading
+									.left
+										.logo-holder
+											a(href="#")
+												img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+										.txt
+											h2
+												a(href="#") LadyLucks
+											.stars
+												span.icon-star
+												span.icon-star
+												span.icon-star
+												span.icon-star-half-empty
+												span.icon-star-o
+											span.note
+												| Launched 
+												br
+												| 2 days ago!
+									.right
+										span.rate
+											strong 4
+											span /5
 										.stars
 											span.icon-star
 											span.icon-star
 											span.icon-star
 											span.icon-star-half-empty
 											span.icon-star-o
-										span.note
-											| Launched 
-											br
-											| 2 days ago!
-								.right
-									span.rate
-										strong 4
-										span /5
-									.stars
-										span.icon-star
-										span.icon-star
-										span.icon-star
-										span.icon-star-half-empty
-										span.icon-star-o
-							.content
-								.content-frame
-									h3 &pound;1000 + 20 Free Spins
-									p 100% up to &pound;500 + 20 Free Spins
-								.button-holder
-									.button-frame
-										a(href="#").btn.btn-primary Go to Casino
-										a(href="#").btn.btn-tc T&amp;C’s Apply
-					li
-						.casino-box-title.short
-							.heading
-								.left
-									.logo-holder
-										a(href="#")
-											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") LadyLucks
+								.content
+									.content-frame
+										h3 &pound;150 + 50 Free Spins
+										p 50% up to &pound;100 + 50 Free Spins
+									.button-holder
+										.button-frame
+											a(href="#").btn.btn-primary Go to Casino
+											a(href="#").btn.btn-tc T&amp;C’s Apply
+						li
+							.casino-box-title.short
+								.heading
+									.left
+										.logo-holder
+											a(href="#")
+												img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+										.txt
+											h2
+												a(href="#") HighRoller
+											.stars
+												span.icon-star
+												span.icon-star
+												span.icon-star
+												span.icon-star-half-empty
+												span.icon-star-o
+											span.note
+												| Launched 
+												br
+												| 2 days ago!
+									.right
+										span.rate
+											strong 4
+											span /5
 										.stars
 											span.icon-star
 											span.icon-star
 											span.icon-star
 											span.icon-star-half-empty
 											span.icon-star-o
-										span.note
-											| Launched 
-											br
-											| 2 days ago!
-								.right
-									span.rate
-										strong 4
-										span /5
-									.stars
-										span.icon-star
-										span.icon-star
-										span.icon-star
-										span.icon-star-half-empty
-										span.icon-star-o
-							.content
-								.content-frame
-									h3 &pound;150 + 50 Free Spins
-									p 50% up to &pound;100 + 50 Free Spins
-								.button-holder
-									.button-frame
-										a(href="#").btn.btn-primary Go to Casino
-										a(href="#").btn.btn-tc T&amp;C’s Apply
-					li
-						.casino-box-title.short
-							.heading
-								.left
-									.logo-holder
-										a(href="#")
-											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") HighRoller
+								.content
+									.content-frame
+										h3 &pound;1000 + 20 Free Spins
+										p 100% up to &pound;500 + 20 Free Spins
+									.button-holder
+										.button-frame
+											a(href="#").btn.btn-primary Go to Casino
+											a(href="#").btn.btn-tc T&amp;C’s Apply
+						li
+							.casino-box-title.short
+								.heading
+									.left
+										.logo-holder
+											a(href="#")
+												img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+										.txt
+											h2
+												a(href="#") Casimba
+											.stars
+												span.icon-star
+												span.icon-star
+												span.icon-star
+												span.icon-star-half-empty
+												span.icon-star-o
+											span.note
+												| Launched 
+												br
+												| 2 days ago!
+									.right
+										span.rate
+											strong 4
+											span /5
 										.stars
 											span.icon-star
 											span.icon-star
 											span.icon-star
 											span.icon-star-half-empty
 											span.icon-star-o
-										span.note
-											| Launched 
-											br
-											| 2 days ago!
-								.right
-									span.rate
-										strong 4
-										span /5
-									.stars
-										span.icon-star
-										span.icon-star
-										span.icon-star
-										span.icon-star-half-empty
-										span.icon-star-o
-							.content
-								.content-frame
-									h3 &pound;1000 + 20 Free Spins
-									p 100% up to &pound;500 + 20 Free Spins
-								.button-holder
-									.button-frame
-										a(href="#").btn.btn-primary Go to Casino
-										a(href="#").btn.btn-tc T&amp;C’s Apply
-					li
-						.casino-box-title.short
-							.heading
-								.left
-									.logo-holder
-										a(href="#")
-											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
-									.txt
-										h2
-											a(href="#") Casimba
-										.stars
-											span.icon-star
-											span.icon-star
-											span.icon-star
-											span.icon-star-half-empty
-											span.icon-star-o
-										span.note
-											| Launched 
-											br
-											| 2 days ago!
-								.right
-									span.rate
-										strong 4
-										span /5
-									.stars
-										span.icon-star
-										span.icon-star
-										span.icon-star
-										span.icon-star-half-empty
-										span.icon-star-o
-							.content
-								.content-frame
-									h3 &pound;150 + 50 Free Spins
-									p 50% up to &pound;100 + 50 Free Spins
-								.button-holder
-									.button-frame
-										a(href="#").btn.btn-primary Go to Casino
-										a(href="#").btn.btn-tc T&amp;C’s Apply
-				.load-more.text-center
-					a(href="#").btn.btn-secondary View More New Casinos
+								.content
+									.content-frame
+										h3 &pound;150 + 50 Free Spins
+										p 50% up to &pound;100 + 50 Free Spins
+									.button-holder
+										.button-frame
+											a(href="#").btn.btn-primary Go to Casino
+											a(href="#").btn.btn-tc T&amp;C’s Apply
+					.load-more.text-center
+						a(href="#").btn.btn-secondary View More New Casinos
 		//- 
 		section.section-top-offer
 			.holder
@@ -272,6 +272,9 @@ block content
 							a(href="#").btn.btn-link View all top casino offers
 					.text-center.load-more
 						a(href="#").btn.btn-secondary View all top casino offers
+			.bg-image
+				- var image = "banner-concept-4"
+				include pug/extends/retina-single
 		//- 
 		section.section-games
 			.holder
@@ -280,7 +283,7 @@ block content
 					strong.subtitle Most played Games &amp; Jackpots right now!
 				.games-slider.grid.col-3
 					div
-						.game-box
+						.game-box.same-height-r
 							.media-holder
 								a(href="#", style="background-image:url('http://via.placeholder.com/562x280/ff0000/ffffff')").bg-cover
 									span.hover-box
@@ -291,14 +294,14 @@ block content
 								strong.media-title Mega Fortune
 							ul.games-list.toplist.template-jackpot-short
 								li
-									.game
+									.game.same-row
 										.heading
 											.logo-holder
 												a(href="#")
 													img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
 											.txt
 												h2
-													a(href="#") Betsson
+													a(href="#") Betsson Betsson Betsson
 												.stars
 													span.icon-star
 													span.icon-star
@@ -306,10 +309,10 @@ block content
 													span.icon-star-half-empty
 													span.icon-star-o
 										.content
-											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-primary Play Games
 											a(href="#").btn.btn-tc T&amp;C’s Apply
 								li
-									.game
+									.game.same-row
 										.heading
 											.logo-holder
 												a(href="#")
@@ -319,11 +322,11 @@ block content
 													a(href="#") Thrills
 												em.note Released 2 Days ago
 										.content
-											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-primary Play Games
 											a(href="#").btn.btn-tc T&amp;C’s Apply
 								//- 
 								li
-									.game
+									.game.same-row
 										.heading
 											.logo-holder
 												a(href="#")
@@ -338,13 +341,13 @@ block content
 													span.icon-star-half-empty
 													span.icon-star-o
 										.content
-											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-primary Play Games
 											a(href="#").btn.btn-tc T&amp;C’s Apply
 							//- 
 							.footer
 								a(href="#").btn.btn-link View all 314 Casinos
 					div
-						.game-box
+						.game-box.same-height-r
 							.media-holder
 								a(href="#", style="background-image:url('http://via.placeholder.com/562x280/ff0000/ffffff')").bg-cover
 									span.hover-box
@@ -355,7 +358,7 @@ block content
 								strong.media-title Mega Fortune
 							ul.games-list.toplist.template-jackpot-short
 								li
-									.game
+									.game.same-row
 										.heading
 											.logo-holder
 												a(href="#")
@@ -370,10 +373,10 @@ block content
 													span.icon-star-half-empty
 													span.icon-star-o
 										.content
-											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-primary Play Games
 											a(href="#").btn.btn-tc T&amp;C’s Apply
 								li
-									.game
+									.game.same-row
 										.heading
 											.logo-holder
 												a(href="#")
@@ -383,10 +386,10 @@ block content
 													a(href="#") Thrills
 												em.note Released 2 Days ago
 										.content
-											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-primary Play Games
 											a(href="#").btn.btn-tc T&amp;C’s Apply
 								li
-									.game
+									.game.same-row
 										.heading
 											.logo-holder
 												a(href="#")
@@ -401,13 +404,13 @@ block content
 													span.icon-star-half-empty
 													span.icon-star-o
 										.content
-											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-primary Play Games
 											a(href="#").btn.btn-tc T&amp;C’s Apply
 							//- 
 								.footer
 									a(href="#").btn.btn-link View all 314 Casinos
 					div
-						.game-box
+						.game-box.same-height-r
 							.media-holder
 								a(href="#", style="background-image:url('http://via.placeholder.com/562x280/ff0000/ffffff')").bg-cover
 									span.hover-box
@@ -418,7 +421,7 @@ block content
 								strong.media-title Mega Fortune Dreams
 							ul.games-list.toplist.template-jackpot-short
 								li
-									.game
+									.game.same-row
 										.heading
 											.logo-holder
 												a(href="#")
@@ -433,9 +436,9 @@ block content
 													span.icon-star-half-empty
 													span.icon-star-o
 										.content
-											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-primary Play Games
 								li
-									.game
+									.game.same-row
 										.heading
 											.logo-holder
 												a(href="#")
@@ -450,9 +453,9 @@ block content
 													span.icon-star-half-empty
 													span.icon-star-o
 										.content
-											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-primary Play Games
 								li
-									.game
+									.game.same-row
 										.heading
 											.logo-holder
 												a(href="#")
@@ -467,7 +470,7 @@ block content
 													span.icon-star-half-empty
 													span.icon-star-o
 										.content
-											a(href="#").btn.btn-primary Play Game
+											a(href="#").btn.btn-primary Play Games
 							//- 
 								.footer
 									a(href="#").btn.btn-link View all 135 Casinos
@@ -482,14 +485,14 @@ block content
 						strong.subtitle Start playing with more today!
 					ul.grid.sh-holder
 						li
-							.bonus-box
+							.bonus-box.same-height-r
 								.heading.sh-column
 									h3 Welcome Bonus
 									p Virtually all Netent Casinos offer new players an attractive welcome bonus so they can explore the casino in an advantageous manner.
 								.content
 									ul.toplist.template-bonuses-short
 										li
-											.single
+											.single.same-row
 												.heading
 													.logo-holder
 														a(href="#casino-summary-popup").ligntbox-opener
@@ -511,7 +514,7 @@ block content
 														a(href="#").btn.btn-primary Go to Betsson
 														a(href="#").btn.btn-tc T&amp;C’s Apply
 										li
-											.single
+											.single.same-row
 												.heading
 													.logo-holder
 														a(href="#casino-summary-popup").ligntbox-opener
@@ -532,7 +535,7 @@ block content
 													.button-holder
 														a(href="#").btn.btn-primary Go to Unibet
 										li
-											.single
+											.single.same-row
 												.heading
 													.logo-holder
 														a(href="#casino-summary-popup").ligntbox-opener
@@ -555,14 +558,14 @@ block content
 								.footer
 									a(href="#").btn.btn-secondary View all 314 Casinos
 						li
-							.bonus-box
+							.bonus-box.same-height-r
 								.heading.sh-column
 									h3 No Deposit Bonus
 									p Check out all Netent Casinos that grant their players a bonus or Free Spins without a deposit has to be made first.  
 								.content
 									ul.toplist.template-bonuses-short 
 										li
-											.single
+											.single.same-row
 												.heading
 													.logo-holder
 														a(href="#casino-summary-popup").ligntbox-opener
@@ -584,7 +587,7 @@ block content
 													.button-holder
 														a(href="#").btn.btn-primary Go to LadyLucks
 										li
-											.single
+											.single.same-row
 												.heading
 													.logo-holder
 														a(href="#casino-summary-popup").ligntbox-opener
@@ -605,7 +608,7 @@ block content
 													.button-holder
 														a(href="#").btn.btn-primary Go to WildSlots
 										li
-											.single
+											.single.same-row
 												.heading
 													.logo-holder
 														a(href="#casino-summary-popup").ligntbox-opener
@@ -629,14 +632,14 @@ block content
 								.footer
 									a(href="#").btn.btn-secondary View all 9 Casinos
 						li
-							.bonus-box
+							.bonus-box.same-height-r
 								.heading.sh-column
 									h3 Free Spins Bonus
 									p Free Spins are popular casino bonuses and many Netent Casinos treat their players on profitable Netent Free Spin promotions. 
 								.content
 									ul.toplist.template-bonuses-short 
 										li
-											.single
+											.single.same-row
 												.heading
 													.logo-holder
 														a(href="#")
@@ -657,7 +660,7 @@ block content
 													.button-holder
 														a(href="#").btn.btn-primary Go to Betsson
 										li
-											.single
+											.single.same-row
 												.heading
 													.logo-holder
 														a(href="#")
@@ -679,7 +682,7 @@ block content
 														a(href="#").btn.btn-primary Go to Unibet
 										//- 
 											li
-												.single
+												.single.same-row
 													.heading
 														.logo-holder
 															a(href="#")

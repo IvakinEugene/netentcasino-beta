@@ -48,27 +48,39 @@ jQuery(window).on('load', function(){
 
 // same height for rows in casino boxes
 function initSameHeightRows() {
-	var holder = jQuery('.grid'),
-		boxes = parent.find('.bonus-box'),
-		itemSelector = '.single',
-		items = [0],
-		// maxItemsNumber = null,
+	var holders = jQuery('.grid'),
 		maxHeight = 0;
 
-	for (var i = 0; i < boxes.length; i++) {
-		items[i] = jQuery(boxes[i]).find(itemSelector);
-	}
-
-	calculate();
-
+	init();
+	
 	jQuery(window).on('resize orientationchange', function(){
-		calculate();
+		if ((jQuery(window).width() >= 768) && (jQuery(window).width() <= 1420)) {
+			init();
+		}
 	});
 
-	function calculate() {
+	function init(){
+		holders.each(function(){
+			var current = jQuery(this),
+				boxes = current.find('.same-height-r'),
+				itemSelector = '.same-row',
+				items = [0];
+
+				maxHeight = 0;
+
+				for (var i = 0; i < boxes.length; i++) {
+					items[i] = jQuery(boxes[i]).find(itemSelector);
+				}
+
+				calculate(boxes, items);
+		});
+	}
+
+	function calculate(boxes, items) {
 		for (var i = 0; i < 3; i++) {
 			for (var j = 0; j < boxes.length; j++) {
 				if (jQuery(items[j][i]).outerHeight() > maxHeight) {
+					jQuery(items[j][i]).css('min-height', '0')
 					maxHeight = jQuery(items[j][i]).outerHeight();
 				}
 			}
@@ -324,7 +336,7 @@ function initMagnificPopup() {
 				// 	})
 				// }
 				this.content.find('.btn-close').on('click',function(e){
-					if (!jQuery(this.content).closest('[id=*casino-summ]')) {
+					if (jQuery(this.content).closest('[id=*casino-summ]').length === 0) {
 						e.preventDefault();
 						$.magnificPopup.close();
 					}
@@ -486,6 +498,12 @@ function initStickyScrollBlock() {
 			if ((jQuery('#wpadminbar').length) && (jQuery(window).width() > 600)) {
 				totalHeight += jQuery('#wpadminbar').outerHeight();
 			}
+
+			jQuery(window).on('scroll resize', function(){
+				if (jQuery('.header-bonus-box').is(':visible')) {
+					totalHeight += jQuery('.header-bonus-box').outerHeight();
+				}
+			});
 
 			return totalHeight;
 		}

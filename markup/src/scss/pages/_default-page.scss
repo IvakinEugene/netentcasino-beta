@@ -3,19 +3,25 @@
 		background:$white;
 		box-shadow:0 -1px 0 $border-color-base inset, 0 -1px 0 $border-color-base;
 	}
-	&.lost-results {
+	&.results {
 		color:$add-text-color;
 		line-height:1.5;
 		.frame{
 			max-width: 550px;
 		}
 		h1{
+			margin:0 0 25px;
 			@include media(">=tablet") {
 				font-size:36px;
 				font-weight:bold;
 				line-height:1.2222;
 				margin:8px 0 14px;
 				text-transform:none;
+			}
+			+ .results-list {
+				@include media(">=tablet") {
+					margin:11px 0 0;
+				}
 			}
 		}
 		h2{
@@ -46,6 +52,9 @@
 		padding: 23px 0 19px;
 		overflow:hidden;
 		@include media(">=desktop") {
+			color:$base-gray;
+			font-size:16px;
+			line-height:1.75;
 			padding:31px 0 36px;
 		}
 		> .holder{

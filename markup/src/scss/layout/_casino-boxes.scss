@@ -160,6 +160,7 @@
 	.games-list{
 		margin:0 0 -1px;
 		&.grid {
+			padding:0;
 			@include media(">=tablet") {
 				display:block;
 				padding:0;
@@ -212,7 +213,7 @@
     	min-height: 84px;
 		// padding:14px 15px 17px;
 		padding:14px 10px 17px;
-		@include media(">=phone") {
+		@include media(">=widescreen") {
 			padding:21px 30px 20px;
 		}
 		.heading{
@@ -256,6 +257,7 @@
 			}
 		}
 		.stars{
+			text-align:left;
 			@include media(">=desktop") {
 				font-size: 13px;
 				margin-left: -4px;
@@ -289,9 +291,14 @@
 			padding-bottom: 6px;
 			@include media(">=tablet") {
 				font-size: 16px;
-				min-width: 160px;
+				min-width: 130px;
 				padding-top: 6px;
 				padding-bottom: 7px;
+			}
+			@include media(">=desktop") {
+			}
+			@include media(">=widescreen") {
+				min-width: 160px;
 			}
 		}
 	}
@@ -1567,11 +1574,6 @@
 			&:before {
 				display:none;
 			}
-			.single{
-				@include media("<tablet") {
-					min-height: 0 !important;
-				}
-			}
 		}
 	}
 }
@@ -1926,4 +1928,12 @@
 	// 		margin-top: 10px;
 	// 	}
 	// }
+}
+
+.same-height-r{
+	.same-row:not([class*="game"]){
+		@include media("<tablet") {
+			min-height: 0 !important;
+		}
+	}
 }

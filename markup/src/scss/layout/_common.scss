@@ -50,6 +50,9 @@
 #wrapper{
 	background:$bg-content;
 	overflow:hidden;
+	.nav-active & {
+		overflow:visible;
+	}
 	// max-width: 320px;
 	// @include media(">=375px") {
 	// 	max-width: 375px;
@@ -1390,8 +1393,13 @@ section{
 	// background: linear-gradient(180deg, rgba(255,102,0,0.6) 0%, #FF6600 100%);
 	background: #f60;
 	padding:26px 0 11px;
+	position:relative;
 	@include media(">=tablet") {
 		padding:37px 0 20px;
+	}
+	> .holder{
+		position:relative;
+		z-index:5;
 	}
 	.location{
 		margin:0 0 1px;
@@ -1424,7 +1432,10 @@ section{
 			}
 		}
 	}
-	h1{
+	h2{
+		font-size: 24px;
+		font-weight:500;
+		line-height:1.1667;
 		margin:0 0 20px;
 		text-transform:none;
 		@include media(">=tablet") {
@@ -1447,14 +1458,15 @@ section{
 		@include media(">=tablet") {
 			display:none;
 		}
-		.btn{
-			border-color: $white;
-			color:$white;
-			&:hover {
-				background:$btn-primary-background;
-				border-color: $btn-primary-border;
-				color:$btn-primary-color;
-			}
-		}
+		// .btn{
+		// 	border-color: $white;
+		// 	color:$white;
+		// 	&:hover {
+		// 		background:$btn-primary-background;
+		// 		border-color: $btn-primary-border;
+		// 		color:$btn-primary-color;
+		// 	}
+		// }
 	}
+
 }

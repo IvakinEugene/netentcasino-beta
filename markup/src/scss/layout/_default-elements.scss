@@ -64,7 +64,7 @@
 }
 
 .offer-sticker{
-	// background:$theme-color-add;
+	color:$add-text-color;
 	display:block;
 	font-size: 13px;
 	font-weight:200;
@@ -713,9 +713,6 @@
 				height:120px;
 				text-align:center;
 				// min-width:205px;
-				&:hover {
-					box-shadow: 0 0 10px $shadow;
-				}
 			}
 			&[href^="mailto"],
 			&[href^="tel"] {
@@ -725,10 +722,46 @@
 				}
 			}
 		}
+		> a{
+			@include media(">=tablet") {
+				&:hover {
+					box-shadow: 0 0 10px $shadow;
+				}
+			}
+		}
+		> span{
+			@include media(">=tablet") {
+				&:hover {
+					cursor:default;
+				}
+			}
+		}
 	}
-	[class*="icon-"]{
-		color:$theme-color-base;
-		font-size: 30px;
+	// [class*="icon-"]{
+	// 	color:$theme-color-base;
+	// 	font-size: 30px;
+	// 	left:11px;
+	// 	position:absolute;
+	// 	text-align:center;
+	// 	top:50%;
+	// 	transform:translateY(-50%);
+	// 	width:50px;
+	// 	@include media(">=tablet") {
+	// 		// display:block;
+	// 		// font-size: 50px;
+	// 		// left: auto;
+	// 		// margin:0 0 10px;
+	// 		// position:relative;
+	// 		// top: auto;
+	// 		// transform:none;
+	// 		// width:auto;
+	// 		display:none;
+	// 	}
+	// }
+	// [class*="phone"]{
+	// 	font-size: 24px;
+	// }
+	.icon-holder{
 		left:11px;
 		position:absolute;
 		text-align:center;
@@ -736,26 +769,19 @@
 		transform:translateY(-50%);
 		width:50px;
 		@include media(">=tablet") {
-			// display:block;
-			// font-size: 50px;
-			// left: auto;
-			// margin:0 0 10px;
-			// position:relative;
-			// top: auto;
-			// transform:none;
-			// width:auto;
-			display:none;
-		}
-	}
-	[class*="phone"]{
-		font-size: 24px;
-	}
-	img.icon{
-		display:none;
-		@include media(">=tablet") {
 			display:block;
-			margin:0 -12px 10px 0;
-			// width:72px;
+			margin:0 0 10px;
+			position:static;
+			transform:none;
+			width:100%;
+		}
+		img{
+			@include media("<tablet") {
+				width:34px;
+			}
+			@include media(">=tablet") {
+				margin:0 -12px 0 0;
+			}
 		}
 	}
 	.content{
@@ -1517,7 +1543,10 @@ table{
 	}
 }
 
-// .cc-window.cc-banner.cc-bottom{
+.cc-window.cc-banner.cc-bottom{
+	.cc-btn.cc-dismiss {
+		text-decoration: none;
+	}
 // 	font:inherit;
 // 	min-width: $base-min-width;
 // 	padding:10px $gutter-width 15px;
@@ -1540,4 +1569,4 @@ table{
 // 		opacity:1;
 // 		padding:0;
 // 	}
-// }
+}
