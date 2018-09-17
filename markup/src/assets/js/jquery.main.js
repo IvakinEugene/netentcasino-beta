@@ -499,12 +499,6 @@ function initStickyScrollBlock() {
 				totalHeight += jQuery('#wpadminbar').outerHeight();
 			}
 
-			jQuery(window).on('scroll resize', function(){
-				if (jQuery('.header-bonus-box').is(':visible')) {
-					totalHeight += jQuery('.header-bonus-box').outerHeight();
-				}
-			});
-
 			return totalHeight;
 		}
 	});

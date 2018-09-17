@@ -54,6 +54,7 @@
 		@include media(">=desktop") {
 			color:$base-gray;
 			font-size:16px;
+			font-weight:300;
 			line-height:1.75;
 			padding:31px 0 36px;
 		}

@@ -1567,6 +1567,9 @@
 			.single{
 				border: 0;
 			}
+			h3{
+				text-transform:none;
+			}
 		}
 		> li{
 			border-bottom: 1px solid $border-color-base;
