@@ -185,7 +185,7 @@
 	align-items: stretch;
 	height:59px;
 	left:0;
-	padding:5px 55px;
+	padding:5px 65px;
 	position:absolute;
 	text-align:center;
 	top:0;
@@ -206,10 +206,14 @@
 	}
 	.title{
 		color:$headings-color;
+		display:block;
 		font-size:18px;
 		font-weight:500;
 		line-height:1.1111;
+		overflow:hidden;
+		text-overflow: ellipsis;
 		text-transform:uppercase;
+		white-space: nowrap;
 	}
 }
 
@@ -433,6 +437,13 @@
 			z-index:10;
 		}
 	}
+	&.changed {
+		.default-results{
+			.bottom{
+				display:block;
+			}
+		}
+	}
 	> *{
 		width:100%;
 	}
@@ -515,6 +526,7 @@
 	}
 	.bottom{
 		border-top: 1px solid $border-color-base;
+		display:none;
 		.btn{
 			border-color: transparent;
 			display:block;

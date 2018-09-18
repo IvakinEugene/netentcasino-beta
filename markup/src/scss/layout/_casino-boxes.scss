@@ -641,7 +641,6 @@
 				// font-size: 20px;
 				// margin:0 0 0 15px;
 				max-width: none;
-				min-width: 0;
 				padding-top: 9px;
 				padding-bottom: 9px;
 				width:100%;
@@ -656,6 +655,9 @@
 			+ .btn{
 				margin-top: 5px;
 			}
+		}
+		.btn-tc{
+			width:auto;
 		}
 		.btn-link{
 			display:none;

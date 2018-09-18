@@ -128,17 +128,6 @@ section{
 			    padding:0 0 0 18px;
 			    position:relative;
 			}
-			&:first-child {
-				@include media(">=desktop") {
-					margin:0;
-					padding-left: 0;
-				}
-				&:before {
-					@include media(">=desktop") {
-						display:none;
-					}
-				}
-			}
 			&:before {
 				@include media(">=desktop") {
 					font-family: 'icomoon' !important;
@@ -155,6 +144,20 @@ section{
 					left:0;
 					position:absolute;
 					top:4px;
+				}
+			}
+		}
+		> span{
+			&,
+			& > span{
+				@include media(">=desktop") {
+					margin:0;
+					padding-left: 0;
+				}
+				&:before {
+					@include media(">=desktop") {
+						display:none;
+					}
 				}
 			}
 		}
@@ -1491,6 +1494,9 @@ section{
 		display:none;
 		@include media(">=tablet") {
 			display:block;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 1354px;
 		}
 	}
 }
