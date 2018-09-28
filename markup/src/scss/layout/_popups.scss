@@ -31,7 +31,7 @@ button,
 		opacity:1;
 		position:absolute;
 		right:15px;
-		top:8px !important;
+		top:16px !important;
 		width:auto;
 		&.invert {
 			color:$white;
@@ -371,6 +371,9 @@ button,
 				padding:0 0 0 25px;
 				&:before {
 					color:inherit;
+					@include media(">=tablet") {
+						color:$theme-color-base;
+					}
 				}
 			}
 			a{
@@ -699,7 +702,7 @@ button,
 	}
 	&[class*="default"] {
 		@include media(">=desktop") {
-			height:464px !important;
+			height:564px !important;
 		}
 	}
 	&.changed {
@@ -725,8 +728,7 @@ button,
 				padding-left: 31px;
 			}
 			ul{
-				margin-right: -30px;
-				margin-left: -30px;
+				margin:0 -30px;
 			}
 		}
 	}
@@ -947,6 +949,7 @@ button,
 		a{
 			@include media(">=tablet") {
 				flex-wrap:nowrap;
+				justify-content: flex-start;
 				font-size: 12px;
 				min-height:73px;
 				width:84px;

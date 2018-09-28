@@ -296,8 +296,11 @@
 				padding-bottom: 7px;
 			}
 			@include media(">=desktop") {
+				max-width: 100px;
+				min-width: 100px;
 			}
 			@include media(">=widescreen") {
+				max-width: none;
 				min-width: 160px;
 			}
 		}
@@ -515,7 +518,7 @@
 				@include media(">=tablet") {
 					display:inline-block;
 					vertical-align:top;
-					margin:0 1px 0 0;
+					margin:0 14px 0 0;
 				}
 			}
 			[class*="message"]{
@@ -1025,6 +1028,37 @@
 				@include media(">=desktop") {
 					position:static;
 				}
+			}
+		}
+	}
+	&:not([class*="col-"]) {
+		> .top{
+			@include media(">=desktop", "<widescreen") {
+				max-width: 300px;
+				min-width: 300px;
+			}
+			.heading{
+				@include media(">=desktop", "<widescreen") {
+					display: flex;
+				    flex-direction: column;
+				    flex-wrap: nowrap;
+				    justify-content: flex-start;
+				    align-content: flex-start;
+				    align-items: flex-start;
+				    padding-right: $gutter-width;
+				    padding-left: $gutter-width;
+				}
+				.logo-holder{
+					@include media(">=desktop", "<widescreen") {
+						margin:0 0 15px;
+					}
+				}
+			}
+		}
+		> .bottom{
+			@include media(">=desktop", "<widescreen") {
+				max-width: 300px;
+				min-width: 300px;
 			}
 		}
 	}

@@ -26,7 +26,6 @@ jQuery(window).on('load', function(){
 	initMagnificPopup();
 	initSlick();
 	initBackToTop();
-	initAnchors();
 	initMagicOpener();
 	initFilters();
 	initTouchNav();
@@ -34,7 +33,10 @@ jQuery(window).on('load', function(){
 	initCheckBoxesStructure();
 	initShowMoreList();
 	initSameHeightRows();
-	initStickyScrollBlock();
+	initAnchors();
+	setTimeout(function(){
+		initStickyScrollBlock();
+	}, 500);
 	$('body').on({
         'ct-toplist-updated': function() {
             $('.lightbox-opener').magnificPopup();
@@ -203,7 +205,7 @@ function initFilters() {
 // init button for open mobile nav and set focus to search input
 function initMagicOpener() {
 	var button = jQuery('[class*="popup"] .btn-search'),
-		defaultSearchOpener = jQuery('.mobile-search-opener');
+		defaultSearchOpener = jQuery('.nav-opener');
 
 	button.on('click', function(e){
 		if (jQuery(window).width() <= 1024) {
@@ -213,9 +215,9 @@ function initMagicOpener() {
 
 			setTimeout(function(){
 				defaultSearchOpener.click();
-				// setTimeout(function(){
-				// 	jQuery('#m-autocomplete').focus();
-				// }, 400);
+				setTimeout(function(){
+					jQuery('#m-autocomplete').focus();
+				}, 400);
 			}, 100);
 		}
 	});
@@ -468,7 +470,7 @@ function initCustomAnchor() {
 }
 
 // initialize fixed blocks on scroll
-function initStickyScrollBlock() {
+function initStickyScrollBlock() { 
 	jQuery('.fixed-aside').stickyScrollBlock({
 		setBoxHeight: false,
 		activeClass: 'fixed-position',
