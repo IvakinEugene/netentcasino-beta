@@ -1,0 +1,368 @@
+.featured-game-thumbnail {
+    width: 70%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+    .title {
+        font-size: 200%;
+        font-family: brother-1816, sans-serif;
+        font-style: bold;
+        display: block;
+    }
+    .title2 {
+        font-size: 200%;
+        font-family: brother-1816, sans-serif;
+        font-style: bold;
+        display: block;
+        padding-top: 100px;
+    }
+    a {
+        display: block;
+        
+        .f-g-t {
+            margin-top: 30px;
+            position: relative;
+            width: 600px;
+            height: 300px;
+            border: 2px solid #fff;
+            box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.15);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: .3s;
+            
+            span.tag {
+                text-transform: uppercase;
+                font-weight: 700;
+                display: block;
+                position: absolute;
+                padding: 5px 30px;
+                background-color: $yellowDefault;
+                border: 2px solid rgba(255, 255, 255, 0);
+                top: 15px;
+                left: -2px;
+                z-index: 3;
+                transition: .3s;
+            }
+            span.game-name {
+                text-transform: uppercase;
+                font-weight: 600;
+                position: absolute;
+                display: block;
+                color: #fff;
+                bottom: 10px;
+                left: 10px;
+                z-index: 3;
+            }
+            .overlay {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                width: 600px;
+                height: 300px;
+                background-color: rgba(0, 0, 0, 0);
+                box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+                position: absolute;
+                z-index: 1;
+                transition: .3s;
+                
+                img {
+                    transform: scale(0);
+                    transition: .3s;
+                }
+                
+            }
+            
+            &:hover {
+                border: 2px solid $greenDefault;
+                box-shadow: 0px 0px 20px 0px rgba(132, 195, 24, 0.15);
+                
+                span.tag {
+                    background-color: $yellowDefault;
+//                    border: 2px solid $greenDefault;
+                }
+                .overlay {
+                    background-color: rgba(0, 0, 0, 0.81);
+                    img {
+                        animation-name: bounceOut;
+                        animation-direction: forwards;
+                        animation-duration: .3s;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+                    }
+                }
+            }
+            
+        }
+        .g-t {
+            margin-top: 30px;
+            position: relative;
+            width: 400px;
+            height: 245px;
+            border: 1px solid #c9c9c9;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: .3s;
+            
+            img {
+                position: absolute;
+                width: inherit;
+                height: 200px;
+                z-index: 3;
+            }
+            .overlay {
+                width: inherit;
+                height: 200px;
+                position: absolute;
+                box-shadow: 0 0 200px rgba(0,0,0,0) inset;
+                top: 0px;
+                left: 0px;
+                transition: .3s;
+            }
+            .game-name {
+                position: absolute;
+                left: 10px;
+                transition: .3s;
+                z-index: 1;
+                
+                &:nth-of-type(1) {
+                    bottom: 6px;
+                }
+                &:nth-of-type(2) {
+                    bottom: -30px;
+                    color: $greenDefault;
+                    font-weight: 700;
+                }
+                
+            }
+            
+            &:hover {
+                border: 1px solid $greenDefault;
+                box-shadow: 0px 0px 20px 0px rgba(132, 195, 24, 0.15);
+                
+                .overlay {
+                    box-shadow: 0 0 200px rgba(0,0,0,0.25) inset;
+                }
+                
+                .game-name {
+                    &:nth-of-type(1) {
+                        transform: translateY(40px);
+                    }
+                    &:nth-of-type(2) {
+                        bottom: 6px;
+                    }
+                }
+            }
+            
+        }
+    }
+        
+}
+
+
+
+@keyframes bounceOut {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

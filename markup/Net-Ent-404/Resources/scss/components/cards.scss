@@ -1,0 +1,448 @@
+.cards {
+    width: 70%;
+    padding-bottom: 100px;
+    
+    .title {
+        font-size: 200%;
+        font-family: brother-1816, sans-serif;
+        font-style: bold;
+        margin: 100px 0 50px 0;
+        display: block;
+    }
+}
+
+
+.news-card {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(58, 58, 58, 0.05);
+    overflow: hidden;
+    transition: .3s;
+    
+    .news-image { 
+        width: inherit;
+        position: relative;
+        overflow: hidden;
+        transition: .3s;
+
+        a {
+            width: 100%;
+            display: block;
+            
+            img {
+                width: inherit;
+                height: 260px;
+            }
+        }
+        .overlay {
+            width: inherit;
+            height: 260px;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0);
+            top: 0px;
+            left: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .3s;
+            
+            img {
+                width: 140px;
+                transform: scale(0);
+                transition: .3s;
+            }
+            
+        }
+    }
+    .news-title {
+        text-transform: uppercase;
+        padding: 15px 20px 2px 20px;
+        font-weight: 300;
+        
+        a {
+            transition: .3s;
+            
+            &:hover {
+                color: $greenDefault;
+            }
+        }
+        
+    }
+    .news-date {
+        padding: 0px 20px 10px 20px;
+        color: $greenDefault;
+        font-size: 80%;
+        font-weight: 300;
+    }
+    .news-preview {
+        padding: 0pc 20px;
+        font-size: 90%;
+        font-weight: 300;
+        opacity: 0.5;
+    }
+    .news-btn {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        
+        .btn {
+            background-color: #fff;
+            border: 2px solid $greyDefault;
+            color: $greyDefault;
+        }
+        
+    }
+    
+    &:hover {
+        border: 1px solid $greenDefault;
+        box-shadow: 0 15px 20px rgba(58, 58, 58, 0.05);
+        
+        .news-image {
+            .overlay {
+                background-color: rgba(0, 0, 0, 0.78);
+                img {
+                    animation-name: bounceOut;
+                    animation-direction: forwards;
+                    animation-duration: .3s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+        .news-btn {
+            .btn {
+                background-color: #fff;
+                border: 2px solid $greenDefault;
+                color: $greenDefault;
+
+                &:hover {
+                    background-color: $greenDefault;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
+}
+
+.news-card-2 {
+    width: 800px;
+    height: 300px;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(58, 58, 58, 0.05);
+    overflow: hidden;
+    transition: .3s;
+    
+    .n-c-2-title {
+        text-transform: uppercase;
+        font-size: 130%;
+        width: 100%;
+        height: 60px;
+        position: relative;
+        overflow: hidden;
+        
+        span {
+            display: block;
+            transition: .25s;
+            
+            &.default {
+                padding: 23px 30px 0px 30px;
+            }
+            &.active {
+                color: $greenDefault;
+                position: absolute;
+                bottom: -30px;
+                padding: 0 30px 0px 30px;
+            }
+        }
+        
+    }
+    .n-c-2-preview {
+        padding: 0px 30px 10px 30px;
+        opacity: .5;
+        font-weight: 300;
+        line-height: 140%;
+    }
+    a.show-more {
+        margin-left: 30px;
+        
+        .btn {
+            background-color: #fff;
+            border: 2px solid $greyDefault;
+            color: $greyDefault;
+            
+            &:hover {
+                border: 2px solid $greenDefault;
+            }
+        }
+        
+    }
+    
+    &:hover {
+        border: 1px solid $greenDefault;
+        box-shadow: 0 15px 20px rgba(58, 58, 58, 0.05);
+        
+        .n-c-2-title {
+            span {
+                &.default {
+                    transform: translateY(40px);
+                }
+                &.active {
+                    bottom: 0px;
+                }
+            }
+        }
+        a.show-more {
+            .btn {
+                border: 2px solid $greenDefault;
+                color: $greenDefault;
+
+                &:hover {
+                    background-color: $greenDefault;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
+}
+
+.payment-method {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(58, 58, 58, 0.05);
+    overflow: hidden;
+    transition: .3s;
+    
+    .payment-logo {
+        width: inherit;
+        height: 180px;
+        border-bottom: 1px solid #ededed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+        
+        a {
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 1px solid #ededed;
+                overflow: hidden;
+                transition: .3s;
+                
+                img {
+                    width: 170px;
+                }
+                
+            }
+        }
+        
+    }
+    .payment-info {
+        padding: 20px 0 0 0;
+        span {
+            display: block;
+            padding: 0px 30px;
+            &:nth-child(1) {
+                font-size: 160%;
+                font-weight: 600;
+            }
+            &:nth-child(2) {
+                font-size: 90%;
+                font-weight: 300;
+                opacity: 0.5;
+                line-height: 160%;
+            }
+        }
+    }
+    .payment-btn {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        
+        .btn {
+            background-color: #fff;
+            border: 2px solid $greyDefault;
+            color: $greyDefault;
+        }
+        
+    }
+    
+    &:hover {
+        border: 1px solid $greenDefault;
+        box-shadow: 0 15px 20px rgba(58, 58, 58, 0.05);
+        
+        .payment-logo {
+            border-bottom: 1px solid $greenDefault;
+            a {
+                div {
+                    border: 1px solid $greenDefault;
+                }
+            }
+        }
+        .payment-btn {
+            .btn {
+                background-color: #fff;
+                border: 2px solid $greenDefault;
+                color: $greenDefault;
+
+                &:hover {
+                    background-color: $greenDefault;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+@keyframes bounceOut {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

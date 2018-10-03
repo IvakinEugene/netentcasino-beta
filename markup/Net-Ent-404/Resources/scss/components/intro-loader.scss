@@ -1,0 +1,119 @@
+.intro-loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #fff;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation-name: loaderOutro;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+    
+//    display: none;
+    
+    .rotate {
+        transform: translateY(-40px);
+        opacity: 0;
+        animation-name: loaderIntro;
+        animation-iteration-count: 1;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+}
+
+
+@keyframes loaderIntro {
+    0% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes loaderOutro {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: -100vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

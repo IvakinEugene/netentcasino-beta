@@ -1,0 +1,27 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111 81.63">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #84c318;
+        stroke-width: 1px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 0.25px;
+      }
+    </style>
+  </defs>
+  <title>noun_link_15341</title>
+  <g>
+    <path class="cls-1" d="M25.89,55.33h11a25.11,25.11,0,0,1-1.31-6H27.09a14.46,14.46,0,0,1,0-28.91H49a14.46,14.46,0,0,1,4.29,28.26A25.11,25.11,0,0,0,57.11,54,20.48,20.48,0,0,0,50,14.37H25.89a20.48,20.48,0,0,0,0,41Z" transform="translate(0.13 0.13)"/>
+    <path class="cls-1" d="M40.33,46.9A20.47,20.47,0,0,0,60.79,67.38H84.86a20.48,20.48,0,0,0,0-41H73.79a25.06,25.06,0,0,1,1.33,6h8.74a14.46,14.46,0,0,1,0,28.91H62A14.46,14.46,0,0,1,58.05,33a9.72,9.72,0,0,0-3.4-5.64A20.51,20.51,0,0,0,40.33,46.9Z" transform="translate(0.13 0.13)"/>
+  </g>
+<!--  <rect class="cls-2" x="0.13" y="0.13" width="110.75" height="81.38"/>-->
+</svg>

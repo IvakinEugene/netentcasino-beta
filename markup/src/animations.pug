@@ -1,0 +1,41 @@
+extends pug/extends/master
+
+block content
+	//- 
+		- var page_class = "hide-bonus"
+		include pug/includes/header
+	#main
+		section.template-default-page
+			//- 
+				.subsection.page-heading
+					.holder
+						.logo-holder
+							a(href="#")
+								img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+						h1 Heading 1
+						strong.subtitle.green Heading 2
+						p You may have seen or heard something about Bitcoin Casinos before, probably even right here on our site. There are many advantages to having a Bitcoin Casino over a regular one, as many casino players can surely appreciate, there is a simply an unrivalled sense of anonymity and (if you know what you are doing) security.
+						p
+							a(href="#default-popup").lightbox-opener t&amp;c apply
+						strong.offer-sticker
+							strong 624 Bonuses Available
+							|  - Last updated 2 days ago
+			.subsection.page-content
+				.holder
+					//- 
+					p
+						a(href="#casino-summary-popup").btn.btn-primary.lightbox-opener primary
+						a(href="#").btn.btn-primary.is-loading primary
+					p
+						a(href="#default-popup").btn.btn-secondary.lightbox-opener secondary
+						a(href="#").btn.btn-secondary.is-loading secondary
+					p
+						a(href="#").btn.btn-secondary.invert secondary invert
+						a(href="#").btn.btn-secondary.invert.is-loading secondary invert
+					p
+						a(href="#").btn.btn-link link
+						a(href="#").btn.btn-link.is-loading link
+					p
+						a(href="#").btn.btn-dark dark
+						a(href="#").btn.btn-dark.is-loading dark
+	include pug/includes/footer

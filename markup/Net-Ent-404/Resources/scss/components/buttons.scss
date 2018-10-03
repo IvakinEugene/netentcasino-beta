@@ -1,0 +1,171 @@
+.buttons {
+    width: 70%;
+    padding-top: 50px;
+    
+    .title {
+        font-size: 200%;
+        font-family: brother-1816, sans-serif;
+        font-style: bold;
+    }
+    .note {
+        font-size: 120%;
+        font-family: brother-1816, sans-serif;
+        font-style: bold;
+        margin-top: 30px;
+    }
+    a {
+        span {
+            margin-top: 40px;
+        }
+    }
+}
+
+
+a.btn-link {
+    
+    .btn {
+        display: inline-block;
+        padding: 10px 70px;
+        text-transform: uppercase;
+        background-color: $greenDefault;
+        border: 2px solid $greenDefault;
+        color: #fff;
+        font-weight: 700;
+        transition: .3s;
+        
+        &:hover {
+            background-color: #fff;
+            color: $greenDefault;
+            box-shadow: 0px 0px 20px 0px rgba(132, 195, 24, 0.15);
+        }
+        
+    }
+
+}
+
+a.show-more {
+    .btn {
+        display: inline-block;
+        padding: 10px 70px;
+        text-transform: uppercase;
+        background-color: $greyDefault;
+        border: 2px solid $greyDefault;
+        color: #fff;
+        font-weight: 700;
+        transition: .3s;
+        
+        &:hover {
+            background-color: #fff;
+            color: $greyDefault;
+            box-shadow: 0px 0px 20px 0px rgba(71, 71, 71, 0.15);
+        }
+        
+    }
+
+}
+
+a.load-more {
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 50px;
+        position: relative;
+        text-transform: uppercase;
+        background-color: $greyDefault;
+        border: 2px solid $greyDefault;
+        color: #fff;
+        font-weight: 700;
+        transition: .3s;
+        
+        p {
+            
+        }
+        
+        .load-more-anim {
+            position: absolute;
+            display: none;
+        }
+        
+        &:hover {
+            background-color: #fff;
+            color: $greyDefault;
+            box-shadow: 0px 0px 20px 0px rgba(71, 71, 71, 0.15);
+        }
+        
+    }
+    .btn.clicked {
+        background-color: #fff;
+        color: $greyDefault;
+        box-shadow: 0px 0px 20px 0px rgba(71, 71, 71, 0.15);
+        
+        p {
+            display: none;
+        }
+        .load-more-anim {
+            display: block;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
