@@ -310,7 +310,7 @@
 				// content: '';
 				font-size: 20px;
 				// height:20px;
-				left:23px;
+				left:14px;
 				position:absolute;
 				top:50%;
 				transform:translateY(-50%);
@@ -560,6 +560,7 @@
 .nav{
 	color:$headings-color;
 	font-size:16px;
+	font-weight:normal;
 	line-height:1.125;
 	padding:11px 0 0;
 	@extend %listreset;

@@ -1,0 +1,19 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414.35 414.35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #84c318;
+        stroke-miterlimit: 10;
+        stroke-width: 20px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <title>play-button</title>
+  <path class="cls-1" d="M79.76,367.73a16.41,16.41,0,0,1-16.41-16.41V64A16.42,16.42,0,0,1,79.76,47.61L346.53,195.36s12.31,12.31,0,24.63S79.76,367.73,79.76,367.73Z" transform="translate(0 -1)"/>
+  <rect class="cls-2" width="414.35" height="414.35"/>
+</svg>

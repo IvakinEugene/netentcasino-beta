@@ -11,6 +11,7 @@
 	text-align:center;
 	text-decoration:none;
 	text-transform:uppercase;
+	transition:border-color $animation-speed, background $animation-speed, color $animation-speed;
 	&:hover {
 		*{
 			color:inherit !important;

@@ -23,14 +23,29 @@
 	overflow:hidden;
 	@include media(">=tablet") {
 		display: flex;
-	    flex-direction: column;
-	    flex-wrap: nowrap;
-	    justify-content: space-between;
-	    align-content: flex-start;
-	    align-items: flex-start;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-content: flex-start;
+		align-items: flex-start;
 	}
 	&.small {
-		border-radius: 2px 2px 0 0;
+		border: 1px solid $border-color-base;
+		border-radius: 4px;
+		overflow:hidden;
+		transition:border-color $animation-speed, box-shadow $animation-speed;
+		&:hover {
+			border-color: $theme-color-base;
+			box-shadow: 0 0 20px rgba($theme-color-base, 0.15);
+			.media-title{
+				.txt{
+					transform:translateY(100%);
+					+ .txt{
+						transform:translateY(0);
+					}
+				}
+			}
+		}
 		.media-holder{
 			height:100px;
 			@include media(">=tablet") {
@@ -43,11 +58,26 @@
 			display:block;
 			font-size: 12px;
 			font-weight:normal;
-			padding:5px 9px 6px;
+			padding:0;
+			pointer-events:auto;
 			position:relative;
 			text-transform:none;
 			@include media(">=tablet") {
 				font-size: 16px;
+			}
+			
+			.txt{
+				display:block;
+				padding:5px 9px 6px;
+				transition:transform $animation-speed;
+				+ .txt{
+					color:$theme-color-base;
+					left:0;
+					position:absolute;
+					top:0;
+					transform:translateY(100%);
+					width:100%;
+				}
 			}
 		}
 	}
@@ -84,7 +114,14 @@
 		}
 		&:hover {
 			.hover-box{
-				display: flex;
+				opacity:1;
+				img {
+					animation-name: bounceOut;
+					animation-direction: forwards;
+					animation-duration: .3s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
 			}
 		}
 		a{
@@ -114,31 +151,23 @@
 		}
 		.hover-box{
 			// display:none !important;
-			display:none;
+			display:flex;
 			flex-direction: row;
 			flex-wrap: nowrap;
 			justify-content: center;
 			align-content: center;
 			align-items: center;
 			background:rgba($black, 0.8);
-			color:$white;
-			font-size:18px;
-			font-weight:500;
-			line-height:1;
 			height:100%;
+			opacity:0;
 			position:absolute;
-			text-align:center;
-			text-transform:uppercase;
 			top:0;
+			transition:opacity $animation-speed;
 			width:100%;
 			z-index:10;
-			> span{
-				width:100%;
-			}
-			.icon-play{
-				display:block;
-				font-size: 44px;
-				margin:0 auto 15px;
+			img {
+				transform: scale(0);
+				transition: $animation-speed;
 			}
 		}
 	}
@@ -208,9 +237,9 @@
 		flex-wrap: nowrap;
 		justify-content: space-between;
 		align-content: center;
-    	align-items: center;
-    	border: 1px solid $border-color-base;
-    	min-height: 84px;
+		align-items: center;
+		border: 1px solid $border-color-base;
+		min-height: 84px;
 		// padding:14px 15px 17px;
 		padding:14px 10px 17px;
 		@include media(">=widescreen") {
@@ -221,9 +250,9 @@
 			flex-direction: row;
 			flex-wrap: nowrap;
 			justify-content: flex-start;
-		    align-content: center;
-		    align-items: center;
-		    padding:0 10px 0 0;
+			align-content: center;
+			align-items: center;
+			padding:0 10px 0 0;
 		}
 		.logo-holder{
 			height:30px;
@@ -277,11 +306,11 @@
 		}
 		.content{
 			display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: flex-start;
-		    align-content: center;
-		    align-items: center;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: center;
+			align-items: center;
 		}
 		.btn{
 			font-size: 14px;
@@ -881,8 +910,8 @@
 			padding:0;
 			.section-content & {
 				flex-direction: column;
-    			flex-wrap: wrap;
-    			justify-content: center;
+				flex-wrap: wrap;
+				justify-content: center;
 			}
 		}
 	}
@@ -947,11 +976,11 @@
 	}
 	.button-frame{
 		display: flex;
-	    flex-direction: column;
-	    flex-wrap: nowrap;
-	    justify-content: center;
-	    align-content: center;
-	    align-items: center;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
 		@include media(">=desktop") {
 			flex:1 1 auto;
 			padding:40px 15px;
@@ -997,14 +1026,14 @@
 	text-align:center;
 	@include media(">=desktop") {
 		display: flex;
-	    flex-direction: row;
-	    flex-wrap: nowrap;
-	    justify-content: space-between;
-	    align-content: stretch;
-	    align-items: stretch;
-	    font-size: 20px;
-	    // max-width: 1252px;
-	    text-align:left;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-content: stretch;
+		align-items: stretch;
+		font-size: 20px;
+		// max-width: 1252px;
+		text-align:left;
 	}
 	&.col-2 {
 		> .top,
@@ -1040,13 +1069,13 @@
 			.heading{
 				@include media(">=desktop", "<widescreen") {
 					display: flex;
-				    flex-direction: column;
-				    flex-wrap: nowrap;
-				    justify-content: flex-start;
-				    align-content: flex-start;
-				    align-items: flex-start;
-				    padding-right: $gutter-width;
-				    padding-left: $gutter-width;
+					flex-direction: column;
+					flex-wrap: nowrap;
+					justify-content: flex-start;
+					align-content: flex-start;
+					align-items: flex-start;
+					padding-right: $gutter-width;
+					padding-left: $gutter-width;
 				}
 				.logo-holder{
 					@include media(">=desktop", "<widescreen") {
@@ -1078,65 +1107,65 @@
 		}
 	}
 	> .top{
-	    border-width:0 0 1px;
+		border-width:0 0 1px;
 		display: flex;
-	    flex-direction: row;
-	    flex-wrap: nowrap;
-	    justify-content: flex-start;
-	    align-content: stretch;
-	    align-items: stretch;
-	    @include media(">=desktop") {
-	    	border-width: 0 1px 0 0;
-	    	max-width: 457px;
-	    	min-width: 457px;
-	    }
-	    .heading{
-	    	border-width: 0 1px 0 0;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: stretch;
+		@include media(">=desktop") {
+			border-width: 0 1px 0 0;
+			max-width: 457px;
+			min-width: 457px;
+		}
+		.heading{
+			border-width: 0 1px 0 0;
 			// float:left;
 			min-height: 96px;
 			width: 92px;
 			padding:10px 5px;
 			@include media(">=desktop") {
 				display: flex;
-			    flex-direction: row;
-			    flex-wrap: nowrap;
-			    justify-content: flex-end;
-			    align-content: center;
-			    // align-content: flex-start;
-			    align-items: center;
-			    // align-items: flex-start;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: flex-end;
+				align-content: center;
+				// align-content: flex-start;
+				align-items: center;
+				// align-items: flex-start;
 				border-width: 0;
 				min-height: 0;
 				padding:20px 0;
 				width:100%;
 			}
-	    }
-	    .content-holder{
-	    	display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: space-between;
-		    align-content: stretch;
-		    align-items: stretch;
-	    	flex:1 1 auto;
-	    	@include media(">=desktop") {
-	    		display:none;
-	    	}
-	    }
-	    .title-holder{
-	    	display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: center;
-		    align-content: stretch;
-		    align-items: stretch;
-	    	flex:1 1 auto;
-	    	padding:10px;
-	    }
-	    .bottom{
-	    	border-width:1px 0 0;
-	    	padding:4px 0 5px;
-	    }
+		}
+		.content-holder{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-content: stretch;
+			align-items: stretch;
+			flex:1 1 auto;
+			@include media(">=desktop") {
+				display:none;
+			}
+		}
+		.title-holder{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: stretch;
+			align-items: stretch;
+			flex:1 1 auto;
+			padding:10px;
+		}
+		.bottom{
+			border-width:1px 0 0;
+			padding:4px 0 5px;
+		}
 		.logo-holder{
 			border-width: 1px;
 			height:40px;
@@ -1172,11 +1201,11 @@
 	> .middle{
 		@include media(">=desktop") {
 			display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: flex-start;
-		    align-content: stretch;
-		    align-items: stretch;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: stretch;
+			align-items: stretch;
 			flex:1 1 auto;
 			border-width: 0 1px 0 0;
 		}
@@ -1184,11 +1213,11 @@
 		.content{
 			@include media(">=desktop") {
 				display: flex;
-			    flex-direction: column;
-			    flex-wrap: nowrap;
-			    justify-content: center;
-			    align-content: stretch;
-			    align-items: stretch;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				justify-content: center;
+				align-content: stretch;
+				align-items: stretch;
 				flex: 1 1 auto;
 			}
 		}
@@ -1268,23 +1297,23 @@
 		// position:relative;
 		@include media(">=desktop") {
 			display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: flex-start;
-		    align-content: stretch;
-		    align-items: stretch;
-		    border-width: 0;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: stretch;
+			align-items: stretch;
+			border-width: 0;
 			max-width: 380px;
 			min-width: 380px;
 			padding:0;
 		}
 		.content-holder{
 			display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: center;
-		    align-content: center;
-		    align-items: center;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
 			// margin:0;
 			@include media(">=desktop") {
 				flex:1 1 auto;
@@ -1390,11 +1419,11 @@
 	@include media(">=desktop") {
 		// display:block;
 		// display: flex;
-	    flex-direction: column;
-	    // flex-wrap: nowrap;
-	    // justify-content: flex-start;
-	    // align-content: stretch;
-	    // align-items: stretch;
+		flex-direction: column;
+		// flex-wrap: nowrap;
+		// justify-content: flex-start;
+		// align-content: stretch;
+		// align-items: stretch;
 		font-size: 14px;
 	}
 	.heading{
@@ -1551,11 +1580,11 @@
 
 .bonus-box{
 	display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-content: stretch;
-    align-items: stretch;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-content: stretch;
+	align-items: stretch;
 	background:$white;
 	box-shadow: 0 0 3px $shadow;
 	color:$base-gray;
@@ -1690,11 +1719,11 @@
 		// }
 		.button-holder{
 			display: flex;
-		    flex-direction: column;
-		    flex-wrap: nowrap;
-		    justify-content: flex-start;
-		    align-content: center;
-		    align-items: center;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: center;
+			align-items: center;
 			&:not(:only-child) {
 				padding: 10px 0 0;
 			}
@@ -1740,11 +1769,11 @@
 		padding:8px 15px 6px;
 		@include media(">=tablet") {
 			display: flex;
-		    flex-direction: row;
-		    flex-wrap: nowrap;
-		    justify-content: space-between;
-		    align-content: flex-start;
-		    align-items: flex-start;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-content: flex-start;
+			align-items: flex-start;
 			font-size: 14px;
 			padding:13px 17px 11px;
 			width:100%;
@@ -1826,11 +1855,11 @@
 		width:100%;
 		@include media(">=tablet") {
 			// display: flex;
-		    flex-direction: column;
-		    // flex-wrap: nowrap;
-		    justify-content: center;
-		    align-content: stretch;
-		    align-items: stretch;
+			flex-direction: column;
+			// flex-wrap: nowrap;
+			justify-content: center;
+			align-content: stretch;
+			align-items: stretch;
 			border: solid $border-color-base;
 			border-width: 0 1px 0 0;
 			max-width: 132px;
@@ -1930,14 +1959,14 @@
 	}
 	.btn-holder{
 		display: flex;
-	    flex-direction: row;
-	    flex-wrap: wrap;
-	    justify-content: center;
-	    align-content: center;
-	    align-items: center;
-	    // @include media(">=tablet") {
-	    // 	justify-content: flex-start;
-	    // }
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		// @include media(">=tablet") {
+		// 	justify-content: flex-start;
+		// }
 	}
 	.btn{
 		margin:3px 7px;

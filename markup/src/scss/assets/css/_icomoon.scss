@@ -43,9 +43,18 @@ a{
 		text-decoration:none;
 	}
 }
-// .icon-search-new:before {
-//   content: "\e932";
-// }
+.icon-netent:before {
+  content: "\e905";
+}
+.icon-home:before {
+  content: "\e932";
+}
+.icon-search:before {
+  content: "\e933";
+}
+.icon-menu-search:before {
+  content: "\e934";
+}
 .icon-chevron-left:before {
   content: "\e92e";
 }
@@ -175,9 +184,6 @@ a{
 .icon-menu:before {
   content: "\e904";
 }
-.icon-menu-search:before {
-  content: "\e905";
-}
 .icon-money:before {
   content: "\e906";
 }
@@ -186,9 +192,6 @@ a{
 }
 .icon-news:before {
   content: "\e908";
-}
-.icon-search:before {
-  content: "\e909";
 }
 .icon-seven:before {
   content: "\e90a";

@@ -1,0 +1,200 @@
+extends pug/extends/master
+
+block content
+	//- 
+		- var page_class = "hide-nav hide-offer hide-bonus"
+		include pug/includes/header
+	#main
+		//- 
+		section.section-breadcrumbs
+			.holder
+				.breadcrumbs
+					span
+						span
+							a(href='#') Home
+							span
+								a(href='#') NetEnt Game &amp; Jackpots
+								span.breadcrumb_last Mega Fortune Jackpot
+				div
+					p Last updated - 
+						strong 2 days ago!
+		//- 
+		section.template-default-page
+			.featured-game.single
+				.holder
+					.game-box.large
+						.media-holder
+							a(href="#", style="background-image:url('http://via.placeholder.com/562x280/ff0000/ffffff')").bg-cover
+								span.hover-box
+									img(src="assets/images/play-btn.svg", alt="Image description", width="80", height="80")
+								span.sticker &pound;2,061.762
+							strong.media-title Mega Fortune
+				.bg-image
+					- var image = "banner-concept-4"
+					include pug/extends/retina-single
+			.subsection.page-heading
+				.holder
+					h1 Mega Fortune Jackpot
+					p Mega Fortune is an incredible triple jackpot casino slot game that is well known for its huge payouts and fantastic prize potential.
+			.subsection.boxes-holder
+				.holder
+					ul.grid.col-1
+						li
+							.casino-box-title
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") Betsson
+										.stars
+											span.icon-star
+											span.icon-star
+											span.icon-star
+											span.icon-star-half-empty
+											span.icon-star-o
+										a(href="#").btn.btn-secondary casino review
+								.content
+									.sticker
+										strong
+											span.icon-check
+											p Recommended by Casino Experts
+									.content-frame
+										h3 &pound;150 + 50 Free Spins
+										p 50% up to &pound;100 + 50 Free Spins
+									.button-holder
+										.button-frame
+											a(href="#").btn.btn-primary Go to Betsson
+					// 
+						li
+							.casino-box-title
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") Unibet
+										.stars
+											span.icon-star
+											span.icon-star
+											span.icon-star
+											span.icon-star-half-empty
+											span.icon-star-o
+										a(href="#").btn.btn-secondary casino review
+								.content
+									.frame
+										h3 &pound;1000 + 20 Free Spins
+										p 100% up to &pound;500 + 20 Free Spins
+									.button-holder
+										.button-frame
+											a(href="#").btn.btn-primary Go to Unibet
+						li
+							.casino-box-title
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") LeoVegas
+										.stars
+											span.icon-star
+											span.icon-star
+											span.icon-star
+											span.icon-star-half-empty
+											span.icon-star-o
+										a(href="#").btn.btn-secondary casino review
+								.content
+									.sticker
+										span.icon
+										p Free Spins Before Depsoit
+									.frame
+										h3 &pound;1500 + 50 Free Spins
+										p 200% up to &pound;500 + 50 Free Spins
+									.button-holder
+										.button-frame
+											a(href="#").btn.btn-primary Go to LeoVegas
+						li
+							.casino-box-title
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140")
+									.txt
+										h2
+											a(href="#") Thrills
+										.stars
+											span.icon-star
+											span.icon-star
+											span.icon-star
+											span.icon-star-half-empty
+											span.icon-star-o
+										a(href="#").btn.btn-secondary casino review
+								.content
+									.frame
+										h3 &pound;150 + 50 Free Spins
+										p 50% up to &pound;100 + 50 Free Spins
+									.button-holder
+										.button-frame
+											a(href="#").btn.btn-primary Go to Thrills
+						li
+							.casino-box-title
+								.heading
+									.logo-holder
+										a(href="#")
+											img(src="assets/images/logo-betsson.png", alt="Image description", width="140", height="140") 
+									.txt
+										h2
+											a(href="#") VideoSlots
+										.stars
+											span.icon-star
+											span.icon-star
+											span.icon-star
+											span.icon-star-half-empty
+											span.icon-star-o
+										a(href="#").btn.btn-secondary casino review
+								.content
+									.sticker
+										span.icon
+										p Lowest Deposit Amount Required
+									.frame
+										h3 &pound;1000 + 20 Free Spins
+										p 100% up to &pound;500 + 20 Free Spins
+									.button-holder
+										.button-frame
+											a(href="#").btn.btn-primary Go to VideoSlots
+					.load-more.text-center
+						a(href="#").btn.btn-secondary Show more casinos
+			.subsection.page-content
+				.holder
+					h2 Mega Fortune Jackpot Info
+					.casino-description.large
+						div
+							.row
+								.heading
+									strong Minimum Bet
+								.content
+									p &pound;0.25 per spin
+							.row
+								.heading
+									strong Maximum Bet
+								.content
+									p &pound;50 per spin
+							.row
+								.heading
+									strong Average Payout Percentage
+								.content
+									p 96.4%
+							.row
+								.heading
+									strong WInning Jackpot Combination
+								.content
+									p 3 or more symbols on a win line start the bonus game. In the bonus game you get the chance to win the jackpot.
+					hr
+					h1 Mega Fortune Progressive Jackpot
+					p As mentioned you are able to win 3 progressive jackpots while playing Mega Fortune. Mega Fortune Rapid, and Major are local progressive jackpots, meaning that the jackpot amount of these are determined by players at any one casino. For example, with every spin made at the NetEnt casino Mr Green, a percentage of the amount played will be added to the progressive jackpots, increasing with every player playing at Mr Green. These therefore can vary greatly, as it may have been only a few hours since the last win spin or it could have been a few weeks depending on the casino. It’s a good idea, therefore, to search around and find which casino currently offers the highest Mega Fortune Rapid and Major jackpots for maximum value.
+					p
+						a(href="#") Rear More
+	include pug/includes/footer

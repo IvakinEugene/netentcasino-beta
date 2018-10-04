@@ -121,7 +121,6 @@
 	.social-networks{
 		font-size:18px;
 		line-height:1;
-		// @extend %listreset;
 		li{
 			display:inline-block;
 			vertical-align:top;
@@ -131,24 +130,41 @@
 			}
 		}
 		a{
-			border: 2px solid $white;
+			box-shadow: 0 0 0 2px $white inset;
 			border-radius: 100%;
 			color:$white;
 			display:block;
 			height:38px;
+			overflow:hidden;
 			position:relative;
+			transition:box-shadow;
 			width:38px;
 			&:hover {
-				background:$white;
-				&:before {
-					color:$base-background-color;
+				box-shadow: 0 0 0 2px $theme-color-base inset, 0 0 20px 0 rgba($theme-color-base, 0.15);
+				[class*="icon-"]{
+					transform:translateY(100%);
+					+ [class*="icon-"]{
+						transform:translateY(0);
+					}
 				}
 			}
+		}
+		[class*="icon-"]{
+			height:inherit;
+			left:0;
+			position:absolute;
+			top:0;
+			transition:transform $animation-speed;
+			width: inherit;
 			&:before {
 				left:50%;
 				position:absolute;
 				top:50%;
 				transform:translate(-50%, -50%);
+			}
+			+ [class*="icon-"]{
+				color:$theme-color-base;
+				transform:translateY(100%);
 			}
 		}
 	}

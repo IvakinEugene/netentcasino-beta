@@ -521,15 +521,39 @@
 .post-preview{
 	background:$white;
 	border: 1px solid $border-color-base;
+	border-radius: 4px;
 	box-shadow: 0 2px 4px $shadow;
 	line-height:1.3571;
 	overflow:hidden;
 	padding:0 18px 21px;
 	position:relative;
+	transition:border-color $animation-speed;
 	@include media(">=tablet") {
 		line-height:$line-height-base;
 		padding:0 21px 74px;
 		width:100%;
+	}
+	&:hover {
+		border-color: $theme-color-base;
+		.post-image{
+			.hover-box{
+				opacity:1;
+				img {
+					animation-name: bounceOut;
+					animation-direction: forwards;
+					animation-duration: .3s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+			}
+		}
+	}
+	&:not(:hover) {
+		.btn{
+			background:$btn-secondary-background;
+			border-color: $btn-secondary-border;
+			color:$btn-secondary-color;
+		}
 	}
 	&.no-image {
 		padding-top: 20px;
@@ -565,6 +589,13 @@
 		}
 	}
 	&.payments {
+		&:hover {
+			&,
+			.post-image,
+			.post-image .logo-holder{
+				border-color: $theme-color-base;
+			}
+		}
 		&.short {
 			padding:14px 10px 12px;
 			@include media(">=xs-phone") {
@@ -657,6 +688,7 @@
 		border-radius: 0;
 		margin:0 -19px 14px;
 		position:relative;
+		transition:border-color $animation-speed;
 		@include media(">=tablet") {
 			margin:0 -22px 21px;
 		}
@@ -668,6 +700,36 @@
 		&.post-video {
 			a:before {
 				display:block;
+			}
+		}
+		&.no-media {
+			.hover-box{
+				height: 198px;
+				position:relative;
+				a{
+					min-height: 0;
+				}
+			}
+		}
+		.hover-box{
+			// display:none !important;
+			display:flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			background:rgba($black, 0.8);
+			height:100%;
+			opacity:0;
+			position:absolute;
+			top:0;
+			transition:opacity $animation-speed;
+			width:100%;
+			z-index:10;
+			img {
+				transform: scale(0);
+                transition: $animation-speed;
 			}
 		}
 		a:before{
@@ -721,7 +783,6 @@
 		min-width: 0;
 		@include media(">=phone") {
 			display:inline-block;
-			// vertical-align:top;
 		}
 		@include media(">=tablet") {
 			max-width: 300px;

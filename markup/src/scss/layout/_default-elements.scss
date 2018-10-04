@@ -45,6 +45,7 @@
 	overflow:hidden;
 	max-width:56px;
 	min-width:56px;
+	transition:border-color $animation-speed;
 	&:hover {
 		border-color: $theme-color-base;
 	}
@@ -979,7 +980,7 @@
 			min-height: 198px;
 		}
 	}
-	img{
+	> img{
 		width: 100%;
 	}
 }
