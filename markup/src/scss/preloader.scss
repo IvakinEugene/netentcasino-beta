@@ -36,7 +36,7 @@
 .cube {
 	// color: $theme-color-base;
 	display:block;
-	font-size: 80px;
+	// font-size: 80px;
 	height:80px;
 	perspective: 9999px;
 	opacity: 1;
@@ -45,7 +45,7 @@
 	transform-style: preserve-3d;
 	transition: transform 0.5s 0.1s;
 	&.loader {
-		color: $theme-color-base;
+		// color: $theme-color-base;
 		&.loading {
 			animation: panel 2.2s infinite forwards;
 			transform: translate(-50%, -50%);
@@ -63,10 +63,11 @@
 	.cube-face {
 		background:$white;
 		display:block;
-		font-size: 0.5em;
-		line-height:1;
+		// font-size: 0.5em;
+		// line-height:1;
 		height: inherit;
 		opacity: 1;
+		padding:0.25em;
 		position: absolute;
 		width: inherit;
 	}
@@ -92,31 +93,35 @@
 
 .cube.small {
 	// color:$white;
-	font-size: 26px;
-	height:26px;
-	width:26px;
+	$size:16px;
+	// font-size: $size;
+	height:$size;
+	width:$size;
 	.cube-face {
 		background:$white;
 		color:$add-text-color;
-		box-shadow:inset 0 0 0 1px $add-text-color, 0 0 1px 1px $add-text-color;
+		// box-shadow:inset 0 0 0 1px $add-text-color, 0 0 1px 1px $add-text-color;
+		.btn-secondary & {
+			box-shadow:inset 0 0 0 1px $add-text-color, 0 0 1px 1px $add-text-color;
+		}
 	}
 	.cube-face-front {
-		transform: translate3d(0, 0, 13px);
+		transform: translate3d(0, 0, #{$size/2});
 	}
 	.cube-face-back {
-		transform: rotateY(180deg) translate3d(0, 0, 13px);
+		transform: rotateY(180deg) translate3d(0, 0, #{$size/2});
 	}
 	.cube-face-left {
-		transform: rotateY(-90deg) translate3d(0, 0, 13px);
+		transform: rotateY(-90deg) translate3d(0, 0, #{$size/2});
 	}
 	.cube-face-right {
-		transform: rotateY(90deg) translate3d(0, 0, 13px);
+		transform: rotateY(90deg) translate3d(0, 0, #{$size/2});
 	}
 	.cube-face-top {
-		transform: rotateX(90deg) translate3d(0, 0, 13px);
+		transform: rotateX(90deg) translate3d(0, 0, #{$size/2});
 	}
 	.cube-face-bottom {
-		transform: rotateX(-90deg) translate3d(0, 0, 13px);
+		transform: rotateX(-90deg) translate3d(0, 0, #{$size/2});
 	}
 }
 

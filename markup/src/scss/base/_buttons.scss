@@ -18,25 +18,36 @@
 		}
 	}
 	&.is-loading {
+		background:transparent !important;
 		color:transparent !important;
-		&:before {
-			$size:24px;
-			animation: spin 1s linear infinite;
-			border: 2px solid transparent;
-			border-radius: 50%;
-			content: '';
-			height:$size;
-			left:50%;
-			margin:-#{$size/2} 0 0 -#{$size/2};
-			position:absolute;
-			top:50%;
-			width:$size;
+		// &:before {
+		// 	$size:24px;
+		// 	animation: spin 1s linear infinite;
+		// 	border: 2px solid transparent;
+		// 	border-radius: 50%;
+		// 	content: '';
+		// 	height:$size;
+		// 	left:50%;
+		// 	margin:-#{$size/2} 0 0 -#{$size/2};
+		// 	position:absolute;
+		// 	top:50%;
+		// 	width:$size;
+		// }
+		.cube{
+			display:block;
 		}
 	}
 	.number{
 		color:$base-gray;
 		font-size: 16px;
 		margin:0 0 0 4px;
+	}
+	.cube{
+		display:none;
+		left:50%;
+		margin:-8px 0 0 -8px;
+		position:absolute;
+		top:50%;
 	}
 }
 
