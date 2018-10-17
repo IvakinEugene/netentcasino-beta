@@ -259,7 +259,7 @@ button,
 		input[type=text]{
 			background:none !important;
 			border:0 !important;
-			font-size:16px;
+			font-size:18px;
 			font-weight:normal;
 			height:auto;
 			line-height:25px;
@@ -1020,11 +1020,13 @@ button,
 		    align-items: center;
 		    color:$base-gray;
 		    font-size: 18px;
+		    font-weight:normal;
 		    padding:20px 29px 17px;
 		}
 		h4{
 			@include media(">=tablet") {
 				font-size: 24px;
+				font-weight:500;
 				margin:0 0 -5px;
 				text-transform:uppercase;
 			}

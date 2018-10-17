@@ -2,9 +2,21 @@ extends pug/extends/master
 
 block content
 	//- 
-	- var page_class = "hide-nav hide-offer hide-bonus"
-	include pug/includes/header
+		- var page_class = "hide-nav hide-offer hide-bonus"
+		include pug/includes/header
 	#main
+		section.section-breadcrumbs
+			.holder
+				.breadcrumbs
+					span
+						span
+							a(href='#') Home
+							span
+								a(href='#') Bonuses
+								span.breadcrumb_last Bonus Calculator
+				div
+					p Last updated - 
+						strong 2 days ago!
 		section.template-default-page
 			.subsection.page-heading
 				.holder
@@ -16,9 +28,9 @@ block content
 							span.minus
 							input(type="text" value="100")#text
 							span.plus
-						.offer-sticker
-							| Bonus breakdown if you deposit
-							strong  £100
+					.offer-sticker
+						| Bonus breakdown if you deposit
+						strong  £100
 			.subsection.boxes-spins
 				.holder
 					ul.list-free-spins

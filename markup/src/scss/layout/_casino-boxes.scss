@@ -1834,6 +1834,7 @@
 		align-content: stretch;
 		align-items: stretch;
 		font-size: 16px;
+		line-height:1.1;
 		max-width: 680px;
 		@include media(">=tablet") {
 			font-size: 26px;
@@ -1943,11 +1944,12 @@
 	}
 	h3{
 		font-size: 22px;
-		margin:0 0 -3px;
+		line-height:1;
+		margin:0 0 10px;
 		@include media(">=tablet") {
 			font-size: 40px;
 			font-weight:500;
-			margin:0 0 -2px;
+			// margin:0 0 -2px;
 			text-transform:uppercase;
 		}
 	}
